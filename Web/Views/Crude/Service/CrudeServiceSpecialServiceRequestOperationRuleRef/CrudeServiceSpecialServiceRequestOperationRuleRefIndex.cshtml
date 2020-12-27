@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:55:23 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceSpecialServiceRequestOperationRuleRefContract>
+
+@{
+    ViewBag.Title = "Index Service Special Service Request Operation Rule Ref";
+}
+
+<h2>Index for Service Special Service Request Operation Rule Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServiceSpecialServiceRequestOperationRuleRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Special Service Request Operation Rule</th>
+        <th>Service Special Service Request Operation Rule Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServiceSpecialServiceRequestOperationRuleRefEdit", new { serviceSpecialServiceRequestOperationRuleRcd = item.ServiceSpecialServiceRequestOperationRuleRcd })
+                | @Html.ActionLink("Delete", "CrudeServiceSpecialServiceRequestOperationRuleRefDelete", new { serviceSpecialServiceRequestOperationRuleRcd = item.ServiceSpecialServiceRequestOperationRuleRcd })
+            </td>
+        </tr>
+    }
+
+</table>

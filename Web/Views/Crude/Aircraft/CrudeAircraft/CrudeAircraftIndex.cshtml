@@ -1,0 +1,53 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:02 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftContract>
+
+@{
+    ViewBag.Title = "Index Aircraft";
+}
+
+<h2>Index for Aircraft</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAircraftCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Name</th>
+        <th>Aircraft Type</th>
+        <th>Aircraft Configuration</th>
+        <th>Aircraft Body</th>
+        <th>Operational Date Time</th>
+        <th>First Flight Date Time</th>
+        <th>Engine Type</th>
+        <th>Passenger Capacity</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftConfigurationRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftBodyRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.OperationalDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.FirstFlightDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.EngineType) </td>
+            <td>@Html.DisplayFor(modelItem => item.PassengerCapacity) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAircraftEdit", new { aircraftId = item.AircraftId })
+                | @Html.ActionLink("Delete", "CrudeAircraftDelete", new { aircraftId = item.AircraftId })
+            </td>
+        </tr>
+    }
+
+</table>

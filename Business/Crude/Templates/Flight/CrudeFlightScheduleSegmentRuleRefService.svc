@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightScheduleSegmentRuleRefService" CodeBehind="Crude\Templates\Flight\\\CrudeFlightScheduleSegmentRuleRef.cs"%>

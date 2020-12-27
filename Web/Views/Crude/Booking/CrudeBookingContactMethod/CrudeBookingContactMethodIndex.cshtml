@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:29 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingContactMethodContract>
+
+@{
+    ViewBag.Title = "Index Booking Contact Method";
+}
+
+<h2>Index for Booking Contact Method</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingContactMethodCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Contact Method</th>
+        <th>Contact Method Way</th>
+        <th>Comment</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ContactMethodRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ContactMethodWay) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingContactMethodEdit", new { bookingContactMethodId = item.BookingContactMethodId })
+                | @Html.ActionLink("Delete", "CrudeBookingContactMethodDelete", new { bookingContactMethodId = item.BookingContactMethodId })
+            </td>
+        </tr>
+    }
+
+</table>

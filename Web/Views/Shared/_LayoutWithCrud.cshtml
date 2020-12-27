@@ -1,0 +1,349 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Address</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Address", "CrudeAddressIndex", "CrudeAddress")</li>
+                            <li>@Html.ActionLink("Address Type Ref", "CrudeAddressTypeRefIndex", "CrudeAddressTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Agency</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Agency", "CrudeAgencyIndex", "CrudeAgency")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Aircraft</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Aircraft", "CrudeAircraftIndex", "CrudeAircraft")</li>
+                            <li>@Html.ActionLink("Aircraft Body Ref", "CrudeAircraftBodyRefIndex", "CrudeAircraftBodyRef")</li>
+                            <li>@Html.ActionLink("Aircraft Compartment", "CrudeAircraftCompartmentIndex", "CrudeAircraftCompartment")</li>
+                            <li>@Html.ActionLink("Aircraft Compartment Measurement", "CrudeAircraftCompartmentMeasurementIndex", "CrudeAircraftCompartmentMeasurement")</li>
+                            <li>@Html.ActionLink("Aircraft Compartment Type Ref", "CrudeAircraftCompartmentTypeRefIndex", "CrudeAircraftCompartmentTypeRef")</li>
+                            <li>@Html.ActionLink("Aircraft Configuration Ref", "CrudeAircraftConfigurationRefIndex", "CrudeAircraftConfigurationRef")</li>
+                            <li>@Html.ActionLink("Aircraft Document", "CrudeAircraftDocumentIndex", "CrudeAircraftDocument")</li>
+                            <li>@Html.ActionLink("Aircraft Document Type Ref", "CrudeAircraftDocumentTypeRefIndex", "CrudeAircraftDocumentTypeRef")</li>
+                            <li>@Html.ActionLink("Aircraft Identifier", "CrudeAircraftIdentifierIndex", "CrudeAircraftIdentifier")</li>
+                            <li>@Html.ActionLink("Aircraft Identifier Type Ref", "CrudeAircraftIdentifierTypeRefIndex", "CrudeAircraftIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Aircraft Measurement", "CrudeAircraftMeasurementIndex", "CrudeAircraftMeasurement")</li>
+                            <li>@Html.ActionLink("Aircraft Type Ref", "CrudeAircraftTypeRefIndex", "CrudeAircraftTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Airline</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Airline", "CrudeAirlineIndex", "CrudeAirline")</li>
+                            <li>@Html.ActionLink("Airline Base Airport", "CrudeAirlineBaseAirportIndex", "CrudeAirlineBaseAirport")</li>
+                            <li>@Html.ActionLink("Airline Contact Method", "CrudeAirlineContactMethodIndex", "CrudeAirlineContactMethod")</li>
+                            <li>@Html.ActionLink("Airline Identifier", "CrudeAirlineIdentifierIndex", "CrudeAirlineIdentifier")</li>
+                            <li>@Html.ActionLink("Airline Identifier Type Ref", "CrudeAirlineIdentifierTypeRefIndex", "CrudeAirlineIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Airline Language", "CrudeAirlineLanguageIndex", "CrudeAirlineLanguage")</li>
+                            <li>@Html.ActionLink("Airline Link", "CrudeAirlineLinkIndex", "CrudeAirlineLink")</li>
+                            <li>@Html.ActionLink("Airline Type Ref", "CrudeAirlineTypeRefIndex", "CrudeAirlineTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Airport</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Airport", "CrudeAirportIndex", "CrudeAirport")</li>
+                            <li>@Html.ActionLink("Airport Facility", "CrudeAirportFacilityIndex", "CrudeAirportFacility")</li>
+                            <li>@Html.ActionLink("Airport Facility Type Ref", "CrudeAirportFacilityTypeRefIndex", "CrudeAirportFacilityTypeRef")</li>
+                            <li>@Html.ActionLink("Airport Hotel Link", "CrudeAirportHotelLinkIndex", "CrudeAirportHotelLink")</li>
+                            <li>@Html.ActionLink("Airport Identifier", "CrudeAirportIdentifierIndex", "CrudeAirportIdentifier")</li>
+                            <li>@Html.ActionLink("Airport Identifier Type Ref", "CrudeAirportIdentifierTypeRefIndex", "CrudeAirportIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Airport Link", "CrudeAirportLinkIndex", "CrudeAirportLink")</li>
+                            <li>@Html.ActionLink("Airport Runway", "CrudeAirportRunwayIndex", "CrudeAirportRunway")</li>
+                            <li>@Html.ActionLink("Airport Supplier", "CrudeAirportSupplierIndex", "CrudeAirportSupplier")</li>
+                            <li>@Html.ActionLink("Airport Supplier Link", "CrudeAirportSupplierLinkIndex", "CrudeAirportSupplierLink")</li>
+                            <li>@Html.ActionLink("Airport Terminal", "CrudeAirportTerminalIndex", "CrudeAirportTerminal")</li>
+                            <li>@Html.ActionLink("Airport Terminal Airline", "CrudeAirportTerminalAirlineIndex", "CrudeAirportTerminalAirline")</li>
+                            <li>@Html.ActionLink("Airport Type Ref", "CrudeAirportTypeRefIndex", "CrudeAirportTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Booking</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Booking", "CrudeBookingIndex", "CrudeBooking")</li>
+                            <li>@Html.ActionLink("Booking Contact Method", "CrudeBookingContactMethodIndex", "CrudeBookingContactMethod")</li>
+                            <li>@Html.ActionLink("Booking Document", "CrudeBookingDocumentIndex", "CrudeBookingDocument")</li>
+                            <li>@Html.ActionLink("Booking Document Type Ref", "CrudeBookingDocumentTypeRefIndex", "CrudeBookingDocumentTypeRef")</li>
+                            <li>@Html.ActionLink("Booking Event", "CrudeBookingEventIndex", "CrudeBookingEvent")</li>
+                            <li>@Html.ActionLink("Booking Event Type Ref", "CrudeBookingEventTypeRefIndex", "CrudeBookingEventTypeRef")</li>
+                            <li>@Html.ActionLink("Booking Flight Segment", "CrudeBookingFlightSegmentIndex", "CrudeBookingFlightSegment")</li>
+                            <li>@Html.ActionLink("Booking Identifier", "CrudeBookingIdentifierIndex", "CrudeBookingIdentifier")</li>
+                            <li>@Html.ActionLink("Booking Identifier Type Ref", "CrudeBookingIdentifierTypeRefIndex", "CrudeBookingIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Booking Passenger", "CrudeBookingPassengerIndex", "CrudeBookingPassenger")</li>
+                            <li>@Html.ActionLink("Booking Passenger Baggage", "CrudeBookingPassengerBaggageIndex", "CrudeBookingPassengerBaggage")</li>
+                            <li>@Html.ActionLink("Booking Passenger Event", "CrudeBookingPassengerEventIndex", "CrudeBookingPassengerEvent")</li>
+                            <li>@Html.ActionLink("Booking Passenger Event Type Ref", "CrudeBookingPassengerEventTypeRefIndex", "CrudeBookingPassengerEventTypeRef")</li>
+                            <li>@Html.ActionLink("Booking Passenger Seat", "CrudeBookingPassengerSeatIndex", "CrudeBookingPassengerSeat")</li>
+                            <li>@Html.ActionLink("Booking Passenger Ticket", "CrudeBookingPassengerTicketIndex", "CrudeBookingPassengerTicket")</li>
+                            <li>@Html.ActionLink("Booking Service Request", "CrudeBookingServiceRequestIndex", "CrudeBookingServiceRequest")</li>
+                            <li>@Html.ActionLink("Booking Source Ref", "CrudeBookingSourceRefIndex", "CrudeBookingSourceRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cart</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Cart Product", "CrudeCartProductIndex", "CrudeCartProduct")</li>
+                            <li>@Html.ActionLink("Cart Product Price", "CrudeCartProductPriceIndex", "CrudeCartProductPrice")</li>
+                            <li>@Html.ActionLink("Cart User", "CrudeCartUserIndex", "CrudeCartUser")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">City</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("City", "CrudeCityIndex", "CrudeCity")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Client</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Client", "CrudeClientIndex", "CrudeClient")</li>
+                            <li>@Html.ActionLink("Client Contact Method", "CrudeClientContactMethodIndex", "CrudeClientContactMethod")</li>
+                            <li>@Html.ActionLink("Client Event", "CrudeClientEventIndex", "CrudeClientEvent")</li>
+                            <li>@Html.ActionLink("Client Event Type Ref", "CrudeClientEventTypeRefIndex", "CrudeClientEventTypeRef")</li>
+                            <li>@Html.ActionLink("Client Link", "CrudeClientLinkIndex", "CrudeClientLink")</li>
+                            <li>@Html.ActionLink("Client Type Ref", "CrudeClientTypeRefIndex", "CrudeClientTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Contact Method Ref", "CrudeContactMethodRefIndex", "CrudeContactMethodRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Country</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Country", "CrudeCountryIndex", "CrudeCountry")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Date</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Date Time Type Ref", "CrudeDateTimeTypeRefIndex", "CrudeDateTimeTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Default</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Default Change Log", "CrudeDefaultChangeLogIndex", "CrudeDefaultChangeLog")</li>
+                            <li>@Html.ActionLink("Default Change Log Type Ref", "CrudeDefaultChangeLogTypeRefIndex", "CrudeDefaultChangeLogTypeRef")</li>
+                            <li>@Html.ActionLink("Default Error", "CrudeDefaultErrorIndex", "CrudeDefaultError")</li>
+                            <li>@Html.ActionLink("Default Error Layer Ref", "CrudeDefaultErrorLayerRefIndex", "CrudeDefaultErrorLayerRef")</li>
+                            <li>@Html.ActionLink("Default Error Type Ref", "CrudeDefaultErrorTypeRefIndex", "CrudeDefaultErrorTypeRef")</li>
+                            <li>@Html.ActionLink("Default Issue", "CrudeDefaultIssueIndex", "CrudeDefaultIssue")</li>
+                            <li>@Html.ActionLink("Default Issue Status Ref", "CrudeDefaultIssueStatusRefIndex", "CrudeDefaultIssueStatusRef")</li>
+                            <li>@Html.ActionLink("Default Issue Type Ref", "CrudeDefaultIssueTypeRefIndex", "CrudeDefaultIssueTypeRef")</li>
+                            <li>@Html.ActionLink("Default Performance Issue", "CrudeDefaultPerformanceIssueIndex", "CrudeDefaultPerformanceIssue")</li>
+                            <li>@Html.ActionLink("Default Performance Time", "CrudeDefaultPerformanceTimeIndex", "CrudeDefaultPerformanceTime")</li>
+                            <li>@Html.ActionLink("Default Performance Time Rollup", "CrudeDefaultPerformanceTimeRollupIndex", "CrudeDefaultPerformanceTimeRollup")</li>
+                            <li>@Html.ActionLink("Default Resource Measurement", "CrudeDefaultResourceMeasurementIndex", "CrudeDefaultResourceMeasurement")</li>
+                            <li>@Html.ActionLink("Default Rule", "CrudeDefaultRuleIndex", "CrudeDefaultRule")</li>
+                            <li>@Html.ActionLink("Default Rule Type Ref", "CrudeDefaultRuleTypeRefIndex", "CrudeDefaultRuleTypeRef")</li>
+                            <li>@Html.ActionLink("Default State Ref", "CrudeDefaultStateRefIndex", "CrudeDefaultStateRef")</li>
+                            <li>@Html.ActionLink("Default System Reference Table", "CrudeDefaultSystemReferenceTableIndex", "CrudeDefaultSystemReferenceTable")</li>
+                            <li>@Html.ActionLink("Default System Setting", "CrudeDefaultSystemSettingIndex", "CrudeDefaultSystemSetting")</li>
+                            <li>@Html.ActionLink("Default System Setting Ref", "CrudeDefaultSystemSettingRefIndex", "CrudeDefaultSystemSettingRef")</li>
+                            <li>@Html.ActionLink("Default Test", "CrudeDefaultTestIndex", "CrudeDefaultTest")</li>
+                            <li>@Html.ActionLink("Default Test Run", "CrudeDefaultTestRunIndex", "CrudeDefaultTestRun")</li>
+                            <li>@Html.ActionLink("Default Test Run Result Ref", "CrudeDefaultTestRunResultRefIndex", "CrudeDefaultTestRunResultRef")</li>
+                            <li>@Html.ActionLink("Default User", "CrudeDefaultUserIndex", "CrudeDefaultUser")</li>
+                            <li>@Html.ActionLink("Default User Activity", "CrudeDefaultUserActivityIndex", "CrudeDefaultUserActivity")</li>
+                            <li>@Html.ActionLink("Default User Activity Type Ref", "CrudeDefaultUserActivityTypeRefIndex", "CrudeDefaultUserActivityTypeRef")</li>
+                            <li>@Html.ActionLink("Default Version", "CrudeDefaultVersionIndex", "CrudeDefaultVersion")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">External</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("External System", "CrudeExternalSystemIndex", "CrudeExternalSystem")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Ferry</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Ferry", "CrudeFerryIndex", "CrudeFerry")</li>
+                            <li>@Html.ActionLink("Ferry Identifier", "CrudeFerryIdentifierIndex", "CrudeFerryIdentifier")</li>
+                            <li>@Html.ActionLink("Ferry Identifier Type Ref", "CrudeFerryIdentifierTypeRefIndex", "CrudeFerryIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Ferry Type Ref", "CrudeFerryTypeRefIndex", "CrudeFerryTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Financial</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Financial Adjustment", "CrudeFinancialAdjustmentIndex", "CrudeFinancialAdjustment")</li>
+                            <li>@Html.ActionLink("Financial Adjustment Type Ref", "CrudeFinancialAdjustmentTypeRefIndex", "CrudeFinancialAdjustmentTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Bank Account Number Type Ref", "CrudeFinancialBankAccountNumberTypeRefIndex", "CrudeFinancialBankAccountNumberTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Booking Transaction", "CrudeFinancialBookingTransactionIndex", "CrudeFinancialBookingTransaction")</li>
+                            <li>@Html.ActionLink("Financial Booking Transaction Type Ref", "CrudeFinancialBookingTransactionTypeRefIndex", "CrudeFinancialBookingTransactionTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Car Rental", "CrudeFinancialCarRentalIndex", "CrudeFinancialCarRental")</li>
+                            <li>@Html.ActionLink("Financial Card Type Ref", "CrudeFinancialCardTypeRefIndex", "CrudeFinancialCardTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Company", "CrudeFinancialCompanyIndex", "CrudeFinancialCompany")</li>
+                            <li>@Html.ActionLink("Financial Costcentre", "CrudeFinancialCostcentreIndex", "CrudeFinancialCostcentre")</li>
+                            <li>@Html.ActionLink("Financial Coupon", "CrudeFinancialCouponIndex", "CrudeFinancialCoupon")</li>
+                            <li>@Html.ActionLink("Financial Coupon Type Ref", "CrudeFinancialCouponTypeRefIndex", "CrudeFinancialCouponTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Currency", "CrudeFinancialCurrencyIndex", "CrudeFinancialCurrency")</li>
+                            <li>@Html.ActionLink("Financial Currency Type Ref", "CrudeFinancialCurrencyTypeRefIndex", "CrudeFinancialCurrencyTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Fare", "CrudeFinancialFareIndex", "CrudeFinancialFare")</li>
+                            <li>@Html.ActionLink("Financial Fare Type Ref", "CrudeFinancialFareTypeRefIndex", "CrudeFinancialFareTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Fee", "CrudeFinancialFeeIndex", "CrudeFinancialFee")</li>
+                            <li>@Html.ActionLink("Financial Fee Type Ref", "CrudeFinancialFeeTypeRefIndex", "CrudeFinancialFeeTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Ferry Booking", "CrudeFinancialFerryBookingIndex", "CrudeFinancialFerryBooking")</li>
+                            <li>@Html.ActionLink("Financial Hotel Booking", "CrudeFinancialHotelBookingIndex", "CrudeFinancialHotelBooking")</li>
+                            <li>@Html.ActionLink("Financial Payment", "CrudeFinancialPaymentIndex", "CrudeFinancialPayment")</li>
+                            <li>@Html.ActionLink("Financial Payment Accounting", "CrudeFinancialPaymentAccountingIndex", "CrudeFinancialPaymentAccounting")</li>
+                            <li>@Html.ActionLink("Financial Payment Bank", "CrudeFinancialPaymentBankIndex", "CrudeFinancialPaymentBank")</li>
+                            <li>@Html.ActionLink("Financial Payment Card", "CrudeFinancialPaymentCardIndex", "CrudeFinancialPaymentCard")</li>
+                            <li>@Html.ActionLink("Financial Payment Cash", "CrudeFinancialPaymentCashIndex", "CrudeFinancialPaymentCash")</li>
+                            <li>@Html.ActionLink("Financial Payment Coupon", "CrudeFinancialPaymentCouponIndex", "CrudeFinancialPaymentCoupon")</li>
+                            <li>@Html.ActionLink("Financial Payment Type Ref", "CrudeFinancialPaymentTypeRefIndex", "CrudeFinancialPaymentTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Payment Voucher", "CrudeFinancialPaymentVoucherIndex", "CrudeFinancialPaymentVoucher")</li>
+                            <li>@Html.ActionLink("Financial Service", "CrudeFinancialServiceIndex", "CrudeFinancialService")</li>
+                            <li>@Html.ActionLink("Financial Special Service", "CrudeFinancialSpecialServiceIndex", "CrudeFinancialSpecialService")</li>
+                            <li>@Html.ActionLink("Financial Tax", "CrudeFinancialTaxIndex", "CrudeFinancialTax")</li>
+                            <li>@Html.ActionLink("Financial Tax Type Ref", "CrudeFinancialTaxTypeRefIndex", "CrudeFinancialTaxTypeRef")</li>
+                            <li>@Html.ActionLink("Financial Voucher", "CrudeFinancialVoucherIndex", "CrudeFinancialVoucher")</li>
+                            <li>@Html.ActionLink("Financial Voucher Type Ref", "CrudeFinancialVoucherTypeRefIndex", "CrudeFinancialVoucherTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Flight</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Flight", "CrudeFlightIndex", "CrudeFlight")</li>
+                            <li>@Html.ActionLink("Flight Event", "CrudeFlightEventIndex", "CrudeFlightEvent")</li>
+                            <li>@Html.ActionLink("Flight Identifier", "CrudeFlightIdentifierIndex", "CrudeFlightIdentifier")</li>
+                            <li>@Html.ActionLink("Flight Identifier Type Ref", "CrudeFlightIdentifierTypeRefIndex", "CrudeFlightIdentifierTypeRef")</li>
+                            <li>@Html.ActionLink("Flight Schedule", "CrudeFlightScheduleIndex", "CrudeFlightSchedule")</li>
+                            <li>@Html.ActionLink("Flight Schedule Identifier", "CrudeFlightScheduleIdentifierIndex", "CrudeFlightScheduleIdentifier")</li>
+                            <li>@Html.ActionLink("Flight Schedule Segment", "CrudeFlightScheduleSegmentIndex", "CrudeFlightScheduleSegment")</li>
+                            <li>@Html.ActionLink("Flight Schedule Segment Rule", "CrudeFlightScheduleSegmentRuleIndex", "CrudeFlightScheduleSegmentRule")</li>
+                            <li>@Html.ActionLink("Flight Schedule Segment Rule Ref", "CrudeFlightScheduleSegmentRuleRefIndex", "CrudeFlightScheduleSegmentRuleRef")</li>
+                            <li>@Html.ActionLink("Flight Segment", "CrudeFlightSegmentIndex", "CrudeFlightSegment")</li>
+                            <li>@Html.ActionLink("Flight Segment Event", "CrudeFlightSegmentEventIndex", "CrudeFlightSegmentEvent")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gender</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Gender Ref", "CrudeGenderRefIndex", "CrudeGenderRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Language Ref", "CrudeLanguageRefIndex", "CrudeLanguageRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Link</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Link Type Ref", "CrudeLinkTypeRefIndex", "CrudeLinkTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Nationality</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Nationality Ref", "CrudeNationalityRefIndex", "CrudeNationalityRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Passenger</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Passenger", "CrudePassengerIndex", "CrudePassenger")</li>
+                            <li>@Html.ActionLink("Passenger Type Ref", "CrudePassengerTypeRefIndex", "CrudePassengerTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Product</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Product", "CrudeProductIndex", "CrudeProduct")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reporting</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Reporting Roundup", "CrudeReportingRoundupIndex", "CrudeReportingRoundup")</li>
+                            <li>@Html.ActionLink("Reporting Roundup Type Ref", "CrudeReportingRoundupTypeRefIndex", "CrudeReportingRoundupTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Service</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Service Car Rental", "CrudeServiceCarRentalIndex", "CrudeServiceCarRental")</li>
+                            <li>@Html.ActionLink("Service Car Rental Link", "CrudeServiceCarRentalLinkIndex", "CrudeServiceCarRentalLink")</li>
+                            <li>@Html.ActionLink("Service Ferry", "CrudeServiceFerryIndex", "CrudeServiceFerry")</li>
+                            <li>@Html.ActionLink("Service Hotel", "CrudeServiceHotelIndex", "CrudeServiceHotel")</li>
+                            <li>@Html.ActionLink("Service Hotel Image", "CrudeServiceHotelImageIndex", "CrudeServiceHotelImage")</li>
+                            <li>@Html.ActionLink("Service Hotel Link", "CrudeServiceHotelLinkIndex", "CrudeServiceHotelLink")</li>
+                            <li>@Html.ActionLink("Service Image Type Ref", "CrudeServiceImageTypeRefIndex", "CrudeServiceImageTypeRef")</li>
+                            <li>@Html.ActionLink("Service Package", "CrudeServicePackageIndex", "CrudeServicePackage")</li>
+                            <li>@Html.ActionLink("Service Package Promotion", "CrudeServicePackagePromotionIndex", "CrudeServicePackagePromotion")</li>
+                            <li>@Html.ActionLink("Service Request Status Ref", "CrudeServiceRequestStatusRefIndex", "CrudeServiceRequestStatusRef")</li>
+                            <li>@Html.ActionLink("Service Special Service Request", "CrudeServiceSpecialServiceRequestIndex", "CrudeServiceSpecialServiceRequest")</li>
+                            <li>@Html.ActionLink("Service Special Service Request Group Ref", "CrudeServiceSpecialServiceRequestGroupRefIndex", "CrudeServiceSpecialServiceRequestGroupRef")</li>
+                            <li>@Html.ActionLink("Service Special Service Request Operation Rule Ref", "CrudeServiceSpecialServiceRequestOperationRuleRefIndex", "CrudeServiceSpecialServiceRequestOperationRuleRef")</li>
+                            <li>@Html.ActionLink("Service Special Service Request Requirement Ref", "CrudeServiceSpecialServiceRequestRequirementRefIndex", "CrudeServiceSpecialServiceRequestRequirementRef")</li>
+                            <li>@Html.ActionLink("Service Type Ref", "CrudeServiceTypeRefIndex", "CrudeServiceTypeRef")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Timezone</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Timezone", "CrudeTimezoneIndex", "CrudeTimezone")</li>
+                        </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Title</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Title Ref", "CrudeTitleRefIndex", "CrudeTitleRef")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Help</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                        </ul>
+                    </li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    </body>
+</html>

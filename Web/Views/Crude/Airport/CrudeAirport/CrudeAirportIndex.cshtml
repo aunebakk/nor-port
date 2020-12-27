@@ -1,0 +1,59 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:17 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportContract>
+
+@{
+    ViewBag.Title = "Index Airport";
+}
+
+<h2>Index for Airport</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAirportCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Airport Name</th>
+        <th>Airport Type</th>
+        <th>Utc Offset</th>
+        <th>Elevation In Meters</th>
+        <th>Runway In Meters</th>
+        <th>Latitude</th>
+        <th>Longitude</th>
+        <th>Variation</th>
+        <th>Attendance</th>
+        <th>Control Tower Flag</th>
+        <th>Activation Date Time</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.UtcOffset) </td>
+            <td>@Html.DisplayFor(modelItem => item.ElevationInMeters) </td>
+            <td>@Html.DisplayFor(modelItem => item.RunwayInMeters) </td>
+            <td>@Html.DisplayFor(modelItem => item.Latitude) </td>
+            <td>@Html.DisplayFor(modelItem => item.Longitude) </td>
+            <td>@Html.DisplayFor(modelItem => item.Variation) </td>
+            <td>@Html.DisplayFor(modelItem => item.Attendance) </td>
+            <td>@Html.DisplayFor(modelItem => item.ControlTowerFlag) </td>
+            <td>@Html.DisplayFor(modelItem => item.ActivationDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAirportEdit", new { airportId = item.AirportId })
+                | @Html.ActionLink("Delete", "CrudeAirportDelete", new { airportId = item.AirportId })
+            </td>
+        </tr>
+    }
+
+</table>

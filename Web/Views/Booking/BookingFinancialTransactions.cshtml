@@ -1,0 +1,81 @@
+@model SolutionNorSolutionPort.AspMvc.Controllers.BookingFinancialTransactionsContract
+
+@{
+    ViewBag.Title = "BookingFinancialTransactions";
+}
+
+<h2>Booking Financial Transactions ( @Html.Raw(Model.Locator) )</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.Partial("_tab")
+
+        <br />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <table class="table">
+            <tr>
+                <th>Nr</th>
+                <th>Date Time</th>
+                <th>Type</th>
+                <th>Name</th>
+                <th>Debit</th>
+                <th>Credit</th>
+                <th>Currency</th>
+                <th>Costcentre</th>
+                <th>User</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Transactions) {
+                <tr>
+                    @if (item.TransactionNumber > Model.Transactions.Count - 2) { 
+                        <td></td>
+                        <td></td>
+                    } else {
+                        <td>@Html.DisplayFor(modelItem => item.TransactionNumber) </td>
+                        <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+                    }
+                    <td>@Html.DisplayFor(modelItem => item.TransactionType) </td>
+                    <td>@Html.DisplayFor(modelItem => item.TypeName) </td>
+                    
+                    @if (item.TransactionNumber == Model.Transactions.Count) {
+                        <td></td>
+                        <td align="right">@Html.DisplayFor(modelItem => item.CreditAmount) </td>
+                    } else {
+                        if (item.DebitAmount != 0) {
+                            <td align="right">@Html.DisplayFor(modelItem => item.DebitAmount) </td>
+                        } else {
+                            <td></td>
+                        }
+                        
+                        if (item.CreditAmount != 0) {
+                            <td align="right">@Html.DisplayFor(modelItem => item.CreditAmount) </td>
+                        } else { 
+                            <td></td>
+                        }
+                    }
+                    <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeRcd) </td>
+                    <td>@Html.DisplayFor(modelItem => item.FinancialCostcentreName) </td>
+                    <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

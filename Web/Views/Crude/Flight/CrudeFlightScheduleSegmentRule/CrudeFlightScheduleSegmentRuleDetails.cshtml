@@ -1,0 +1,28 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:54:55 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightScheduleSegmentRuleContract
+
+@{
+    ViewBag.Title = "Details Flight Schedule Segment Rule";
+}
+
+<h2>Details for Flight Schedule Segment Rule</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeFlightScheduleSegmentRuleEdit", new { flightScheduleSegmentRuleId = Model.FlightScheduleSegmentRuleId }) |
+    @Html.ActionLink("New", "CrudeFlightScheduleSegmentRuleCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeFlightScheduleSegmentRuleIndex")
+</p>

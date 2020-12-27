@@ -1,0 +1,5 @@
+currency
+	http://www.webservicex.net/CurrencyConvertor.asmx
+	http://currencyconverter.kowabunga.net/converter.asmx
+
+	(winner) http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml

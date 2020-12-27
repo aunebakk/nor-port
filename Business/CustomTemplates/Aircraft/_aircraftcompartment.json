@@ -1,0 +1,37 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateManual",
+  "Filename": "_aircraftcompartment.json",
+  "Table": {
+    "DomainName": "Aircraft",
+    "TableName": "aircraft_compartment",
+    "ClassNamePascalCase": "AircraftCompartment",
+    "VariableNameCamelCase": "aircraftCompartment",
+    "AutoUpdateScheme": "autoupdatenormal",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": "aircraft",
+    "Children": []
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkWithDurian",
+    "Name": "WithDurian",
+    "DesignTypeScript": "",
+    "PrimaryKey": "",
+    "AzureAppName": "",
+    "OverrideDisplayableName": null,
+    "WebStyle": "TabularOnEditCreate",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "AircraftSearch",
+    "DurianParameterToOwner": true,
+    "DurianParameters": true,
+    "DurianMethod": "AircraftCompartmentIndexWithFilter"
+  },
+  "Header": [],
+  "RefreshLink": "",
+  "Injection": "",
+  "Result": null
+}

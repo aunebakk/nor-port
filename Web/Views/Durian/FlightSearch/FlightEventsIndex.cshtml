@@ -1,0 +1,37 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 7:21:50 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.FlightEventsContract>
+
+@{
+    ViewBag.Title = "Flight Events";
+}
+
+<h2>Flight Events</h2>
+
+<table class="table">
+    <tr>
+        <th>Flight Event Number</th>
+        <th>Date Time</th>
+        <th>Date Time Type</th>
+        <th>Date Time Type Name</th>
+        <th>New Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FlightEventNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTimeTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTimeTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.NewDateTime) </td>
+        </tr>
+    }
+
+</table>

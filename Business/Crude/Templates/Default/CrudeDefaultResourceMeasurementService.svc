@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeDefaultResourceMeasurementService" CodeBehind="Crude\Templates\Default\\\CrudeDefaultResourceMeasurement.cs"%>

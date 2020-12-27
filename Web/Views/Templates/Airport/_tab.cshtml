@@ -1,0 +1,19 @@
+<div>
+    @if (ViewBag.Title.Equals("Index Airport")) {
+        <b>@Html.ActionLink("Index", "AirportIndex", "Airport")</b>
+    } else {
+        @Html.ActionLink("Index", "AirportIndex", "Airport")
+    }
+    |
+    @if (ViewBag.Title.EndsWith("Airport")) {
+        <b>@Html.ActionLink("Airport", "AirportEdit", "Airport", new { airportId = ViewBag.AirportId }, null)</b>
+    } else {
+        @Html.ActionLink("Airport", "AirportEdit", "Airport", new { airportId = ViewBag.AirportId }, null)
+    }
+    |
+    @if (ViewBag.Title.Contains("Identifier")) {
+        <b>@Html.ActionLink("Identifier", "AirportIdentifierIndex", "AirportIdentifier", new { airportId = ViewBag.AirportId }, null)</b>
+    } else {
+        @Html.ActionLink("Identifier", "AirportIdentifierIndex", "AirportIdentifier", new { airportId = ViewBag.AirportId }, null)
+    }
+</div>

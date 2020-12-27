@@ -1,0 +1,53 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:10 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftMeasurementContract>
+
+@{
+    ViewBag.Title = "Index Aircraft Measurement";
+}
+
+<h2>Index for Aircraft Measurement</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAircraftMeasurementCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Length</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>Wingspan</th>
+        <th>Width</th>
+        <th>Payload</th>
+        <th>Takeoff Weight In Kilo</th>
+        <th>Speed</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Length) </td>
+            <td>@Html.DisplayFor(modelItem => item.Height) </td>
+            <td>@Html.DisplayFor(modelItem => item.Weight) </td>
+            <td>@Html.DisplayFor(modelItem => item.Wingspan) </td>
+            <td>@Html.DisplayFor(modelItem => item.Width) </td>
+            <td>@Html.DisplayFor(modelItem => item.Payload) </td>
+            <td>@Html.DisplayFor(modelItem => item.TakeoffWeightInKilo) </td>
+            <td>@Html.DisplayFor(modelItem => item.Speed) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAircraftMeasurementEdit", new { aircraftMeasurementId = item.AircraftMeasurementId })
+                | @Html.ActionLink("Delete", "CrudeAircraftMeasurementDelete", new { aircraftMeasurementId = item.AircraftMeasurementId })
+            </td>
+        </tr>
+    }
+
+</table>

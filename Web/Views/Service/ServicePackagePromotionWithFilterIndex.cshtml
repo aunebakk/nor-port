@@ -1,0 +1,36 @@
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.ServicePackagePromotionWithFilterContract>
+
+@{
+    ViewBag.Title = "Service Package Promotion With Filter";
+}
+
+<h2>Service Package Promotion</h2>
+
+<table class="table">
+    <tr>
+        <th>Service Package Name</th>
+        <th>Client Name</th>
+        <th>Promotion Price Amount</th>
+        <th>Financial Currency Type Name</th>
+        <th>Default User Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServicePackageName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ClientName) </td>
+            <td>@Html.DisplayFor(modelItem => item.PromotionPriceAmount) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServicePackagePromotionEdit", "CrudeServicePackagePromotion", new { servicePackagePromotionId = item.ServicePackagePromotionId }, null)
+                | @Html.ActionLink("Send", "ServicePackagePromotionSend", "ServicePackagePromotionWithFilter", new { servicePackagePromotionId = item.ServicePackagePromotionId }, null)
+                | @Html.ActionLink("Make", "ServicePackagePromotionMakeBooking", "ServicePackagePromotionWithFilter", new { servicePackagePromotionId = item.ServicePackagePromotionId }, null)
+            </td>
+        </tr>
+    }
+
+</table>

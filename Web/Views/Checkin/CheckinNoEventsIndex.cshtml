@@ -1,0 +1,60 @@
+@model SolutionNorSolutionPort.AspMvc.Controllers.CheckinContract
+
+@{
+    ViewBag.Title = "CheckinNoEvents";
+}
+
+<h2>Checkin No Events</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.Partial("_tab")
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Flight", htmlAttributes: new { @class = "control-label col-md-2", @style = "display:inline-block;width:100px" })
+            @Html.DropDownList("FlightId", null, htmlAttributes: new { @class = "form-control", @style = "display:inline-block;width:325px" })
+            <input type="submit" value="Search" class="btn-primary" style="display:inline-block" />
+        </div>
+
+        <table class="table">
+            <tr>
+                <th>Record Locator</th>
+                <th>Received From</th>
+                <th>Passenger Name</th>
+                <th>Passenger Type Name</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.PassengersWithoutEvents) {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.RecordLocator) </td>
+                    <td>@Html.DisplayFor(modelItem => item.ReceivedFrom) </td>
+                    <td>@Html.DisplayFor(modelItem => item.PassengerName) </td>
+                    <td>@Html.DisplayFor(modelItem => item.PassengerTypeName) </td>
+                    <td>
+                        @Html.ActionLink("Check-In", "CheckinCheckIn", "Checkin",
+                            new {
+                                flightId = Model.FlightId,
+                                bookingPassengerId = item.BookingPassengerId,
+                                bookingFlightSegmentId = item.BookingFlightSegmentId,
+                                returnToPage = "CheckinNoEventsIndex"
+                            }, null)
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript"> $(function () { $('.date-picker').datepicker(); }) </script>
+}

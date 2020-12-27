@@ -1,0 +1,104 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 7:24:11 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateWithDurianGenerator.ParentViewCreate
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.AircraftDocumentContract
+
+@{
+    ViewBag.Title = "Create Aircraft Document";
+}
+
+<h2>Create Aircraft Document</h2>
+
+<br />
+@Html.Partial("~/Views/Templates/Aircraft/_tab.cshtml")
+<br />
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.AircraftDocument.AircraftDocumentId)
+        @Html.HiddenFor(model => model.AircraftDocument.UserId)
+        @Html.HiddenFor(model => model.AircraftDocument.DateTime)
+
+        <div class="form-group">
+            @Html.Label("Aircraft Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AircraftId", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Aircraft Document Type", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AircraftDocumentTypeRcd", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Document Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AircraftDocument.DocumentName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.AircraftDocument.DocumentName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Document Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AircraftDocument.DocumentDateTime, new { htmlAttributes = new { @class = "form-control date-picker", @Value = @Model.AircraftDocument.DocumentDateTime.ToString("yyyy-MM-dd") } })
+                @Html.ValidationMessageFor(model => model.AircraftDocument.DocumentDateTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Expiry Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.AircraftDocument.ExpiryDateTime, new { htmlAttributes = new { @class = "form-control date-picker", @Value = @Model.AircraftDocument.ExpiryDateTime.ToString("yyyy-MM-dd") } })
+                @Html.ValidationMessageFor(model => model.AircraftDocument.ExpiryDateTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("User Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DefaultUserName")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DateTime")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "AircraftDocumentIndex")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

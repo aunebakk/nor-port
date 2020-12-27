@@ -1,0 +1,47 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:29 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingDocumentContract>
+
+@{
+    ViewBag.Title = "Index Booking Document";
+}
+
+<h2>Index for Booking Document</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingDocumentCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Booking Document Type</th>
+        <th>Booking Document Name</th>
+        <th>Booking Document Filename</th>
+        <th>Booking Document</th>
+        <th>Comment</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingDocumentTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingDocumentName) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingDocumentFilename) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingDocument) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingDocumentEdit", new { bookingDocumentId = item.BookingDocumentId })
+                | @Html.ActionLink("Delete", "CrudeBookingDocumentDelete", new { bookingDocumentId = item.BookingDocumentId })
+            </td>
+        </tr>
+    }
+
+</table>

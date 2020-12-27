@@ -1,0 +1,39 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 7:17:26 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AircraftMaintenanceIdentifierIndexWithFilterContract>
+
+@{
+    ViewBag.Title = "Aircraft Maintenance Identifier Index With Filter";
+}
+
+<h2>Aircraft Maintenance Identifier Index With Filter</h2>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Name</th>
+        <th>Aircraft Identifier Type</th>
+        <th>Aircraft Identifier Type Name</th>
+        <th>Aircraft Identifier Code</th>
+        <th>Default User Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftIdentifierTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftIdentifierTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+        </tr>
+    }
+
+</table>

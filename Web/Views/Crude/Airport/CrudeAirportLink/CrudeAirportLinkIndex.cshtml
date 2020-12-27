@@ -1,0 +1,39 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:22 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportLinkContract>
+
+@{
+    ViewBag.Title = "Index Airport Link";
+}
+
+<h2>Index for Airport Link</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAirportLinkCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Link Type</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.LinkTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAirportLinkEdit", new { airportLinkId = item.AirportLinkId })
+                | @Html.ActionLink("Delete", "CrudeAirportLinkDelete", new { airportLinkId = item.AirportLinkId })
+            </td>
+        </tr>
+    }
+
+</table>

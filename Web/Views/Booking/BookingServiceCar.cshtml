@@ -1,0 +1,81 @@
+@model SolutionNorSolutionPort.AspMvc.Controllers.BookingServiceCarContract
+
+@{
+    ViewBag.Title = "BookingServiceCar";
+}
+
+<h2>Booking Services Hotel( @Html.Raw(Model.Locator) )</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        @Html.Partial("_tab")
+        <br />
+        @Html.Partial("_tabServices")
+        <br />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <table class="table">
+            <tr>
+                <th>Service Type Name</th>
+                <th>Service Description</th>
+                <th>Service Request Status Name</th>
+                <th>Service Amount</th>
+                <th>Service Currency Type Name</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.Services) {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.ServiceTypeName) </td>
+                    <td>@Html.DisplayFor(modelItem => item.ServiceDescription) </td>
+                    <td>@Html.DisplayFor(modelItem => item.ServiceRequestStatusName) </td>
+                    <td>@Html.DisplayFor(modelItem => item.ServiceAmount) </td>
+                    <td>@Html.DisplayFor(modelItem => item.ServiceCurrencyTypeName) </td>
+                    <td>
+                        @Html.ActionLink(
+                            "Remove", 
+                            "ServiceCarRemove", 
+                            "Booking",
+                            new { bookingId = Model.BookingId, bookingServiceRequestId = item.BookingServiceRequestId }, 
+                            null
+                            )
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    <div>
+        <table class="table">
+            <tr>
+                <th>Car Name</th>
+                <th>Day Price Amount</th>
+                <th>Financial Currency Type Name</th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model.ServiceCarList) {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.CarName) </td>
+                    <td>@Html.DisplayFor(modelItem => item.DayPriceAmount) </td>
+                    <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeName) </td>
+                    <td>
+                        @Html.ActionLink(
+                            "Add",
+                            "ServiceCarAdd",
+                            "Booking",
+                            new { bookingId = Model.BookingId, serviceCarRentalId = item.ServiceCarRentalId },
+                            null
+                        )
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript"> $(function () { $('.date-picker').datepicker(); }) </script>
+}

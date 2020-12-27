@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeFinancialPaymentCardService" CodeBehind="Crude\Templates\Financial\\\CrudeFinancialPaymentCard.cs"%>

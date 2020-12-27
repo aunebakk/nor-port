@@ -1,0 +1,90 @@
+﻿
+<html>
+    <head>
+        <title>Aircraft</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>Aircraft Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeAircraftService</label>
+        <br /><label>Contract name: CrudeAircraftContract</label>
+        <br /><label>Fetcher: FetchByAircraftId</label>
+        <br /><label>Id: AircraftId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Aircraft/CrudeAircraft.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Aircraft Id            </td><td>System.Guid</td></tr>
+            <tr><td>Aircraft Name            </td><td>System.String</td></tr>
+            <tr><td>Aircraft Type            </td><td>System.String</td></tr>
+            <tr><td>Aircraft Configuration            </td><td>System.String</td></tr>
+            <tr><td>Aircraft Body            </td><td>System.String</td></tr>
+            <tr><td>Aircraft Measurement Id            </td><td>System.Guid</td></tr>
+            <tr><td>Product Id            </td><td>System.Guid</td></tr>
+            <tr><td>Operational Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>First Flight Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Engine Type            </td><td>System.String</td></tr>
+            <tr><td>Passenger Capacity            </td><td>System.Int32</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeAircraftContract<b> FetchByAircraftId </b>(System.Guid aircraftId);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByAircraftMeasurementId </b>(System.Guid aircraftMeasurementId);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByProductId </b>(System.Guid productId);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByAircraftTypeRcd </b>(System.String aircraftTypeRcd);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByAircraftConfigurationRcd </b>(System.String aircraftConfigurationRcd);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchByAircraftBodyRcd </b>(System.String aircraftBodyRcd);
+        <br />
+        <br />CrudeAircraftContract<b> FetchByAircraftName </b>(System.String aircraftName);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchWithFilter </b>(System.Guid aircraftId,System.String aircraftName,System.String aircraftTypeRcd,System.String aircraftConfigurationRcd,System.String aircraftBodyRcd,System.Guid aircraftMeasurementId,System.Guid productId,System.DateTime operationalDateTime,System.DateTime firstFlightDateTime,System.String engineType,System.Int32 passengerCapacity,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeAircraftContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeAircraftContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeAircraftContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid aircraftId);
+        <br />
+        <br />
+    </body>
+</html>
+

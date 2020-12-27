@@ -1,0 +1,74 @@
+﻿
+<html>
+    <head>
+        <title>FerryTypeRef</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FerryTypeRef Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFerryTypeRefService</label>
+        <br /><label>Contract name: CrudeFerryTypeRefContract</label>
+        <br /><label>Fetcher: FetchByFerryTypeRcd</label>
+        <br /><label>Id: FerryTypeRcd, System.String</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Ferry/CrudeFerryTypeRef.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Ferry Type            </td><td>System.String</td></tr>
+            <tr><td>Ferry Type Name            </td><td>System.String</td></tr>
+            <tr><td>State            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFerryTypeRefContract<b> FetchByFerryTypeRcd </b>(System.String ferryTypeRcd);
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchByStateRcd </b>(System.String stateRcd);
+        <br />
+        <br />CrudeFerryTypeRefContract<b> FetchByFerryTypeName </b>(System.String ferryTypeName);
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchWithFilter </b>(System.String ferryTypeRcd,System.String ferryTypeName,System.String stateRcd,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFerryTypeRefContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFerryTypeRefContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFerryTypeRefContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.String ferryTypeRcd);
+        <br />
+        <br />
+    </body>
+</html>
+

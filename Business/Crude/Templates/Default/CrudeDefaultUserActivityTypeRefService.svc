@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeDefaultUserActivityTypeRefService" CodeBehind="Crude\Templates\Default\\\CrudeDefaultUserActivityTypeRef.cs"%>

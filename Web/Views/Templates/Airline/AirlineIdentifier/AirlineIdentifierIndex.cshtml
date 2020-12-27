@@ -1,0 +1,52 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 7:24:47 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateWithDurianGenerator.ParentViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AirlineIdentifierIndexWithFilterContract>
+
+@{
+    ViewBag.Title = "Index Airline Identifier";
+}
+
+<h2>Index for Airline Identifier</h2>
+
+<br />
+@Html.Partial("~/Views/Templates/Airline/_tab.cshtml")
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "AirlineIdentifierCreate", new { airlineId = ViewBag.AirlineId })
+</p>
+
+<table class="table">
+    <tr>
+        <th>Airline Name</th>
+        <th>Legal Name</th>
+        <th>Airline Identifier Type Name</th>
+        <th>Default User Name</th>
+        <th>Airline Identifier Type</th>
+        <th>Airline Identifier Code</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirlineName) </td>
+            <td>@Html.DisplayFor(modelItem => item.LegalName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "AirlineIdentifierEdit", new { airlineIdentifierId = item.AirlineIdentifierId })
+            </td>
+        </tr>
+    }
+
+</table>

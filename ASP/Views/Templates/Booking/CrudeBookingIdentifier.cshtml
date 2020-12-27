@@ -1,0 +1,100 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:59:08 PM
+  From Machine: DESKTOP-LSRVP12
+  Filename: BookingIdentifier.json
+  Template: sql2x.TemplateDotNetCoreApiGenerator.View
+  Style: DotNetCoreApi
+-->
+
+<style>
+    a {
+        color: lightgray;
+    } 
+
+    html {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    table {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        border-color: red;
+        font-weight: 100;
+        margin: 0px;
+        max-width: 100%;
+        align-content: flex-start
+    }
+
+    th {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        text-align: left;
+    }
+
+    tr {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    td {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<h2><a id="CrudeBookingIdentifier">CrudeBookingIdentifier</a> ( DotNetCoreApi )</h2><br>
+<br>
+        <table>
+            <tr><td>Booking Identifier Id            </td><td>System.Guid</td></tr>
+            <tr><td>Booking Id            </td><td>System.Guid</td></tr>
+            <tr><td>Booking Identifier Type            </td><td>System.String</td></tr>
+            <tr><td>Booking Identifier Value            </td><td>System.String</td></tr>
+            <tr><td>Comment            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+<br>
+<br>
+<i>GET</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchAll'>FetchAll</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchAllCount'>FetchAllCount</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchAllWithLimit' asp-route-limit='1'>FetchAllWithLimit</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchAllWithLimitAndOffset' asp-route-limit='1' asp-route-offset='1'>FetchAllWithLimitAndOffset</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchByBookingIdentifierId' asp-route-bookingidentifierid=00000000-0000-0000-0000-000000000001>FetchByBookingIdentifierId</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchByBookingId' asp-route-bookingid=00000000-0000-0000-0000-000000000001>FetchByBookingId</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchByBookingIdentifierTypeRcd' asp-route-bookingidentifiertypercd=00000000-0000-0000-0000-000000000001>FetchByBookingIdentifierTypeRcd</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierFetchByBookingIdentifierId' asp-route-bookingidentifierid=Guid.Empty>FetchByBookingIdentifierId</a><br>
+<br>
+<br>
+<i>POST</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierCreate'>CrudeBookingIdentifierCreate</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierCreateTest'>Create Test (GET)</a><br>
+<br>
+<br>
+<i>PUT</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierUpdate'>CrudeBookingIdentifierUpdate</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierUpdateTest'>Update Test (GET)</a><br>
+<br>
+<br>
+<i>DELETE</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierDelete'>CrudeBookingIdentifierDelete</a><br>
+<a asp-area='' asp-controller='CrudeBookingIdentifier' asp-action='CrudeBookingIdentifierDeleteTest'>Delete Test (GET)</a><br>

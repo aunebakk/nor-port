@@ -1,0 +1,47 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:11 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirlineContract>
+
+@{
+    ViewBag.Title = "Index Airline";
+}
+
+<h2>Index for Airline</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAirlineCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Airline Name</th>
+        <th>Airline Type</th>
+        <th>Legal Name</th>
+        <th>Stock Market Symbol</th>
+        <th>Aircraft Count</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirlineName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirlineTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.LegalName) </td>
+            <td>@Html.DisplayFor(modelItem => item.StockMarketSymbol) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAirlineEdit", new { airlineId = item.AirlineId })
+                | @Html.ActionLink("Delete", "CrudeAirlineDelete", new { airlineId = item.AirlineId })
+            </td>
+        </tr>
+    }
+
+</table>

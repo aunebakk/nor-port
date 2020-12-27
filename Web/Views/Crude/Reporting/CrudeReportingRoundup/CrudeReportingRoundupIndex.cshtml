@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:55:07 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeReportingRoundupContract>
+
+@{
+    ViewBag.Title = "Index Reporting Roundup";
+}
+
+<h2>Index for Reporting Roundup</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeReportingRoundupCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Date</th>
+        <th>Reporting Roundup Type</th>
+        <th>Reporting Reference Code</th>
+        <th>Count Number</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Date) </td>
+            <td>@Html.DisplayFor(modelItem => item.ReportingRoundupTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ReportingReferenceCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.CountNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeReportingRoundupEdit", new { reportingRoundupId = item.ReportingRoundupId })
+                | @Html.ActionLink("Delete", "CrudeReportingRoundupDelete", new { reportingRoundupId = item.ReportingRoundupId })
+            </td>
+        </tr>
+    }
+
+</table>

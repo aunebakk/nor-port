@@ -1,0 +1,49 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:11 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Aircraft Type Ref";
+}
+
+<h2>Index for Aircraft Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAircraftTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Type</th>
+        <th>Aircraft Type Name</th>
+        <th>Description</th>
+        <th>Aircraft Family Image</th>
+        <th>Active Flag</th>
+        <th>Sort Order</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.Description) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftFamilyImage) </td>
+            <td>@Html.DisplayFor(modelItem => item.ActiveFlag) </td>
+            <td>@Html.DisplayFor(modelItem => item.SortOrder) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAircraftTypeRefEdit", new { aircraftTypeRcd = item.AircraftTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeAircraftTypeRefDelete", new { aircraftTypeRcd = item.AircraftTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

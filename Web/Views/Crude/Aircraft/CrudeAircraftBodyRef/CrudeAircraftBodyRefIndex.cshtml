@@ -1,0 +1,47 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:53:03 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftBodyRefContract>
+
+@{
+    ViewBag.Title = "Index Aircraft Body Ref";
+}
+
+<h2>Index for Aircraft Body Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAircraftBodyRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Body</th>
+        <th>Aircraft Body Name</th>
+        <th>Description</th>
+        <th>Active Flag</th>
+        <th>Sort Order</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftBodyRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftBodyName) </td>
+            <td>@Html.DisplayFor(modelItem => item.Description) </td>
+            <td>@Html.DisplayFor(modelItem => item.ActiveFlag) </td>
+            <td>@Html.DisplayFor(modelItem => item.SortOrder) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAircraftBodyRefEdit", new { aircraftBodyRcd = item.AircraftBodyRcd })
+                | @Html.ActionLink("Delete", "CrudeAircraftBodyRefDelete", new { aircraftBodyRcd = item.AircraftBodyRcd })
+            </td>
+        </tr>
+    }
+
+</table>

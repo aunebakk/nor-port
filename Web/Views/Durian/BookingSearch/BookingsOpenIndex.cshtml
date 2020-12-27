@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 7:18:33 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.BookingsOpenContract>
+
+@{
+    ViewBag.Title = "Bookings Open";
+}
+
+<h2>Bookings Open</h2>
+
+<table class="table">
+    <tr>
+        <th>Record Locator</th>
+        <th>Last Booking Event Type Name</th>
+        <th>Last Booking Event Date Time</th>
+        <th>Last Booking Contact Method</th>
+        <th>Booking Source Name</th>
+        <th>Adult Count</th>
+        <th>Child Count</th>
+        <th>Infant Count</th>
+        <th>Balance Amount</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.RecordLocator) </td>
+            <td>@Html.DisplayFor(modelItem => item.LastBookingEventTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.LastBookingEventDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.LastBookingContactMethod) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingSourceName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AdultCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.ChildCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.InfantCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BalanceAmount) </td>
+        </tr>
+    }
+
+</table>

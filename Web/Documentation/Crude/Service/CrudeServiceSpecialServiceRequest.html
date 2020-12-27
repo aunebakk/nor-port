@@ -1,0 +1,90 @@
+﻿
+<html>
+    <head>
+        <title>ServiceSpecialServiceRequest</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>ServiceSpecialServiceRequest Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeServiceSpecialServiceRequestService</label>
+        <br /><label>Contract name: CrudeServiceSpecialServiceRequestContract</label>
+        <br /><label>Fetcher: FetchByServiceSpecialServiceRequestId</label>
+        <br /><label>Id: ServiceSpecialServiceRequestId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Service/CrudeServiceSpecialServiceRequest.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Service Special Service Request Id            </td><td>System.Guid</td></tr>
+            <tr><td>Service Special Service Request Group            </td><td>System.String</td></tr>
+            <tr><td>Service Special Service Request Code            </td><td>System.String</td></tr>
+            <tr><td>Service Special Service Request Name            </td><td>System.String</td></tr>
+            <tr><td>Service Description            </td><td>System.String</td></tr>
+            <tr><td>Amount            </td><td>System.Decimal</td></tr>
+            <tr><td>Financial Currency Id            </td><td>System.Guid</td></tr>
+            <tr><td>Inventory Controlled Flag            </td><td>System.Boolean</td></tr>
+            <tr><td>Request Service Special Service Request Requirement            </td><td>System.String</td></tr>
+            <tr><td>Reply Service Special Service Request Requirement            </td><td>System.String</td></tr>
+            <tr><td>Service Special Service Request Operation Rule            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeServiceSpecialServiceRequestContract<b> FetchByServiceSpecialServiceRequestId </b>(System.Guid serviceSpecialServiceRequestId);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByFinancialCurrencyId </b>(System.Guid financialCurrencyId);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByServiceSpecialServiceRequestGroupRcd </b>(System.String serviceSpecialServiceRequestGroupRcd);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByRequestServiceSpecialServiceRequestRequirementRcd </b>(System.String requestServiceSpecialServiceRequestRequirementRcd);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByReplyServiceSpecialServiceRequestRequirementRcd </b>(System.String replyServiceSpecialServiceRequestRequirementRcd);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchByServiceSpecialServiceRequestOperationRuleRcd </b>(System.String serviceSpecialServiceRequestOperationRuleRcd);
+        <br />
+        <br />CrudeServiceSpecialServiceRequestContract<b> FetchByServiceSpecialServiceRequestCode </b>(System.String serviceSpecialServiceRequestCode);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchWithFilter </b>(System.Guid serviceSpecialServiceRequestId,System.String serviceSpecialServiceRequestGroupRcd,System.String serviceSpecialServiceRequestCode,System.String serviceSpecialServiceRequestName,System.String serviceDescription,System.Decimal amount,System.Guid financialCurrencyId,System.Boolean inventoryControlledFlag,System.String requestServiceSpecialServiceRequestRequirementRcd,System.String replyServiceSpecialServiceRequestRequirementRcd,System.String serviceSpecialServiceRequestOperationRuleRcd,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeServiceSpecialServiceRequestContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeServiceSpecialServiceRequestContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeServiceSpecialServiceRequestContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid serviceSpecialServiceRequestId);
+        <br />
+        <br />
+    </body>
+</html>
+

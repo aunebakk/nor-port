@@ -1,0 +1,29 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:55:08 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeReportingRoundupTypeRefContract
+
+@{
+    ViewBag.Title = "Details Reporting Roundup Type Ref";
+}
+
+<h2>Details for Reporting Roundup Type Ref</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Reporting Roundup Type Name</dt> <dd>@Html.DisplayFor(model => model.ReportingRoundupTypeName)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeReportingRoundupTypeRefEdit", new { reportingRoundupTypeRcd = Model.ReportingRoundupTypeRcd }) |
+    @Html.ActionLink("New", "CrudeReportingRoundupTypeRefCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeReportingRoundupTypeRefIndex")
+</p>

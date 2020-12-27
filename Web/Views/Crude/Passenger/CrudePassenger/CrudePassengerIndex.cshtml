@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 6:55:03 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudePassengerContract>
+
+@{
+    ViewBag.Title = "Index Passenger";
+}
+
+<h2>Index for Passenger</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudePassengerCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Passenger Type</th>
+        <th>Passenger Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.PassengerTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.PassengerName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudePassengerEdit", new { passengerId = item.PassengerId })
+                | @Html.ActionLink("Delete", "CrudePassengerDelete", new { passengerId = item.PassengerId })
+            </td>
+        </tr>
+    }
+
+</table>
