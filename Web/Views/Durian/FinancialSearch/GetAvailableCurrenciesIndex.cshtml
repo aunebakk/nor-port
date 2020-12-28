@@ -1,0 +1,37 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:45:52 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.GetAvailableCurrenciesContract>
+
+@{
+    ViewBag.Title = "Get Available Currencies";
+}
+
+<h2>Get Available Currencies</h2>
+
+<table class="table">
+    <tr>
+        <th>Financial Currency Against Financial Currency Type</th>
+        <th>Financial Currency Type Name</th>
+        <th>Amount</th>
+        <th>Equals Amount</th>
+        <th>Decimal Count</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyAgainstFinancialCurrencyTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.Amount) </td>
+            <td>@Html.DisplayFor(modelItem => item.EqualsAmount) </td>
+            <td>@Html.DisplayFor(modelItem => item.DecimalCount) </td>
+        </tr>
+    }
+
+</table>

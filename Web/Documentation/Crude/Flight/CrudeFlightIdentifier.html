@@ -1,0 +1,75 @@
+﻿
+<html>
+    <head>
+        <title>FlightIdentifier</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FlightIdentifier Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFlightIdentifierService</label>
+        <br /><label>Contract name: CrudeFlightIdentifierContract</label>
+        <br /><label>Fetcher: FetchByFlightIdentifierId</label>
+        <br /><label>Id: FlightIdentifierId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Flight/CrudeFlightIdentifier.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Flight Identifier Id            </td><td>System.Guid</td></tr>
+            <tr><td>Flight Id            </td><td>System.Guid</td></tr>
+            <tr><td>Flight Identifier Code            </td><td>System.String</td></tr>
+            <tr><td>Flight Identifier Type            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFlightIdentifierContract<b> FetchByFlightIdentifierId </b>(System.Guid flightIdentifierId);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchByFlightId </b>(System.Guid flightId);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchByFlightIdentifierTypeRcd </b>(System.String flightIdentifierTypeRcd);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchWithFilter </b>(System.Guid flightIdentifierId,System.Guid flightId,System.String flightIdentifierCode,System.String flightIdentifierTypeRcd,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFlightIdentifierContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFlightIdentifierContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFlightIdentifierContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid flightIdentifierId);
+        <br />
+        <br />
+    </body>
+</html>
+

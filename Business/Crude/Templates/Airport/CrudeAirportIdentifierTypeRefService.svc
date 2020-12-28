@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportIdentifierTypeRefService" CodeBehind="Crude\Templates\Airport\\\CrudeAirportIdentifierTypeRef.cs"%>

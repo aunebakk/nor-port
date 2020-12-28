@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:46:45 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.FlightsOnBookingContract>
+
+@{
+    ViewBag.Title = "Flights On Booking";
+}
+
+<h2>Flights On Booking</h2>
+
+<table class="table">
+    <tr>
+        <th>Flight Number</th>
+        <th>Origin Airport Code</th>
+        <th>Origin Airport Name</th>
+        <th>Destination Airport Code</th>
+        <th>Destination Airport Name</th>
+        <th>From Date Time</th>
+        <th>Until Date Time</th>
+        <th>Comment</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FlightNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.OriginAirportCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.OriginAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DestinationAirportCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DestinationAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.FromDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UntilDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,19 @@
+<div>
+    @if (ViewBag.Title == "Checkin") {
+        <b>@Html.ActionLink("All", "CheckinIndex", "Checkin", new { flightId = Model.FlightId }, null)</b>
+    } else {
+        @Html.ActionLink("All", "CheckinIndex", "Checkin", new { flightId = Model.FlightId }, null)
+    }
+    |
+    @if (ViewBag.Title == "CheckinNoEvents") {
+        <b>@Html.ActionLink("No Events", "CheckinNoEventsIndex", "Checkin", new { flightId = Model.FlightId }, null)</b>
+    } else {
+        @Html.ActionLink("No Events", "CheckinNoEventsIndex", "Checkin", new { flightId = Model.FlightId }, null)
+    }
+    |
+    @if (ViewBag.Title == "CheckinCheckedIn") {
+        <b>@Html.ActionLink("Checked In", "CheckinCheckedInIndex", "Checkin", new { flightId = Model.FlightId }, null)</b>
+    } else {
+        @Html.ActionLink("Checked In", "CheckinCheckedInIndex", "Checkin", new { flightId = Model.FlightId }, null) 
+    }
+</div>

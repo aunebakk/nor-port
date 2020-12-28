@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:18:07 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeGenderRefContract>
+
+@{
+    ViewBag.Title = "Index Gender Ref";
+}
+
+<h2>Index for Gender Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeGenderRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Gender</th>
+        <th>Gender Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.GenderRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.GenderName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeGenderRefEdit", new { genderRcd = item.GenderRcd })
+                | @Html.ActionLink("Delete", "CrudeGenderRefDelete", new { genderRcd = item.GenderRcd })
+            </td>
+        </tr>
+    }
+
+</table>

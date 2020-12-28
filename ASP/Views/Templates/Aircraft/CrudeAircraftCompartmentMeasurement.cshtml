@@ -1,0 +1,107 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:20:22 PM
+  From Machine: DESKTOP-LSRVP12
+  Filename: AircraftCompartmentMeasurement.json
+  Template: sql2x.TemplateDotNetCoreApiGenerator.View
+  Style: DotNetCoreApi
+-->
+
+<style>
+    a {
+        color: lightgray;
+    } 
+
+    html {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    table {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        border-color: red;
+        font-weight: 100;
+        margin: 0px;
+        max-width: 100%;
+        align-content: flex-start
+    }
+
+    th {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        text-align: left;
+    }
+
+    tr {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    td {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<h2><a id="CrudeAircraftCompartmentMeasurement">CrudeAircraftCompartmentMeasurement</a> ( DotNetCoreApi )</h2><br>
+<br>
+        <table>
+            <tr><td>Aircraft Compartment Measurement Id            </td><td>System.Guid</td></tr>
+            <tr><td>Length            </td><td>System.Decimal</td></tr>
+            <tr><td>Height            </td><td>System.Decimal</td></tr>
+            <tr><td>Width            </td><td>System.Decimal</td></tr>
+            <tr><td>Payload In Kilo            </td><td>System.Decimal</td></tr>
+            <tr><td>Unit Load Device Positions            </td><td>System.Int32</td></tr>
+            <tr><td>Carry On Bin Count            </td><td>System.Int32</td></tr>
+            <tr><td>Carry On Pieces Allowed Count            </td><td>System.Int32</td></tr>
+            <tr><td>Carry On Piece Max Weight In Kilo            </td><td>System.Int32</td></tr>
+            <tr><td>Infant Limit            </td><td>System.Int32</td></tr>
+            <tr><td>Bookable Limit            </td><td>System.Int32</td></tr>
+            <tr><td>Passenger Limit            </td><td>System.Int32</td></tr>
+            <tr><td>Row Count            </td><td>System.Int32</td></tr>
+            <tr><td>Column Count            </td><td>System.Int32</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+<br>
+<br>
+<i>GET</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchAll'>FetchAll</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchAllCount'>FetchAllCount</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchAllWithLimit' asp-route-limit='1'>FetchAllWithLimit</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchAllWithLimitAndOffset' asp-route-limit='1' asp-route-offset='1'>FetchAllWithLimitAndOffset</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchByAircraftCompartmentMeasurementId' asp-route-aircraftcompartmentmeasurementid=00000000-0000-0000-0000-000000000001>FetchByAircraftCompartmentMeasurementId</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementFetchByAircraftCompartmentMeasurementId' asp-route-aircraftcompartmentmeasurementid=Guid.Empty>FetchByAircraftCompartmentMeasurementId</a><br>
+<br>
+<br>
+<i>POST</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementCreate'>CrudeAircraftCompartmentMeasurementCreate</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementCreateTest'>Create Test (GET)</a><br>
+<br>
+<br>
+<i>PUT</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementUpdate'>CrudeAircraftCompartmentMeasurementUpdate</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementUpdateTest'>Update Test (GET)</a><br>
+<br>
+<br>
+<i>DELETE</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementDelete'>CrudeAircraftCompartmentMeasurementDelete</a><br>
+<a asp-area='' asp-controller='CrudeAircraftCompartmentMeasurement' asp-action='CrudeAircraftCompartmentMeasurementDeleteTest'>Delete Test (GET)</a><br>

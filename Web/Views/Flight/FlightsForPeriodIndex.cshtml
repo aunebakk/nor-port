@@ -1,0 +1,78 @@
+@model SolutionNorSolutionPort.BusinessLogicLayer.FlightsForPeriodLiveContract
+
+@{
+    ViewBag.Title = "Flights For Period";
+}
+
+<h2>Flights</h2>
+
+<br>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <div>
+        <div class="form-group">
+            @Html.Label("Period:", htmlAttributes: new { @class = "control-label col-md-2", @style = "display:inline-block;width:100px" })
+
+            @Html.EditorFor(model => model.FromDateTime, new { htmlAttributes = new { @class = "form-control date-picker", @style = "display:inline-block;width:125px", @Value = @Model.FromDateTime.ToString("yyyy-MM-dd") } })
+            @Html.ValidationMessageFor(model => model.FromDateTime, "", new { @class = "text-danger" })
+
+            @Html.EditorFor(model => model.UntilDateTime, new { htmlAttributes = new { @class = "form-control date-picker", @style = "display:inline-block;width:125px", @Value = @Model.UntilDateTime.ToString("yyyy-MM-dd") } })
+            @Html.ValidationMessageFor(model => model.UntilDateTime, "", new { @class = "text-danger" })
+           <input type="submit" value="Search" class="btn-primary" style="display:inline-block"/>
+        </div>
+    </div>
+}
+<br />
+<table class="table">
+    <tr>
+        <th>Airline Identifier Code</th>
+        <th>Flight Number</th>
+        <th>Departure Airport Identifier Code</th>
+        <th>Departure Airport Name</th>
+        <th>Arrival Airport Identifier Code</th>
+        <th>Arrival Airport Name</th>
+        <th>From Date Time</th>
+        <th>Until Date Time</th>
+        <th>Last Date Time Type Name</th>
+        <th>Planned Departure Date Time</th>
+        <th>Estimated Departure Date Time</th>
+        <th>Comment</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Flights) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.FlightNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.FromDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UntilDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.LastDateTimeTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.PlannedDepartureDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.EstimatedDepartureDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>
+                @Html.ActionLink("Segments", "FlightSegmentsIndex", "FlightSegments", new { flightId = item.FlightId }, null) 
+                @Html.ActionLink("Events", "FlightEventsIndex", "FlightEvents", new { flightId = item.FlightId }, null) |
+                @Html.ActionLink("Edit", "FlightEdit", "Flight", new { flightId = item.FlightId }, null) |
+                @Html.ActionLink("Passengers", "PassengersOnFlightIndex", "PassengersOnFlight", new { flightId = item.FlightId }, null)
+            </td>
+        </tr>
+    }
+
+</table>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

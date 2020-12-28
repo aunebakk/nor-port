@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeDefaultPerformanceIssueService" CodeBehind="Crude\Templates\Default\\\CrudeDefaultPerformanceIssue.cs"%>

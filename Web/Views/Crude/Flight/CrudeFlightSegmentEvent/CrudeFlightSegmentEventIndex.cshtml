@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:18:06 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightSegmentEventContract>
+
+@{
+    ViewBag.Title = "Index Flight Segment Event";
+}
+
+<h2>Index for Flight Segment Event</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeFlightSegmentEventCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Flight Segment Event Number</th>
+        <th>Date Time Type</th>
+        <th>New Date Time</th>
+        <th>Remarks</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FlightSegmentEventNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTimeTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.NewDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.Remarks) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeFlightSegmentEventEdit", new { flightSegmentEventId = item.FlightSegmentEventId })
+                | @Html.ActionLink("Delete", "CrudeFlightSegmentEventDelete", new { flightSegmentEventId = item.FlightSegmentEventId })
+            </td>
+        </tr>
+    }
+
+</table>

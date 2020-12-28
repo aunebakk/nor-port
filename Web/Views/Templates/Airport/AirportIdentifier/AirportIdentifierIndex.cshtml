@@ -1,0 +1,50 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:49:17 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateWithDurianGenerator.ParentViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AirportIdentifierIndexWithFilterContract>
+
+@{
+    ViewBag.Title = "Index Airport Identifier";
+}
+
+<h2>Index for Airport Identifier</h2>
+
+<br />
+@Html.Partial("~/Views/Templates/Airport/_tab.cshtml")
+<br />
+
+<p>
+    @Html.ActionLink("Create New", "AirportIdentifierCreate", new { airportId = ViewBag.AirportId })
+</p>
+
+<table class="table">
+    <tr>
+        <th>Airport Name</th>
+        <th>Airport Identifier Type Name</th>
+        <th>Default User Name</th>
+        <th>Airport Identifier Type</th>
+        <th>Airport Identifier Code</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportIdentifierTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportIdentifierTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "AirportIdentifierEdit", new { airportIdentifierId = item.AirportIdentifierId })
+            </td>
+        </tr>
+    }
+
+</table>

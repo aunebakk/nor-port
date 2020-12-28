@@ -1,0 +1,29 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:26 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportFacilityContract
+
+@{
+    ViewBag.Title = "Details Airport Facility";
+}
+
+<h2>Details for Airport Facility</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Airport Facility Name</dt> <dd>@Html.DisplayFor(model => model.AirportFacilityName)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeAirportFacilityEdit", new { airportFacilityId = Model.AirportFacilityId }) |
+    @Html.ActionLink("New", "CrudeAirportFacilityCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeAirportFacilityIndex")
+</p>

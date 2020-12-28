@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:09 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAgencyContract>
+
+@{
+    ViewBag.Title = "Index Agency";
+}
+
+<h2>Index for Agency</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAgencyCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Agency Code</th>
+        <th>Agency Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AgencyCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.AgencyName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAgencyEdit", new { agencyId = item.AgencyId })
+                | @Html.ActionLink("Delete", "CrudeAgencyDelete", new { agencyId = item.AgencyId })
+            </td>
+        </tr>
+    }
+
+</table>

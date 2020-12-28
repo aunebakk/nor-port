@@ -1,0 +1,89 @@
+﻿
+<html>
+    <head>
+        <title>FlightSchedule</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FlightSchedule Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFlightScheduleService</label>
+        <br /><label>Contract name: CrudeFlightScheduleContract</label>
+        <br /><label>Fetcher: FetchByFlightScheduleId</label>
+        <br /><label>Id: FlightScheduleId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Flight/CrudeFlightSchedule.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Flight Schedule Id            </td><td>System.Guid</td></tr>
+            <tr><td>Became Flight Schedule Id            </td><td>System.Guid</td></tr>
+            <tr><td>Binding Flight Schedule Id            </td><td>System.Guid</td></tr>
+            <tr><td>Airline Id            </td><td>System.Guid</td></tr>
+            <tr><td>Aircraft Type            </td><td>System.String</td></tr>
+            <tr><td>Departure Airport Id            </td><td>System.Guid</td></tr>
+            <tr><td>Arrival Airport Id            </td><td>System.Guid</td></tr>
+            <tr><td>Comment            </td><td>System.String</td></tr>
+            <tr><td>From Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Until Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFlightScheduleContract<b> FetchByFlightScheduleId </b>(System.Guid flightScheduleId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByBecameFlightScheduleId </b>(System.Guid becameFlightScheduleId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByBindingFlightScheduleId </b>(System.Guid bindingFlightScheduleId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByAirlineId </b>(System.Guid airlineId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByDepartureAirportId </b>(System.Guid departureAirportId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByArrivalAirportId </b>(System.Guid arrivalAirportId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchByAircraftTypeRcd </b>(System.String aircraftTypeRcd);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchWithFilter </b>(System.Guid flightScheduleId,System.Guid becameFlightScheduleId,System.Guid bindingFlightScheduleId,System.Guid airlineId,System.String aircraftTypeRcd,System.Guid departureAirportId,System.Guid arrivalAirportId,System.String comment,System.DateTime fromDateTime,System.DateTime untilDateTime,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFlightScheduleContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFlightScheduleContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFlightScheduleContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid flightScheduleId);
+        <br />
+        <br />
+    </body>
+</html>
+

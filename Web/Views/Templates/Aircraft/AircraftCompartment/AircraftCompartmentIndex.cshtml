@@ -1,0 +1,48 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:48:13 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateWithDurianGenerator.ParentViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AircraftCompartmentIndexWithFilterContract>
+
+@{
+    ViewBag.Title = "Index Aircraft Compartment";
+}
+
+<h2>Index for Aircraft Compartment</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AircraftCompartmentCreate", new { aircraftId = ViewBag.AircraftId })
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Name</th>
+        <th>Aircraft Compartment Type Name</th>
+        <th>Aircraft Compartment Name</th>
+        <th>Default User Name</th>
+        <th>Engine Type</th>
+        <th>Aircraft Compartment Type</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftCompartmentTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftCompartmentName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.EngineType) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftCompartmentTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "AircraftCompartmentEdit", new { aircraftCompartmentId = item.AircraftCompartmentId })
+            </td>
+        </tr>
+    }
+
+</table>

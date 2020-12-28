@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:57 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeCountryContract>
+
+@{
+    ViewBag.Title = "Index Country";
+}
+
+<h2>Index for Country</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeCountryCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Country Code</th>
+        <th>Country Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.CountryCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.CountryName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeCountryEdit", new { countryId = item.CountryId })
+                | @Html.ActionLink("Delete", "CrudeCountryDelete", new { countryId = item.CountryId })
+            </td>
+        </tr>
+    }
+
+</table>

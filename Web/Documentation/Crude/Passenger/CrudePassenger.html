@@ -1,0 +1,83 @@
+﻿
+<html>
+    <head>
+        <title>Passenger</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>Passenger Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudePassengerService</label>
+        <br /><label>Contract name: CrudePassengerContract</label>
+        <br /><label>Fetcher: FetchByPassengerId</label>
+        <br /><label>Id: PassengerId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Passenger/CrudePassenger.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Passenger Id            </td><td>System.Guid</td></tr>
+            <tr><td>Became Passenger Id            </td><td>System.Guid</td></tr>
+            <tr><td>Binding Passenger Id            </td><td>System.Guid</td></tr>
+            <tr><td>Passenger Type            </td><td>System.String</td></tr>
+            <tr><td>Passenger Name            </td><td>System.String</td></tr>
+            <tr><td>Default State            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudePassengerContract<b> FetchByPassengerId </b>(System.Guid passengerId);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchByBecamePassengerId </b>(System.Guid becamePassengerId);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchByBindingPassengerId </b>(System.Guid bindingPassengerId);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchByPassengerTypeRcd </b>(System.String passengerTypeRcd);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchByDefaultStateRcd </b>(System.String defaultStateRcd);
+        <br />
+        <br />CrudePassengerContract<b> FetchByPassengerName </b>(System.String passengerName);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchWithFilter </b>(System.Guid passengerId,System.Guid becamePassengerId,System.Guid bindingPassengerId,System.String passengerTypeRcd,System.String passengerName,System.String defaultStateRcd,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudePassengerContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudePassengerContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudePassengerContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid passengerId);
+        <br />
+        <br />
+    </body>
+</html>
+

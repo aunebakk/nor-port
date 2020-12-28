@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:47 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingSourceRefContract>
+
+@{
+    ViewBag.Title = "Index Booking Source Ref";
+}
+
+<h2>Index for Booking Source Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingSourceRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Booking Source</th>
+        <th>Booking Source Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingSourceRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingSourceName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingSourceRefEdit", new { bookingSourceRcd = item.BookingSourceRcd })
+                | @Html.ActionLink("Delete", "CrudeBookingSourceRefDelete", new { bookingSourceRcd = item.BookingSourceRcd })
+            </td>
+        </tr>
+    }
+
+</table>

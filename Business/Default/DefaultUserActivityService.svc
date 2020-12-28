@@ -1,0 +1,1 @@
+<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.DefaultUserActivityService" CodeBehind="C:\projects\nor-star\norport\code\BusinessLogicLayer\Default\\DefaultUserActivityService.cs"%>

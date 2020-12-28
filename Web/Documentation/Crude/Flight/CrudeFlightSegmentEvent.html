@@ -1,0 +1,77 @@
+﻿
+<html>
+    <head>
+        <title>FlightSegmentEvent</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FlightSegmentEvent Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFlightSegmentEventService</label>
+        <br /><label>Contract name: CrudeFlightSegmentEventContract</label>
+        <br /><label>Fetcher: FetchByFlightSegmentEventId</label>
+        <br /><label>Id: FlightSegmentEventId, System.Guid</label>
+        <br /><label>SOAP Interface: </label><a href="http://NorSolutionPortBusiness.azurewebsites.net/Crude\Templates\Flight/CrudeFlightSegmentEvent.svc?singleWsdl">&nbsp;Live Link</a>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Flight Segment Event Id            </td><td>System.Guid</td></tr>
+            <tr><td>Flight Segment Id            </td><td>System.Guid</td></tr>
+            <tr><td>Flight Segment Event Number            </td><td>System.Int32</td></tr>
+            <tr><td>Date Time Type            </td><td>System.String</td></tr>
+            <tr><td>New Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Remarks            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFlightSegmentEventContract<b> FetchByFlightSegmentEventId </b>(System.Guid flightSegmentEventId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchByFlightSegmentId </b>(System.Guid flightSegmentId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchByDateTimeTypeRcd </b>(System.String dateTimeTypeRcd);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchWithFilter </b>(System.Guid flightSegmentEventId,System.Guid flightSegmentId,System.Int32 flightSegmentEventNumber,System.String dateTimeTypeRcd,System.DateTime newDateTime,System.String remarks,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFlightSegmentEventContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFlightSegmentEventContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFlightSegmentEventContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid flightSegmentEventId);
+        <br />
+        <br />
+    </body>
+</html>
+

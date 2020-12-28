@@ -1,0 +1,31 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:43:40 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.DefaultUserActivityByHourContract>
+
+@{
+    ViewBag.Title = "Default User Activity By Hour";
+}
+
+<h2>Default User Activity By Hour</h2>
+
+<table class="table">
+    <tr>
+        <th>Hour Number</th>
+        <th>Hour Count</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.HourNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.HourCount) </td>
+        </tr>
+    }
+
+</table>

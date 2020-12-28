@@ -1,0 +1,59 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:47:54 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.FetchServiceSpecialServiceRequestWithFilterContract>
+
+@{
+    ViewBag.Title = "Fetch Service Special Service Request With Filter";
+}
+
+<h2>Fetch Service Special Service Request With Filter</h2>
+
+<table class="table">
+    <tr>
+        <th>Service Special Service Request Group</th>
+        <th>Service Special Service Request Group Name</th>
+        <th>Service Special Service Request Code</th>
+        <th>Service Special Service Request Name</th>
+        <th>Service Description</th>
+        <th>Amount</th>
+        <th>Financial Currency Type Name</th>
+        <th>Inventory Controlled Flag</th>
+        <th>Request Service Special Service Request Requirement</th>
+        <th>Request Requirement Name</th>
+        <th>Reply Service Special Service Request Requirement</th>
+        <th>Reply Requirement Name</th>
+        <th>Service Special Service Request Operation Rule</th>
+        <th>Service Special Service Request Operation Rule Name</th>
+        <th>Default User Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestGroupRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestGroupName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceDescription) </td>
+            <td>@Html.DisplayFor(modelItem => item.Amount) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.InventoryControlledFlag) </td>
+            <td>@Html.DisplayFor(modelItem => item.RequestServiceSpecialServiceRequestRequirementRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.RequestRequirementName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ReplyServiceSpecialServiceRequestRequirementRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ReplyRequirementName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DefaultUserName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+        </tr>
+    }
+
+</table>

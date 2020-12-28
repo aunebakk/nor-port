@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:38 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingEventContract>
+
+@{
+    ViewBag.Title = "Index Booking Event";
+}
+
+<h2>Index for Booking Event</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingEventCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Booking Event Type</th>
+        <th>Comment</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingEventTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingEventEdit", new { bookingEventId = item.BookingEventId })
+                | @Html.ActionLink("Delete", "CrudeBookingEventDelete", new { bookingEventId = item.BookingEventId })
+            </td>
+        </tr>
+    }
+
+</table>

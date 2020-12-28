@@ -1,0 +1,49 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateManual",
+  "Filename": "_airline.json",
+  "Table": {
+    "DomainName": "Airline",
+    "TableName": "airline",
+    "ClassNamePascalCase": "Airline",
+    "VariableNameCamelCase": "airline",
+    "AutoUpdateScheme": "autoupdatenormal",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": "",
+    "Children": [
+      {
+        "TableName": "airline_contact_method",
+        "ClassNamePascalCase": "AirlineContactMethod",
+        "MainColumnName": "contact_method_way",
+        "MainColumnPascalCase": "ContactMethodWay",
+        "ReferenceTranslateFrom": "",
+        "ReferenceTranslateFromPascalCase": "",
+        "ReferenceTranslateTo": "",
+        "ReferenceTranslateToPascalCase": "",
+        "ReferenceTranslateToDisplay": ""
+      }
+    ]
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkWithDurian",
+    "Name": "WithDurian",
+    "DesignTypeScript": "",
+    "PrimaryKey": "",
+    "AzureAppName": "",
+    "OverrideDisplayableName": null,
+    "WebStyle": "TabularOnEditCreate",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "AirlineSearch",
+    "DurianParameterToOwner": false,
+    "DurianParameters": false,
+    "DurianMethod": "GetAirlineIndexWithFilter"
+  },
+  "Header": [],
+  "RefreshLink": "",
+  "Injection": "",
+  "Result": null
+}

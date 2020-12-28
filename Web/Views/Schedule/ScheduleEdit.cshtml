@@ -1,0 +1,167 @@
+@model SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract
+
+@{
+    ViewBag.Title = "Edit Schedule";
+}
+
+<h2>Edit Schedule</h2>
+<div>
+    @Html.ActionLink("Back to Schedule", "FlightScheduleIndex", "FlightScheduleLive") |
+    @Html.ActionLink("History", "FlightScheduleHistoryIndex", "FlightScheduleHistory", new { flightScheduleId = @Model.FlightSchedule.BindingFlightScheduleId }, null)
+</div>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.FlightSchedule.FlightScheduleId)
+        @Html.HiddenFor(model => model.FlightSchedule.BindingFlightScheduleId)
+        @Html.HiddenFor(model => model.FlightSchedule.UserId)
+        @Html.HiddenFor(model => model.FlightSchedule.DateTime)
+        @Html.HiddenFor(model => model.FlightScheduleIdentifier.FlightScheduleIdentifierId)
+        @Html.HiddenFor(model => model.FlightScheduleIdentifier.FlightScheduleId)
+        @Html.HiddenFor(model => model.FlightScheduleIdentifier.FlightIdentifierTypeRcd)
+        @Html.HiddenFor(model => model.FlightScheduleIdentifier.DateTime)
+        @Html.HiddenFor(model => model.FlightScheduleIdentifier.UserId)
+
+        <div class="form-group">
+            @Html.Label("Airline Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AirlineId", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Flight Number", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FlightNumberFN3, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FlightNumberFN3, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Aircraft Type", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AircraftTypeRcd", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Departure Airport Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("DepartureAirportId", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Arrival Airport Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ArrivalAirportId", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Comment", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FlightSchedule.Comment, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FlightSchedule.Comment, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("From Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FlightSchedule.FromDateTime, 
+                new { htmlAttributes = new { @class = "form-control date-picker", 
+                                             @Value = @Model.FlightSchedule.FromDateTime.ToString("yyyy-MM-dd") } })
+                @Html.ValidationMessageFor(model => model.FlightSchedule.FromDateTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Until Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FlightSchedule.UntilDateTime, 
+                new { htmlAttributes = new { @class = "form-control date-picker", 
+                                             @Value = @Model.FlightSchedule.UntilDateTime.ToString("yyyy-MM-dd") } })
+                @Html.ValidationMessageFor(model => model.FlightSchedule.UntilDateTime, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("User Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DefaultUserName")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DateTime")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn-primary" />
+            </div>
+        </div>
+    </div>
+    <br />
+    <div>
+        @Html.ActionLink("Add Segment", "ScheduleSegmentCreate", new { flightScheduleId = @Model.FlightSchedule.FlightScheduleId })
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>Airline Identifier Code</th>
+        <th>Flight Number</th>
+        <th>Departure Airport Identifier Code</th>
+        <th>Departure Airport Name</th>
+        <th>Arrival Airport Identifier Code</th>
+        <th>Arrival Airport Name</th>
+        <th>Logical Segment Number</th>
+        <th>Physical Segment Number</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Departure Gate</th>
+        <th>Arrival Gate</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.FlightScheduleSegments) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.FlightNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.LogicalSegmentNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.PhysicalSegmentNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureGate) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalGate) </td>
+            <td>
+                @Html.ActionLink("Edit", "ScheduleSegmentEdit", new { flightScheduleSegmentId = item.FlightScheduleSegmentId })
+            </td>
+        </tr>
+    }
+
+</table>
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

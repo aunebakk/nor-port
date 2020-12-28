@@ -1,0 +1,29 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 12/27/2020 11:16:26 PM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportFacilityTypeRefContract
+
+@{
+    ViewBag.Title = "Details Airport Facility Type Ref";
+}
+
+<h2>Details for Airport Facility Type Ref</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Airport Facility Type Name</dt> <dd>@Html.DisplayFor(model => model.AirportFacilityTypeName)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeAirportFacilityTypeRefEdit", new { airportFacilityTypeRcd = Model.AirportFacilityTypeRcd }) |
+    @Html.ActionLink("New", "CrudeAirportFacilityTypeRefCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeAirportFacilityTypeRefIndex")
+</p>
