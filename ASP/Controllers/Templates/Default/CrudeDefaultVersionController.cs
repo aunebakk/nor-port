@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/27/2020 11:25:41 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/28/2020 12:19:39 AM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -122,7 +122,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "MajorNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "MinorNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "SequenceNumber" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/27/2020 11:25:41 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 12:19:39 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -168,7 +168,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "MajorNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "MinorNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "SequenceNumber" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/27/2020 11:25:41 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 12:19:39 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
