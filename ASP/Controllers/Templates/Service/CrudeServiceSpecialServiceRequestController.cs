@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 12:25:59 AM
+  Generated Date: 12/28/2020 8:17:11 AM
   From Machine: DESKTOP-BP3OHLH
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -196,7 +196,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "RequestServiceSpecialServiceRequestRequirementRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ReplyServiceSpecialServiceRequestRequirementRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ServiceSpecialServiceRequestOperationRuleRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 12:25:59 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 8:17:11 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -244,7 +244,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "RequestServiceSpecialServiceRequestRequirementRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ReplyServiceSpecialServiceRequestRequirementRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ServiceSpecialServiceRequestOperationRuleRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 12:25:59 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 8:17:11 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

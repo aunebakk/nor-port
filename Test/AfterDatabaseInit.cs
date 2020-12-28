@@ -16,7 +16,7 @@ namespace UnitTest {
         /// Initiate schedule 
         /// </summary>
         [TestMethod]
-        public void Step1_Web_InitiateDB() {
+        public void Step01_Web_InitiateDB() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
 
@@ -54,7 +54,7 @@ namespace UnitTest {
         /// Initiate schedule 
         /// </summary>
         [TestMethod]
-        public void Step2_API_MakeFlights() {
+        public void Step02_API_MakeFlights() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
 
@@ -67,7 +67,7 @@ namespace UnitTest {
         /// check flight schedule and make bookings
         /// </summary>
         [TestMethod]
-        public void Step3_API_CheckFlightAndMakeBookings() {
+        public void Step03_API_CheckFlightAndMakeBookings() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
 
@@ -89,7 +89,7 @@ namespace UnitTest {
         /// check reports
         /// </summary>
         [TestMethod]
-        public void Step4_Web_Reports() {
+        public void Step04_Web_Reports() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
 
@@ -101,7 +101,7 @@ namespace UnitTest {
             int iPos = html.IndexOf("Gardermoen");
 
             Assert.IsTrue(
-                            condition: iPos > 15000 && iPos < 18999,
+                            condition: iPos > 22000 && iPos < 24000,
                             message: $"airport not in expected position, found in {iPos}"
                             );
 
@@ -113,8 +113,8 @@ namespace UnitTest {
             int dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("MM/dd/2020")} 5:00:00 AM");
 
             Assert.IsTrue(
-                            condition: dateTimePosition > 18000 && dateTimePosition < 20000,
-                            message: $"SAS 620 not in position {"18000 to 20000"} but in {dateTimePosition}"
+                            condition: dateTimePosition > 24000 && dateTimePosition < 26000,
+                            message: $"SAS 620 not in position {"24000 to 26000"} but in {dateTimePosition}"
                             );
 
             // SAS 638 ( last flight arrival )
@@ -130,7 +130,7 @@ namespace UnitTest {
         /// Number of aircrafts must be 3 after database has been initialized
         /// </summary>
         [TestMethod]
-        public void Step5_SOAP_Count_Aircrafts() {
+        public void Step05_SOAP_Count_Aircrafts() {
             Assert.AreEqual(
                     expected: 3,
                     actual: new SolutionNorSolutionPort.BusinessLogicLayer.AircraftSearchService().AircraftIndexWithFilter().Count,
@@ -142,7 +142,7 @@ namespace UnitTest {
         /// Number of flights must be 22
         /// </summary>
         [TestMethod]
-        public void Step6_SOAP_Count_Flights() {
+        public void Step06_SOAP_Count_Flights() {
             Assert.AreEqual(
                     expected: 22,
                     actual: new SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightServiceClient().FetchAllCount(),
@@ -154,7 +154,7 @@ namespace UnitTest {
         /// Number of flights must be 22
         /// </summary>
         [TestMethod]
-        public void Step7_REST_Count_Flights() {
+        public void Step07_REST_Count_Flights() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
             
@@ -174,7 +174,7 @@ namespace UnitTest {
         /// Number of flights must be 22
         /// </summary>
         [TestMethod]
-        public void Step8_REST_Check_Flights() {
+        public void Step08_REST_Check_Flights() {
             Simulate simulate = new Simulate();
             WebClient client = new WebClient();
 
@@ -212,7 +212,7 @@ namespace UnitTest {
         /// test proxy
         /// </summary>
         [TestMethod]
-        public void Step9_REST_Proxy_test() {
+        public void Step09_REST_Proxy_test() {
 
             AircraftSearchServiceClient aircraftSearchServiceProxy = new AircraftSearchServiceClient();
 

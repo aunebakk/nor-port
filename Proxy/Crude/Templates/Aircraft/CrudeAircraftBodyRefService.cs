@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 12:03:59 AM
+  Generated Date: 12/28/2020 7:53:38 AM
   From Machine: DESKTOP-BP3OHLH
   Filename: AircraftBodyRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy

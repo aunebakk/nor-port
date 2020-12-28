@@ -10,7 +10,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D65B8EE9-618F-47D6-884A-220ABB40A1D8}</ProjectGuid>
+    <ProjectGuid>{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -834,22 +834,23 @@
     <Content Include="Views\Shared\_Layout.bootstrap3.cshtml" />
     <Content Include="Views\Shared\_Layout.TypeScript.Phone.cshtml" />
     <Content Include="Views\Shared\_LayoutWithCrud.cshtml" />
+    <Content Include="Views\Durian\AircraftSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\AircraftSearch\AircraftDetailsIndex.cshtml" />
     <Content Include="Views\Durian\AircraftSearch\AircraftSearch.cshtml" />
-    <Content Include="Views\Home\Durian\AircraftSearch\AircraftSearchDurians.cshtml" />
+    <Content Include="Views\Home\Durians.cshtml" />
+    <Content Include="Views\Durian\AircraftMaintenanceSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftMaintenanceDocumentIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftMaintenanceSearch.cshtml" />
-    <Content Include="Views\Home\Durian\AircraftMaintenanceSearch\AircraftMaintenanceSearchDurians.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftMaintenanceIdentifierIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftMaintenanceCompartmentIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftMaintenanceIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\AircraftMaintenanceSearch\AircraftPIMDetailsIndex.cshtml" />
+    <Content Include="Views\Durian\AirportSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\AirportSearch\GetAirportIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\AirportSearch\AirportSearch.cshtml" />
-    <Content Include="Views\Home\Durian\AirportSearch\AirportSearchDurians.cshtml" />
+    <Content Include="Views\Durian\BookingSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingEventCountIndex.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingSearch.cshtml" />
-    <Content Include="Views\Home\Durian\BookingSearch\BookingSearchDurians.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingFinancialPaymentsIndex.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingServiceSummaryIndex.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingFinancialTransactionsIndex.cshtml" />
@@ -859,15 +860,15 @@
     <Content Include="Views\Durian\BookingSearch\BookingsOpenIndex.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingEventHistoryIndex.cshtml" />
     <Content Include="Views\Durian\BookingSearch\BookingStatisticsIndex.cshtml" />
+    <Content Include="Views\Durian\CarRentalSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\CarRentalSearch\GetCarRentalIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\CarRentalSearch\CarRentalSearch.cshtml" />
-    <Content Include="Views\Home\Durian\CarRentalSearch\CarRentalSearchDurians.cshtml" />
+    <Content Include="Views\Durian\ClientSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\ClientSearch\GetClientWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\ClientSearch\ClientSearch.cshtml" />
-    <Content Include="Views\Home\Durian\ClientSearch\ClientSearchDurians.cshtml" />
+    <Content Include="Views\Durian\DefaultSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultTestOverviewIndex.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultSearch.cshtml" />
-    <Content Include="Views\Home\Durian\DefaultSearch\DefaultSearchDurians.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DashboardCountsIndex.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultPerformanceIssueFetchWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultIssueWithFilterIndex.cshtml" />
@@ -888,15 +889,15 @@
     <Content Include="Views\Durian\DefaultSearch\GetDefaultChangeLogIndex.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultResourceStatisticsIndex.cshtml" />
     <Content Include="Views\Durian\DefaultSearch\DefaultResourceDatabaseStatisticsIndex.cshtml" />
+    <Content Include="Views\Durian\DefaultTestSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\DefaultTestSearch\DefaultTestSearchQueryIndex.cshtml" />
     <Content Include="Views\Durian\DefaultTestSearch\DefaultTestSearch.cshtml" />
-    <Content Include="Views\Home\Durian\DefaultTestSearch\DefaultTestSearchDurians.cshtml" />
+    <Content Include="Views\Durian\FerrySearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\FerrySearch\GetFerryIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\FerrySearch\FerrySearch.cshtml" />
-    <Content Include="Views\Home\Durian\FerrySearch\FerrySearchDurians.cshtml" />
+    <Content Include="Views\Durian\FinancialSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\TransactionsCreditDebitBalanceIndex.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\FinancialSearch.cshtml" />
-    <Content Include="Views\Home\Durian\FinancialSearch\FinancialSearchDurians.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\SpecialServiceRequestListIndex.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\ServiceHotelListIndex.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\ServiceCarRentalListIndex.cshtml" />
@@ -906,9 +907,9 @@
     <Content Include="Views\Durian\FinancialSearch\VoucherSearchWithRemainingAmountIndex.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\FinancialFaresIndex.cshtml" />
     <Content Include="Views\Durian\FinancialSearch\GetAvailableCurrenciesIndex.cshtml" />
+    <Content Include="Views\Durian\FlightSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightEventsIndex.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightSearch.cshtml" />
-    <Content Include="Views\Home\Durian\FlightSearch\FlightSearchDurians.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightsForPeriodIndex.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightsForBookingWithFareIndex.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightsWithBookingInformationIndex.cshtml" />
@@ -917,23 +918,23 @@
     <Content Include="Views\Durian\FlightSearch\AirportsAvailableWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightSegmentsIndex.cshtml" />
     <Content Include="Views\Durian\FlightSearch\FlightsOnBookingIndex.cshtml" />
+    <Content Include="Views\Durian\HotelSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\HotelSearch\GetHotelIndexWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\HotelSearch\HotelSearch.cshtml" />
-    <Content Include="Views\Home\Durian\HotelSearch\HotelSearchDurians.cshtml" />
+    <Content Include="Views\Durian\PassengerSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\PassengerSearch\PassengersOnBookingIndex.cshtml" />
     <Content Include="Views\Durian\PassengerSearch\PassengerSearch.cshtml" />
-    <Content Include="Views\Home\Durian\PassengerSearch\PassengerSearchDurians.cshtml" />
     <Content Include="Views\Durian\PassengerSearch\PassengersOnFlightIndex.cshtml" />
     <Content Include="Views\Durian\PassengerSearch\PassengersOnFlightCheckedInIndex.cshtml" />
     <Content Include="Views\Durian\PassengerSearch\PassengersOnFlightWithoutEventsIndex.cshtml" />
+    <Content Include="Views\Durian\ScheduleSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\ScheduleSearch\FlightScheduleIndex.cshtml" />
     <Content Include="Views\Durian\ScheduleSearch\ScheduleSearch.cshtml" />
-    <Content Include="Views\Home\Durian\ScheduleSearch\ScheduleSearchDurians.cshtml" />
     <Content Include="Views\Durian\ScheduleSearch\FlightScheduleHistoryIndex.cshtml" />
     <Content Include="Views\Durian\ScheduleSearch\FlightSegmentsScheduleIndex.cshtml" />
+    <Content Include="Views\Durian\ServiceSearch\ActionLinkSnippets.cshtml" />
     <Content Include="Views\Durian\ServiceSearch\ServicePackagePromotionWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\ServiceSearch\ServiceSearch.cshtml" />
-    <Content Include="Views\Home\Durian\ServiceSearch\ServiceSearchDurians.cshtml" />
     <Content Include="Views\Durian\ServiceSearch\FetchServiceSpecialServiceRequestWithFilterIndex.cshtml" />
     <Content Include="Views\Durian\ServiceSearch\GetServicePackageIndex.cshtml" />
     <Content Include="Views\Templates\Aircraft\Aircraft\AircraftIndex.cshtml" />
@@ -1921,11 +1922,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{895d9a65-c2b7-41ec-af71-578841dea7c1}</Project>
+      <Project>{40c0cad5-9608-4f84-a564-51659d0dba23}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{30e5e8f7-9b24-4f0d-aafb-755ef546fefd}</Project>
+      <Project>{86d7cd23-77fb-4888-b0e6-61d7aac55997}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1955,7 +1956,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>51086</DevelopmentServerPort>
+          <DevelopmentServerPort>51548</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

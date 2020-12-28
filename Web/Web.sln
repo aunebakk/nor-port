@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web.csproj", "{D65B8EE9-618F-47D6-884A-220ABB40A1D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web.csproj", "{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D65B8EE9-618F-47D6-884A-220ABB40A1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D65B8EE9-618F-47D6-884A-220ABB40A1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D65B8EE9-618F-47D6-884A-220ABB40A1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D65B8EE9-618F-47D6-884A-220ABB40A1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB60CD8-D088-4405-8B8C-49E7ADDCF8DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {6452A74D-A3E4-4325-9778-CCF96A2B9FCD}
+		SolutionGuid = {D04791EA-5DFE-43ED-B707-28640D72D149}
 	EndGlobalSection
 EndGlobal

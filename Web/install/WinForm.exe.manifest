@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>JiX1oGzh1W0r9XEkayuOkxpbrriRgt9oDmjXP5vwqR4=</dsig:DigestValue>
+        <dsig:DigestValue>4Ots1SHq1VbbwJawlkGeOMuJEv4PZYOL56MIsIGqu1w=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -73,7 +73,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>onI48rWP4RiyZ35k+icSZ3FP9zLPlxhlWipbXNoYzuc=</dsig:DigestValue>
+        <dsig:DigestValue>qWZ9RvKOkmIiC1lawKlfnATHVbVkXeI+llVx/axYySU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -85,17 +85,17 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7sw9B+sCo5YWXoQgrtrs6woI8A123pyzw9enHr4T8Ys=</dsig:DigestValue>
+        <dsig:DigestValue>62Hk2m99Y8xKwzvnvtAvizv2wIk/rjH8lMRJ4fG2WOs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="WinForm.exe.config" size="57488">
+  <file name="WinForm.exe.config" size="57487">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QiJ3H5RuykJPQsGMmXtHSjRuQrxQglZNCHfRkz+JM5I=</dsig:DigestValue>
+      <dsig:DigestValue>rIyvFWAvXrOkARQtZRlvHjRROhwAbNXT5adblDpsr3g=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

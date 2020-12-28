@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 12:45:31 AM
+  Generated Date: 12/28/2020 8:37:50 AM
   From Machine: DESKTOP-BP3OHLH
   Template: sql2x.MVCDurianGenerator.MethodControllerCode
 */
