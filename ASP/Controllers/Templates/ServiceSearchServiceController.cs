@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:28:45 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:14:20 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -13,21 +13,36 @@ using System.Net.Http;
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-// controller namespace for mvc
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
+//  the Business Logic Layer contains domain logic that encodes real world business rules
+//   that determine how data is created, stored and changed. Typically it will also deal with
+//   import and export of data and integration with API's from other parts of the system or other systems
+//  the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//   REST http services
 // links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+//  application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/6382691f-5a87-466f-89a7-ab9d8e28b367
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Produces("application/json")]
     [Route("api/1/ServiceSearchService")]
-    // controller class for mvc
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
+    //  this contract is an identical representation of a Durian's columns
+    //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
+    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
+    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class ServiceSearchServiceController : Controller {
-
-        // REST interface to Business layer
+        // get a JSON Array Contract with data for GetServicePackage
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
-
+        // parameters:
+        //  servicePackageId: filter by this key, for no filter use: '00000000-0000-0000-0000-000000000000'
         [HttpGet("GetServicePackage")]
         public IEnumerable<GetServicePackageContract> GetServicePackage(
             System.Guid servicePackageId
@@ -39,6 +54,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for FetchServiceSpecialServiceRequestWithFilter
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  serviceSpecialServiceRequestGroupRcd: filter by this key, for no filter use: ''
+        //   serviceSpecialServiceRequestCode: filter by this key, for no filter use: ''
+        //   requestServiceSpecialServiceRequestRequirementRcd: filter by this key, for no filter use: ''
+        //   replyServiceSpecialServiceRequestRequirementRcd: filter by this key, for no filter use: ''
+        //   serviceSpecialServiceRequestOperationRuleRcd: filter by this key, for no filter use: ''
         [HttpGet("FetchServiceSpecialServiceRequestWithFilter")]
         public IEnumerable<FetchServiceSpecialServiceRequestWithFilterContract> FetchServiceSpecialServiceRequestWithFilter(
             System.String serviceSpecialServiceRequestGroupRcd,
@@ -54,6 +79,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for ServicePackagePromotionWithFilter
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  clientId: filter by this key, for no filter use: '00000000-0000-0000-0000-000000000000'
         [HttpGet("ServicePackagePromotionWithFilter")]
         public IEnumerable<ServicePackagePromotionWithFilterContract> ServicePackagePromotionWithFilter(
             System.Guid clientId
@@ -64,5 +95,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             return list;
         }
+
     }
 }

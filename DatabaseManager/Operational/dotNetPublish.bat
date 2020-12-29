@@ -1,8 +1,8 @@
 rem SQL2X Generated code based on a SQL Server Schema
 rem SQL2X Version: 1.0
 rem http://sql2x.org/
-rem Generated Date: 12/28/2020 4:54:08 PM
-rem From Machine: DESKTOP-LSRVP12
+rem Generated Date: 12/29/2020 2:27:32 AM
+rem From Machine: DESKTOP-517I8BU
 rem Template: SQL2XExtensionV3.SQL2XExtensionCreatorNorSolution.ExecuteDatabaseManager
 cd C:\SQL2XProjects\SolutionNorSolutionPort\DatabaseManager
 dotnet restore DatabaseManager.csproj

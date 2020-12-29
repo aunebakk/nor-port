@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:24:04 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:07:08 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
 using System;
@@ -21,7 +21,7 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IFinancialSearchService {
@@ -39,8 +39,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  financialCurrencyId: filter by this key
-        //  currencyDateTime: filter by this key
+        //  financialCurrencyId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  currencyDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<GetAvailableCurrenciesContract> GetAvailableCurrencies (System.Guid financialCurrencyId,System.DateTime currencyDateTime);
         // returns a list of FinancialFares contracts from FinancialSearchService
@@ -54,21 +54,21 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  voucherValidOnDateTime: filter by this key
+        //  voucherValidOnDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<VoucherSearchWithRemainingAmountContract> VoucherSearchWithRemainingAmount (System.DateTime voucherValidOnDateTime);
         // returns a list of VoucherTransactions contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  financialVoucherId: filter by this key
+        //  financialVoucherId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<VoucherTransactionsContract> VoucherTransactions (System.Guid financialVoucherId);
         // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  bookingId: filter by this key
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FinancialServiceDetailsForBookingContract> FinancialServiceDetailsForBooking (System.Guid bookingId);
         // returns a list of ServiceFerryList contracts from FinancialSearchService
@@ -104,8 +104,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/cdd86da0-630c-402b-b72a-8dabf924530d
         // parameters:
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<TransactionsCreditDebitBalanceContract> TransactionsCreditDebitBalance(System.DateTime fromDateTime, System.DateTime untilDateTime);
     }
@@ -120,8 +120,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  financialCurrencyId: filter by this key
-        //  currencyDateTime: filter by this key
+        //  financialCurrencyId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  currencyDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<GetAvailableCurrenciesContract> GetAvailableCurrencies (System.Guid financialCurrencyId,System.DateTime currencyDateTime) {
             // transfer all GetAvailableCurrencies serialized objects from FinancialSearch as GetAvailableCurrencies contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FinancialSearch();
@@ -143,7 +143,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  voucherValidOnDateTime: filter by this key
+        //  voucherValidOnDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<VoucherSearchWithRemainingAmountContract> VoucherSearchWithRemainingAmount (System.DateTime voucherValidOnDateTime) {
             // transfer all VoucherSearchWithRemainingAmount serialized objects from FinancialSearch as VoucherSearchWithRemainingAmount contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FinancialSearch();
@@ -154,7 +154,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  financialVoucherId: filter by this key
+        //  financialVoucherId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<VoucherTransactionsContract> VoucherTransactions (System.Guid financialVoucherId) {
             // transfer all VoucherTransactions serialized objects from FinancialSearch as VoucherTransactions contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FinancialSearch();
@@ -165,7 +165,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  bookingId: filter by this key
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FinancialServiceDetailsForBookingContract> FinancialServiceDetailsForBooking (System.Guid bookingId) {
             // transfer all FinancialServiceDetailsForBooking serialized objects from FinancialSearch as FinancialServiceDetailsForBooking contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FinancialSearch();
@@ -221,8 +221,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b582d9b-64df-473e-9f42-7ce7701e67f0
         // parameters:
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public virtual List<TransactionsCreditDebitBalanceContract> TransactionsCreditDebitBalance(System.DateTime fromDateTime, System.DateTime untilDateTime) {
             // transfer all TransactionsCreditDebitBalance serialized objects from FinancialSearch as TransactionsCreditDebitBalance contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FinancialSearch();

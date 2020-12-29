@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:03:17 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:38:55 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -13,15 +13,29 @@ using System.Net.Http;
 using System;
 using Microsoft.AspNetCore.Mvc;
 
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
+//  the Business Logic Layer contains domain logic that encodes real world business rules
+//   that determine how data is created, stored and changed. Typically it will also deal with
+//   import and export of data and integration with API's from other parts of the system or other systems
+//  the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//   REST http services
+// links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+//  application programming interface: https://en.wikipedia.org/wiki/API
+//  docLink: http://sql2x.org/documentationLink/6382691f-5a87-466f-89a7-ab9d8e28b367
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
-    // controller namespace for mvc
-    // links:
-    //  docLink: http://sql2x.org/documentationLink/38992382-0d4d-420b-ad2d-d57d3a1b6641
     [Produces("application/json")]
     [Route("api/1/crudebookingpassengerevent")]
-    // controller class for mvc
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
+    //  this contract is an identical representation of a Durian's columns
+    //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  docLink: http://sql2x.org/documentationLink/cebddfc4-5dd6-4651-a217-1c7697d48c61
+    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
+    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
+    //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class CrudeBookingPassengerEventController : Controller {
 
         // help page for controller
@@ -58,6 +72,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch all with limit page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/2eda6a92-1bc1-43d8-9285-87d26d50f574
+        // parameters:
+        //  limit: only return this number of rows
         [HttpGet("fetchallwithlimit/{limit?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchAllWithLimit(
                 string limit
@@ -72,6 +88,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch all with limit and offset page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/320ad742-0b46-4155-a5c9-2a82277b1f96
+        // parameters:
+        //  limit: only return this number of rows
+        //   offset: start from this offset of rows
         [HttpGet("fetchallwithlimitandoffset/{limit?}/{offset?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchAllWithLimitAndOffset(
                 string limit,
@@ -87,6 +106,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by primary key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/b08faa47-a306-4a01-99f5-1125963b5d47
+        // parameters:
+        //  bookingpassengereventid: filter by primary key
         [HttpGet("fetchbybookingpassengereventid/{bookingpassengereventid?}")]
         public CrudeBookingPassengerEventModel CrudeBookingPassengerEventFetchByBookingPassengerEventId(System.Guid bookingpassengereventid) {
 
@@ -99,6 +120,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingpassengereventtypercd: filter by this foreign this key, use the following for no filter: ''
         [HttpGet("fetchbybookingpassengereventtypercd/{bookingpassengereventtypercd?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingPassengerEventTypeRcd(System.String bookingpassengereventtypercd) {
 
@@ -111,6 +134,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingpassengerid: filter by this foreign this key, use the following for no filter: '00000000-0000-0000-0000-000000000000'
         [HttpGet("fetchbybookingpassengerid/{bookingpassengerid?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingPassengerId(System.Guid bookingpassengerid) {
 
@@ -123,6 +148,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingflightsegmentid: filter by this foreign this key, use the following for no filter: '00000000-0000-0000-0000-000000000000'
         [HttpGet("fetchbybookingflightsegmentid/{bookingflightsegmentid?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingFlightSegmentId(System.Guid bookingflightsegmentid) {
 
@@ -135,6 +162,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingpassengerticketid: filter by this foreign this key, use the following for no filter: '00000000-0000-0000-0000-000000000000'
         [HttpGet("fetchbybookingpassengerticketid/{bookingpassengerticketid?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingPassengerTicketId(System.Guid bookingpassengerticketid) {
 
@@ -147,6 +176,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingpassengerseatid: filter by this foreign this key, use the following for no filter: '00000000-0000-0000-0000-000000000000'
         [HttpGet("fetchbybookingpassengerseatid/{bookingpassengerseatid?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingPassengerSeatId(System.Guid bookingpassengerseatid) {
 
@@ -159,6 +190,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
+        // parameters:
+        //  bookingpassengerbaggageid: filter by this foreign this key, use the following for no filter: '00000000-0000-0000-0000-000000000000'
         [HttpGet("fetchbybookingpassengerbaggageid/{bookingpassengerbaggageid?}")]
         public IEnumerable<CrudeBookingPassengerEventModel> CrudeBookingPassengerEventFetchByBookingPassengerBaggageId(System.Guid bookingpassengerbaggageid) {
 
@@ -168,9 +201,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return bookingPassengerEvent;
         }
 
-        // create POST page for controller
+        // create BookingPassengerEvent POST page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/fa6b4ff5-5a11-4563-b6de-449d1bb6a5e7
+        // parameters:
+        //  CrudeBookingPassengerEventModel: contract to add
         [HttpPost("crudebookingpassengereventcreate")]
         public CrudeBookingPassengerEventModel CrudeBookingPassengerEventCreate([Bind()] CrudeBookingPassengerEventModel bookingPassengerEvent) {
 
@@ -192,7 +227,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "BookingPassengerEventTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "BookingPassengerEventNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 5:03:17 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:38:55 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -212,9 +247,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // Update POST page for controller
+        // Update BookingPassengerEvent POST page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/5c88b29b-595f-4435-b8cd-6db26d0f958d
+        // parameters:
+        //  CrudeBookingPassengerEventModel: contract to add
         [HttpPut("crudebookingpassengereventupdate")]
         public CrudeBookingPassengerEventModel CrudeBookingPassengerEventUpdate([Bind()] CrudeBookingPassengerEventModel bookingPassengerEvent) {
 
@@ -236,7 +273,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "BookingPassengerEventTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "BookingPassengerEventNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/28/2020 5:03:17 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:38:55 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
@@ -256,7 +293,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // delete page for controller
+        // DELETE page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/c5cd4292-e198-4631-9b3f-a67451a48cac
         [HttpDelete("bookingpassengereventdelete/{bookingpassengereventid?}")]

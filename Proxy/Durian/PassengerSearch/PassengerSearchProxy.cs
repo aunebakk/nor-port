@@ -2,35 +2,61 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:25:55 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:09:56 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
 using System.Collections.Generic;
+// Namespace for a Business Logic Layer in a Proxy
+// the Business Logic Layer contains domain logic that encodes real world business rules
+//  that determine how data is created, stored and changed. Typically it will also deal with
+//  import and export of data and integration with API's from other parts of the system or other systems
+// the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//  REST http services
+// links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+// application programming interface: https://en.wikipedia.org/wiki/API
+//  docLink: http://sql2x.org/documentationLink/2595ba81-a5dc-4b5a-8bc8-2f7ca6630d9b
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
     
     
+    // Interface class for an WCF Service contract
+    // this interface is used to expose C# objects as SOAP services using WCF
+    // interface is a common means for discrete objects to communicate with each other
+    // links:
+    //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IPassengerSearchService")]
     public interface IPassengerSearchService {
-        // transfer all objects from data to contract
+        // returns a list of PassengersOnFlightWithoutEvents contracts from PassengerSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPassengerSearchService/PassengersOnFlightWithoutEvents", ReplyAction="http://tempuri.org/IPassengerSearchService/PassengersOnFlightWithoutEventsResponse")]
         List<PassengersOnFlightWithoutEventsContract> PassengersOnFlightWithoutEvents (System.Guid flightId);
-        // transfer all objects from data to contract
+        // returns a list of PassengersOnFlightCheckedIn contracts from PassengerSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPassengerSearchService/PassengersOnFlightCheckedIn", ReplyAction="http://tempuri.org/IPassengerSearchService/PassengersOnFlightCheckedInResponse")]
         List<PassengersOnFlightCheckedInContract> PassengersOnFlightCheckedIn (System.Guid flightId);
-        // transfer all objects from data to contract
+        // returns a list of PassengersOnFlight contracts from PassengerSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPassengerSearchService/PassengersOnFlight", ReplyAction="http://tempuri.org/IPassengerSearchService/PassengersOnFlightResponse")]
         List<PassengersOnFlightContract> PassengersOnFlight (System.Guid flightId);
-        // transfer all objects from data to contract
+        // returns a list of PassengersOnBooking contracts from PassengerSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPassengerSearchService/PassengersOnBooking", ReplyAction="http://tempuri.org/IPassengerSearchService/PassengersOnBookingResponse")]
         List<PassengersOnBookingContract> PassengersOnBooking (System.Guid bookingId);
     }
@@ -40,35 +66,35 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     public class PassengerSearchService : System.ServiceModel.ClientBase<IPassengerSearchService>, IPassengerSearchService {
-        // This Method
-        // is generated by
+        // returns a list of PassengersOnFlightWithoutEvents contracts from PassengerSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<PassengersOnFlightWithoutEventsContract> PassengersOnFlightWithoutEvents (System.Guid flightId) {
             return base.Channel.PassengersOnFlightWithoutEvents(flightId);
         }
-        // This Method
-        // is generated by
+        // returns a list of PassengersOnFlightCheckedIn contracts from PassengerSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<PassengersOnFlightCheckedInContract> PassengersOnFlightCheckedIn (System.Guid flightId) {
             return base.Channel.PassengersOnFlightCheckedIn(flightId);
         }
-        // This Method
-        // is generated by
+        // returns a list of PassengersOnFlight contracts from PassengerSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<PassengersOnFlightContract> PassengersOnFlight (System.Guid flightId) {
             return base.Channel.PassengersOnFlight(flightId);
         }
-        // This Method
-        // is generated by
+        // returns a list of PassengersOnBooking contracts from PassengerSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<PassengersOnBookingContract> PassengersOnBooking (System.Guid bookingId) {
             return base.Channel.PassengersOnBooking(bookingId);
         }

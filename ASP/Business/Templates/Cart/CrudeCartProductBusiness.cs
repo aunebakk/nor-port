@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:03:37 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:39:19 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreBusiness
 */
 using System.Linq;
@@ -22,21 +22,11 @@ using SolutionNorSolutionPort.BusinessLogicLayer.Models;
 //  REST http services
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/15abf34a-dec0-46df-8ef1-15d4f2eb7dd0
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// the BusinessLogicLayer is where the DataAccessLayer is exposed as
-//  REST http services
-// links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
-//  docLink: http://sql2x.org/documentationLink/5b274d55-8093-4652-bf16-8b8d1155bea9
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface is used to expose POCO classes
+    // this class is used to expose plain POCO classes against the data layer
     // links:
     //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
     //  docLink: http://sql2x.org/documentationLink/3f4b94b2-708b-4e8d-847b-2dcf1a60839d
@@ -44,10 +34,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/fdcc33b4-08f1-43c3-ae28-95fbf029c3bd
         // parameters:
-        //  CrudeCartProductData: primary key of table CrudeCartProductData
+        //  cartProductId: primary key of table cart_product
         public CrudeCartProductModel FetchByCartProductId(System.Guid cartProductId) {
             var dataAccessLayer = new CrudeCartProductData();
             var model = new CrudeCartProductModel();
@@ -60,50 +49,45 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  ProductId: key of table CrudeCartProductData
+        //  ProductId: key of table cart_product
         public List<CrudeCartProductModel> FetchByProductId(System.Guid productId) {
             return DataListToModelList(CrudeCartProductData.FetchByProductId(productId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCurrencyId: key of table CrudeCartProductData
+        //  FinancialCurrencyId: key of table cart_product
         public List<CrudeCartProductModel> FetchByFinancialCurrencyId(System.Guid financialCurrencyId) {
             return DataListToModelList(CrudeCartProductData.FetchByFinancialCurrencyId(financialCurrencyId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  StateRcd: key of table CrudeCartProductData
+        //  StateRcd: key of table cart_product
         public List<CrudeCartProductModel> FetchByStateRcd(string stateRcd) {
             return DataListToModelList(CrudeCartProductData.FetchByStateRcd(stateRcd));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  UserId: key of table CrudeCartProductData
+        //  UserId: key of table cart_product
         public List<CrudeCartProductModel> FetchByUserId(System.Guid userId) {
             return DataListToModelList(CrudeCartProductData.FetchByUserId(userId));
         }
         
         // transfer data list to model list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/b8ab5693-f2f2-494f-883e-89b617113511
         // parameters:
-        //  CrudeCartProductData: key of table CrudeCartProductData
+        //  CrudeCartProductData: object instance of CartProduct
         public static List<CrudeCartProductModel> DataListToModelList(List<CrudeCartProductData> dataList) {
             var modelList = new List<CrudeCartProductModel>();
 
@@ -118,10 +102,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // transfer model list to data list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/1d6a48d9-fe39-4397-b8fa-a332da164cbf
         // parameters:
-        //  CrudeCartProductData: key of table CrudeCartProductData
+        //  CrudeCartProductData: object instance of CartProduct
         public static void ModelListToDataList(List<CrudeCartProductModel> modelList, List<CrudeCartProductData> dataList) {
             foreach (CrudeCartProductModel model in modelList) {
                 var data = new CrudeCartProductData();
@@ -130,7 +113,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
-        // copy all rows from a List of serialized data objects in CrudeCartProductData to a List of SOAP Contracts
+        // copy all rows from a List of data objects in CrudeCartProductData to a List of REST Contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/3d3e60c3-69e4-43d6-8bd5-14a67a6ecf58
         public List<CrudeCartProductModel> FetchAll() {

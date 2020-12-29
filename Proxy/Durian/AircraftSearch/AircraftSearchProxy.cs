@@ -2,40 +2,68 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:20:35 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:01:35 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
 using System.Collections.Generic;
+// Namespace for a Business Logic Layer in a Proxy
+// the Business Logic Layer contains domain logic that encodes real world business rules
+//  that determine how data is created, stored and changed. Typically it will also deal with
+//  import and export of data and integration with API's from other parts of the system or other systems
+// the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//  REST http services
+// links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+// application programming interface: https://en.wikipedia.org/wiki/API
+//  docLink: http://sql2x.org/documentationLink/2595ba81-a5dc-4b5a-8bc8-2f7ca6630d9b
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
     
     
+    // Interface class for an WCF Service contract
+    // this interface is used to expose C# objects as SOAP services using WCF
+    // interface is a common means for discrete objects to communicate with each other
+    // links:
+    //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IAircraftSearchService")]
     public interface IAircraftSearchService {
-        // transfer all objects from data to contract
+        // returns a list of AircraftIdentifierIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAircraftSearchService/AircraftIdentifierIndexWithFilter", ReplyAction="http://tempuri.org/IAircraftSearchService/AircraftIdentifierIndexWithFilterResponse")]
         List<AircraftIdentifierIndexWithFilterContract> AircraftIdentifierIndexWithFilter (System.Guid aircraftId);
-        // transfer all objects from data to contract
+        // returns a list of AircraftDocumentIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAircraftSearchService/AircraftDocumentIndexWithFilter", ReplyAction="http://tempuri.org/IAircraftSearchService/AircraftDocumentIndexWithFilterResponse")]
         List<AircraftDocumentIndexWithFilterContract> AircraftDocumentIndexWithFilter (System.Guid aircraftId);
-        // transfer all objects from data to contract
+        // returns a list of AircraftCompartmentIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAircraftSearchService/AircraftCompartmentIndexWithFilter", ReplyAction="http://tempuri.org/IAircraftSearchService/AircraftCompartmentIndexWithFilterResponse")]
         List<AircraftCompartmentIndexWithFilterContract> AircraftCompartmentIndexWithFilter (System.Guid aircraftId);
-        // transfer all objects from data to contract
+        // returns a list of AircraftIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAircraftSearchService/AircraftIndexWithFilter", ReplyAction="http://tempuri.org/IAircraftSearchService/AircraftIndexWithFilterResponse")]
         List<AircraftIndexWithFilterContract> AircraftIndexWithFilter ();
-        // transfer all objects from data to contract
+        // returns a list of AircraftDetails contracts from AircraftSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAircraftSearchService/AircraftDetails", ReplyAction="http://tempuri.org/IAircraftSearchService/AircraftDetailsResponse")]
         List<AircraftDetailsContract> AircraftDetails ();
     }
@@ -45,43 +73,43 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     public class AircraftSearchService : System.ServiceModel.ClientBase<IAircraftSearchService>, IAircraftSearchService {
-        // This Method
-        // is generated by
+        // returns a list of AircraftIdentifierIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftIdentifierIndexWithFilterContract> AircraftIdentifierIndexWithFilter (System.Guid aircraftId) {
             return base.Channel.AircraftIdentifierIndexWithFilter(aircraftId);
         }
-        // This Method
-        // is generated by
+        // returns a list of AircraftDocumentIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftDocumentIndexWithFilterContract> AircraftDocumentIndexWithFilter (System.Guid aircraftId) {
             return base.Channel.AircraftDocumentIndexWithFilter(aircraftId);
         }
-        // This Method
-        // is generated by
+        // returns a list of AircraftCompartmentIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftCompartmentIndexWithFilterContract> AircraftCompartmentIndexWithFilter (System.Guid aircraftId) {
             return base.Channel.AircraftCompartmentIndexWithFilter(aircraftId);
         }
-        // This Method
-        // is generated by
+        // returns a list of AircraftIndexWithFilter contracts from AircraftSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         public List<AircraftIndexWithFilterContract> AircraftIndexWithFilter () {
             return base.Channel.AircraftIndexWithFilter();
         }
-        // This Method
-        // is generated by
+        // returns a list of AircraftDetails contracts from AircraftSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         public List<AircraftDetailsContract> AircraftDetails () {
             return base.Channel.AircraftDetails();
         }

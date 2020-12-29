@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:23:18 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:05:57 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.ContractsGenerator.MethodNewStyle
 */
 using System.Runtime.Serialization;
@@ -15,8 +15,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
     //  serialization: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/
-    //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/86781214-890e-420a-b31f-5bd141c32c4a
     [DataContract()]
     public class DefaultUserActivityGroupedContract {

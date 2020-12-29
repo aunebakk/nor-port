@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:25:21 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:09:03 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.MVCDurianGenerator.MethodControllerCode
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -11,9 +11,16 @@ using System;
 using System.Web.Mvc;
 
 namespace SolutionNorSolutionPort.AspMvc.Controllers {
-    // controller class for mvc
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
+    //  this contract is an identical representation of a Durian's columns
+    //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  docLink: http://sql2x.org/documentationLink/d6881d43-704e-4777-91c7-30d9357acc93
+    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
+    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
+    //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class FlightsWithCheckinInformationController : Controller {
 
         // index page for controller

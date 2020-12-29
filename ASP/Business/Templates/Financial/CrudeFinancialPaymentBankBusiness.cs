@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:08:27 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:45:26 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreBusiness
 */
 using System.Linq;
@@ -22,21 +22,11 @@ using SolutionNorSolutionPort.BusinessLogicLayer.Models;
 //  REST http services
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/15abf34a-dec0-46df-8ef1-15d4f2eb7dd0
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// the BusinessLogicLayer is where the DataAccessLayer is exposed as
-//  REST http services
-// links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
-//  docLink: http://sql2x.org/documentationLink/5b274d55-8093-4652-bf16-8b8d1155bea9
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface is used to expose POCO classes
+    // this class is used to expose plain POCO classes against the data layer
     // links:
     //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
     //  docLink: http://sql2x.org/documentationLink/3f4b94b2-708b-4e8d-847b-2dcf1a60839d
@@ -44,10 +34,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/fdcc33b4-08f1-43c3-ae28-95fbf029c3bd
         // parameters:
-        //  CrudeFinancialPaymentBankData: primary key of table CrudeFinancialPaymentBankData
+        //  financialPaymentBankId: primary key of table financial_payment_bank
         public CrudeFinancialPaymentBankModel FetchByFinancialPaymentBankId(System.Guid financialPaymentBankId) {
             var dataAccessLayer = new CrudeFinancialPaymentBankData();
             var model = new CrudeFinancialPaymentBankModel();
@@ -60,7 +49,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/ad2dd952-e3ec-471a-9e34-f5fc965b8b37
         // parameters:
         //  BankName: key of table CrudeFinancialPaymentBankData
@@ -76,40 +64,36 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialBankAccountNumberTypeRcd: key of table CrudeFinancialPaymentBankData
+        //  FinancialBankAccountNumberTypeRcd: key of table financial_payment_bank
         public List<CrudeFinancialPaymentBankModel> FetchByFinancialBankAccountNumberTypeRcd(string financialBankAccountNumberTypeRcd) {
             return DataListToModelList(CrudeFinancialPaymentBankData.FetchByFinancialBankAccountNumberTypeRcd(financialBankAccountNumberTypeRcd));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCurrencyId: key of table CrudeFinancialPaymentBankData
+        //  FinancialCurrencyId: key of table financial_payment_bank
         public List<CrudeFinancialPaymentBankModel> FetchByFinancialCurrencyId(System.Guid financialCurrencyId) {
             return DataListToModelList(CrudeFinancialPaymentBankData.FetchByFinancialCurrencyId(financialCurrencyId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  UserId: key of table CrudeFinancialPaymentBankData
+        //  UserId: key of table financial_payment_bank
         public List<CrudeFinancialPaymentBankModel> FetchByUserId(System.Guid userId) {
             return DataListToModelList(CrudeFinancialPaymentBankData.FetchByUserId(userId));
         }
         
         // transfer data list to model list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/b8ab5693-f2f2-494f-883e-89b617113511
         // parameters:
-        //  CrudeFinancialPaymentBankData: key of table CrudeFinancialPaymentBankData
+        //  CrudeFinancialPaymentBankData: object instance of FinancialPaymentBank
         public static List<CrudeFinancialPaymentBankModel> DataListToModelList(List<CrudeFinancialPaymentBankData> dataList) {
             var modelList = new List<CrudeFinancialPaymentBankModel>();
 
@@ -124,10 +108,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // transfer model list to data list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/1d6a48d9-fe39-4397-b8fa-a332da164cbf
         // parameters:
-        //  CrudeFinancialPaymentBankData: key of table CrudeFinancialPaymentBankData
+        //  CrudeFinancialPaymentBankData: object instance of FinancialPaymentBank
         public static void ModelListToDataList(List<CrudeFinancialPaymentBankModel> modelList, List<CrudeFinancialPaymentBankData> dataList) {
             foreach (CrudeFinancialPaymentBankModel model in modelList) {
                 var data = new CrudeFinancialPaymentBankData();
@@ -136,7 +119,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
-        // copy all rows from a List of serialized data objects in CrudeFinancialPaymentBankData to a List of SOAP Contracts
+        // copy all rows from a List of data objects in CrudeFinancialPaymentBankData to a List of REST Contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/3d3e60c3-69e4-43d6-8bd5-14a67a6ecf58
         public List<CrudeFinancialPaymentBankModel> FetchAll() {

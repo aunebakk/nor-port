@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:06:52 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:43:31 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreBusiness
 */
 using System.Linq;
@@ -22,21 +22,11 @@ using SolutionNorSolutionPort.BusinessLogicLayer.Models;
 //  REST http services
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/15abf34a-dec0-46df-8ef1-15d4f2eb7dd0
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// the BusinessLogicLayer is where the DataAccessLayer is exposed as
-//  REST http services
-// links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
-//  docLink: http://sql2x.org/documentationLink/5b274d55-8093-4652-bf16-8b8d1155bea9
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface is used to expose POCO classes
+    // this class is used to expose plain POCO classes against the data layer
     // links:
     //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
     //  docLink: http://sql2x.org/documentationLink/3f4b94b2-708b-4e8d-847b-2dcf1a60839d
@@ -44,10 +34,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/fdcc33b4-08f1-43c3-ae28-95fbf029c3bd
         // parameters:
-        //  CrudeFinancialBookingTransactionData: primary key of table CrudeFinancialBookingTransactionData
+        //  financialBookingTransactionId: primary key of table financial_booking_transaction
         public CrudeFinancialBookingTransactionModel FetchByFinancialBookingTransactionId(System.Guid financialBookingTransactionId) {
             var dataAccessLayer = new CrudeFinancialBookingTransactionData();
             var model = new CrudeFinancialBookingTransactionModel();
@@ -60,120 +49,108 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  BookingId: key of table CrudeFinancialBookingTransactionData
+        //  BookingId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByBookingId(System.Guid bookingId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByBookingId(bookingId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialBookingTransactionTypeRcd: key of table CrudeFinancialBookingTransactionData
+        //  FinancialBookingTransactionTypeRcd: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialBookingTransactionTypeRcd(string financialBookingTransactionTypeRcd) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialBookingTransactionTypeRcd(financialBookingTransactionTypeRcd));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialFeeId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialFeeId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialFeeId(System.Guid financialFeeId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialFeeId(financialFeeId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialTaxId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialTaxId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialTaxId(System.Guid financialTaxId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialTaxId(financialTaxId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialFareId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialFareId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialFareId(System.Guid financialFareId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialFareId(financialFareId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialPaymentId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialPaymentId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialPaymentId(System.Guid financialPaymentId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialPaymentId(financialPaymentId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCurrencyId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialCurrencyId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialCurrencyId(System.Guid financialCurrencyId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialCurrencyId(financialCurrencyId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCostcentreId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialCostcentreId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialCostcentreId(System.Guid financialCostcentreId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialCostcentreId(financialCostcentreId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialAdjustmentId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialAdjustmentId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialAdjustmentId(System.Guid financialAdjustmentId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialAdjustmentId(financialAdjustmentId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialServiceId: key of table CrudeFinancialBookingTransactionData
+        //  FinancialServiceId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByFinancialServiceId(System.Guid financialServiceId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByFinancialServiceId(financialServiceId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  UserId: key of table CrudeFinancialBookingTransactionData
+        //  UserId: key of table financial_booking_transaction
         public List<CrudeFinancialBookingTransactionModel> FetchByUserId(System.Guid userId) {
             return DataListToModelList(CrudeFinancialBookingTransactionData.FetchByUserId(userId));
         }
         
         // transfer data list to model list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/b8ab5693-f2f2-494f-883e-89b617113511
         // parameters:
-        //  CrudeFinancialBookingTransactionData: key of table CrudeFinancialBookingTransactionData
+        //  CrudeFinancialBookingTransactionData: object instance of FinancialBookingTransaction
         public static List<CrudeFinancialBookingTransactionModel> DataListToModelList(List<CrudeFinancialBookingTransactionData> dataList) {
             var modelList = new List<CrudeFinancialBookingTransactionModel>();
 
@@ -188,10 +165,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // transfer model list to data list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/1d6a48d9-fe39-4397-b8fa-a332da164cbf
         // parameters:
-        //  CrudeFinancialBookingTransactionData: key of table CrudeFinancialBookingTransactionData
+        //  CrudeFinancialBookingTransactionData: object instance of FinancialBookingTransaction
         public static void ModelListToDataList(List<CrudeFinancialBookingTransactionModel> modelList, List<CrudeFinancialBookingTransactionData> dataList) {
             foreach (CrudeFinancialBookingTransactionModel model in modelList) {
                 var data = new CrudeFinancialBookingTransactionData();
@@ -200,7 +176,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
-        // copy all rows from a List of serialized data objects in CrudeFinancialBookingTransactionData to a List of SOAP Contracts
+        // copy all rows from a List of data objects in CrudeFinancialBookingTransactionData to a List of REST Contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/3d3e60c3-69e4-43d6-8bd5-14a67a6ecf58
         public List<CrudeFinancialBookingTransactionModel> FetchAll() {

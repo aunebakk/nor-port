@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:08:32 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:45:33 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreBusiness
 */
 using System.Linq;
@@ -22,21 +22,11 @@ using SolutionNorSolutionPort.BusinessLogicLayer.Models;
 //  REST http services
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/15abf34a-dec0-46df-8ef1-15d4f2eb7dd0
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// the BusinessLogicLayer is where the DataAccessLayer is exposed as
-//  REST http services
-// links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
-//  docLink: http://sql2x.org/documentationLink/5b274d55-8093-4652-bf16-8b8d1155bea9
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface is used to expose POCO classes
+    // this class is used to expose plain POCO classes against the data layer
     // links:
     //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
     //  docLink: http://sql2x.org/documentationLink/3f4b94b2-708b-4e8d-847b-2dcf1a60839d
@@ -44,10 +34,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/fdcc33b4-08f1-43c3-ae28-95fbf029c3bd
         // parameters:
-        //  CrudeFinancialPaymentCardData: primary key of table CrudeFinancialPaymentCardData
+        //  financialPaymentCardId: primary key of table financial_payment_card
         public CrudeFinancialPaymentCardModel FetchByFinancialPaymentCardId(System.Guid financialPaymentCardId) {
             var dataAccessLayer = new CrudeFinancialPaymentCardData();
             var model = new CrudeFinancialPaymentCardModel();
@@ -60,40 +49,36 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCardTypeRcd: key of table CrudeFinancialPaymentCardData
+        //  FinancialCardTypeRcd: key of table financial_payment_card
         public List<CrudeFinancialPaymentCardModel> FetchByFinancialCardTypeRcd(string financialCardTypeRcd) {
             return DataListToModelList(CrudeFinancialPaymentCardData.FetchByFinancialCardTypeRcd(financialCardTypeRcd));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  FinancialCurrencyId: key of table CrudeFinancialPaymentCardData
+        //  FinancialCurrencyId: key of table financial_payment_card
         public List<CrudeFinancialPaymentCardModel> FetchByFinancialCurrencyId(System.Guid financialCurrencyId) {
             return DataListToModelList(CrudeFinancialPaymentCardData.FetchByFinancialCurrencyId(financialCurrencyId));
         }
         
         // fetch by Search key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/87368fa6-b618-4f0c-acbb-1fc4e273bb2d
         // parameters:
-        //  UserId: key of table CrudeFinancialPaymentCardData
+        //  UserId: key of table financial_payment_card
         public List<CrudeFinancialPaymentCardModel> FetchByUserId(System.Guid userId) {
             return DataListToModelList(CrudeFinancialPaymentCardData.FetchByUserId(userId));
         }
         
         // transfer data list to model list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/b8ab5693-f2f2-494f-883e-89b617113511
         // parameters:
-        //  CrudeFinancialPaymentCardData: key of table CrudeFinancialPaymentCardData
+        //  CrudeFinancialPaymentCardData: object instance of FinancialPaymentCard
         public static List<CrudeFinancialPaymentCardModel> DataListToModelList(List<CrudeFinancialPaymentCardData> dataList) {
             var modelList = new List<CrudeFinancialPaymentCardModel>();
 
@@ -108,10 +93,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // transfer model list to data list
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/1d6a48d9-fe39-4397-b8fa-a332da164cbf
         // parameters:
-        //  CrudeFinancialPaymentCardData: key of table CrudeFinancialPaymentCardData
+        //  CrudeFinancialPaymentCardData: object instance of FinancialPaymentCard
         public static void ModelListToDataList(List<CrudeFinancialPaymentCardModel> modelList, List<CrudeFinancialPaymentCardData> dataList) {
             foreach (CrudeFinancialPaymentCardModel model in modelList) {
                 var data = new CrudeFinancialPaymentCardData();
@@ -120,7 +104,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
-        // copy all rows from a List of serialized data objects in CrudeFinancialPaymentCardData to a List of SOAP Contracts
+        // copy all rows from a List of data objects in CrudeFinancialPaymentCardData to a List of REST Contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/3d3e60c3-69e4-43d6-8bd5-14a67a6ecf58
         public List<CrudeFinancialPaymentCardModel> FetchAll() {

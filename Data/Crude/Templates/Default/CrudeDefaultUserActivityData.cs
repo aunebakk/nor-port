@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 4:55:08 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:28:56 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.TemplateChildCrudeData.UsingDotNetFramework
 */
 using System;
@@ -21,13 +21,12 @@ using System.Configuration;
 namespace SolutionNorSolutionPort.DataAccessLayer {
 
     // this class serves as a data access layer between c# and sql server
-    // it is serializable in order to speed up processing between the data access and business layers
     // this class start with an identical representation of default_user_activity's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  serialization: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/
+    //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
+    // crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
     //  docLink: http://sql2x.org/documentationLink/e32ed6d4-57c7-43b1-8f2e-918c702e730a
-    [Serializable()]
     public partial class CrudeDefaultUserActivityData {
         
         public System.Guid DefaultUserActivityId { get; set; }
@@ -46,7 +45,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/71a3c70c-2d6d-4115-911c-a61f0383dbd5
         // parameters:
         //  defaultUserActivityId: primary key of table default_user_activity
@@ -100,7 +98,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         
         // fetch by Primary key into new class instance
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/7a625d0a-3028-42ce-a543-72ea3673cef4
         // parameters:
         //  defaultUserActivityId: primary key of table default_user_activity

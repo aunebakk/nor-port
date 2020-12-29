@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:28:32 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:13:55 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -13,21 +13,35 @@ using System.Net.Http;
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-// controller namespace for mvc
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
+//  the Business Logic Layer contains domain logic that encodes real world business rules
+//   that determine how data is created, stored and changed. Typically it will also deal with
+//   import and export of data and integration with API's from other parts of the system or other systems
+//  the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//   REST http services
 // links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+//  application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/6382691f-5a87-466f-89a7-ab9d8e28b367
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Produces("application/json")]
     [Route("api/1/DefaultSearchService")]
-    // controller class for mvc
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
+    //  this contract is an identical representation of a Durian's columns
+    //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
+    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
+    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
+    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class DefaultSearchServiceController : Controller {
-
-        // REST interface to Business layer
+        // get a JSON Array Contract with data for DefaultResourceDatabaseStatistics
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
-
+        // parameters:
         [HttpGet("DefaultResourceDatabaseStatistics")]
         public IEnumerable<DefaultResourceDatabaseStatisticsContract> DefaultResourceDatabaseStatistics(
             ) {
@@ -38,6 +52,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultResourceStatistics
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultResourceStatistics")]
         public IEnumerable<DefaultResourceStatisticsContract> DefaultResourceStatistics(
             ) {
@@ -48,6 +67,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for GetDefaultChangeLog
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  defaultChangeName: filter by this key, for no filter use: ''
+        //   defaultChangeLogTypeRcd: filter by this key, for no filter use: ''
+        //   defaultIssueId: filter by this key, for no filter use: '00000000-0000-0000-0000-000000000000'
+        //   defaultChangeLogId: filter by this key, for no filter use: '00000000-0000-0000-0000-000000000000'
         [HttpGet("GetDefaultChangeLog")]
         public IEnumerable<GetDefaultChangeLogContract> GetDefaultChangeLog(
             System.String defaultChangeName,
@@ -62,6 +90,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserListForDashboard
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultUserListForDashboard")]
         public IEnumerable<DefaultUserListForDashboardContract> DefaultUserListForDashboard(
             ) {
@@ -72,6 +105,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserList
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultUserList")]
         public IEnumerable<DefaultUserListContract> DefaultUserList(
             ) {
@@ -82,6 +120,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserActivityGroupedByAddress
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultUserActivityGroupedByAddress")]
         public IEnumerable<DefaultUserActivityGroupedByAddressContract> DefaultUserActivityGroupedByAddress(
             ) {
@@ -92,6 +135,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserActivityGrouped
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultUserActivityGrouped")]
         public IEnumerable<DefaultUserActivityGroupedContract> DefaultUserActivityGrouped(
             ) {
@@ -102,6 +150,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserActivityOnAddress
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  originatingAddress: filter by this key, for no filter use: ''
         [HttpGet("DefaultUserActivityOnAddress")]
         public IEnumerable<DefaultUserActivityOnAddressContract> DefaultUserActivityOnAddress(
             System.String originatingAddress
@@ -113,6 +167,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserActivityRecent
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  defaultUserId: filter by this key, for no filter use: '00000000-0000-0000-0000-000000000000'
         [HttpGet("DefaultUserActivityRecent")]
         public IEnumerable<DefaultUserActivityRecentContract> DefaultUserActivityRecent(
             System.Guid defaultUserId
@@ -124,6 +184,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultPerformanceTimeCommands
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultPerformanceTimeCommands")]
         public IEnumerable<DefaultPerformanceTimeCommandsContract> DefaultPerformanceTimeCommands(
             ) {
@@ -134,6 +199,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultPerformanceTimes
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  commandName: filter by this key, for no filter use: ''
         [HttpGet("DefaultPerformanceTimes")]
         public IEnumerable<DefaultPerformanceTimesContract> DefaultPerformanceTimes(
             System.String commandName
@@ -145,6 +216,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultStatisticsTop5
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultStatisticsTop5")]
         public IEnumerable<DefaultStatisticsTop5Contract> DefaultStatisticsTop5(
             ) {
@@ -155,6 +231,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultStatisticsByMonth
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultStatisticsByMonth")]
         public IEnumerable<DefaultStatisticsByMonthContract> DefaultStatisticsByMonth(
             ) {
@@ -165,6 +246,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultUserActivityByHour
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultUserActivityByHour")]
         public IEnumerable<DefaultUserActivityByHourContract> DefaultUserActivityByHour(
             ) {
@@ -175,6 +261,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultStatistics
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultStatistics")]
         public IEnumerable<DefaultStatisticsContract> DefaultStatistics(
             ) {
@@ -185,6 +276,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultPerformanceIndicators
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultPerformanceIndicators")]
         public IEnumerable<DefaultPerformanceIndicatorsContract> DefaultPerformanceIndicators(
             ) {
@@ -195,6 +291,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultErrorOverview
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
         [HttpGet("DefaultErrorOverview")]
         public IEnumerable<DefaultErrorOverviewContract> DefaultErrorOverview(
             ) {
@@ -205,6 +306,13 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultIssueWithFilter
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  defaultIssueTypeRcd: filter by this key, for no filter use: ''
+        //   defaultIssueStatusRcd: filter by this key, for no filter use: ''
         [HttpGet("DefaultIssueWithFilter")]
         public IEnumerable<DefaultIssueWithFilterContract> DefaultIssueWithFilter(
             System.String defaultIssueTypeRcd,
@@ -217,6 +325,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultPerformanceIssueFetchWithFilter
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  commandName: filter by this key, for no filter use: ''
         [HttpGet("DefaultPerformanceIssueFetchWithFilter")]
         public IEnumerable<DefaultPerformanceIssueFetchWithFilterContract> DefaultPerformanceIssueFetchWithFilter(
             System.String commandName
@@ -228,6 +342,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DashboardCounts
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  dashboardLayoutRcd: filter by this key, for no filter use: ''
         [HttpGet("DashboardCounts")]
         public IEnumerable<DashboardCountsContract> DashboardCounts(
             System.String dashboardLayoutRcd
@@ -239,6 +359,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+        // get a JSON Array Contract with data for DefaultTestOverview
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
+        // parameters:
+        //  commandName: filter by this key, for no filter use: ''
         [HttpGet("DefaultTestOverview")]
         public IEnumerable<DefaultTestOverviewContract> DefaultTestOverview(
             System.String commandName
@@ -249,5 +375,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             return list;
         }
+
     }
 }

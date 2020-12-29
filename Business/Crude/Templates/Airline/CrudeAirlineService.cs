@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 4:55:25 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:29:16 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.TemplateCrudeSoap.DefaultUsing
 */
 using System;
@@ -24,7 +24,7 @@ using SolutionNorSolutionPort.DataAccessLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -33,8 +33,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface ICrudeAirlineService {
@@ -89,13 +89,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/bccca991-4801-4ad4-80f0-0357a1249606
     public partial class CrudeAirlineService : ICrudeAirlineService {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/bbab4791-c9e7-49bf-90d5-fca19b1fedaa
         // parameters:
         //  airlineId: primary key of table airline

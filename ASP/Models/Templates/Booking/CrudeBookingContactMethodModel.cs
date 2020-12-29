@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:02:43 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:38:19 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreModel
 */
 using System.ComponentModel.DataAnnotations;
@@ -15,11 +15,11 @@ using System.ComponentModel.DataAnnotations;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Models {
 
-    // this interface is used to expose Model POCO classes
+    // this class is used to carry Model POCO classes
     // links:
     //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
     //  docLink: http://sql2x.org/documentationLink/c5c604a1-5d6d-4fb3-8e70-5d7f590292a6

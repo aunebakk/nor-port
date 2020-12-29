@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:08:11 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:45:06 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeDataAccessLayer
 */
 
@@ -21,13 +21,12 @@ using System.Data.SqlClient;
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
     // this class serves as a data access layer between c# and sql server
-    // it is serializable in order to speed up processing between the data access and business layers
     // this class start with an identical representation of financial_hotel_booking's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  serialization: https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/serialization/
+    //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
+    // crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
     //  docLink: http://sql2x.org/documentationLink/e32ed6d4-57c7-43b1-8f2e-918c702e730a
-    //[Serializable()]
     public partial class CrudeFinancialHotelBookingData {
         
         public System.Guid FinancialHotelBookingId { get; set; }
@@ -48,7 +47,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into current object
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/71a3c70c-2d6d-4115-911c-a61f0383dbd5
         // parameters:
         //  financialHotelBookingId: primary key of table financial_hotel_booking
@@ -102,7 +100,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch by Primary key into new class instance
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/7a625d0a-3028-42ce-a543-72ea3673cef4
         // parameters:
         //  financialHotelBookingId: primary key of table financial_hotel_booking

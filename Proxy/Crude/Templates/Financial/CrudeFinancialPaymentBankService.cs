@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 4:56:08 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 2:30:09 AM
+  From Machine: DESKTOP-517I8BU
   Filename: FinancialPaymentBank.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
   Template Style: DotNetFrameworkCrudeProxy
@@ -21,7 +21,7 @@ using System.Collections.Generic;
 //  ASP and TypeScript User Interfaces or from one business layer to another
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  client Proxy: https://www.c-sharpcorner.com/UploadFile/8a67c0/proxy-class-for-the-wcf-service/
+// client Proxy: https://www.c-sharpcorner.com/UploadFile/8a67c0/proxy-class-for-the-wcf-service/
 //  docLink: http://sql2x.org/documentationLink/a58883c6-e6e2-4265-98ad-0268dbbdb1b1
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ICrudeFinancialPaymentBankService")]
@@ -128,8 +128,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ICrudeFinancialPaymentBankServiceChannel : ICrudeFinancialPaymentBankService, System.ServiceModel.IClientChannel {
@@ -140,8 +140,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     public class CrudeFinancialPaymentBankServiceClient : System.ServiceModel.ClientBase<ICrudeFinancialPaymentBankService>, ICrudeFinancialPaymentBankService {
         

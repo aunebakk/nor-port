@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:24:56 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:08:28 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
 using System;
@@ -21,7 +21,7 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IFlightSearchService {
@@ -39,81 +39,81 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  bookingId: filter by this key
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsOnBookingContract> FlightsOnBooking (System.Guid bookingId);
         // returns a list of FlightHistory contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightHistoryContract> FlightHistory (System.Guid flightId);
         // returns a list of FlightSegments contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightSegmentsContract> FlightSegments (System.Guid flightId);
         // returns a list of AirportsAvailableWithFilter contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<AirportsAvailableWithFilterContract> AirportsAvailableWithFilter (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of FlightsOpenForCheckinWithDescription contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsOpenForCheckinWithDescriptionContract> FlightsOpenForCheckinWithDescription (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of FlightsWithCheckinInformation contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsWithCheckinInformationContract> FlightsWithCheckinInformation (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of FlightsWithBookingInformation contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsWithBookingInformationContract> FlightsWithBookingInformation (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of FlightsForBookingWithFare contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsForBookingWithFareContract> FlightsForBookingWithFare (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of FlightsForPeriod contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightsForPeriodContract> FlightsForPeriod (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         
@@ -121,7 +121,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/cdd86da0-630c-402b-b72a-8dabf924530d
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightEventsContract> FlightEvents(System.Guid flightId);
     }
@@ -136,7 +136,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  bookingId: filter by this key
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsOnBookingContract> FlightsOnBooking (System.Guid bookingId) {
             // transfer all FlightsOnBooking serialized objects from FlightSearch as FlightsOnBooking contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -147,7 +147,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightHistoryContract> FlightHistory (System.Guid flightId) {
             // transfer all FlightHistory serialized objects from FlightSearch as FlightHistory contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -158,7 +158,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightSegmentsContract> FlightSegments (System.Guid flightId) {
             // transfer all FlightSegments serialized objects from FlightSearch as FlightSegments contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -169,10 +169,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AirportsAvailableWithFilterContract> AirportsAvailableWithFilter (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all AirportsAvailableWithFilter serialized objects from FlightSearch as AirportsAvailableWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -183,10 +183,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsOpenForCheckinWithDescriptionContract> FlightsOpenForCheckinWithDescription (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all FlightsOpenForCheckinWithDescription serialized objects from FlightSearch as FlightsOpenForCheckinWithDescription contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -197,10 +197,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsWithCheckinInformationContract> FlightsWithCheckinInformation (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all FlightsWithCheckinInformation serialized objects from FlightSearch as FlightsWithCheckinInformation contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -211,10 +211,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsWithBookingInformationContract> FlightsWithBookingInformation (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all FlightsWithBookingInformation serialized objects from FlightSearch as FlightsWithBookingInformation contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -225,10 +225,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsForBookingWithFareContract> FlightsForBookingWithFare (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all FlightsForBookingWithFare serialized objects from FlightSearch as FlightsForBookingWithFare contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -239,10 +239,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  departureAirportId: filter by this key
-        //  arrivalAirportId: filter by this key
-        //  fromDateTime: filter by this key
-        //  untilDateTime: filter by this key
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightsForPeriodContract> FlightsForPeriod (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             // transfer all FlightsForPeriod serialized objects from FlightSearch as FlightsForPeriod contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();
@@ -254,7 +254,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b582d9b-64df-473e-9f42-7ce7701e67f0
         // parameters:
-        //  flightId: filter by this key
+        //  flightId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public virtual List<FlightEventsContract> FlightEvents(System.Guid flightId) {
             // transfer all FlightEvents serialized objects from FlightSearch as FlightEvents contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.FlightSearch();

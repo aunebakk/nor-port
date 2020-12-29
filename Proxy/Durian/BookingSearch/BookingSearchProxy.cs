@@ -2,65 +2,106 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:21:15 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:02:41 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
 using System.Collections.Generic;
+// Namespace for a Business Logic Layer in a Proxy
+// the Business Logic Layer contains domain logic that encodes real world business rules
+//  that determine how data is created, stored and changed. Typically it will also deal with
+//  import and export of data and integration with API's from other parts of the system or other systems
+// the BusinessLogicLayer is where the DataAccessLayer is exposed as
+//  REST http services
+// links:
+//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
+// application programming interface: https://en.wikipedia.org/wiki/API
+//  docLink: http://sql2x.org/documentationLink/2595ba81-a5dc-4b5a-8bc8-2f7ca6630d9b
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
     
     
+    // Interface class for an WCF Service contract
+    // this interface is used to expose C# objects as SOAP services using WCF
+    // interface is a common means for discrete objects to communicate with each other
+    // links:
+    //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IBookingSearchService")]
     public interface IBookingSearchService {
-        // transfer all objects from data to contract
+        // returns a list of BookingStatistics contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingStatistics", ReplyAction="http://tempuri.org/IBookingSearchService/BookingStatisticsResponse")]
         List<BookingStatisticsContract> BookingStatistics (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
-        // transfer all objects from data to contract
+        // returns a list of BookingEventHistory contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingEventHistory", ReplyAction="http://tempuri.org/IBookingSearchService/BookingEventHistoryResponse")]
         List<BookingEventHistoryContract> BookingEventHistory (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingsOpen contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingsOpen", ReplyAction="http://tempuri.org/IBookingSearchService/BookingsOpenResponse")]
         List<BookingsOpenContract> BookingsOpen ();
-        // transfer all objects from data to contract
+        // returns a list of BookingPassengerWithExtra contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingPassengerId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingPassengerWithExtra", ReplyAction="http://tempuri.org/IBookingSearchService/BookingPassengerWithExtraResponse")]
         BookingPassengerWithExtraContract BookingPassengerWithExtra (System.Guid bookingPassengerId);
-        // transfer all objects from data to contract
+        // returns a list of BookingPassengers contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingPassengers", ReplyAction="http://tempuri.org/IBookingSearchService/BookingPassengersResponse")]
         List<BookingPassengersContract> BookingPassengers (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingFlights contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingFlights", ReplyAction="http://tempuri.org/IBookingSearchService/BookingFlightsResponse")]
         List<BookingFlightsContract> BookingFlights (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingFinancialTransactions contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingFinancialTransactions", ReplyAction="http://tempuri.org/IBookingSearchService/BookingFinancialTransactionsResponse")]
         List<BookingFinancialTransactionsContract> BookingFinancialTransactions (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingServiceSummary contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingServiceSummary", ReplyAction="http://tempuri.org/IBookingSearchService/BookingServiceSummaryResponse")]
         List<BookingServiceSummaryContract> BookingServiceSummary (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingFinancialPayments contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingFinancialPayments", ReplyAction="http://tempuri.org/IBookingSearchService/BookingFinancialPaymentsResponse")]
         List<BookingFinancialPaymentsContract> BookingFinancialPayments (System.Guid bookingId);
-        // transfer all objects from data to contract
+        // returns a list of BookingEventCount contracts from BookingSearchService
         // links:
-        //  docLink: http://sql2x.org/documentationLink/da04228c-8663-4aa2-b0ba-64712bbdc601
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingSearchService/BookingEventCount", ReplyAction="http://tempuri.org/IBookingSearchService/BookingEventCountResponse")]
         BookingEventCountContract BookingEventCount (System.Guid bookingId);
     }
@@ -70,83 +111,86 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     public class BookingSearchService : System.ServiceModel.ClientBase<IBookingSearchService>, IBookingSearchService {
-        // This Method
-        // is generated by
+        // returns a list of BookingStatistics contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  departureAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  arrivalAirportId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  fromDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  untilDateTime: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingStatisticsContract> BookingStatistics (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime) {
             return base.Channel.BookingStatistics(departureAirportId, arrivalAirportId, fromDateTime, untilDateTime);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingEventHistory contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingEventHistoryContract> BookingEventHistory (System.Guid bookingId) {
             return base.Channel.BookingEventHistory(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingsOpen contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //
         public List<BookingsOpenContract> BookingsOpen () {
             return base.Channel.BookingsOpen();
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingPassengerWithExtra contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingPassengerId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public BookingPassengerWithExtraContract BookingPassengerWithExtra (System.Guid bookingPassengerId) {
             return base.Channel.BookingPassengerWithExtra(bookingPassengerId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingPassengers contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingPassengersContract> BookingPassengers (System.Guid bookingId) {
             return base.Channel.BookingPassengers(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingFlights contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingFlightsContract> BookingFlights (System.Guid bookingId) {
             return base.Channel.BookingFlights(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingFinancialTransactions contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingFinancialTransactionsContract> BookingFinancialTransactions (System.Guid bookingId) {
             return base.Channel.BookingFinancialTransactions(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingServiceSummary contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingServiceSummaryContract> BookingServiceSummary (System.Guid bookingId) {
             return base.Channel.BookingServiceSummary(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingFinancialPayments contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<BookingFinancialPaymentsContract> BookingFinancialPayments (System.Guid bookingId) {
             return base.Channel.BookingFinancialPayments(bookingId);
         }
-        // This Method
-        // is generated by
+        // returns a list of BookingEventCount contracts from BookingSearchService
         // links:
-        //  SQL2X.org: https://sql2.org
-        //  docLink: http://sql2x.org/documentationLink/3cf57883-f68e-4318-80a4-1a36604ef84b
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        // parameters:
+        //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public BookingEventCountContract BookingEventCount (System.Guid bookingId) {
             return base.Channel.BookingEventCount(bookingId);
         }

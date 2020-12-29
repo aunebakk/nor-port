@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:26:19 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:10:28 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
 using System;
@@ -21,7 +21,7 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IScheduleSearchService {
@@ -39,14 +39,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  flightScheduleId: filter by this key
+        //  flightScheduleId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightSegmentsScheduleContract> FlightSegmentsSchedule (System.Guid flightScheduleId);
         // returns a list of FlightScheduleHistory contracts from ScheduleSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  flightScheduleId: filter by this key
+        //  flightScheduleId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<FlightScheduleHistoryContract> FlightScheduleHistory (System.Guid flightScheduleId);
         
@@ -69,7 +69,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  flightScheduleId: filter by this key
+        //  flightScheduleId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightSegmentsScheduleContract> FlightSegmentsSchedule (System.Guid flightScheduleId) {
             // transfer all FlightSegmentsSchedule serialized objects from ScheduleSearch as FlightSegmentsSchedule contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.ScheduleSearch();
@@ -80,7 +80,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  flightScheduleId: filter by this key
+        //  flightScheduleId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<FlightScheduleHistoryContract> FlightScheduleHistory (System.Guid flightScheduleId) {
             // transfer all FlightScheduleHistory serialized objects from ScheduleSearch as FlightScheduleHistory contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.ScheduleSearch();

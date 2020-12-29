@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:22:13 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:04:19 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
 using System;
@@ -21,7 +21,7 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IDefaultSearchService {
@@ -53,10 +53,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  defaultChangeName: filter by this key
-        //  defaultChangeLogTypeRcd: filter by this key
-        //  defaultIssueId: filter by this key
-        //  defaultChangeLogId: filter by this key
+        //  defaultChangeName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultChangeLogTypeRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultIssueId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultChangeLogId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<GetDefaultChangeLogContract> GetDefaultChangeLog (System.String defaultChangeName,System.String defaultChangeLogTypeRcd,System.Guid defaultIssueId,System.Guid defaultChangeLogId);
         // returns a list of DefaultUserListForDashboard contracts from DefaultSearchService
@@ -91,14 +91,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  originatingAddress: filter by this key
+        //  originatingAddress: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultUserActivityOnAddressContract> DefaultUserActivityOnAddress (System.String originatingAddress);
         // returns a list of DefaultUserActivityRecent contracts from DefaultSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  defaultUserId: filter by this key
+        //  defaultUserId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultUserActivityRecentContract> DefaultUserActivityRecent (System.Guid defaultUserId);
         // returns a list of DefaultPerformanceTimeCommands contracts from DefaultSearchService
@@ -112,7 +112,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultPerformanceTimesContract> DefaultPerformanceTimes (System.String commandName);
         // returns a list of DefaultStatisticsTop5 contracts from DefaultSearchService
@@ -161,22 +161,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  defaultIssueTypeRcd: filter by this key
-        //  defaultIssueStatusRcd: filter by this key
+        //  defaultIssueTypeRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultIssueStatusRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultIssueWithFilterContract> DefaultIssueWithFilter (System.String defaultIssueTypeRcd,System.String defaultIssueStatusRcd);
         // returns a list of DefaultPerformanceIssueFetchWithFilter contracts from DefaultSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultPerformanceIssueFetchWithFilterContract> DefaultPerformanceIssueFetchWithFilter (System.String commandName);
         // returns a list of DashboardCounts contracts from DefaultSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  dashboardLayoutRcd: filter by this key
+        //  dashboardLayoutRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DashboardCountsContract> DashboardCounts (System.String dashboardLayoutRcd);
         
@@ -184,7 +184,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/cdd86da0-630c-402b-b72a-8dabf924530d
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<DefaultTestOverviewContract> DefaultTestOverview(string commandName);
     }
@@ -221,10 +221,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  defaultChangeName: filter by this key
-        //  defaultChangeLogTypeRcd: filter by this key
-        //  defaultIssueId: filter by this key
-        //  defaultChangeLogId: filter by this key
+        //  defaultChangeName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultChangeLogTypeRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultIssueId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultChangeLogId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<GetDefaultChangeLogContract> GetDefaultChangeLog (System.String defaultChangeName,System.String defaultChangeLogTypeRcd,System.Guid defaultIssueId,System.Guid defaultChangeLogId) {
             // transfer all GetDefaultChangeLog serialized objects from DefaultSearch as GetDefaultChangeLog contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -279,7 +279,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  originatingAddress: filter by this key
+        //  originatingAddress: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DefaultUserActivityOnAddressContract> DefaultUserActivityOnAddress (System.String originatingAddress) {
             // transfer all DefaultUserActivityOnAddress serialized objects from DefaultSearch as DefaultUserActivityOnAddress contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -290,7 +290,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  defaultUserId: filter by this key
+        //  defaultUserId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DefaultUserActivityRecentContract> DefaultUserActivityRecent (System.Guid defaultUserId) {
             // transfer all DefaultUserActivityRecent serialized objects from DefaultSearch as DefaultUserActivityRecent contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -312,7 +312,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DefaultPerformanceTimesContract> DefaultPerformanceTimes (System.String commandName) {
             // transfer all DefaultPerformanceTimes serialized objects from DefaultSearch as DefaultPerformanceTimes contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -389,8 +389,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  defaultIssueTypeRcd: filter by this key
-        //  defaultIssueStatusRcd: filter by this key
+        //  defaultIssueTypeRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
+        //  defaultIssueStatusRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DefaultIssueWithFilterContract> DefaultIssueWithFilter (System.String defaultIssueTypeRcd,System.String defaultIssueStatusRcd) {
             // transfer all DefaultIssueWithFilter serialized objects from DefaultSearch as DefaultIssueWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -401,7 +401,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DefaultPerformanceIssueFetchWithFilterContract> DefaultPerformanceIssueFetchWithFilter (System.String commandName) {
             // transfer all DefaultPerformanceIssueFetchWithFilter serialized objects from DefaultSearch as DefaultPerformanceIssueFetchWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -412,7 +412,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  dashboardLayoutRcd: filter by this key
+        //  dashboardLayoutRcd: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<DashboardCountsContract> DashboardCounts (System.String dashboardLayoutRcd) {
             // transfer all DashboardCounts serialized objects from DefaultSearch as DashboardCounts contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();
@@ -424,7 +424,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b582d9b-64df-473e-9f42-7ce7701e67f0
         // parameters:
-        //  commandName: filter by this key
+        //  commandName: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public virtual List<DefaultTestOverviewContract> DefaultTestOverview(string commandName) {
             // transfer all DefaultTestOverview serialized objects from DefaultSearch as DefaultTestOverview contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.DefaultSearch();

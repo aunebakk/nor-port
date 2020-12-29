@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:22:19 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:04:27 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateDataAccessLayerV0.UsingDotNetFramework
 */
 using System;
@@ -54,7 +54,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         
         // use ordinals to speed up access to DataReader
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/327451c3-64a8-4de8-b359-76742d634497
         // parameters:
         //  reader: IDataReader from SQLClient
@@ -104,7 +103,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         
         // get ordinals in order to speed up subsequent access to DataReader
         // links:
-        //  crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
         //  docLink: http://sql2x.org/documentationLink/41a04ed0-5ed8-4d0e-bb90-ccfbfd219e82
         // parameters:
         //  reader: IDataReader from SQLClient

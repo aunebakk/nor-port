@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/28/2020 5:20:34 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 12/29/2020 3:01:34 AM
+  From Machine: DESKTOP-517I8BU
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
 using System;
@@ -21,7 +21,7 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 //  SOAP http services, using Windows Communication Framework
 // links:
 //  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
+// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
@@ -30,8 +30,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    //  Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
-    //  WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
+    // Interface/Protocol (object-oriented programming): https://en.wikipedia.org/wiki/Protocol_(object-oriented_programming)
+    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IAircraftSearchService {
@@ -39,21 +39,21 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<AircraftIdentifierIndexWithFilterContract> AircraftIdentifierIndexWithFilter (System.Guid aircraftId);
         // returns a list of AircraftDocumentIndexWithFilter contracts from AircraftSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<AircraftDocumentIndexWithFilterContract> AircraftDocumentIndexWithFilter (System.Guid aircraftId);
         // returns a list of AircraftCompartmentIndexWithFilter contracts from AircraftSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<AircraftCompartmentIndexWithFilterContract> AircraftCompartmentIndexWithFilter (System.Guid aircraftId);
         // returns a list of AircraftIndexWithFilter contracts from AircraftSearchService
@@ -83,7 +83,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftIdentifierIndexWithFilterContract> AircraftIdentifierIndexWithFilter (System.Guid aircraftId) {
             // transfer all AircraftIdentifierIndexWithFilter serialized objects from AircraftSearch as AircraftIdentifierIndexWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.AircraftSearch();
@@ -94,7 +94,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftDocumentIndexWithFilterContract> AircraftDocumentIndexWithFilter (System.Guid aircraftId) {
             // transfer all AircraftDocumentIndexWithFilter serialized objects from AircraftSearch as AircraftDocumentIndexWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.AircraftSearch();
@@ -105,7 +105,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
-        //  aircraftId: filter by this key
+        //  aircraftId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         public List<AircraftCompartmentIndexWithFilterContract> AircraftCompartmentIndexWithFilter (System.Guid aircraftId) {
             // transfer all AircraftCompartmentIndexWithFilter serialized objects from AircraftSearch as AircraftCompartmentIndexWithFilter contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.AircraftSearch();
