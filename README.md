@@ -4,34 +4,36 @@ Nor-Port is a Passenger Service System written for enterprise cloud environments
 
 A major part of the code is produced by a Code Generator [sql2x](www.sql2x.org). The general idea is to use as few frameworks and dependencies as possible in order to make a product that will stand the test of time without having to be rewritten when technology shifts happens and frameworks and dependencies become incompatible.
 
-The remaining part of code mainly consists of user interface tweaks to support new user interface trends and fads, business layer code to interact with other systems, import/export, etc.
+The remaining part of code mainly consists of user interface tweaks to support new user interface trends and fads, business layer code to interact with other systems, import/export, etc. 
 
 The example schedule and passenger data is all Latin "Lorem ipsum" Gibberish, this to take focus away from the data but most language specific data can be handled by Nor-Port.
 
-The goal of Open Sourcing Nor-Port is to attract organizations/developers to make user interfaces tailored towards more specialized businesses while keeping the core sturdy enough to handle both small and large passenger bases as effective as possible on the infrastructure it runs on. 
+The goal of Open Sourcing Nor-Port is to attract airlines to improve functionality and make user interfaces tailored towards more specialized businesses cases, while keeping the core sturdy enough to handle both small and large passenger bases as effective as possible on the infrastructure it runs on. 
 
-Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is not expected to change at all during this transition from WCF/SOAP to REST. And the tailored user interface code should stay the same as SQL2X provides the same client side proxy for REST interfaces as SOAP did.
+Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is shared between dot net core's REST interface and dot net framework's SOAP interface. And the tailored user interface code stays the same as SQL2X provides the same client side proxy for REST interfaces as SOAP does.
 
-Live [Nor-Port running under Azure](http://www.NorPort.org). In this configuration all 3 FrontEnds runs under one Azure App, the WCF/SOAP layer in another one and finally Azure SQL Database on a third server.
+Live [Nor-Port running under Azure](http://www.NorPort.org). In this configuration all 3 FrontEnds runs under one Azure App, SOAP/WCF & REST/ASP layer in separate instances ( with shared business layer code ) and finally a Azure SQL Database on a whichever Azure SQL server configuration suits the airline's needs.
 
 # Nor-Port
-[Nor-Port](http://www.NorPort.org) Passenger Service System - Structured product specific attributes for Windows / Web and Mobile platform.
+[Nor-Port](http://www.NorPort.org) Passenger Service System - for Windows / Web and Mobile platform.
 
 Nor-Port is a Passenger Service System System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile.
 
-Nor-Port is used for managing a fleet and a schedule with inventory which is either maintained manually or automatically through interfaces to other systems.
+Nor-Port is used for managing a fleet and a schedule with inventory which is either maintained manually or automatically through SOAP/REST interfaces to other systems.
 
-Nor-Port provides full access to a it's fleet, schedule and inventory with a fixed or customized API through WCF/SOAP interfaces.
+Nor-Port provides full access to it's fleet, schedule and inventory with a fixed or customized API through SOAP and REST interfaces.
 
 Nor-Port also acts as a proof of concept for a three tiered cloud based "Line-of-Business" system that features:
 
  - SQL Server database
- - Business layer through WCF/SOAP / ASP
- - Business layer through ASP / REST
- - FrontEnd's consuming the WCF/SOAP layer :
+ - Business layer through SOAP/WCF / REST/ASP
+ - FrontEnd's consuming the SOAP/WCF layer :
    - Windows application ( Full Maintenance Capabilities )
-   - Web Site ( Browsing and editing products / product bucket )
-   - Mobile Hybrid App ( Browsing and editing products / product bucket )
+   - Web Site ( Booking, Reporting, Charting & Maintenance )
+   - Mobile Hybrid App ( Dashboard )
+   - MS Test
+ - FrontEnd's consuming the REST/ASP layer :
+   - MS Test
 
 Nor-Port uses no special frameworks outside of the dotNetFramework ecosystem in an effort to make it as scalable and maintainable as possible, this is made possible by using a tool to generate boiler plate code for efficient communication between layers ( SQL2X ). Since the code is bare bone C# and TypeScript it is easier to find developers to maintain / enhance the code.
 
@@ -48,7 +50,7 @@ You will need the following WorkLoad:
 ## PowerShell 5.1
 Nor-Port uses PowerShell to switch environment between local development and publishing to Azure, download [here](https://docs.microsoft.com/en-us/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)
 
-## Git ( Source control system used by NorPim )
+## Git ( Source control system used by NorPort )
 Download Git [here](https://git-scm.com/downloads)
 
 Download GitHub Command Line interface for Windows [here](https://cli.github.com/)
@@ -62,8 +64,8 @@ Download GitHub Command Line interface for Windows [here](https://cli.github.com
 ## Folder structure ( first level )
 | Folder Name                           | Comment                                                                           |
 |---------------------------------------|-----------------------------------------------------------------------------------|
-| ASP                                   | WCF / SOAP Business layer ( C# )
-| Business                              | WCF / SOAP Business layer ( C# )
+| ASP                                   | REST (ASP) Business layer ( C# )
+| Business                              | SOAP (WCF) Business layer ( C# )
 | Contract                              | Contracts used by the Data, Business, Web and WinForm Layers ( C# )
 | Data                                  | Data Access Layer, used by the Business Layer ( C# / Ansi SQL )
 | Database                              | Visual Studio testbed to SQL Server ( Ansi SQL ) & ErWin Schema
@@ -74,6 +76,7 @@ Download GitHub Command Line interface for Windows [here](https://cli.github.com
 | Proxy                                 | WCF / SOAP client proxy used in WinForm and Web / ASP ( C# )
 | Web                                   | Hybrid / Web FrontEnd's ( C# / ASP & TypeScript / JavaScript / HTML / CSS )
 | WinForm                               | Windows WinForm & Installer ( C# )
+| Test                                  | Unit, Integration and User Interface tests
 
 ## How to run code on local computer
 Use PowerShell to rename the sql server connection string for the various projects:
@@ -110,8 +113,9 @@ Prerequisites:
 |---------------------------------------|-------------------------------------------------------|
 | AzureRM                               | PowerShell module needed for fetching publish profile
 | Azure SQL Server                      | Minimal configuration
-| NorSolutionPimBusiness                | Azure Web App
-| NorSolutionPim                        | Azure Web App
+| NorSolutionPortCore                   | Azure Web App
+| NorSolutionPortBusiness               | Azure Web App
+| NorSolutionPort                       | Azure Web App
 | Active Directory User                 | Guest User
 
 Use PowerShell to rename the sql server connection string and login information for the various projects:
@@ -144,7 +148,7 @@ Use PowerShell to rename the sql server connection string and login information 
 ```
 **The Web and Window FrontEnd's**
 ```
-NuGet.exe restore .\SolutionNorSolutionPim.sln ( Download NuGet here: https://docs.microsoft.com/en-us/nuget/release-notes/nuget-4.9-rtm )
+NuGet.exe restore .\SolutionNorSolutionPort.sln ( Download NuGet here: https://docs.microsoft.com/en-us/nuget/release-notes/nuget-4.9-rtm )
 & '.\Operational\Restore packages.bat'
 & '.\WinForm\Operational\Publish WinForm layer to ASP site install directory.bat'
 & '.\Web\Operational\Get-Web-App-PublishingProfile.ps1' 
@@ -180,7 +184,7 @@ Is an top-down view of Nor-Port, starting with all user visible aspects, going t
 This repository ("`Nor-Port`") is where we ( NorGate ) develop the [Nor-Port](http://www.NorPort.org) product. This source code is available to everyone under the standard [MIT](https://github.com/aunebakk/nor-port/blob/master/Documentation/license.txt) license.
 
 ## DashBoard web
-This is the starting page for the Web side of Nor-Port. It supports portrait and landscape mode, so rotating a mobile device will change layout of tiles.
+This is the starting page for the Web side of Nor-Port. 
 
 <p align="center">
   <img alt="Nor-Port in action" src=".\Documentation\dashboard.web.png">
@@ -253,7 +257,7 @@ For editing all product data, including an all inclusive history of all changes 
  - Windows Server
  
  ## Security
- - On FrontEnd and SQL Server level. WCF/SOAP services level is in the [pipeline](#pipeline).
+ - On FrontEnd and SQL Server level. SOAP/WCF and REST/ASP services level is in the [pipeline](#pipeline).
  
 ## Database
 Following is parts of Nor-Port's Database schema, there are more tables dealing with import and export, catalog structure, security and users.
@@ -264,17 +268,16 @@ Nor-Port uses a database handler that takes care of upgrading the database schem
 </p>
 
 ## Pipeline
- - WCF/SOAP Security / Winter 2020
- - Replace jQuery and Bootstrap / Winter 2021
- - dotNetCore / Spring 2021
- - Visual Studio 2019 / Spring 2021 
+ - SOAP/WCF Security / Winter 2021
+ - REST/ASP Security / Winter 2021
+ - Replace jQuery and Bootstrap / Summer 2021
 
 ## Feedback
 
 * Follow [@sql2x](https://twitter.com/sql2x) and let us know what you think!
 * Follow [reddit](https://www.reddit.com/r/sql2x/) and let us know what you think!
 * [File an issue ( GitHub issue tracker )](https://github.com/aunebakk/nor-port/issues)
-* [File an issue ( Nor-Port's own issue tracker )](https://norsolutionpim.azurewebsites.net/DefaultIssueWithFilterLive/DefaultIssueWithFilterLiveIndex)
+* [File an issue ( Nor-Port's own issue tracker )](https://NorSolutionPort.azurewebsites.net/DefaultIssueWithFilterLive/DefaultIssueWithFilterLiveIndex)
 * Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/Nor-Port)
 
 ## SQL2X

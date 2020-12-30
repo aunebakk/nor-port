@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{099F55EA-FAB9-4394-B053-B17D00BF65C8}</ProjectGuid>
+    <ProjectGuid>{EE0DB8E7-141C-4359-9223-FFAC0712029C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -727,11 +727,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{b17b8d3d-d19b-4ae8-98fa-7f21cf465ca2}</Project>
+      <Project>{4c814560-2674-4cad-9e99-42e21b282569}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{4698dcf8-d498-40f7-8e1b-11e3304ce6c7}</Project>
+      <Project>{a128c87b-0999-4290-8514-3c1d5faca746}</Project>
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/29/2020 2:30:09 AM
-  From Machine: DESKTOP-517I8BU
+  Generated Date: 12/30/2020 5:21:36 AM
+  From Machine: DESKTOP-LSRVP12
   Filename: FinancialCouponTypeRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
   Template Style: DotNetFrameworkCrudeProxy

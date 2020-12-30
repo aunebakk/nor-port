@@ -890,7 +890,7 @@ namespace SolutionNorSolutionPort.DataAccessLayer
                 from booking as bo
                 inner join booking_source_ref as bsr on bsr.booking_source_rcd = bo.booking_source_rcd
                 --realwhere
-                order by bo.date_time
+                order by bo.date_time desc
                 -- (todo, crazy expensive) order by last_booking_event_date_time desc
             ";
 

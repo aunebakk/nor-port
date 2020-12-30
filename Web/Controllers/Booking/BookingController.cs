@@ -52,7 +52,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     Logging.UserId(User.Identity, ViewBag)
                     );
 
-            return RedirectToAction("BookingEventHistoryIndex",
+            return RedirectToAction("BookingEventHistory",
                                     new { bookingId = bookingId }
                                     );
 

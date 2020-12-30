@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/29/2020 2:36:45 AM
-  From Machine: DESKTOP-517I8BU
+  Generated Date: 12/30/2020 5:26:42 AM
+  From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -226,16 +226,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftConfigurationRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftBodyRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "12/29/2020 2:36:45 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "12/29/2020 2:36:45 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "12/30/2020 5:26:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "12/30/2020 5:26:42 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "EngineType" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PassengerCapacity" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:36:45 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 5:26:42 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
                 var client = new HttpClient ();
-                var response = client.PostAsync("http://.azurewebsites.net//api/1/CrudeAircraft/CrudeAircraftCreate/", content).Result;
+                var response = client.PostAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeAircraft/CrudeAircraftCreate/", content).Result;
                 // todo var response = client.PostAsync("http://NorSolutionPortCore.azurewebsites.net/api/1/CrudeAircraft/CrudeAircraftCreate/", content).Result;
 
                 // read/return reply
@@ -277,16 +277,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftConfigurationRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftBodyRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "12/29/2020 2:36:45 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "12/29/2020 2:36:45 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "12/30/2020 5:26:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "12/30/2020 5:26:42 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "EngineType" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PassengerCapacity" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:36:45 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 5:26:42 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
                 var client = new HttpClient ();
-                var response = client.PutAsync("http://.azurewebsites.net//api/1/CrudeAircraft/CrudeAircraftUpdate/", content).Result;
+                var response = client.PutAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeAircraft/CrudeAircraftUpdate/", content).Result;
                 // todo var response = client.PutAsync("http://NorSolutionPortCore.azurewebsites.net/api/1/CrudeAircraft/CrudeAircraftUpdate/", content).Result;
 
                 // read/return reply
@@ -319,7 +319,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             try {
                 var client = new HttpClient ();
-                var response = client.DeleteAsync("http://.azurewebsites.net//api/1/CrudeAircraft/CrudeAircraftDelete/00000000-0000-0000-0000-000000000001" ).Result;
+                var response = client.DeleteAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeAircraft/CrudeAircraftDelete/00000000-0000-0000-0000-000000000001" ).Result;
 
                 // read/return reply
                 if ( response.IsSuccessStatusCode )

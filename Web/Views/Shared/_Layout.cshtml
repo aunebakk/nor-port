@@ -39,8 +39,8 @@
                 @*@Html.ActionLink("nor-port", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
                 <a class="navbar-left logo" href="/Home/Index">
                     <svg width="300"
-                         height="150"
-                         viewBox="0 0 300 150">
+                         height="50"
+                         viewBox="0 0 300 50">
                         <g transform="translate(-22,-10)">
                             <path id="path3331"
                                   style="fill:#e0e0e0"
@@ -101,10 +101,10 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Availability", "FlightsWithBookingInformationIndex", "FlightsWithBookingInformationLive", null, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("Booking List", "BookingListIndex", "Booking", null, new { @class = "dropdown-item" })</li>
-                            <li>@Html.ActionLink("Booking New ( Windows Form )", "Booking", "Home", new { bookingId = Guid.Empty }, new { @class = "dropdown-item" })</li>
+                            @*<li>@Html.ActionLink("Booking New ( Windows Form )", "Booking", "Home", new { bookingId = Guid.Empty }, new { @class = "dropdown-item" })</li>*@
                             <li>@Html.ActionLink("Bookie", "BookieIndex", "Bookie", null, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("Checkin", "CheckinIndex", "Checkin", null, new { @class = "dropdown-item" })</li>
-                            <li>@Html.ActionLink("Checkin ( Windows Form )", "Checkin", "Home", null, new { @class = "dropdown-item" })</li>
+                            @*<li>@Html.ActionLink("Checkin ( Windows Form )", "Checkin", "Home", null, new { @class = "dropdown-item" })</li>*@
                             <li>@Html.ActionLink("-------------------------", "", "", null, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("Simulate Bookings", "SimulateBookings", "Booking", null, new { @class = "dropdown-item" })</li>
                         </ul>

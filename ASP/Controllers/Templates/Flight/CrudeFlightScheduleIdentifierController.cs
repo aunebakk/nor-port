@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/29/2020 2:47:23 AM
-  From Machine: DESKTOP-517I8BU
+  Generated Date: 12/30/2020 5:36:06 AM
+  From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -170,12 +170,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightIdentifierTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightIdentifierCode" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:47:23 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 5:36:06 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
                 var client = new HttpClient ();
-                var response = client.PostAsync("http://.azurewebsites.net//api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierCreate/", content).Result;
+                var response = client.PostAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierCreate/", content).Result;
                 // todo var response = client.PostAsync("http://NorSolutionPortCore.azurewebsites.net/api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierCreate/", content).Result;
 
                 // read/return reply
@@ -215,12 +215,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightIdentifierTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightIdentifierCode" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/29/2020 2:47:23 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 5:36:06 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
                 var client = new HttpClient ();
-                var response = client.PutAsync("http://.azurewebsites.net//api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierUpdate/", content).Result;
+                var response = client.PutAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierUpdate/", content).Result;
                 // todo var response = client.PutAsync("http://NorSolutionPortCore.azurewebsites.net/api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierUpdate/", content).Result;
 
                 // read/return reply
@@ -253,7 +253,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             try {
                 var client = new HttpClient ();
-                var response = client.DeleteAsync("http://.azurewebsites.net//api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierDelete/00000000-0000-0000-0000-000000000001" ).Result;
+                var response = client.DeleteAsync("http://NorSolutionPort.AzureWebSites.net/api/1/CrudeFlightScheduleIdentifier/CrudeFlightScheduleIdentifierDelete/00000000-0000-0000-0000-000000000001" ).Result;
 
                 // read/return reply
                 if ( response.IsSuccessStatusCode )

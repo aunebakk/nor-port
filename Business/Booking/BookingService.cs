@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -2497,10 +2497,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer
                     // todo, system setting
                     client.Credentials =
                         new System.Net.NetworkCredential(
-                            "emailLog",
-                            "azureActiveDirectoryPassword"
+                            userName: "emailLog",
+                            password: "azureActiveDirectoryPassword"
                             );
 
+                    //sql2x.MailEx.MailMessage(
+                    //        messageSubject: "Booking Confirmation for " + booking.BookingIdentifier.BookingIdentifierValue,
+                    //        messageText: messageText,
+                    //        recipients: contactMethod[0].ContactMethodWay
+                    //    );
                     MailMessage message = 
                         new MailMessage(
                             "emailLog",
@@ -2625,4 +2630,5 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer
         }
     }
 }
+
 

@@ -6,10 +6,29 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace UnitTest {
+namespace Test {
+    [TestClass]
+    public partial class Ordered {
+        [TestMethod]
+        public void DatabaseInit() {
+            DatabaseInit afterDatabaseInit = new DatabaseInit();
+
+            afterDatabaseInit.Step01_Web_InitiateDB();
+            afterDatabaseInit.Step02_API_MakeFlights();
+            afterDatabaseInit.Step03_API_CheckFlightAndMakeBookings();
+            afterDatabaseInit.Step04_Web_Reports();
+            afterDatabaseInit.Step05_SOAP_Count_Aircrafts();
+            afterDatabaseInit.Step06_SOAP_Count_Flights();
+            afterDatabaseInit.Step07_REST_Count_Flights();
+            afterDatabaseInit.Step08_REST_Check_Flights();
+            afterDatabaseInit.Step09_REST_Proxy_test();
+            afterDatabaseInit.Step10_REST_Proxy_Booking_Test();
+        }
+    }
 
     [TestClass]
-    public class AfterDatabaseInit {
+    public class DatabaseInit {
+
         private Guid DefaultUserId = new Guid("{FFFFFFFF-5555-5555-5555-FFFFFFFFFFFF}");
 
         /// <summary>
@@ -231,7 +250,7 @@ namespace UnitTest {
         [TestMethod]
         public void Step10_REST_Proxy_Booking_Test() {
 
-            new BookingServiceClient().UpdateBookingPage1(new Guid(), "source", "locator", "me", "hi", new Guid());
+            //new BookingServiceClient().UpdateBookingPage1(new Guid(), "source", "locator", "me", "hi", new Guid());
 
             Assert.AreEqual(
                 expected: 3,

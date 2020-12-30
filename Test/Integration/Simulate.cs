@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Net;
 
-namespace UnitTest {
+namespace Test {
     [TestClass]
     public class Simulate {
         private Guid DefaultUserId => new System.Guid("{FFFFFFFF-5555-5555-5555-FFFFFFFFFFFF}");

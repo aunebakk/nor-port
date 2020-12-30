@@ -37,7 +37,7 @@
             <td>@Html.DisplayFor(modelItem => item.BalanceAmount) </td>
             <td>
                   @Html.ActionLink("Modify", "BookingGeneral", "Booking", new { bookingId = item.BookingId }, null) 
-                | @Html.ActionLink("Modify(WinForm)", "Booking", "Home", new { bookingId = item.BookingId }, null)
+                @*| @Html.ActionLink("Modify(WinForm)", "Booking", "Home", new { bookingId = item.BookingId }, null)*@
             </td>
         </tr>
     }
