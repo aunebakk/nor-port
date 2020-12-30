@@ -336,7 +336,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer
 
                 try {
                     // iterate all dates between from / until
-                    DateTime currentDate = scheduleContract.FlightSchedule.FromDateTime.Date;
+                    //DateTime currentDate = scheduleContract.FlightSchedule.FromDateTime.Date;
+                    DateTime currentDate = DateTime.UtcNow.Date;
 
                     while ( currentDate >= scheduleContract.FlightSchedule.FromDateTime.Date
                             && currentDate <= scheduleContract.FlightSchedule.UntilDateTime ) {
