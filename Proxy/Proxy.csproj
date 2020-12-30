@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7BA1B6E-5600-4AA6-A681-9C91FE6A4643}</ProjectGuid>
+    <ProjectGuid>{704293A5-D33F-4B04-B2A3-94CC87575BD2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Proxy</RootNamespace>
@@ -48,8 +48,6 @@
     <Compile Include="Crude\Templates\Address\CrudeAddressService.cs" />
     <Compile Include="Crude\Templates\Address\CrudeAddressTypeRefService.cs" />
     <Compile Include="Crude\Templates\Agency\CrudeAgencyService.cs" />
-    <Compile Include="Crude\Templates\AircraftMaintenanceSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\AircraftSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Aircraft\CrudeAircraftBodyRefService.cs" />
     <Compile Include="Crude\Templates\Aircraft\CrudeAircraftCompartmentMeasurementService.cs" />
     <Compile Include="Crude\Templates\Aircraft\CrudeAircraftCompartmentService.cs" />
@@ -70,7 +68,6 @@
     <Compile Include="Crude\Templates\Airline\CrudeAirlineLinkService.cs" />
     <Compile Include="Crude\Templates\Airline\CrudeAirlineService.cs" />
     <Compile Include="Crude\Templates\Airline\CrudeAirlineTypeRefService.cs" />
-    <Compile Include="Crude\Templates\AirportSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Airport\CrudeAirportFacilityService.cs" />
     <Compile Include="Crude\Templates\Airport\CrudeAirportFacilityTypeRefService.cs" />
     <Compile Include="Crude\Templates\Airport\CrudeAirportHotelLinkService.cs" />
@@ -84,8 +81,6 @@
     <Compile Include="Crude\Templates\Airport\CrudeAirportTerminalAirlineService.cs" />
     <Compile Include="Crude\Templates\Airport\CrudeAirportTerminalService.cs" />
     <Compile Include="Crude\Templates\Airport\CrudeAirportTypeRefService.cs" />
-    <Compile Include="Crude\Templates\BookingSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\BookingServiceProxy.cs" />
     <Compile Include="Crude\Templates\Booking\CrudeBookingContactMethodService.cs" />
     <Compile Include="Crude\Templates\Booking\CrudeBookingDocumentService.cs" />
     <Compile Include="Crude\Templates\Booking\CrudeBookingDocumentTypeRefService.cs" />
@@ -103,12 +98,10 @@
     <Compile Include="Crude\Templates\Booking\CrudeBookingService.cs" />
     <Compile Include="Crude\Templates\Booking\CrudeBookingServiceRequestService.cs" />
     <Compile Include="Crude\Templates\Booking\CrudeBookingSourceRefService.cs" />
-    <Compile Include="Crude\Templates\CarRentalSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Cart\CrudeCartProductPriceService.cs" />
     <Compile Include="Crude\Templates\Cart\CrudeCartProductService.cs" />
     <Compile Include="Crude\Templates\Cart\CrudeCartUserService.cs" />
     <Compile Include="Crude\Templates\City\CrudeCityService.cs" />
-    <Compile Include="Crude\Templates\ClientSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Client\CrudeClientContactMethodService.cs" />
     <Compile Include="Crude\Templates\Client\CrudeClientEventService.cs" />
     <Compile Include="Crude\Templates\Client\CrudeClientEventTypeRefService.cs" />
@@ -118,10 +111,6 @@
     <Compile Include="Crude\Templates\Contact\CrudeContactMethodRefService.cs" />
     <Compile Include="Crude\Templates\Country\CrudeCountryService.cs" />
     <Compile Include="Crude\Templates\Date\CrudeDateTimeTypeRefService.cs" />
-    <Compile Include="Crude\Templates\DefaultSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\DefaultTestSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\DefaultTestServiceProxy.cs" />
-    <Compile Include="Crude\Templates\DefaultUserActivityServiceProxy.cs" />
     <Compile Include="Crude\Templates\Default\CrudeDefaultChangeLogService.cs" />
     <Compile Include="Crude\Templates\Default\CrudeDefaultChangeLogTypeRefService.cs" />
     <Compile Include="Crude\Templates\Default\CrudeDefaultErrorLayerRefService.cs" />
@@ -147,14 +136,11 @@
     <Compile Include="Crude\Templates\Default\CrudeDefaultUserActivityTypeRefService.cs" />
     <Compile Include="Crude\Templates\Default\CrudeDefaultUserService.cs" />
     <Compile Include="Crude\Templates\Default\CrudeDefaultVersionService.cs" />
-    <Compile Include="Crude\Templates\DiagnosticsServiceProxy.cs" />
     <Compile Include="Crude\Templates\External\CrudeExternalSystemService.cs" />
-    <Compile Include="Crude\Templates\FerrySearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Ferry\CrudeFerryIdentifierService.cs" />
     <Compile Include="Crude\Templates\Ferry\CrudeFerryIdentifierTypeRefService.cs" />
     <Compile Include="Crude\Templates\Ferry\CrudeFerryService.cs" />
     <Compile Include="Crude\Templates\Ferry\CrudeFerryTypeRefService.cs" />
-    <Compile Include="Crude\Templates\FinancialSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Financial\CrudeFinancialAdjustmentService.cs" />
     <Compile Include="Crude\Templates\Financial\CrudeFinancialAdjustmentTypeRefService.cs" />
     <Compile Include="Crude\Templates\Financial\CrudeFinancialBankAccountNumberTypeRefService.cs" />
@@ -188,8 +174,6 @@
     <Compile Include="Crude\Templates\Financial\CrudeFinancialTaxTypeRefService.cs" />
     <Compile Include="Crude\Templates\Financial\CrudeFinancialVoucherService.cs" />
     <Compile Include="Crude\Templates\Financial\CrudeFinancialVoucherTypeRefService.cs" />
-    <Compile Include="Crude\Templates\FlightSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\FlightServiceProxy.cs" />
     <Compile Include="Crude\Templates\Flight\CrudeFlightEventService.cs" />
     <Compile Include="Crude\Templates\Flight\CrudeFlightIdentifierService.cs" />
     <Compile Include="Crude\Templates\Flight\CrudeFlightIdentifierTypeRefService.cs" />
@@ -202,20 +186,14 @@
     <Compile Include="Crude\Templates\Flight\CrudeFlightSegmentService.cs" />
     <Compile Include="Crude\Templates\Flight\CrudeFlightService.cs" />
     <Compile Include="Crude\Templates\Gender\CrudeGenderRefService.cs" />
-    <Compile Include="Crude\Templates\HotelSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Language\CrudeLanguageRefService.cs" />
     <Compile Include="Crude\Templates\Link\CrudeLinkTypeRefService.cs" />
     <Compile Include="Crude\Templates\Nationality\CrudeNationalityRefService.cs" />
-    <Compile Include="Crude\Templates\PassengerSearchServiceProxy.cs" />
     <Compile Include="Crude\Templates\Passenger\CrudePassengerService.cs" />
     <Compile Include="Crude\Templates\Passenger\CrudePassengerTypeRefService.cs" />
     <Compile Include="Crude\Templates\Product\CrudeProductService.cs" />
     <Compile Include="Crude\Templates\Reporting\CrudeReportingRoundupService.cs" />
     <Compile Include="Crude\Templates\Reporting\CrudeReportingRoundupTypeRefService.cs" />
-    <Compile Include="Crude\Templates\ScheduleSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\ScheduleServiceProxy.cs" />
-    <Compile Include="Crude\Templates\ServiceSearchServiceProxy.cs" />
-    <Compile Include="Crude\Templates\ServiceServiceProxy.cs" />
     <Compile Include="Crude\Templates\Service\CrudeServiceCarRentalLinkService.cs" />
     <Compile Include="Crude\Templates\Service\CrudeServiceCarRentalService.cs" />
     <Compile Include="Crude\Templates\Service\CrudeServiceFerryService.cs" />
@@ -257,6 +235,28 @@
     <Compile Include="Service\FlightProxy.cs" />
     <Compile Include="Service\ScheduleProxy.cs" />
     <Compile Include="Service\ServiceProxy.cs" />
+    <Compile Include="Service\Templates\AircraftMaintenanceSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\AircraftSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\AirportSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\BookingSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\BookingServiceProxy.cs" />
+    <Compile Include="Service\Templates\CarRentalSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\ClientSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\DefaultSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\DefaultTestSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\DefaultTestServiceProxy.cs" />
+    <Compile Include="Service\Templates\DefaultUserActivityServiceProxy.cs" />
+    <Compile Include="Service\Templates\DiagnosticsServiceProxy.cs" />
+    <Compile Include="Service\Templates\FerrySearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\FinancialSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\FlightSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\FlightServiceProxy.cs" />
+    <Compile Include="Service\Templates\HotelSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\PassengerSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\ScheduleSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\ScheduleServiceProxy.cs" />
+    <Compile Include="Service\Templates\ServiceSearchServiceProxy.cs" />
+    <Compile Include="Service\Templates\ServiceServiceProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CustomTemplates\Rest\Proxy.json" />
@@ -431,7 +431,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{cdf4922b-cb1f-47c3-9e7b-641d8c325043}</Project>
+      <Project>{ffe088a3-0af5-46ec-9e30-3346a459a170}</Project>
       <Name>Contract</Name>
     </ProjectReference>
   </ItemGroup>

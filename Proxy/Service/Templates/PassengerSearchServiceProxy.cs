@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:20 AM
+  Generated Date: 12/30/2020 1:57:03 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlightWithoutEvents?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlightWithoutEvents?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<PassengersOnFlightWithoutEventsContract> reply =
@@ -52,7 +52,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlightCheckedIn?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlightCheckedIn?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<PassengersOnFlightCheckedInContract> reply =
@@ -67,7 +67,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlight?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnFlight?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<PassengersOnFlightContract> reply =
@@ -82,7 +82,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnBooking?bookingId={bookingId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/PassengerSearchService/PassengersOnBooking?bookingId={bookingId}";
             string jsonString = client.DownloadString(query);
 
             List<PassengersOnBookingContract> reply =

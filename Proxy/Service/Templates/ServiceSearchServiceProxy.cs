@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:24 AM
+  Generated Date: 12/30/2020 1:57:09 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/GetServicePackage?servicePackageId={servicePackageId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/GetServicePackage?servicePackageId={servicePackageId}";
             string jsonString = client.DownloadString(query);
 
             List<GetServicePackageContract> reply =
@@ -56,7 +56,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/FetchServiceSpecialServiceRequestWithFilter?serviceSpecialServiceRequestGroupRcd={serviceSpecialServiceRequestGroupRcd}&serviceSpecialServiceRequestCode={serviceSpecialServiceRequestCode}&requestServiceSpecialServiceRequestRequirementRcd={requestServiceSpecialServiceRequestRequirementRcd}&replyServiceSpecialServiceRequestRequirementRcd={replyServiceSpecialServiceRequestRequirementRcd}&serviceSpecialServiceRequestOperationRuleRcd={serviceSpecialServiceRequestOperationRuleRcd}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/FetchServiceSpecialServiceRequestWithFilter?serviceSpecialServiceRequestGroupRcd={serviceSpecialServiceRequestGroupRcd}&serviceSpecialServiceRequestCode={serviceSpecialServiceRequestCode}&requestServiceSpecialServiceRequestRequirementRcd={requestServiceSpecialServiceRequestRequirementRcd}&replyServiceSpecialServiceRequestRequirementRcd={replyServiceSpecialServiceRequestRequirementRcd}&serviceSpecialServiceRequestOperationRuleRcd={serviceSpecialServiceRequestOperationRuleRcd}";
             string jsonString = client.DownloadString(query);
 
             List<FetchServiceSpecialServiceRequestWithFilterContract> reply =
@@ -71,7 +71,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/ServicePackagePromotionWithFilter?clientId={clientId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceSearchService/ServicePackagePromotionWithFilter?clientId={clientId}";
             string jsonString = client.DownloadString(query);
 
             List<ServicePackagePromotionWithFilterContract> reply =

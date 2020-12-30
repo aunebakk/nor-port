@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 6:36:04 AM
+  Generated Date: 12/30/2020 1:23:14 PM
   From Machine: DESKTOP-LSRVP12
   Filename: AirportRunway.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy

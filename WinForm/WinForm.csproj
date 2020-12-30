@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{274DAD09-980A-4387-BE31-AEAE9501B327}</ProjectGuid>
+    <ProjectGuid>{98B9D509-0C17-4851-954A-C6EB78BCD8EC}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>WinForm</RootNamespace>
@@ -3882,11 +3882,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{cdf4922b-cb1f-47c3-9e7b-641d8c325043}</Project>
+      <Project>{ffe088a3-0af5-46ec-9e30-3346a459a170}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{d7ba1b6e-5600-4aa6-a681-9c91fe6a4643}</Project>
+      <Project>{704293a5-d33f-4b04-b2a3-94cc87575bd2}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -3901,6 +3901,10 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Main\pimlogo.png" />
+    <Content Include="Main\pimlogo.svg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Operational\" />

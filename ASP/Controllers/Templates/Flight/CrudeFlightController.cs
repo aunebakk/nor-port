@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 6:50:03 AM
+  Generated Date: 12/30/2020 1:36:45 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -211,10 +211,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 6:50:03 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 6:50:03 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 1:36:45 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 6:50:03 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 1:36:45 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -258,10 +258,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 6:50:03 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 6:50:03 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 1:36:45 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 6:50:03 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 1:36:45 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

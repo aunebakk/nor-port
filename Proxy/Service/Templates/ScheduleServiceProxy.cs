@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:21 AM
+  Generated Date: 12/30/2020 1:57:08 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -27,52 +27,71 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
     // proxy service class for dot net framework
     // links:
     //  docLink: http://sql2x.org/documentationLink/41996556-e83c-47d0-90e1-464b60264260
-    public class ScheduleSearchServiceClient {
+    public class ScheduleServiceClient {
         // REST interface to Business layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/794b5c09-a236-4274-9be6-f25aeaa2ab46
-        public List<FlightSegmentsScheduleContract> FlightSegmentsSchedule(
-            System.Guid flightScheduleId
+        public void MakeFlightsFromScheduleAll(
+            System.Guid userId
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleSearchService/FlightSegmentsSchedule?flightScheduleId={flightScheduleId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleService/MakeFlightsFromScheduleAll?userId={userId}";
             string jsonString = client.DownloadString(query);
 
-            List<FlightSegmentsScheduleContract> reply =
-                JsonConvert.DeserializeObject<List<FlightSegmentsScheduleContract>>(jsonString);
+        }
+
+        public void MakeFlightsFromSchedule(
+            System.Guid flightScheduleId,
+            System.Guid userId
+            ) {
+
+            WebClient client = new WebClient();
+
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleService/MakeFlightsFromSchedule?flightScheduleId={flightScheduleId}&userId={userId}";
+            string jsonString = client.DownloadString(query);
+
+        }
+
+        public ScheduleContract GetSchedule(
+            System.Guid flightScheduleId,
+            System.Guid userId
+            ) {
+
+            WebClient client = new WebClient();
+
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleService/GetSchedule?flightScheduleId={flightScheduleId}&userId={userId}";
+            string jsonString = client.DownloadString(query);
+
+            ScheduleContract reply =
+                JsonConvert.DeserializeObject<ScheduleContract>(jsonString);
 
             return reply;
         }
 
-        public List<FlightScheduleHistoryContract> FlightScheduleHistory(
-            System.Guid flightScheduleId
+        public void CreateSchedule(
+            ScheduleContract scheduleContract,
+            System.Guid userId
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleSearchService/FlightScheduleHistory?flightScheduleId={flightScheduleId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleService/CreateSchedule?scheduleContract={scheduleContract}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
-            List<FlightScheduleHistoryContract> reply =
-                JsonConvert.DeserializeObject<List<FlightScheduleHistoryContract>>(jsonString);
-
-            return reply;
         }
 
-        public List<FlightScheduleContract> FlightSchedule(
+        public void UpdateSchedule(
+            ScheduleContract scheduleContract,
+            System.Guid userId
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleSearchService/FlightSchedule?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ScheduleService/UpdateSchedule?scheduleContract={scheduleContract}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
-            List<FlightScheduleContract> reply =
-                JsonConvert.DeserializeObject<List<FlightScheduleContract>>(jsonString);
-
-            return reply;
         }
 
     }

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:14 AM
+  Generated Date: 12/30/2020 1:56:49 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -27,26 +27,46 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
     // proxy service class for dot net framework
     // links:
     //  docLink: http://sql2x.org/documentationLink/41996556-e83c-47d0-90e1-464b60264260
-    public class DefaultTestServiceClient {
+    public class DefaultUserActivityServiceClient {
         // REST interface to Business layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/794b5c09-a236-4274-9be6-f25aeaa2ab46
-        public System.Guid AddTestRun(
-            System.String systemName,
-            System.String testArea,
-            System.String testSubArea,
-            System.String testAddress,
-            System.DateTime startDateTime,
-            System.DateTime endDateTime,
-            System.Int32 elapsedMilliseconds,
-            System.String defaultTestRunResultRcd,
-            System.String result,
-            System.Guid userId
+        public System.String ResolveNetnameFromIpV4(
+            System.String ipAddress
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultTestService/AddTestRun?systemName={systemName}&testArea={testArea}&testSubArea={testSubArea}&testAddress={testAddress}&startDateTime={startDateTime}&endDateTime={endDateTime}&elapsedMilliseconds={elapsedMilliseconds}&defaultTestRunResultRcd={defaultTestRunResultRcd}&result={result}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultUserActivityService/ResolveNetnameFromIpV4?ipAddress={ipAddress}";
+            string jsonString = client.DownloadString(query);
+
+            System.String reply =
+                JsonConvert.DeserializeObject<System.String>(jsonString);
+
+            return reply;
+        }
+
+        public void AddActivity(
+            System.Guid userId,
+            System.String userActivityTypeRcd,
+            System.String activityNote,
+            System.String originatingAddress
+            ) {
+
+            WebClient client = new WebClient();
+
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultUserActivityService/AddActivity?userId={userId}&userActivityTypeRcd={userActivityTypeRcd}&activityNote={activityNote}&originatingAddress={originatingAddress}";
+            string jsonString = client.DownloadString(query);
+
+        }
+
+        public System.Guid Login(
+            System.String userCode
+            ) {
+
+            WebClient client = new WebClient();
+
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultUserActivityService/Login?userCode={userCode}";
             string jsonString = client.DownloadString(query);
 
             System.Guid reply =
@@ -55,15 +75,19 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
             return reply;
         }
 
-        public void RunAllTests(
-            System.Guid userId
+        public System.Guid LoginOverrideUserName(
+            System.String userCode
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultTestService/RunAllTests?userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultUserActivityService/LoginOverrideUserName?userCode={userCode}";
             string jsonString = client.DownloadString(query);
 
+            System.Guid reply =
+                JsonConvert.DeserializeObject<System.Guid>(jsonString);
+
+            return reply;
         }
 
     }

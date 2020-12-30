@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:19 AM
+  Generated Date: 12/30/2020 1:57:11 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -27,22 +27,32 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
     // proxy service class for dot net framework
     // links:
     //  docLink: http://sql2x.org/documentationLink/41996556-e83c-47d0-90e1-464b60264260
-    public class HotelSearchServiceClient {
+    public class ServiceServiceClient {
         // REST interface to Business layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/794b5c09-a236-4274-9be6-f25aeaa2ab46
-        public List<GetHotelIndexWithFilterContract> GetHotelIndexWithFilter(
+        public void PromotionSend(
+            System.Guid servicePackagePromotionId,
+            System.Guid userId
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/HotelSearchService/GetHotelIndexWithFilter?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceService/PromotionSend?servicePackagePromotionId={servicePackagePromotionId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
-            List<GetHotelIndexWithFilterContract> reply =
-                JsonConvert.DeserializeObject<List<GetHotelIndexWithFilterContract>>(jsonString);
+        }
 
-            return reply;
+        public void PromotionMakeBooking(
+            System.Guid servicePackagePromotionId,
+            System.Guid userId
+            ) {
+
+            WebClient client = new WebClient();
+
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/ServiceService/PromotionMakeBooking?servicePackagePromotionId={servicePackagePromotionId}&userId={userId}";
+            string jsonString = client.DownloadString(query);
+
         }
 
     }

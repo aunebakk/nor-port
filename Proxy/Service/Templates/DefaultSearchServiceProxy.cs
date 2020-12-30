@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:09 AM
+  Generated Date: 12/30/2020 1:56:48 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -36,7 +36,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultResourceDatabaseStatistics?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultResourceDatabaseStatistics?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultResourceDatabaseStatisticsContract> reply =
@@ -50,7 +50,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultResourceStatistics?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultResourceStatistics?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultResourceStatisticsContract> reply =
@@ -68,7 +68,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/GetDefaultChangeLog?defaultChangeName={defaultChangeName}&defaultChangeLogTypeRcd={defaultChangeLogTypeRcd}&defaultIssueId={defaultIssueId}&defaultChangeLogId={defaultChangeLogId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/GetDefaultChangeLog?defaultChangeName={defaultChangeName}&defaultChangeLogTypeRcd={defaultChangeLogTypeRcd}&defaultIssueId={defaultIssueId}&defaultChangeLogId={defaultChangeLogId}";
             string jsonString = client.DownloadString(query);
 
             List<GetDefaultChangeLogContract> reply =
@@ -82,7 +82,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserListForDashboard?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserListForDashboard?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserListForDashboardContract> reply =
@@ -96,7 +96,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserList?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserList?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserListContract> reply =
@@ -110,7 +110,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityGroupedByAddress?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityGroupedByAddress?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserActivityGroupedByAddressContract> reply =
@@ -124,7 +124,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityGrouped?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityGrouped?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserActivityGroupedContract> reply =
@@ -139,7 +139,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityOnAddress?originatingAddress={originatingAddress}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityOnAddress?originatingAddress={originatingAddress}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserActivityOnAddressContract> reply =
@@ -154,7 +154,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityRecent?defaultUserId={defaultUserId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityRecent?defaultUserId={defaultUserId}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserActivityRecentContract> reply =
@@ -168,7 +168,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceTimeCommands?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceTimeCommands?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultPerformanceTimeCommandsContract> reply =
@@ -183,7 +183,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceTimes?commandName={commandName}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceTimes?commandName={commandName}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultPerformanceTimesContract> reply =
@@ -197,7 +197,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatisticsTop5?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatisticsTop5?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultStatisticsTop5Contract> reply =
@@ -211,7 +211,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatisticsByMonth?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatisticsByMonth?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultStatisticsByMonthContract> reply =
@@ -225,7 +225,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityByHour?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultUserActivityByHour?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultUserActivityByHourContract> reply =
@@ -239,7 +239,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatistics?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultStatistics?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultStatisticsContract> reply =
@@ -253,7 +253,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceIndicators?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceIndicators?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultPerformanceIndicatorsContract> reply =
@@ -267,7 +267,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultErrorOverview?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultErrorOverview?";
             string jsonString = client.DownloadString(query);
 
             List<DefaultErrorOverviewContract> reply =
@@ -283,7 +283,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultIssueWithFilter?defaultIssueTypeRcd={defaultIssueTypeRcd}&defaultIssueStatusRcd={defaultIssueStatusRcd}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultIssueWithFilter?defaultIssueTypeRcd={defaultIssueTypeRcd}&defaultIssueStatusRcd={defaultIssueStatusRcd}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultIssueWithFilterContract> reply =
@@ -298,7 +298,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceIssueFetchWithFilter?commandName={commandName}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultPerformanceIssueFetchWithFilter?commandName={commandName}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultPerformanceIssueFetchWithFilterContract> reply =
@@ -313,7 +313,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DashboardCounts?dashboardLayoutRcd={dashboardLayoutRcd}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DashboardCounts?dashboardLayoutRcd={dashboardLayoutRcd}";
             string jsonString = client.DownloadString(query);
 
             List<DashboardCountsContract> reply =
@@ -328,7 +328,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultTestOverview?commandName={commandName}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultSearchService/DefaultTestOverview?commandName={commandName}";
             string jsonString = client.DownloadString(query);
 
             List<DefaultTestOverviewContract> reply =

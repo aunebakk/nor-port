@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:01 AM
+  Generated Date: 12/30/2020 1:56:38 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftIdentifierIndexWithFilter?aircraftId={aircraftId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftIdentifierIndexWithFilter?aircraftId={aircraftId}";
             string jsonString = client.DownloadString(query);
 
             List<AircraftIdentifierIndexWithFilterContract> reply =
@@ -52,7 +52,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftDocumentIndexWithFilter?aircraftId={aircraftId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftDocumentIndexWithFilter?aircraftId={aircraftId}";
             string jsonString = client.DownloadString(query);
 
             List<AircraftDocumentIndexWithFilterContract> reply =
@@ -67,7 +67,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftCompartmentIndexWithFilter?aircraftId={aircraftId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftCompartmentIndexWithFilter?aircraftId={aircraftId}";
             string jsonString = client.DownloadString(query);
 
             List<AircraftCompartmentIndexWithFilterContract> reply =
@@ -81,7 +81,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftIndexWithFilter?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftIndexWithFilter?";
             string jsonString = client.DownloadString(query);
 
             List<AircraftIndexWithFilterContract> reply =
@@ -95,7 +95,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftDetails?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/AircraftDetails?";
             string jsonString = client.DownloadString(query);
 
             List<AircraftDetailsContract> reply =

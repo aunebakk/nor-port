@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:07 AM
+  Generated Date: 12/30/2020 1:56:44 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/GetBookingEmpty?userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/GetBookingEmpty?userId={userId}";
             string jsonString = client.DownloadString(query);
 
             BookingContract reply =
@@ -54,7 +54,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/CreateBooking?bookingSourceRcd={bookingSourceRcd}&flightId={flightId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/CreateBooking?bookingSourceRcd={bookingSourceRcd}&flightId={flightId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
             System.Guid reply =
@@ -77,7 +77,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBooking?bookingId={bookingId}&bookingSourceRcd={bookingSourceRcd}&locator={locator}&email={email}&receivedFrom={receivedFrom}&comment={comment}&financialCurrencyId={financialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBooking?bookingId={bookingId}&bookingSourceRcd={bookingSourceRcd}&locator={locator}&email={email}&receivedFrom={receivedFrom}&comment={comment}&financialCurrencyId={financialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
             System.Guid reply =
@@ -93,7 +93,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/GetBooking?bookingId={bookingId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/GetBooking?bookingId={bookingId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
             BookingContract reply =
@@ -113,7 +113,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage1?bookingId={bookingId}&bookingSourceRcd={bookingSourceRcd}&locator={locator}&receivedFrom={receivedFrom}&comment={comment}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage1?bookingId={bookingId}&bookingSourceRcd={bookingSourceRcd}&locator={locator}&receivedFrom={receivedFrom}&comment={comment}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -127,7 +127,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage2?bookingId={bookingId}&eMail={eMail}&comment={comment}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage2?bookingId={bookingId}&eMail={eMail}&comment={comment}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -151,7 +151,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage3?bookingId={bookingId}&addressTypeRcd={addressTypeRcd}&addressOne={addressOne}&addressTwo={addressTwo}&addressThree={addressThree}&city={city}&street={street}&state={state}&district={district}&province={province}&zipCode={zipCode}&poBox={poBox}&comment={comment}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage3?bookingId={bookingId}&addressTypeRcd={addressTypeRcd}&addressOne={addressOne}&addressTwo={addressTwo}&addressThree={addressThree}&city={city}&street={street}&state={state}&district={district}&province={province}&zipCode={zipCode}&poBox={poBox}&comment={comment}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -164,7 +164,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage4?bookingId={bookingId}&passengers={passengers}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/UpdateBookingPage4?bookingId={bookingId}&passengers={passengers}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -178,7 +178,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerAdd?bookingId={bookingId}&passengerTypeRcd={passengerTypeRcd}&passengerName={passengerName}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerAdd?bookingId={bookingId}&passengerTypeRcd={passengerTypeRcd}&passengerName={passengerName}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -190,7 +190,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerRemove?bookingPassengerId={bookingPassengerId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerRemove?bookingPassengerId={bookingPassengerId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -205,7 +205,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerUpdate?bookingPassengerId={bookingPassengerId}&passengerTypeRcd={passengerTypeRcd}&passengerName={passengerName}&defaultStateRcd={defaultStateRcd}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerUpdate?bookingPassengerId={bookingPassengerId}&passengerTypeRcd={passengerTypeRcd}&passengerName={passengerName}&defaultStateRcd={defaultStateRcd}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -222,7 +222,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentCardAdd?bookingId={bookingId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&cardContract={cardContract}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentCardAdd?bookingId={bookingId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&cardContract={cardContract}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -241,7 +241,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentCashAdd?bookingId={bookingId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentCashAdd?bookingId={bookingId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -261,7 +261,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentVoucherAdd?bookingId={bookingId}&financialVoucherId={financialVoucherId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentVoucherAdd?bookingId={bookingId}&financialVoucherId={financialVoucherId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -284,7 +284,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentBankAdd?bookingId={bookingId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialBankAccountNumberTypeRcd={financialBankAccountNumberTypeRcd}&bankName={bankName}&bankAccount={bankAccount}&bankNumber={bankNumber}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentBankAdd?bookingId={bookingId}&paidAmount={paidAmount}&paidAmountRounding={paidAmountRounding}&paidFinancialCurrencyId={paidFinancialCurrencyId}&paidAmountBookingCurrency={paidAmountBookingCurrency}&paidAmountRoundingBookingCurrency={paidAmountRoundingBookingCurrency}&paidAmountBookingFinancialCurrencyId={paidAmountBookingFinancialCurrencyId}&financialBankAccountNumberTypeRcd={financialBankAccountNumberTypeRcd}&bankName={bankName}&bankAccount={bankAccount}&bankNumber={bankNumber}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -300,7 +300,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentAccountingAdd?bookingId={bookingId}&amount={amount}&roundingAmount={roundingAmount}&financialCurrencyId={financialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentAccountingAdd?bookingId={bookingId}&amount={amount}&roundingAmount={roundingAmount}&financialCurrencyId={financialCurrencyId}&financialCostcentreId={financialCostcentreId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -313,7 +313,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentGetCurrency?financialCurrencyId={financialCurrencyId}&againstFinancialCurrencyId={againstFinancialCurrencyId}&currencyDateTime={currencyDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PaymentGetCurrency?financialCurrencyId={financialCurrencyId}&againstFinancialCurrencyId={againstFinancialCurrencyId}&currencyDateTime={currencyDateTime}";
             string jsonString = client.DownloadString(query);
 
             CrudeFinancialCurrencyContract reply =
@@ -330,7 +330,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FlightAdd?bookingId={bookingId}&flightId={flightId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FlightAdd?bookingId={bookingId}&flightId={flightId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -343,7 +343,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FlightRemove?bookingId={bookingId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FlightRemove?bookingId={bookingId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -356,7 +356,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/SimulateBookings?fromDateTime={fromDateTime}&untilDateTime={untilDateTime}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/SimulateBookings?fromDateTime={fromDateTime}&untilDateTime={untilDateTime}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -368,7 +368,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingConfirm?bookingId={bookingId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingConfirm?bookingId={bookingId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -378,7 +378,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/LocatorCreate?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/LocatorCreate?";
             string jsonString = client.DownloadString(query);
 
             System.String reply =
@@ -393,7 +393,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingFinancialBalance?bookingId={bookingId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingFinancialBalance?bookingId={bookingId}";
             string jsonString = client.DownloadString(query);
 
             System.Decimal reply =
@@ -409,7 +409,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/SendBookingConfirmationByEmail?bookingId={bookingId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/SendBookingConfirmationByEmail?bookingId={bookingId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -422,7 +422,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerCheckIn?bookingPassengerId={bookingPassengerId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerCheckIn?bookingPassengerId={bookingPassengerId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -435,7 +435,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerCheckOut?bookingPassengerId={bookingPassengerId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/PassengerCheckOut?bookingPassengerId={bookingPassengerId}&bookingFlightSegmentId={bookingFlightSegmentId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -448,7 +448,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceHotelAdd?bookingId={bookingId}&serviceHotelId={serviceHotelId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceHotelAdd?bookingId={bookingId}&serviceHotelId={serviceHotelId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -461,7 +461,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceFerryAdd?bookingId={bookingId}&serviceFerryId={serviceFerryId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceFerryAdd?bookingId={bookingId}&serviceFerryId={serviceFerryId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -474,7 +474,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceCarRentalAdd?bookingId={bookingId}&serviceCarRentalId={serviceCarRentalId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceCarRentalAdd?bookingId={bookingId}&serviceCarRentalId={serviceCarRentalId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -487,7 +487,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceSpecialServiceRequestAdd?bookingId={bookingId}&serviceSpecialServiceRequestId={serviceSpecialServiceRequestId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceSpecialServiceRequestAdd?bookingId={bookingId}&serviceSpecialServiceRequestId={serviceSpecialServiceRequestId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -499,7 +499,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceRequestRemove?bookingServiceRequestId={bookingServiceRequestId}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/BookingServiceRequestRemove?bookingServiceRequestId={bookingServiceRequestId}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }
@@ -513,7 +513,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FinancialCurrencyUpdate?currencyCode={currencyCode}&againstCurrencyCode={againstCurrencyCode}&rate={rate}&userId={userId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/BookingService/FinancialCurrencyUpdate?currencyCode={currencyCode}&againstCurrencyCode={againstCurrencyCode}&rate={rate}&userId={userId}";
             string jsonString = client.DownloadString(query);
 
         }

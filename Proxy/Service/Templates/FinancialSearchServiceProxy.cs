@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:16 AM
+  Generated Date: 12/30/2020 1:56:57 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -38,7 +38,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/GetAvailableCurrencies?financialCurrencyId={financialCurrencyId}&currencyDateTime={currencyDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/GetAvailableCurrencies?financialCurrencyId={financialCurrencyId}&currencyDateTime={currencyDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<GetAvailableCurrenciesContract> reply =
@@ -52,7 +52,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/FinancialFares?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/FinancialFares?";
             string jsonString = client.DownloadString(query);
 
             List<FinancialFaresContract> reply =
@@ -67,7 +67,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/VoucherSearchWithRemainingAmount?voucherValidOnDateTime={voucherValidOnDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/VoucherSearchWithRemainingAmount?voucherValidOnDateTime={voucherValidOnDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<VoucherSearchWithRemainingAmountContract> reply =
@@ -82,7 +82,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/VoucherTransactions?financialVoucherId={financialVoucherId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/VoucherTransactions?financialVoucherId={financialVoucherId}";
             string jsonString = client.DownloadString(query);
 
             List<VoucherTransactionsContract> reply =
@@ -97,7 +97,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/FinancialServiceDetailsForBooking?bookingId={bookingId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/FinancialServiceDetailsForBooking?bookingId={bookingId}";
             string jsonString = client.DownloadString(query);
 
             List<FinancialServiceDetailsForBookingContract> reply =
@@ -111,7 +111,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceFerryList?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceFerryList?";
             string jsonString = client.DownloadString(query);
 
             List<ServiceFerryListContract> reply =
@@ -125,7 +125,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceCarRentalList?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceCarRentalList?";
             string jsonString = client.DownloadString(query);
 
             List<ServiceCarRentalListContract> reply =
@@ -139,7 +139,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceHotelList?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/ServiceHotelList?";
             string jsonString = client.DownloadString(query);
 
             List<ServiceHotelListContract> reply =
@@ -153,7 +153,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/SpecialServiceRequestList?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/SpecialServiceRequestList?";
             string jsonString = client.DownloadString(query);
 
             List<SpecialServiceRequestListContract> reply =
@@ -169,7 +169,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/TransactionsCreditDebitBalance?fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FinancialSearchService/TransactionsCreditDebitBalance?fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<TransactionsCreditDebitBalanceContract> reply =

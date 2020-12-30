@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:03:16 AM
+  Generated Date: 12/30/2020 1:49:58 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ContractsGenerator.MethodNewStyle
 */

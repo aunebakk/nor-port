@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:12 AM
+  Generated Date: 12/30/2020 1:56:45 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -27,20 +27,20 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
     // proxy service class for dot net framework
     // links:
     //  docLink: http://sql2x.org/documentationLink/41996556-e83c-47d0-90e1-464b60264260
-    public class DefaultTestSearchServiceClient {
+    public class CarRentalSearchServiceClient {
         // REST interface to Business layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/794b5c09-a236-4274-9be6-f25aeaa2ab46
-        public List<DefaultTestSearchQueryContract> DefaultTestSearchQuery(
+        public List<GetCarRentalIndexWithFilterContract> GetCarRentalIndexWithFilter(
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DefaultTestSearchService/DefaultTestSearchQuery?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/CarRentalSearchService/GetCarRentalIndexWithFilter?";
             string jsonString = client.DownloadString(query);
 
-            List<DefaultTestSearchQueryContract> reply =
-                JsonConvert.DeserializeObject<List<DefaultTestSearchQueryContract>>(jsonString);
+            List<GetCarRentalIndexWithFilterContract> reply =
+                JsonConvert.DeserializeObject<List<GetCarRentalIndexWithFilterContract>>(jsonString);
 
             return reply;
         }

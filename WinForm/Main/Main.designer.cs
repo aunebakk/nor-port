@@ -45,6 +45,10 @@ namespace SolutionNorSolutionPort.UserInterface
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.availabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.promotionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.flightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -283,10 +287,6 @@ namespace SolutionNorSolutionPort.UserInterface
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.availabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.checkinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.promotionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -326,12 +326,12 @@ namespace SolutionNorSolutionPort.UserInterface
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(90, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -356,7 +356,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.undoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.undoToolStripMenuItem.Text = "&Undo";
             // 
             // redoToolStripMenuItem
@@ -365,13 +365,13 @@ namespace SolutionNorSolutionPort.UserInterface
             this.redoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
             this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.redoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.redoToolStripMenuItem.Text = "&Redo";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(161, 6);
             // 
             // cutToolStripMenuItem
             // 
@@ -379,7 +379,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.cutToolStripMenuItem.Text = "Cu&t";
             // 
             // copyToolStripMenuItem
@@ -388,7 +388,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.copyToolStripMenuItem.Text = "&Copy";
             // 
             // pasteToolStripMenuItem
@@ -397,19 +397,19 @@ namespace SolutionNorSolutionPort.UserInterface
             this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.pasteToolStripMenuItem.Text = "&Paste";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(161, 6);
             // 
             // selectAllToolStripMenuItem
             // 
             this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
             this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.selectAllToolStripMenuItem.Text = "Select &All";
             // 
             // viewMenu
@@ -428,7 +428,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.toolBarToolStripMenuItem.CheckOnClick = true;
             this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.toolBarToolStripMenuItem.Text = "&Toolbar";
             this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
             // 
@@ -438,7 +438,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.statusBarToolStripMenuItem.CheckOnClick = true;
             this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.statusBarToolStripMenuItem.Text = "&Status Bar";
             this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
             // 
@@ -448,7 +448,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.toBarToolStripMenuItem.CheckOnClick = true;
             this.toBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toBarToolStripMenuItem.Name = "toBarToolStripMenuItem";
-            this.toBarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.toBarToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.toBarToolStripMenuItem.Text = "Topbar";
             // 
             // reservationsToolStripMenuItem
@@ -462,6 +462,34 @@ namespace SolutionNorSolutionPort.UserInterface
             this.reservationsToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
             this.reservationsToolStripMenuItem.Text = "Reservations";
             // 
+            // availabilityToolStripMenuItem
+            // 
+            this.availabilityToolStripMenuItem.Name = "availabilityToolStripMenuItem";
+            this.availabilityToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.availabilityToolStripMenuItem.Text = "Availability";
+            this.availabilityToolStripMenuItem.Click += new System.EventHandler(this.availabilityToolStripMenuItem_Click);
+            // 
+            // bookingsToolStripMenuItem
+            // 
+            this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
+            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.bookingsToolStripMenuItem.Text = "Bookings";
+            this.bookingsToolStripMenuItem.Click += new System.EventHandler(this.bookingsToolStripMenuItem_Click);
+            // 
+            // checkinToolStripMenuItem
+            // 
+            this.checkinToolStripMenuItem.Name = "checkinToolStripMenuItem";
+            this.checkinToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.checkinToolStripMenuItem.Text = "Checkin";
+            this.checkinToolStripMenuItem.Click += new System.EventHandler(this.checkinToolStripMenuItem_Click);
+            // 
+            // promotionToolStripMenuItem
+            // 
+            this.promotionToolStripMenuItem.Name = "promotionToolStripMenuItem";
+            this.promotionToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.promotionToolStripMenuItem.Text = "Promotion";
+            this.promotionToolStripMenuItem.Click += new System.EventHandler(this.promotionToolStripMenuItem_Click);
+            // 
             // flightToolStripMenuItem
             // 
             this.flightToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -474,14 +502,14 @@ namespace SolutionNorSolutionPort.UserInterface
             // scheduleToolStripMenuItem
             // 
             this.scheduleToolStripMenuItem.Name = "scheduleToolStripMenuItem";
-            this.scheduleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.scheduleToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.scheduleToolStripMenuItem.Text = "Schedule";
             this.scheduleToolStripMenuItem.Click += new System.EventHandler(this.scheduleToolStripMenuItem_Click);
             // 
             // flightsToolStripMenuItem
             // 
             this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
-            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.flightsToolStripMenuItem.Text = "Flights";
             this.flightsToolStripMenuItem.Click += new System.EventHandler(this.flightsToolStripMenuItem_Click);
             // 
@@ -506,7 +534,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.maintainServiceToolStripMenuItem,
             this.maintainTimezoneToolStripMenuItem});
             this.toolsMenu.Name = "toolsMenu";
-            this.toolsMenu.Size = new System.Drawing.Size(47, 20);
+            this.toolsMenu.Size = new System.Drawing.Size(46, 20);
             this.toolsMenu.Text = "&Tools";
             // 
             // maintainAddressToolStripMenuItem
@@ -515,20 +543,20 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeAddressToolStripMenuItem,
             this.crudeAddressTypeRefToolStripMenuItem});
             this.maintainAddressToolStripMenuItem.Name = "maintainAddressToolStripMenuItem";
-            this.maintainAddressToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainAddressToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainAddressToolStripMenuItem.Text = "Maintain Address";
             // 
             // crudeAddressToolStripMenuItem
             // 
             this.crudeAddressToolStripMenuItem.Name = "crudeAddressToolStripMenuItem";
-            this.crudeAddressToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.crudeAddressToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.crudeAddressToolStripMenuItem.Text = "CrudeAddress";
             this.crudeAddressToolStripMenuItem.Click += new System.EventHandler(this.crudeAddressToolStripMenuItem_Click);
             // 
             // crudeAddressTypeRefToolStripMenuItem
             // 
             this.crudeAddressTypeRefToolStripMenuItem.Name = "crudeAddressTypeRefToolStripMenuItem";
-            this.crudeAddressTypeRefToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.crudeAddressTypeRefToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
             this.crudeAddressTypeRefToolStripMenuItem.Text = "CrudeAddressTypeRef";
             this.crudeAddressTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAddressTypeRefToolStripMenuItem_Click);
             // 
@@ -537,7 +565,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.maintainAgencyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crudeAgencyToolStripMenuItem});
             this.maintainAgencyToolStripMenuItem.Name = "maintainAgencyToolStripMenuItem";
-            this.maintainAgencyToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainAgencyToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainAgencyToolStripMenuItem.Text = "Maintain Agency";
             // 
             // crudeAgencyToolStripMenuItem
@@ -563,7 +591,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeAircraftMeasurementToolStripMenuItem,
             this.crudeAircraftTypeRefToolStripMenuItem});
             this.maintainAircraftToolStripMenuItem.Name = "maintainAircraftToolStripMenuItem";
-            this.maintainAircraftToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainAircraftToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainAircraftToolStripMenuItem.Text = "Maintain Aircraft";
             // 
             // crudeAircraftToolStripMenuItem
@@ -662,62 +690,62 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeAirlineLinkToolStripMenuItem,
             this.crudeAirlineTypeRefToolStripMenuItem});
             this.maintainAirlineToolStripMenuItem.Name = "maintainAirlineToolStripMenuItem";
-            this.maintainAirlineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainAirlineToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainAirlineToolStripMenuItem.Text = "Maintain Airline";
             // 
             // crudeAirlineToolStripMenuItem
             // 
             this.crudeAirlineToolStripMenuItem.Name = "crudeAirlineToolStripMenuItem";
-            this.crudeAirlineToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineToolStripMenuItem.Text = "CrudeAirline";
             this.crudeAirlineToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineToolStripMenuItem_Click);
             // 
             // crudeAirlineBaseAirportToolStripMenuItem
             // 
             this.crudeAirlineBaseAirportToolStripMenuItem.Name = "crudeAirlineBaseAirportToolStripMenuItem";
-            this.crudeAirlineBaseAirportToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineBaseAirportToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineBaseAirportToolStripMenuItem.Text = "CrudeAirlineBaseAirport";
             this.crudeAirlineBaseAirportToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineBaseAirportToolStripMenuItem_Click);
             // 
             // crudeAirlineContactMethodToolStripMenuItem
             // 
             this.crudeAirlineContactMethodToolStripMenuItem.Name = "crudeAirlineContactMethodToolStripMenuItem";
-            this.crudeAirlineContactMethodToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineContactMethodToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineContactMethodToolStripMenuItem.Text = "CrudeAirlineContactMethod";
             this.crudeAirlineContactMethodToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineContactMethodToolStripMenuItem_Click);
             // 
             // crudeAirlineIdentifierToolStripMenuItem
             // 
             this.crudeAirlineIdentifierToolStripMenuItem.Name = "crudeAirlineIdentifierToolStripMenuItem";
-            this.crudeAirlineIdentifierToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineIdentifierToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineIdentifierToolStripMenuItem.Text = "CrudeAirlineIdentifier";
             this.crudeAirlineIdentifierToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineIdentifierToolStripMenuItem_Click);
             // 
             // crudeAirlineIdentifierTypeRefToolStripMenuItem
             // 
             this.crudeAirlineIdentifierTypeRefToolStripMenuItem.Name = "crudeAirlineIdentifierTypeRefToolStripMenuItem";
-            this.crudeAirlineIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineIdentifierTypeRefToolStripMenuItem.Text = "CrudeAirlineIdentifierTypeRef";
             this.crudeAirlineIdentifierTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineIdentifierTypeRefToolStripMenuItem_Click);
             // 
             // crudeAirlineLanguageToolStripMenuItem
             // 
             this.crudeAirlineLanguageToolStripMenuItem.Name = "crudeAirlineLanguageToolStripMenuItem";
-            this.crudeAirlineLanguageToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineLanguageToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineLanguageToolStripMenuItem.Text = "CrudeAirlineLanguage";
             this.crudeAirlineLanguageToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineLanguageToolStripMenuItem_Click);
             // 
             // crudeAirlineLinkToolStripMenuItem
             // 
             this.crudeAirlineLinkToolStripMenuItem.Name = "crudeAirlineLinkToolStripMenuItem";
-            this.crudeAirlineLinkToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineLinkToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineLinkToolStripMenuItem.Text = "CrudeAirlineLink";
             this.crudeAirlineLinkToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineLinkToolStripMenuItem_Click);
             // 
             // crudeAirlineTypeRefToolStripMenuItem
             // 
             this.crudeAirlineTypeRefToolStripMenuItem.Name = "crudeAirlineTypeRefToolStripMenuItem";
-            this.crudeAirlineTypeRefToolStripMenuItem.Size = new System.Drawing.Size(229, 22);
+            this.crudeAirlineTypeRefToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
             this.crudeAirlineTypeRefToolStripMenuItem.Text = "CrudeAirlineTypeRef";
             this.crudeAirlineTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAirlineTypeRefToolStripMenuItem_Click);
             // 
@@ -738,97 +766,97 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeAirportTerminalAirlineToolStripMenuItem,
             this.crudeAirportTypeRefToolStripMenuItem});
             this.maintainAirportToolStripMenuItem.Name = "maintainAirportToolStripMenuItem";
-            this.maintainAirportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainAirportToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainAirportToolStripMenuItem.Text = "Maintain Airport";
             // 
             // crudeAirportToolStripMenuItem
             // 
             this.crudeAirportToolStripMenuItem.Name = "crudeAirportToolStripMenuItem";
-            this.crudeAirportToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportToolStripMenuItem.Text = "CrudeAirport";
             this.crudeAirportToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportToolStripMenuItem_Click);
             // 
             // crudeAirportFacilityToolStripMenuItem
             // 
             this.crudeAirportFacilityToolStripMenuItem.Name = "crudeAirportFacilityToolStripMenuItem";
-            this.crudeAirportFacilityToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportFacilityToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportFacilityToolStripMenuItem.Text = "CrudeAirportFacility";
             this.crudeAirportFacilityToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportFacilityToolStripMenuItem_Click);
             // 
             // crudeAirportFacilityTypeRefToolStripMenuItem
             // 
             this.crudeAirportFacilityTypeRefToolStripMenuItem.Name = "crudeAirportFacilityTypeRefToolStripMenuItem";
-            this.crudeAirportFacilityTypeRefToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportFacilityTypeRefToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportFacilityTypeRefToolStripMenuItem.Text = "CrudeAirportFacilityTypeRef";
             this.crudeAirportFacilityTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportFacilityTypeRefToolStripMenuItem_Click);
             // 
             // crudeAirportHotelLinkToolStripMenuItem
             // 
             this.crudeAirportHotelLinkToolStripMenuItem.Name = "crudeAirportHotelLinkToolStripMenuItem";
-            this.crudeAirportHotelLinkToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportHotelLinkToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportHotelLinkToolStripMenuItem.Text = "CrudeAirportHotelLink";
             this.crudeAirportHotelLinkToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportHotelLinkToolStripMenuItem_Click);
             // 
             // crudeAirportIdentifierToolStripMenuItem
             // 
             this.crudeAirportIdentifierToolStripMenuItem.Name = "crudeAirportIdentifierToolStripMenuItem";
-            this.crudeAirportIdentifierToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportIdentifierToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportIdentifierToolStripMenuItem.Text = "CrudeAirportIdentifier";
             this.crudeAirportIdentifierToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportIdentifierToolStripMenuItem_Click);
             // 
             // crudeAirportIdentifierTypeRefToolStripMenuItem
             // 
             this.crudeAirportIdentifierTypeRefToolStripMenuItem.Name = "crudeAirportIdentifierTypeRefToolStripMenuItem";
-            this.crudeAirportIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportIdentifierTypeRefToolStripMenuItem.Text = "CrudeAirportIdentifierTypeRef";
             this.crudeAirportIdentifierTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportIdentifierTypeRefToolStripMenuItem_Click);
             // 
             // crudeAirportLinkToolStripMenuItem
             // 
             this.crudeAirportLinkToolStripMenuItem.Name = "crudeAirportLinkToolStripMenuItem";
-            this.crudeAirportLinkToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportLinkToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportLinkToolStripMenuItem.Text = "CrudeAirportLink";
             this.crudeAirportLinkToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportLinkToolStripMenuItem_Click);
             // 
             // crudeAirportRunwayToolStripMenuItem
             // 
             this.crudeAirportRunwayToolStripMenuItem.Name = "crudeAirportRunwayToolStripMenuItem";
-            this.crudeAirportRunwayToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportRunwayToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportRunwayToolStripMenuItem.Text = "CrudeAirportRunway";
             this.crudeAirportRunwayToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportRunwayToolStripMenuItem_Click);
             // 
             // crudeAirportSupplierToolStripMenuItem
             // 
             this.crudeAirportSupplierToolStripMenuItem.Name = "crudeAirportSupplierToolStripMenuItem";
-            this.crudeAirportSupplierToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportSupplierToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportSupplierToolStripMenuItem.Text = "CrudeAirportSupplier";
             this.crudeAirportSupplierToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportSupplierToolStripMenuItem_Click);
             // 
             // crudeAirportSupplierLinkToolStripMenuItem
             // 
             this.crudeAirportSupplierLinkToolStripMenuItem.Name = "crudeAirportSupplierLinkToolStripMenuItem";
-            this.crudeAirportSupplierLinkToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportSupplierLinkToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportSupplierLinkToolStripMenuItem.Text = "CrudeAirportSupplierLink";
             this.crudeAirportSupplierLinkToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportSupplierLinkToolStripMenuItem_Click);
             // 
             // crudeAirportTerminalToolStripMenuItem
             // 
             this.crudeAirportTerminalToolStripMenuItem.Name = "crudeAirportTerminalToolStripMenuItem";
-            this.crudeAirportTerminalToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportTerminalToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportTerminalToolStripMenuItem.Text = "CrudeAirportTerminal";
             this.crudeAirportTerminalToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportTerminalToolStripMenuItem_Click);
             // 
             // crudeAirportTerminalAirlineToolStripMenuItem
             // 
             this.crudeAirportTerminalAirlineToolStripMenuItem.Name = "crudeAirportTerminalAirlineToolStripMenuItem";
-            this.crudeAirportTerminalAirlineToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportTerminalAirlineToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportTerminalAirlineToolStripMenuItem.Text = "CrudeAirportTerminalAirline";
             this.crudeAirportTerminalAirlineToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportTerminalAirlineToolStripMenuItem_Click);
             // 
             // crudeAirportTypeRefToolStripMenuItem
             // 
             this.crudeAirportTypeRefToolStripMenuItem.Name = "crudeAirportTypeRefToolStripMenuItem";
-            this.crudeAirportTypeRefToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.crudeAirportTypeRefToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
             this.crudeAirportTypeRefToolStripMenuItem.Text = "CrudeAirportTypeRef";
             this.crudeAirportTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeAirportTypeRefToolStripMenuItem_Click);
             // 
@@ -853,125 +881,125 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeBookingServiceRequestToolStripMenuItem,
             this.crudeBookingSourceRefToolStripMenuItem});
             this.maintainBookingToolStripMenuItem.Name = "maintainBookingToolStripMenuItem";
-            this.maintainBookingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainBookingToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainBookingToolStripMenuItem.Text = "Maintain Booking";
             // 
             // crudeBookingToolStripMenuItem
             // 
             this.crudeBookingToolStripMenuItem.Name = "crudeBookingToolStripMenuItem";
-            this.crudeBookingToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingToolStripMenuItem.Text = "CrudeBooking";
             this.crudeBookingToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingToolStripMenuItem_Click);
             // 
             // crudeBookingContactMethodToolStripMenuItem
             // 
             this.crudeBookingContactMethodToolStripMenuItem.Name = "crudeBookingContactMethodToolStripMenuItem";
-            this.crudeBookingContactMethodToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingContactMethodToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingContactMethodToolStripMenuItem.Text = "CrudeBookingContactMethod";
             this.crudeBookingContactMethodToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingContactMethodToolStripMenuItem_Click);
             // 
             // crudeBookingDocumentToolStripMenuItem
             // 
             this.crudeBookingDocumentToolStripMenuItem.Name = "crudeBookingDocumentToolStripMenuItem";
-            this.crudeBookingDocumentToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingDocumentToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingDocumentToolStripMenuItem.Text = "CrudeBookingDocument";
             this.crudeBookingDocumentToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingDocumentToolStripMenuItem_Click);
             // 
             // crudeBookingDocumentTypeRefToolStripMenuItem
             // 
             this.crudeBookingDocumentTypeRefToolStripMenuItem.Name = "crudeBookingDocumentTypeRefToolStripMenuItem";
-            this.crudeBookingDocumentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingDocumentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingDocumentTypeRefToolStripMenuItem.Text = "CrudeBookingDocumentTypeRef";
             this.crudeBookingDocumentTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingDocumentTypeRefToolStripMenuItem_Click);
             // 
             // crudeBookingEventToolStripMenuItem
             // 
             this.crudeBookingEventToolStripMenuItem.Name = "crudeBookingEventToolStripMenuItem";
-            this.crudeBookingEventToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingEventToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingEventToolStripMenuItem.Text = "CrudeBookingEvent";
             this.crudeBookingEventToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingEventToolStripMenuItem_Click);
             // 
             // crudeBookingEventTypeRefToolStripMenuItem
             // 
             this.crudeBookingEventTypeRefToolStripMenuItem.Name = "crudeBookingEventTypeRefToolStripMenuItem";
-            this.crudeBookingEventTypeRefToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingEventTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingEventTypeRefToolStripMenuItem.Text = "CrudeBookingEventTypeRef";
             this.crudeBookingEventTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingEventTypeRefToolStripMenuItem_Click);
             // 
             // crudeBookingFlightSegmentToolStripMenuItem
             // 
             this.crudeBookingFlightSegmentToolStripMenuItem.Name = "crudeBookingFlightSegmentToolStripMenuItem";
-            this.crudeBookingFlightSegmentToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingFlightSegmentToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingFlightSegmentToolStripMenuItem.Text = "CrudeBookingFlightSegment";
             this.crudeBookingFlightSegmentToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingFlightSegmentToolStripMenuItem_Click);
             // 
             // crudeBookingIdentifierToolStripMenuItem
             // 
             this.crudeBookingIdentifierToolStripMenuItem.Name = "crudeBookingIdentifierToolStripMenuItem";
-            this.crudeBookingIdentifierToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingIdentifierToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingIdentifierToolStripMenuItem.Text = "CrudeBookingIdentifier";
             this.crudeBookingIdentifierToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingIdentifierToolStripMenuItem_Click);
             // 
             // crudeBookingIdentifierTypeRefToolStripMenuItem
             // 
             this.crudeBookingIdentifierTypeRefToolStripMenuItem.Name = "crudeBookingIdentifierTypeRefToolStripMenuItem";
-            this.crudeBookingIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingIdentifierTypeRefToolStripMenuItem.Text = "CrudeBookingIdentifierTypeRef";
             this.crudeBookingIdentifierTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingIdentifierTypeRefToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerToolStripMenuItem
             // 
             this.crudeBookingPassengerToolStripMenuItem.Name = "crudeBookingPassengerToolStripMenuItem";
-            this.crudeBookingPassengerToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerToolStripMenuItem.Text = "CrudeBookingPassenger";
             this.crudeBookingPassengerToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerBaggageToolStripMenuItem
             // 
             this.crudeBookingPassengerBaggageToolStripMenuItem.Name = "crudeBookingPassengerBaggageToolStripMenuItem";
-            this.crudeBookingPassengerBaggageToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerBaggageToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerBaggageToolStripMenuItem.Text = "CrudeBookingPassengerBaggage";
             this.crudeBookingPassengerBaggageToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerBaggageToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerEventToolStripMenuItem
             // 
             this.crudeBookingPassengerEventToolStripMenuItem.Name = "crudeBookingPassengerEventToolStripMenuItem";
-            this.crudeBookingPassengerEventToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerEventToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerEventToolStripMenuItem.Text = "CrudeBookingPassengerEvent";
             this.crudeBookingPassengerEventToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerEventToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerEventTypeRefToolStripMenuItem
             // 
             this.crudeBookingPassengerEventTypeRefToolStripMenuItem.Name = "crudeBookingPassengerEventTypeRefToolStripMenuItem";
-            this.crudeBookingPassengerEventTypeRefToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerEventTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerEventTypeRefToolStripMenuItem.Text = "CrudeBookingPassengerEventTypeRef";
             this.crudeBookingPassengerEventTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerEventTypeRefToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerSeatToolStripMenuItem
             // 
             this.crudeBookingPassengerSeatToolStripMenuItem.Name = "crudeBookingPassengerSeatToolStripMenuItem";
-            this.crudeBookingPassengerSeatToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerSeatToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerSeatToolStripMenuItem.Text = "CrudeBookingPassengerSeat";
             this.crudeBookingPassengerSeatToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerSeatToolStripMenuItem_Click);
             // 
             // crudeBookingPassengerTicketToolStripMenuItem
             // 
             this.crudeBookingPassengerTicketToolStripMenuItem.Name = "crudeBookingPassengerTicketToolStripMenuItem";
-            this.crudeBookingPassengerTicketToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingPassengerTicketToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingPassengerTicketToolStripMenuItem.Text = "CrudeBookingPassengerTicket";
             this.crudeBookingPassengerTicketToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingPassengerTicketToolStripMenuItem_Click);
             // 
             // crudeBookingServiceRequestToolStripMenuItem
             // 
             this.crudeBookingServiceRequestToolStripMenuItem.Name = "crudeBookingServiceRequestToolStripMenuItem";
-            this.crudeBookingServiceRequestToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingServiceRequestToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingServiceRequestToolStripMenuItem.Text = "CrudeBookingServiceRequest";
             this.crudeBookingServiceRequestToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingServiceRequestToolStripMenuItem_Click);
             // 
             // crudeBookingSourceRefToolStripMenuItem
             // 
             this.crudeBookingSourceRefToolStripMenuItem.Name = "crudeBookingSourceRefToolStripMenuItem";
-            this.crudeBookingSourceRefToolStripMenuItem.Size = new System.Drawing.Size(274, 22);
+            this.crudeBookingSourceRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
             this.crudeBookingSourceRefToolStripMenuItem.Text = "CrudeBookingSourceRef";
             this.crudeBookingSourceRefToolStripMenuItem.Click += new System.EventHandler(this.crudeBookingSourceRefToolStripMenuItem_Click);
             // 
@@ -980,7 +1008,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.maintainCityToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crudeCityToolStripMenuItem});
             this.maintainCityToolStripMenuItem.Name = "maintainCityToolStripMenuItem";
-            this.maintainCityToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainCityToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainCityToolStripMenuItem.Text = "Maintain City";
             // 
             // crudeCityToolStripMenuItem
@@ -1000,7 +1028,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeClientLinkToolStripMenuItem,
             this.crudeClientTypeRefToolStripMenuItem});
             this.maintainClientToolStripMenuItem.Name = "maintainClientToolStripMenuItem";
-            this.maintainClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainClientToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainClientToolStripMenuItem.Text = "Maintain Client";
             // 
             // crudeClientToolStripMenuItem
@@ -1050,7 +1078,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.maintainCountryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crudeCountryToolStripMenuItem});
             this.maintainCountryToolStripMenuItem.Name = "maintainCountryToolStripMenuItem";
-            this.maintainCountryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainCountryToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainCountryToolStripMenuItem.Text = "Maintain Country";
             // 
             // crudeCountryToolStripMenuItem
@@ -1089,181 +1117,181 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeDefaultUserActivityTypeRefToolStripMenuItem,
             this.crudeDefaultVersionToolStripMenuItem});
             this.maintainDefaultToolStripMenuItem.Name = "maintainDefaultToolStripMenuItem";
-            this.maintainDefaultToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainDefaultToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainDefaultToolStripMenuItem.Text = "Maintain Default";
             // 
             // crudeDefaultChangeLogToolStripMenuItem
             // 
             this.crudeDefaultChangeLogToolStripMenuItem.Name = "crudeDefaultChangeLogToolStripMenuItem";
-            this.crudeDefaultChangeLogToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultChangeLogToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultChangeLogToolStripMenuItem.Text = "CrudeDefaultChangeLog";
             this.crudeDefaultChangeLogToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultChangeLogToolStripMenuItem_Click);
             // 
             // crudeDefaultChangeLogTypeRefToolStripMenuItem
             // 
             this.crudeDefaultChangeLogTypeRefToolStripMenuItem.Name = "crudeDefaultChangeLogTypeRefToolStripMenuItem";
-            this.crudeDefaultChangeLogTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultChangeLogTypeRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultChangeLogTypeRefToolStripMenuItem.Text = "CrudeDefaultChangeLogTypeRef";
             this.crudeDefaultChangeLogTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultChangeLogTypeRefToolStripMenuItem_Click);
             // 
             // crudeDefaultErrorToolStripMenuItem
             // 
             this.crudeDefaultErrorToolStripMenuItem.Name = "crudeDefaultErrorToolStripMenuItem";
-            this.crudeDefaultErrorToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultErrorToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultErrorToolStripMenuItem.Text = "CrudeDefaultError";
             this.crudeDefaultErrorToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultErrorToolStripMenuItem_Click);
             // 
             // crudeDefaultErrorLayerRefToolStripMenuItem
             // 
             this.crudeDefaultErrorLayerRefToolStripMenuItem.Name = "crudeDefaultErrorLayerRefToolStripMenuItem";
-            this.crudeDefaultErrorLayerRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultErrorLayerRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultErrorLayerRefToolStripMenuItem.Text = "CrudeDefaultErrorLayerRef";
             this.crudeDefaultErrorLayerRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultErrorLayerRefToolStripMenuItem_Click);
             // 
             // crudeDefaultErrorTypeRefToolStripMenuItem
             // 
             this.crudeDefaultErrorTypeRefToolStripMenuItem.Name = "crudeDefaultErrorTypeRefToolStripMenuItem";
-            this.crudeDefaultErrorTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultErrorTypeRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultErrorTypeRefToolStripMenuItem.Text = "CrudeDefaultErrorTypeRef";
             this.crudeDefaultErrorTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultErrorTypeRefToolStripMenuItem_Click);
             // 
             // crudeDefaultIssueToolStripMenuItem
             // 
             this.crudeDefaultIssueToolStripMenuItem.Name = "crudeDefaultIssueToolStripMenuItem";
-            this.crudeDefaultIssueToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultIssueToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultIssueToolStripMenuItem.Text = "CrudeDefaultIssue";
             this.crudeDefaultIssueToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultIssueToolStripMenuItem_Click);
             // 
             // crudeDefaultIssueStatusRefToolStripMenuItem
             // 
             this.crudeDefaultIssueStatusRefToolStripMenuItem.Name = "crudeDefaultIssueStatusRefToolStripMenuItem";
-            this.crudeDefaultIssueStatusRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultIssueStatusRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultIssueStatusRefToolStripMenuItem.Text = "CrudeDefaultIssueStatusRef";
             this.crudeDefaultIssueStatusRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultIssueStatusRefToolStripMenuItem_Click);
             // 
             // crudeDefaultIssueTypeRefToolStripMenuItem
             // 
             this.crudeDefaultIssueTypeRefToolStripMenuItem.Name = "crudeDefaultIssueTypeRefToolStripMenuItem";
-            this.crudeDefaultIssueTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultIssueTypeRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultIssueTypeRefToolStripMenuItem.Text = "CrudeDefaultIssueTypeRef";
             this.crudeDefaultIssueTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultIssueTypeRefToolStripMenuItem_Click);
             // 
             // crudeDefaultPerformanceIssueToolStripMenuItem
             // 
             this.crudeDefaultPerformanceIssueToolStripMenuItem.Name = "crudeDefaultPerformanceIssueToolStripMenuItem";
-            this.crudeDefaultPerformanceIssueToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultPerformanceIssueToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultPerformanceIssueToolStripMenuItem.Text = "CrudeDefaultPerformanceIssue";
             this.crudeDefaultPerformanceIssueToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultPerformanceIssueToolStripMenuItem_Click);
             // 
             // crudeDefaultPerformanceTimeToolStripMenuItem
             // 
             this.crudeDefaultPerformanceTimeToolStripMenuItem.Name = "crudeDefaultPerformanceTimeToolStripMenuItem";
-            this.crudeDefaultPerformanceTimeToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultPerformanceTimeToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultPerformanceTimeToolStripMenuItem.Text = "CrudeDefaultPerformanceTime";
             this.crudeDefaultPerformanceTimeToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultPerformanceTimeToolStripMenuItem_Click);
             // 
             // crudeDefaultPerformanceTimeRollupToolStripMenuItem
             // 
             this.crudeDefaultPerformanceTimeRollupToolStripMenuItem.Name = "crudeDefaultPerformanceTimeRollupToolStripMenuItem";
-            this.crudeDefaultPerformanceTimeRollupToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultPerformanceTimeRollupToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultPerformanceTimeRollupToolStripMenuItem.Text = "CrudeDefaultPerformanceTimeRollup";
             this.crudeDefaultPerformanceTimeRollupToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultPerformanceTimeRollupToolStripMenuItem_Click);
             // 
             // crudeDefaultResourceMeasurementToolStripMenuItem
             // 
             this.crudeDefaultResourceMeasurementToolStripMenuItem.Name = "crudeDefaultResourceMeasurementToolStripMenuItem";
-            this.crudeDefaultResourceMeasurementToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultResourceMeasurementToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultResourceMeasurementToolStripMenuItem.Text = "CrudeDefaultResourceMeasurement";
             this.crudeDefaultResourceMeasurementToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultResourceMeasurementToolStripMenuItem_Click);
             // 
             // crudeDefaultRuleToolStripMenuItem
             // 
             this.crudeDefaultRuleToolStripMenuItem.Name = "crudeDefaultRuleToolStripMenuItem";
-            this.crudeDefaultRuleToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultRuleToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultRuleToolStripMenuItem.Text = "CrudeDefaultRule";
             this.crudeDefaultRuleToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultRuleToolStripMenuItem_Click);
             // 
             // crudeDefaultRuleTypeRefToolStripMenuItem
             // 
             this.crudeDefaultRuleTypeRefToolStripMenuItem.Name = "crudeDefaultRuleTypeRefToolStripMenuItem";
-            this.crudeDefaultRuleTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultRuleTypeRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultRuleTypeRefToolStripMenuItem.Text = "CrudeDefaultRuleTypeRef";
             this.crudeDefaultRuleTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultRuleTypeRefToolStripMenuItem_Click);
             // 
             // crudeDefaultStateRefToolStripMenuItem
             // 
             this.crudeDefaultStateRefToolStripMenuItem.Name = "crudeDefaultStateRefToolStripMenuItem";
-            this.crudeDefaultStateRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultStateRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultStateRefToolStripMenuItem.Text = "CrudeDefaultStateRef";
             this.crudeDefaultStateRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultStateRefToolStripMenuItem_Click);
             // 
             // crudeDefaultSystemReferenceTableToolStripMenuItem
             // 
             this.crudeDefaultSystemReferenceTableToolStripMenuItem.Name = "crudeDefaultSystemReferenceTableToolStripMenuItem";
-            this.crudeDefaultSystemReferenceTableToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultSystemReferenceTableToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultSystemReferenceTableToolStripMenuItem.Text = "CrudeDefaultSystemReferenceTable";
             this.crudeDefaultSystemReferenceTableToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultSystemReferenceTableToolStripMenuItem_Click);
             // 
             // crudeDefaultSystemSettingToolStripMenuItem
             // 
             this.crudeDefaultSystemSettingToolStripMenuItem.Name = "crudeDefaultSystemSettingToolStripMenuItem";
-            this.crudeDefaultSystemSettingToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultSystemSettingToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultSystemSettingToolStripMenuItem.Text = "CrudeDefaultSystemSetting";
             this.crudeDefaultSystemSettingToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultSystemSettingToolStripMenuItem_Click);
             // 
             // crudeDefaultSystemSettingRefToolStripMenuItem
             // 
             this.crudeDefaultSystemSettingRefToolStripMenuItem.Name = "crudeDefaultSystemSettingRefToolStripMenuItem";
-            this.crudeDefaultSystemSettingRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultSystemSettingRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultSystemSettingRefToolStripMenuItem.Text = "CrudeDefaultSystemSettingRef";
             this.crudeDefaultSystemSettingRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultSystemSettingRefToolStripMenuItem_Click);
             // 
             // crudeDefaultTestToolStripMenuItem
             // 
             this.crudeDefaultTestToolStripMenuItem.Name = "crudeDefaultTestToolStripMenuItem";
-            this.crudeDefaultTestToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultTestToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultTestToolStripMenuItem.Text = "CrudeDefaultTest";
             this.crudeDefaultTestToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultTestToolStripMenuItem_Click);
             // 
             // crudeDefaultTestRunToolStripMenuItem
             // 
             this.crudeDefaultTestRunToolStripMenuItem.Name = "crudeDefaultTestRunToolStripMenuItem";
-            this.crudeDefaultTestRunToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultTestRunToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultTestRunToolStripMenuItem.Text = "CrudeDefaultTestRun";
             this.crudeDefaultTestRunToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultTestRunToolStripMenuItem_Click);
             // 
             // crudeDefaultTestRunResultRefToolStripMenuItem
             // 
             this.crudeDefaultTestRunResultRefToolStripMenuItem.Name = "crudeDefaultTestRunResultRefToolStripMenuItem";
-            this.crudeDefaultTestRunResultRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultTestRunResultRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultTestRunResultRefToolStripMenuItem.Text = "CrudeDefaultTestRunResultRef";
             this.crudeDefaultTestRunResultRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultTestRunResultRefToolStripMenuItem_Click);
             // 
             // crudeDefaultUserToolStripMenuItem
             // 
             this.crudeDefaultUserToolStripMenuItem.Name = "crudeDefaultUserToolStripMenuItem";
-            this.crudeDefaultUserToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultUserToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultUserToolStripMenuItem.Text = "CrudeDefaultUser";
             this.crudeDefaultUserToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultUserToolStripMenuItem_Click);
             // 
             // crudeDefaultUserActivityToolStripMenuItem
             // 
             this.crudeDefaultUserActivityToolStripMenuItem.Name = "crudeDefaultUserActivityToolStripMenuItem";
-            this.crudeDefaultUserActivityToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultUserActivityToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultUserActivityToolStripMenuItem.Text = "CrudeDefaultUserActivity";
             this.crudeDefaultUserActivityToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultUserActivityToolStripMenuItem_Click);
             // 
             // crudeDefaultUserActivityTypeRefToolStripMenuItem
             // 
             this.crudeDefaultUserActivityTypeRefToolStripMenuItem.Name = "crudeDefaultUserActivityTypeRefToolStripMenuItem";
-            this.crudeDefaultUserActivityTypeRefToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultUserActivityTypeRefToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultUserActivityTypeRefToolStripMenuItem.Text = "CrudeDefaultUserActivityTypeRef";
             this.crudeDefaultUserActivityTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultUserActivityTypeRefToolStripMenuItem_Click);
             // 
             // crudeDefaultVersionToolStripMenuItem
             // 
             this.crudeDefaultVersionToolStripMenuItem.Name = "crudeDefaultVersionToolStripMenuItem";
-            this.crudeDefaultVersionToolStripMenuItem.Size = new System.Drawing.Size(273, 22);
+            this.crudeDefaultVersionToolStripMenuItem.Size = new System.Drawing.Size(272, 22);
             this.crudeDefaultVersionToolStripMenuItem.Text = "CrudeDefaultVersion";
             this.crudeDefaultVersionToolStripMenuItem.Click += new System.EventHandler(this.crudeDefaultVersionToolStripMenuItem_Click);
             // 
@@ -1275,34 +1303,34 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeFerryIdentifierTypeRefToolStripMenuItem,
             this.crudeFerryTypeRefToolStripMenuItem});
             this.maintainFerryToolStripMenuItem.Name = "maintainFerryToolStripMenuItem";
-            this.maintainFerryToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainFerryToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainFerryToolStripMenuItem.Text = "Maintain Ferry";
             // 
             // crudeFerryToolStripMenuItem
             // 
             this.crudeFerryToolStripMenuItem.Name = "crudeFerryToolStripMenuItem";
-            this.crudeFerryToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.crudeFerryToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.crudeFerryToolStripMenuItem.Text = "CrudeFerry";
             this.crudeFerryToolStripMenuItem.Click += new System.EventHandler(this.crudeFerryToolStripMenuItem_Click);
             // 
             // crudeFerryIdentifierToolStripMenuItem
             // 
             this.crudeFerryIdentifierToolStripMenuItem.Name = "crudeFerryIdentifierToolStripMenuItem";
-            this.crudeFerryIdentifierToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.crudeFerryIdentifierToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.crudeFerryIdentifierToolStripMenuItem.Text = "CrudeFerryIdentifier";
             this.crudeFerryIdentifierToolStripMenuItem.Click += new System.EventHandler(this.crudeFerryIdentifierToolStripMenuItem_Click);
             // 
             // crudeFerryIdentifierTypeRefToolStripMenuItem
             // 
             this.crudeFerryIdentifierTypeRefToolStripMenuItem.Name = "crudeFerryIdentifierTypeRefToolStripMenuItem";
-            this.crudeFerryIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.crudeFerryIdentifierTypeRefToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.crudeFerryIdentifierTypeRefToolStripMenuItem.Text = "CrudeFerryIdentifierTypeRef";
             this.crudeFerryIdentifierTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFerryIdentifierTypeRefToolStripMenuItem_Click);
             // 
             // crudeFerryTypeRefToolStripMenuItem
             // 
             this.crudeFerryTypeRefToolStripMenuItem.Name = "crudeFerryTypeRefToolStripMenuItem";
-            this.crudeFerryTypeRefToolStripMenuItem.Size = new System.Drawing.Size(221, 22);
+            this.crudeFerryTypeRefToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
             this.crudeFerryTypeRefToolStripMenuItem.Text = "CrudeFerryTypeRef";
             this.crudeFerryTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFerryTypeRefToolStripMenuItem_Click);
             // 
@@ -1343,237 +1371,237 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeFinancialVoucherToolStripMenuItem,
             this.crudeFinancialVoucherTypeRefToolStripMenuItem});
             this.maintainFinancialToolStripMenuItem.Name = "maintainFinancialToolStripMenuItem";
-            this.maintainFinancialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainFinancialToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainFinancialToolStripMenuItem.Text = "Maintain Financial";
             // 
             // crudeFinancialAdjustmentToolStripMenuItem
             // 
             this.crudeFinancialAdjustmentToolStripMenuItem.Name = "crudeFinancialAdjustmentToolStripMenuItem";
-            this.crudeFinancialAdjustmentToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialAdjustmentToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialAdjustmentToolStripMenuItem.Text = "CrudeFinancialAdjustment";
             this.crudeFinancialAdjustmentToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialAdjustmentToolStripMenuItem_Click);
             // 
             // crudeFinancialAdjustmentTypeRefToolStripMenuItem
             // 
             this.crudeFinancialAdjustmentTypeRefToolStripMenuItem.Name = "crudeFinancialAdjustmentTypeRefToolStripMenuItem";
-            this.crudeFinancialAdjustmentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialAdjustmentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialAdjustmentTypeRefToolStripMenuItem.Text = "CrudeFinancialAdjustmentTypeRef";
             this.crudeFinancialAdjustmentTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialAdjustmentTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialBankAccountNumberTypeRefToolStripMenuItem
             // 
             this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem.Name = "crudeFinancialBankAccountNumberTypeRefToolStripMenuItem";
-            this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem.Text = "CrudeFinancialBankAccountNumberTypeRef";
             this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialBankAccountNumberTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialBookingTransactionToolStripMenuItem
             // 
             this.crudeFinancialBookingTransactionToolStripMenuItem.Name = "crudeFinancialBookingTransactionToolStripMenuItem";
-            this.crudeFinancialBookingTransactionToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialBookingTransactionToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialBookingTransactionToolStripMenuItem.Text = "CrudeFinancialBookingTransaction";
             this.crudeFinancialBookingTransactionToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialBookingTransactionToolStripMenuItem_Click);
             // 
             // crudeFinancialBookingTransactionTypeRefToolStripMenuItem
             // 
             this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem.Name = "crudeFinancialBookingTransactionTypeRefToolStripMenuItem";
-            this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem.Text = "CrudeFinancialBookingTransactionTypeRef";
             this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialBookingTransactionTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialCarRentalToolStripMenuItem
             // 
             this.crudeFinancialCarRentalToolStripMenuItem.Name = "crudeFinancialCarRentalToolStripMenuItem";
-            this.crudeFinancialCarRentalToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCarRentalToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCarRentalToolStripMenuItem.Text = "CrudeFinancialCarRental";
             this.crudeFinancialCarRentalToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCarRentalToolStripMenuItem_Click);
             // 
             // crudeFinancialCardTypeRefToolStripMenuItem
             // 
             this.crudeFinancialCardTypeRefToolStripMenuItem.Name = "crudeFinancialCardTypeRefToolStripMenuItem";
-            this.crudeFinancialCardTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCardTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCardTypeRefToolStripMenuItem.Text = "CrudeFinancialCardTypeRef";
             this.crudeFinancialCardTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCardTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialCompanyToolStripMenuItem
             // 
             this.crudeFinancialCompanyToolStripMenuItem.Name = "crudeFinancialCompanyToolStripMenuItem";
-            this.crudeFinancialCompanyToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCompanyToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCompanyToolStripMenuItem.Text = "CrudeFinancialCompany";
             this.crudeFinancialCompanyToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCompanyToolStripMenuItem_Click);
             // 
             // crudeFinancialCostcentreToolStripMenuItem
             // 
             this.crudeFinancialCostcentreToolStripMenuItem.Name = "crudeFinancialCostcentreToolStripMenuItem";
-            this.crudeFinancialCostcentreToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCostcentreToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCostcentreToolStripMenuItem.Text = "CrudeFinancialCostcentre";
             this.crudeFinancialCostcentreToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCostcentreToolStripMenuItem_Click);
             // 
             // crudeFinancialCouponToolStripMenuItem
             // 
             this.crudeFinancialCouponToolStripMenuItem.Name = "crudeFinancialCouponToolStripMenuItem";
-            this.crudeFinancialCouponToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCouponToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCouponToolStripMenuItem.Text = "CrudeFinancialCoupon";
             this.crudeFinancialCouponToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCouponToolStripMenuItem_Click);
             // 
             // crudeFinancialCouponTypeRefToolStripMenuItem
             // 
             this.crudeFinancialCouponTypeRefToolStripMenuItem.Name = "crudeFinancialCouponTypeRefToolStripMenuItem";
-            this.crudeFinancialCouponTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCouponTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCouponTypeRefToolStripMenuItem.Text = "CrudeFinancialCouponTypeRef";
             this.crudeFinancialCouponTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCouponTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialCurrencyToolStripMenuItem
             // 
             this.crudeFinancialCurrencyToolStripMenuItem.Name = "crudeFinancialCurrencyToolStripMenuItem";
-            this.crudeFinancialCurrencyToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCurrencyToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCurrencyToolStripMenuItem.Text = "CrudeFinancialCurrency";
             this.crudeFinancialCurrencyToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCurrencyToolStripMenuItem_Click);
             // 
             // crudeFinancialCurrencyTypeRefToolStripMenuItem
             // 
             this.crudeFinancialCurrencyTypeRefToolStripMenuItem.Name = "crudeFinancialCurrencyTypeRefToolStripMenuItem";
-            this.crudeFinancialCurrencyTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialCurrencyTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialCurrencyTypeRefToolStripMenuItem.Text = "CrudeFinancialCurrencyTypeRef";
             this.crudeFinancialCurrencyTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialCurrencyTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialFareToolStripMenuItem
             // 
             this.crudeFinancialFareToolStripMenuItem.Name = "crudeFinancialFareToolStripMenuItem";
-            this.crudeFinancialFareToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialFareToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialFareToolStripMenuItem.Text = "CrudeFinancialFare";
             this.crudeFinancialFareToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialFareToolStripMenuItem_Click);
             // 
             // crudeFinancialFareTypeRefToolStripMenuItem
             // 
             this.crudeFinancialFareTypeRefToolStripMenuItem.Name = "crudeFinancialFareTypeRefToolStripMenuItem";
-            this.crudeFinancialFareTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialFareTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialFareTypeRefToolStripMenuItem.Text = "CrudeFinancialFareTypeRef";
             this.crudeFinancialFareTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialFareTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialFeeToolStripMenuItem
             // 
             this.crudeFinancialFeeToolStripMenuItem.Name = "crudeFinancialFeeToolStripMenuItem";
-            this.crudeFinancialFeeToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialFeeToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialFeeToolStripMenuItem.Text = "CrudeFinancialFee";
             this.crudeFinancialFeeToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialFeeToolStripMenuItem_Click);
             // 
             // crudeFinancialFeeTypeRefToolStripMenuItem
             // 
             this.crudeFinancialFeeTypeRefToolStripMenuItem.Name = "crudeFinancialFeeTypeRefToolStripMenuItem";
-            this.crudeFinancialFeeTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialFeeTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialFeeTypeRefToolStripMenuItem.Text = "CrudeFinancialFeeTypeRef";
             this.crudeFinancialFeeTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialFeeTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialFerryBookingToolStripMenuItem
             // 
             this.crudeFinancialFerryBookingToolStripMenuItem.Name = "crudeFinancialFerryBookingToolStripMenuItem";
-            this.crudeFinancialFerryBookingToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialFerryBookingToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialFerryBookingToolStripMenuItem.Text = "CrudeFinancialFerryBooking";
             this.crudeFinancialFerryBookingToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialFerryBookingToolStripMenuItem_Click);
             // 
             // crudeFinancialHotelBookingToolStripMenuItem
             // 
             this.crudeFinancialHotelBookingToolStripMenuItem.Name = "crudeFinancialHotelBookingToolStripMenuItem";
-            this.crudeFinancialHotelBookingToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialHotelBookingToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialHotelBookingToolStripMenuItem.Text = "CrudeFinancialHotelBooking";
             this.crudeFinancialHotelBookingToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialHotelBookingToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentToolStripMenuItem
             // 
             this.crudeFinancialPaymentToolStripMenuItem.Name = "crudeFinancialPaymentToolStripMenuItem";
-            this.crudeFinancialPaymentToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentToolStripMenuItem.Text = "CrudeFinancialPayment";
             this.crudeFinancialPaymentToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentAccountingToolStripMenuItem
             // 
             this.crudeFinancialPaymentAccountingToolStripMenuItem.Name = "crudeFinancialPaymentAccountingToolStripMenuItem";
-            this.crudeFinancialPaymentAccountingToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentAccountingToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentAccountingToolStripMenuItem.Text = "CrudeFinancialPaymentAccounting";
             this.crudeFinancialPaymentAccountingToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentAccountingToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentBankToolStripMenuItem
             // 
             this.crudeFinancialPaymentBankToolStripMenuItem.Name = "crudeFinancialPaymentBankToolStripMenuItem";
-            this.crudeFinancialPaymentBankToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentBankToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentBankToolStripMenuItem.Text = "CrudeFinancialPaymentBank";
             this.crudeFinancialPaymentBankToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentBankToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentCardToolStripMenuItem
             // 
             this.crudeFinancialPaymentCardToolStripMenuItem.Name = "crudeFinancialPaymentCardToolStripMenuItem";
-            this.crudeFinancialPaymentCardToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentCardToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentCardToolStripMenuItem.Text = "CrudeFinancialPaymentCard";
             this.crudeFinancialPaymentCardToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentCardToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentCashToolStripMenuItem
             // 
             this.crudeFinancialPaymentCashToolStripMenuItem.Name = "crudeFinancialPaymentCashToolStripMenuItem";
-            this.crudeFinancialPaymentCashToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentCashToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentCashToolStripMenuItem.Text = "CrudeFinancialPaymentCash";
             this.crudeFinancialPaymentCashToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentCashToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentCouponToolStripMenuItem
             // 
             this.crudeFinancialPaymentCouponToolStripMenuItem.Name = "crudeFinancialPaymentCouponToolStripMenuItem";
-            this.crudeFinancialPaymentCouponToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentCouponToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentCouponToolStripMenuItem.Text = "CrudeFinancialPaymentCoupon";
             this.crudeFinancialPaymentCouponToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentCouponToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentTypeRefToolStripMenuItem
             // 
             this.crudeFinancialPaymentTypeRefToolStripMenuItem.Name = "crudeFinancialPaymentTypeRefToolStripMenuItem";
-            this.crudeFinancialPaymentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentTypeRefToolStripMenuItem.Text = "CrudeFinancialPaymentTypeRef";
             this.crudeFinancialPaymentTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialPaymentVoucherToolStripMenuItem
             // 
             this.crudeFinancialPaymentVoucherToolStripMenuItem.Name = "crudeFinancialPaymentVoucherToolStripMenuItem";
-            this.crudeFinancialPaymentVoucherToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialPaymentVoucherToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialPaymentVoucherToolStripMenuItem.Text = "CrudeFinancialPaymentVoucher";
             this.crudeFinancialPaymentVoucherToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialPaymentVoucherToolStripMenuItem_Click);
             // 
             // crudeFinancialServiceToolStripMenuItem
             // 
             this.crudeFinancialServiceToolStripMenuItem.Name = "crudeFinancialServiceToolStripMenuItem";
-            this.crudeFinancialServiceToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialServiceToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialServiceToolStripMenuItem.Text = "CrudeFinancialService";
             this.crudeFinancialServiceToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialServiceToolStripMenuItem_Click);
             // 
             // crudeFinancialSpecialServiceToolStripMenuItem
             // 
             this.crudeFinancialSpecialServiceToolStripMenuItem.Name = "crudeFinancialSpecialServiceToolStripMenuItem";
-            this.crudeFinancialSpecialServiceToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialSpecialServiceToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialSpecialServiceToolStripMenuItem.Text = "CrudeFinancialSpecialService";
             this.crudeFinancialSpecialServiceToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialSpecialServiceToolStripMenuItem_Click);
             // 
             // crudeFinancialTaxToolStripMenuItem
             // 
             this.crudeFinancialTaxToolStripMenuItem.Name = "crudeFinancialTaxToolStripMenuItem";
-            this.crudeFinancialTaxToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialTaxToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialTaxToolStripMenuItem.Text = "CrudeFinancialTax";
             this.crudeFinancialTaxToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialTaxToolStripMenuItem_Click);
             // 
             // crudeFinancialTaxTypeRefToolStripMenuItem
             // 
             this.crudeFinancialTaxTypeRefToolStripMenuItem.Name = "crudeFinancialTaxTypeRefToolStripMenuItem";
-            this.crudeFinancialTaxTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialTaxTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialTaxTypeRefToolStripMenuItem.Text = "CrudeFinancialTaxTypeRef";
             this.crudeFinancialTaxTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialTaxTypeRefToolStripMenuItem_Click);
             // 
             // crudeFinancialVoucherToolStripMenuItem
             // 
             this.crudeFinancialVoucherToolStripMenuItem.Name = "crudeFinancialVoucherToolStripMenuItem";
-            this.crudeFinancialVoucherToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialVoucherToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialVoucherToolStripMenuItem.Text = "CrudeFinancialVoucher";
             this.crudeFinancialVoucherToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialVoucherToolStripMenuItem_Click);
             // 
             // crudeFinancialVoucherTypeRefToolStripMenuItem
             // 
             this.crudeFinancialVoucherTypeRefToolStripMenuItem.Name = "crudeFinancialVoucherTypeRefToolStripMenuItem";
-            this.crudeFinancialVoucherTypeRefToolStripMenuItem.Size = new System.Drawing.Size(310, 22);
+            this.crudeFinancialVoucherTypeRefToolStripMenuItem.Size = new System.Drawing.Size(309, 22);
             this.crudeFinancialVoucherTypeRefToolStripMenuItem.Text = "CrudeFinancialVoucherTypeRef";
             this.crudeFinancialVoucherTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeFinancialVoucherTypeRefToolStripMenuItem_Click);
             // 
@@ -1592,7 +1620,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeFlightSegmentToolStripMenuItem,
             this.crudeFlightSegmentEventToolStripMenuItem});
             this.maintainFlightToolStripMenuItem.Name = "maintainFlightToolStripMenuItem";
-            this.maintainFlightToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainFlightToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainFlightToolStripMenuItem.Text = "Maintain Flight";
             // 
             // crudeFlightToolStripMenuItem
@@ -1678,20 +1706,20 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudePassengerToolStripMenuItem,
             this.crudePassengerTypeRefToolStripMenuItem});
             this.maintainPassengerToolStripMenuItem.Name = "maintainPassengerToolStripMenuItem";
-            this.maintainPassengerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainPassengerToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainPassengerToolStripMenuItem.Text = "Maintain Passenger";
             // 
             // crudePassengerToolStripMenuItem
             // 
             this.crudePassengerToolStripMenuItem.Name = "crudePassengerToolStripMenuItem";
-            this.crudePassengerToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.crudePassengerToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.crudePassengerToolStripMenuItem.Text = "CrudePassenger";
             this.crudePassengerToolStripMenuItem.Click += new System.EventHandler(this.crudePassengerToolStripMenuItem_Click);
             // 
             // crudePassengerTypeRefToolStripMenuItem
             // 
             this.crudePassengerTypeRefToolStripMenuItem.Name = "crudePassengerTypeRefToolStripMenuItem";
-            this.crudePassengerTypeRefToolStripMenuItem.Size = new System.Drawing.Size(201, 22);
+            this.crudePassengerTypeRefToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.crudePassengerTypeRefToolStripMenuItem.Text = "CrudePassengerTypeRef";
             this.crudePassengerTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudePassengerTypeRefToolStripMenuItem_Click);
             // 
@@ -1701,20 +1729,20 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeReportingRoundupToolStripMenuItem,
             this.crudeReportingRoundupTypeRefToolStripMenuItem});
             this.maintainReportingToolStripMenuItem.Name = "maintainReportingToolStripMenuItem";
-            this.maintainReportingToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainReportingToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainReportingToolStripMenuItem.Text = "Maintain Reporting";
             // 
             // crudeReportingRoundupToolStripMenuItem
             // 
             this.crudeReportingRoundupToolStripMenuItem.Name = "crudeReportingRoundupToolStripMenuItem";
-            this.crudeReportingRoundupToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.crudeReportingRoundupToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.crudeReportingRoundupToolStripMenuItem.Text = "CrudeReportingRoundup";
             this.crudeReportingRoundupToolStripMenuItem.Click += new System.EventHandler(this.crudeReportingRoundupToolStripMenuItem_Click);
             // 
             // crudeReportingRoundupTypeRefToolStripMenuItem
             // 
             this.crudeReportingRoundupTypeRefToolStripMenuItem.Name = "crudeReportingRoundupTypeRefToolStripMenuItem";
-            this.crudeReportingRoundupTypeRefToolStripMenuItem.Size = new System.Drawing.Size(249, 22);
+            this.crudeReportingRoundupTypeRefToolStripMenuItem.Size = new System.Drawing.Size(248, 22);
             this.crudeReportingRoundupTypeRefToolStripMenuItem.Text = "CrudeReportingRoundupTypeRef";
             this.crudeReportingRoundupTypeRefToolStripMenuItem.Click += new System.EventHandler(this.crudeReportingRoundupTypeRefToolStripMenuItem_Click);
             // 
@@ -1737,7 +1765,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.crudeServiceSpecialServiceRequestRequirementRefToolStripMenuItem,
             this.crudeServiceTypeRefToolStripMenuItem});
             this.maintainServiceToolStripMenuItem.Name = "maintainServiceToolStripMenuItem";
-            this.maintainServiceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainServiceToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainServiceToolStripMenuItem.Text = "Maintain Service";
             // 
             // crudeServiceCarRentalToolStripMenuItem
@@ -1850,13 +1878,13 @@ namespace SolutionNorSolutionPort.UserInterface
             this.maintainTimezoneToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crudeTimezoneToolStripMenuItem});
             this.maintainTimezoneToolStripMenuItem.Name = "maintainTimezoneToolStripMenuItem";
-            this.maintainTimezoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.maintainTimezoneToolStripMenuItem.Size = new System.Drawing.Size(177, 22);
             this.maintainTimezoneToolStripMenuItem.Text = "Maintain Timezone";
             // 
             // crudeTimezoneToolStripMenuItem
             // 
             this.crudeTimezoneToolStripMenuItem.Name = "crudeTimezoneToolStripMenuItem";
-            this.crudeTimezoneToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
+            this.crudeTimezoneToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.crudeTimezoneToolStripMenuItem.Text = "CrudeTimezone";
             this.crudeTimezoneToolStripMenuItem.Click += new System.EventHandler(this.crudeTimezoneToolStripMenuItem_Click);
             // 
@@ -1918,28 +1946,28 @@ namespace SolutionNorSolutionPort.UserInterface
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
-            this.userToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.userToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.userToolStripMenuItem.Text = "User";
             this.userToolStripMenuItem.Click += new System.EventHandler(this.userToolStripMenuItem_Click);
             // 
             // optionsToolStripMenuItem
             // 
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.optionsToolStripMenuItem.Text = "System Setting";
             this.optionsToolStripMenuItem.Click += new System.EventHandler(this.optionsToolStripMenuItem_Click);
             // 
             // referenceToolStripMenuItem
             // 
             this.referenceToolStripMenuItem.Name = "referenceToolStripMenuItem";
-            this.referenceToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.referenceToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.referenceToolStripMenuItem.Text = "Reference";
             this.referenceToolStripMenuItem.Click += new System.EventHandler(this.referenceToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(154, 6);
             // 
             // locationToolStripMenuItem
             // 
@@ -1950,7 +1978,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.countryToolStripMenuItem,
             this.cityToolStripMenuItem});
             this.locationToolStripMenuItem.Name = "locationToolStripMenuItem";
-            this.locationToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.locationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.locationToolStripMenuItem.Text = "Location";
             // 
             // addressToolStripMenuItem
@@ -1998,7 +2026,7 @@ namespace SolutionNorSolutionPort.UserInterface
             this.feeToolStripMenuItem,
             this.taxToolStripMenuItem});
             this.financialToolStripMenuItem.Name = "financialToolStripMenuItem";
-            this.financialToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.financialToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.financialToolStripMenuItem.Text = "Financial";
             // 
             // companyToolStripMenuItem
@@ -2046,53 +2074,53 @@ namespace SolutionNorSolutionPort.UserInterface
             // serviceToolStripMenuItem
             // 
             this.serviceToolStripMenuItem.Name = "serviceToolStripMenuItem";
-            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.serviceToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.serviceToolStripMenuItem.Text = "Service";
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(153, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(154, 6);
             // 
             // aircraftToolStripMenuItem
             // 
             this.aircraftToolStripMenuItem.Name = "aircraftToolStripMenuItem";
-            this.aircraftToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.aircraftToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.aircraftToolStripMenuItem.Text = "Aircraft";
             this.aircraftToolStripMenuItem.Click += new System.EventHandler(this.aircraftToolStripMenuItem_Click);
             // 
             // airportToolStripMenuItem
             // 
             this.airportToolStripMenuItem.Name = "airportToolStripMenuItem";
-            this.airportToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.airportToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.airportToolStripMenuItem.Text = "Airport";
             this.airportToolStripMenuItem.Click += new System.EventHandler(this.airportToolStripMenuItem_Click);
             // 
             // agencyToolStripMenuItem
             // 
             this.agencyToolStripMenuItem.Name = "agencyToolStripMenuItem";
-            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.agencyToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.agencyToolStripMenuItem.Text = "Agency";
             this.agencyToolStripMenuItem.Click += new System.EventHandler(this.agencyToolStripMenuItem_Click);
             // 
             // ferryToolStripMenuItem
             // 
             this.ferryToolStripMenuItem.Name = "ferryToolStripMenuItem";
-            this.ferryToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.ferryToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.ferryToolStripMenuItem.Text = "Ferry";
             this.ferryToolStripMenuItem.Click += new System.EventHandler(this.ferryToolStripMenuItem_Click);
             // 
             // clientToolStripMenuItem
             // 
             this.clientToolStripMenuItem.Name = "clientToolStripMenuItem";
-            this.clientToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.clientToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.clientToolStripMenuItem.Text = "Client";
             this.clientToolStripMenuItem.Click += new System.EventHandler(this.clientToolStripMenuItem_Click);
             // 
             // externalSystemToolStripMenuItem
             // 
             this.externalSystemToolStripMenuItem.Name = "externalSystemToolStripMenuItem";
-            this.externalSystemToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.externalSystemToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.externalSystemToolStripMenuItem.Text = "External System";
             this.externalSystemToolStripMenuItem.Click += new System.EventHandler(this.externalSystemToolStripMenuItem_Click);
             // 
@@ -2175,41 +2203,41 @@ namespace SolutionNorSolutionPort.UserInterface
             // newWindowToolStripMenuItem
             // 
             this.newWindowToolStripMenuItem.Name = "newWindowToolStripMenuItem";
-            this.newWindowToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.newWindowToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.newWindowToolStripMenuItem.Text = "&New Window";
             // 
             // cascadeToolStripMenuItem
             // 
             this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.cascadeToolStripMenuItem.Text = "&Cascade";
             this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
             // 
             // tileVerticalToolStripMenuItem
             // 
             this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.tileVerticalToolStripMenuItem.Text = "Tile &Vertical";
             this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
             // 
             // tileHorizontalToolStripMenuItem
             // 
             this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.tileHorizontalToolStripMenuItem.Text = "Tile &Horizontal";
             this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
             // 
             // closeAllToolStripMenuItem
             // 
             this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.closeAllToolStripMenuItem.Text = "C&lose All";
             this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
             // 
             // arrangeIconsToolStripMenuItem
             // 
             this.arrangeIconsToolStripMenuItem.Name = "arrangeIconsToolStripMenuItem";
-            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.arrangeIconsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.arrangeIconsToolStripMenuItem.Text = "&Arrange Icons";
             this.arrangeIconsToolStripMenuItem.Click += new System.EventHandler(this.ArrangeIconsToolStripMenuItem_Click);
             // 
@@ -2357,34 +2385,6 @@ namespace SolutionNorSolutionPort.UserInterface
             this.toolStripStatusLabel.Name = "toolStripStatusLabel";
             this.toolStripStatusLabel.Size = new System.Drawing.Size(39, 17);
             this.toolStripStatusLabel.Text = "Status";
-            // 
-            // availabilityToolStripMenuItem
-            // 
-            this.availabilityToolStripMenuItem.Name = "availabilityToolStripMenuItem";
-            this.availabilityToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.availabilityToolStripMenuItem.Text = "Availability";
-            this.availabilityToolStripMenuItem.Click += new System.EventHandler(this.availabilityToolStripMenuItem_Click);
-            // 
-            // bookingsToolStripMenuItem
-            // 
-            this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
-            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bookingsToolStripMenuItem.Text = "Bookings";
-            this.bookingsToolStripMenuItem.Click += new System.EventHandler(this.bookingsToolStripMenuItem_Click);
-            // 
-            // checkinToolStripMenuItem
-            // 
-            this.checkinToolStripMenuItem.Name = "checkinToolStripMenuItem";
-            this.checkinToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.checkinToolStripMenuItem.Text = "Checkin";
-            this.checkinToolStripMenuItem.Click += new System.EventHandler(this.checkinToolStripMenuItem_Click);
-            // 
-            // promotionToolStripMenuItem
-            // 
-            this.promotionToolStripMenuItem.Name = "promotionToolStripMenuItem";
-            this.promotionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.promotionToolStripMenuItem.Text = "Promotion";
-            this.promotionToolStripMenuItem.Click += new System.EventHandler(this.promotionToolStripMenuItem_Click);
             // 
             // Main
             // 

@@ -10,7 +10,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A8DC0141-4354-4FD3-88F7-BFBCE5389DE5}</ProjectGuid>
+    <ProjectGuid>{197E8775-2B85-43DB-A387-DDD30EEFE77A}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -743,6 +743,8 @@
     <Content Include="install\Application Files\WinForm_0_0_0_1\WinForm.exe.config.deploy" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\WinForm.exe.deploy" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\WinForm.exe.manifest" />
+    <Content Include="install\Application Files\WinForm_0_0_0_1\Main\pimlogo.png.deploy" />
+    <Content Include="install\Application Files\WinForm_0_0_0_1\Main\pimlogo.svg.deploy" />
     <None Include="Scripts\Frameworks\jquery-3.2.1.intellisense.js" />
     <Content Include="install\Newtonsoft.Json.dll" />
     <Content Include="install\Newtonsoft.Json.xml" />
@@ -1922,11 +1924,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{cdf4922b-cb1f-47c3-9e7b-641d8c325043}</Project>
+      <Project>{ffe088a3-0af5-46ec-9e30-3346a459a170}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{d7ba1b6e-5600-4aa6-a681-9c91fe6a4643}</Project>
+      <Project>{704293a5-d33f-4b04-b2a3-94cc87575bd2}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1956,7 +1958,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>59437</DevelopmentServerPort>
+          <DevelopmentServerPort>60085</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

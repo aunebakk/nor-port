@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:17 AM
+  Generated Date: 12/30/2020 1:56:58 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsOnBooking?bookingId={bookingId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsOnBooking?bookingId={bookingId}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsOnBookingContract> reply =
@@ -52,7 +52,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightHistory?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightHistory?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<FlightHistoryContract> reply =
@@ -67,7 +67,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightSegments?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightSegments?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<FlightSegmentsContract> reply =
@@ -85,7 +85,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/AirportsAvailableWithFilter?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/AirportsAvailableWithFilter?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<AirportsAvailableWithFilterContract> reply =
@@ -103,7 +103,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsOpenForCheckinWithDescription?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsOpenForCheckinWithDescription?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsOpenForCheckinWithDescriptionContract> reply =
@@ -121,7 +121,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsWithCheckinInformation?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsWithCheckinInformation?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsWithCheckinInformationContract> reply =
@@ -139,7 +139,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsWithBookingInformation?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsWithBookingInformation?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsWithBookingInformationContract> reply =
@@ -157,7 +157,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsForBookingWithFare?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsForBookingWithFare?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsForBookingWithFareContract> reply =
@@ -175,7 +175,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsForPeriod?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightsForPeriod?departureAirportId={departureAirportId}&arrivalAirportId={arrivalAirportId}&fromDateTime={fromDateTime}&untilDateTime={untilDateTime}";
             string jsonString = client.DownloadString(query);
 
             List<FlightsForPeriodContract> reply =
@@ -190,7 +190,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightEvents?flightId={flightId}";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/FlightSearchService/FlightEvents?flightId={flightId}";
             string jsonString = client.DownloadString(query);
 
             List<FlightEventsContract> reply =

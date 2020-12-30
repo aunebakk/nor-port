@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 7:10:11 AM
+  Generated Date: 12/30/2020 1:56:41 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetFrameworkRestProxy.ProxyMake
 */
@@ -27,62 +27,34 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Proxy {
     // proxy service class for dot net framework
     // links:
     //  docLink: http://sql2x.org/documentationLink/41996556-e83c-47d0-90e1-464b60264260
-    public class DiagnosticsServiceClient {
+    public class AirportSearchServiceClient {
         // REST interface to Business layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/794b5c09-a236-4274-9be6-f25aeaa2ab46
-        public System.Int64 WorkingSet(
+        public List<AirportIdentifierIndexWithFilterContract> AirportIdentifierIndexWithFilter(
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DiagnosticsService/WorkingSet?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AirportSearchService/AirportIdentifierIndexWithFilter?";
             string jsonString = client.DownloadString(query);
 
-            System.Int64 reply =
-                JsonConvert.DeserializeObject<System.Int64>(jsonString);
+            List<AirportIdentifierIndexWithFilterContract> reply =
+                JsonConvert.DeserializeObject<List<AirportIdentifierIndexWithFilterContract>>(jsonString);
 
             return reply;
         }
 
-        public System.DateTime PingTest(
+        public List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter(
             ) {
 
             WebClient client = new WebClient();
 
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DiagnosticsService/PingTest?";
+            string query = $"http://NorSolutionPortCore.AzureWebSites.net/api/1/AirportSearchService/GetAirportIndexWithFilter?";
             string jsonString = client.DownloadString(query);
 
-            System.DateTime reply =
-                JsonConvert.DeserializeObject<System.DateTime>(jsonString);
-
-            return reply;
-        }
-
-        public System.String Database(
-            ) {
-
-            WebClient client = new WebClient();
-
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DiagnosticsService/Database?";
-            string jsonString = client.DownloadString(query);
-
-            System.String reply =
-                JsonConvert.DeserializeObject<System.String>(jsonString);
-
-            return reply;
-        }
-
-        public System.String ComputerName(
-            ) {
-
-            WebClient client = new WebClient();
-
-            string query = "http://NorSolutionPortCore.AzureWebSites.net/api/1/DiagnosticsService/ComputerName?";
-            string jsonString = client.DownloadString(query);
-
-            System.String reply =
-                JsonConvert.DeserializeObject<System.String>(jsonString);
+            List<GetAirportIndexWithFilterContract> reply =
+                JsonConvert.DeserializeObject<List<GetAirportIndexWithFilterContract>>(jsonString);
 
             return reply;
         }
