@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:55:50 PM
+  Generated Date: 12/30/2020 9:30:41 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -14,29 +14,37 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 
 // Namespace for a Business Logic Layer in a Controller using ModelViewController
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
+//  the Business Logic Layer contains domain logic that encodes real world business rules
+//   that determine how data is created, stored and changed. Typically it will also deal with
+//   import and export of data and integration with API's from other parts of the system or other systems
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
 //  the Business Logic Layer contains domain logic that encodes real world business rules
 //   that determine how data is created, stored and changed. Typically it will also deal with
 //   import and export of data and integration with API's from other parts of the system or other systems
 //  the BusinessLogicLayer is where the DataAccessLayer is exposed as
 //   REST http services
 // links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/6382691f-5a87-466f-89a7-ab9d8e28b367
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Produces("application/json")]
     [Route("api/1/BookingService")]
+    // this class serves as Controller to the data access layer between c# and sql server
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
     // this class serves as Controller to the data access layer between c# and sql server
     //  primarily it calls the data access layer to get to the serialized CRUDE tables data
     //   and transfers that data with an to REST API Contract through the JSON string format
     //  this contract is an identical representation of a Durian's columns
     //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
-    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
-    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class BookingServiceController : Controller {
+        // get a JSON Array Contract with data for GetBookingEmpty
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for GetBookingEmpty
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for GetBookingEmpty
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -51,6 +59,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new BookingService().GetBookingEmpty(userId: userId);
         }
 
+        // get a JSON Array Contract with data for CreateBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for CreateBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for CreateBooking
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -69,6 +81,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new BookingService().CreateBooking(bookingSourceRcd: bookingSourceRcd, flightId: flightId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for UpdateBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for UpdateBooking
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -101,6 +117,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for GetBooking
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for GetBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for GetBooking
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -115,6 +135,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new BookingService().GetBooking(bookingId: bookingId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for UpdateBookingPage1
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage1
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for UpdateBookingPage1
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -141,6 +165,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for UpdateBookingPage2
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage2
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage2
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -159,6 +187,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().UpdateBookingPage2(bookingId: bookingId, eMail: eMail, comment: comment, userId: userId);
         }
 
+        // get a JSON Array Contract with data for UpdateBookingPage3
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage3
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for UpdateBookingPage3
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -201,6 +233,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for UpdateBookingPage4
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage4
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for UpdateBookingPage4
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -217,6 +253,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().UpdateBookingPage4(bookingId: bookingId, passengers: passengers, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PassengerAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PassengerAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -239,6 +279,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for PassengerRemove
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -253,6 +297,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().PassengerRemove(bookingPassengerId: bookingPassengerId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PassengerUpdate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerUpdate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PassengerUpdate
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -275,6 +323,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().PassengerUpdate(bookingPassengerId: bookingPassengerId, passengerTypeRcd: passengerTypeRcd, passengerName: passengerName, defaultStateRcd: defaultStateRcd, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PaymentCardAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentCardAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PaymentCardAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -301,6 +353,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().PaymentCardAdd(bookingId: bookingId, paidAmountBookingCurrency: paidAmountBookingCurrency, paidAmountRoundingBookingCurrency: paidAmountRoundingBookingCurrency, paidAmountBookingFinancialCurrencyId: paidAmountBookingFinancialCurrencyId, cardContract: cardContract, financialCostcentreId: financialCostcentreId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PaymentCashAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentCashAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PaymentCashAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -333,6 +389,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for PaymentVoucherAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentVoucherAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentVoucherAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -363,6 +423,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().PaymentVoucherAdd(bookingId: bookingId, financialVoucherId: financialVoucherId, paidAmount: paidAmount, paidAmountRounding: paidAmountRounding, paidFinancialCurrencyId: paidFinancialCurrencyId, paidAmountBookingCurrency: paidAmountBookingCurrency, paidAmountRoundingBookingCurrency: paidAmountRoundingBookingCurrency, paidAmountBookingFinancialCurrencyId: paidAmountBookingFinancialCurrencyId, financialCostcentreId: financialCostcentreId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PaymentBankAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentBankAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PaymentBankAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -403,6 +467,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for PaymentAccountingAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentAccountingAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentAccountingAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -427,6 +495,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for PaymentGetCurrency
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentGetCurrency
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PaymentGetCurrency
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -443,6 +515,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new BookingService().PaymentGetCurrency(financialCurrencyId: financialCurrencyId, againstFinancialCurrencyId: againstFinancialCurrencyId, currencyDateTime: currencyDateTime);
         }
 
+        // get a JSON Array Contract with data for FlightAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for FlightAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for FlightAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -463,6 +539,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for FlightRemove
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for FlightRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for FlightRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -479,6 +559,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().FlightRemove(bookingId: bookingId, bookingFlightSegmentId: bookingFlightSegmentId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for SimulateBookings
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for SimulateBookings
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for SimulateBookings
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -499,6 +583,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for BookingConfirm
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingConfirm
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingConfirm
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -515,6 +603,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for LocatorCreate
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for LocatorCreate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for LocatorCreate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -525,6 +617,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new BookingService().LocatorCreate();
         }
 
+        // get a JSON Array Contract with data for BookingFinancialBalance
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingFinancialBalance
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for BookingFinancialBalance
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -541,6 +637,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for SendBookingConfirmationByEmail
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for SendBookingConfirmationByEmail
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for SendBookingConfirmationByEmail
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -555,6 +655,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().SendBookingConfirmationByEmail(bookingId: bookingId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for PassengerCheckIn
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerCheckIn
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for PassengerCheckIn
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -575,6 +679,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for PassengerCheckOut
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerCheckOut
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for PassengerCheckOut
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -591,6 +699,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().PassengerCheckOut(bookingPassengerId: bookingPassengerId, bookingFlightSegmentId: bookingFlightSegmentId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for BookingServiceHotelAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceHotelAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for BookingServiceHotelAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -611,6 +723,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for BookingServiceFerryAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceFerryAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceFerryAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -627,6 +743,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().BookingServiceFerryAdd(bookingId: bookingId, serviceFerryId: serviceFerryId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for BookingServiceCarRentalAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceCarRentalAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for BookingServiceCarRentalAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -647,6 +767,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for BookingServiceSpecialServiceRequestAdd
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceSpecialServiceRequestAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceSpecialServiceRequestAdd
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -665,6 +789,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
         // get a JSON Array Contract with data for BookingServiceRequestRemove
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceRequestRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for BookingServiceRequestRemove
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
         // parameters:
@@ -679,6 +807,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new BookingService().BookingServiceRequestRemove(bookingServiceRequestId: bookingServiceRequestId, userId: userId);
         }
 
+        // get a JSON Array Contract with data for FinancialCurrencyUpdate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
+        // get a JSON Array Contract with data for FinancialCurrencyUpdate
+        //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // get a JSON Array Contract with data for FinancialCurrencyUpdate
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:

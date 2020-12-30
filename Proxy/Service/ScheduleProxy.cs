@@ -2,10 +2,15 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:59:40 PM
+  Generated Date: 12/30/2020 9:34:46 PM
   Template: SQL2XExtensionV3.SQL2XExtensionCreatorCoreV3.ProxyClient
 */
 using System;
+// Namespace for the Business Logic Layer
+// Namespace for the Business Logic Layer
+// the Business Logic Layer contains domain logic that encodes real world business rules
+//  that determine how data is created, stored and changed. Typically it will also deal with
+//  import and export of data and integration with API's from other parts of the system or other systems
 // Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
@@ -13,24 +18,26 @@ using System;
 // the BusinessLogicLayer is where the DataAccessLayer is exposed as
 //  SOAP http services, using Windows Communication Framework
 // links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-// application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
+    // this interface serves as a link to the data access layer between c# and sql server
+    // this interface serves as a link to the data access layer between c# and sql server
+    // primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //  and transfers that data to a SOAP Contract ready to be exposed through WCF
     // this interface serves as a link to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
     //  and transfers that data to a SOAP Contract ready to be exposed through WCF
     // this contract is an identical representation of Schedule's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  SOAP ( Simple Object Access Protocol ): https://en.wikipedia.org/wiki/SOAP
-    // WCF ( Windows Communication Foundation ): https://en.wikipedia.org/wiki/Windows_Communication_Foundation
     //  docLink: http://sql2x.org/documentationLink/4067ab7d-fb64-496a-b5d1-0ef69e142b57
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IScheduleService")]
     public partial interface IScheduleService {
         
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
@@ -38,11 +45,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         void MakeFlightsFromScheduleAll(System.Guid userId);
         
         // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScheduleService/MakeFlightsFromScheduleAll", ReplyAction="http://tempuri.org/IScheduleService/MakeFlightsFromScheduleAllResponse")]
         System.Threading.Tasks.Task MakeFlightsFromScheduleAllAsync(System.Guid userId);
         
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
@@ -50,11 +61,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         void MakeFlightsFromSchedule(System.Guid flightScheduleId, System.Guid userId);
         
         // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScheduleService/MakeFlightsFromSchedule", ReplyAction="http://tempuri.org/IScheduleService/MakeFlightsFromScheduleResponse")]
         System.Threading.Tasks.Task MakeFlightsFromScheduleAsync(System.Guid flightScheduleId, System.Guid userId);
         
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
@@ -62,11 +77,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract GetSchedule(System.Guid flightScheduleId, System.Guid userId);
         
         // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScheduleService/GetSchedule", ReplyAction="http://tempuri.org/IScheduleService/GetScheduleResponse")]
         System.Threading.Tasks.Task<SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract> GetScheduleAsync(System.Guid flightScheduleId, System.Guid userId);
         
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
@@ -74,17 +93,23 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         void CreateSchedule(SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract scheduleContract, System.Guid userId);
         
         // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScheduleService/CreateSchedule", ReplyAction="http://tempuri.org/IScheduleService/CreateScheduleResponse")]
         System.Threading.Tasks.Task CreateScheduleAsync(SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract scheduleContract, System.Guid userId);
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IScheduleService/UpdateSchedule", ReplyAction="http://tempuri.org/IScheduleService/UpdateScheduleResponse")]
         void UpdateSchedule(SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract scheduleContract, System.Guid userId);
         
+        // method derived from SOAP layer, Async version
+        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -118,12 +143,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void MakeFlightsFromScheduleAll(System.Guid userId) {
             base.Channel.MakeFlightsFromScheduleAll(userId);
         }
         
+        // method derived from SOAP layer, async version
+        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -132,12 +161,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void MakeFlightsFromSchedule(System.Guid flightScheduleId, System.Guid userId) {
             base.Channel.MakeFlightsFromSchedule(flightScheduleId, userId);
         }
         
+        // method derived from SOAP layer, async version
+        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -146,12 +179,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract GetSchedule(System.Guid flightScheduleId, System.Guid userId) {
             return base.Channel.GetSchedule(flightScheduleId, userId);
         }
         
+        // method derived from SOAP layer, async version
+        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -160,12 +197,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void CreateSchedule(SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract scheduleContract, System.Guid userId) {
             base.Channel.CreateSchedule(scheduleContract, userId);
         }
         
+        // method derived from SOAP layer, async version
+        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -174,12 +215,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
+        // method derived from SOAP layer
+        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void UpdateSchedule(SolutionNorSolutionPort.BusinessLogicLayer.ScheduleContract scheduleContract, System.Guid userId) {
             base.Channel.UpdateSchedule(scheduleContract, userId);
         }
         
+        // method derived from SOAP layer, async version
+        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f

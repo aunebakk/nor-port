@@ -18,6 +18,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     [ServiceContract()]
     public partial interface IDefaultTestSearchService {
         // returns a list of DefaultTestSearchQuery contracts from DefaultTestSearchService
+        // returns a list of DefaultTestSearchQuery contracts from DefaultTestSearchService
+        // returns a list of DefaultTestSearchQuery contracts from DefaultTestSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
@@ -27,6 +29,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     public partial class DefaultTestSearchService : IDefaultTestSearchService {
+        // returns a list of DefaultTestSearchQuery contracts
+        // returns a list of DefaultTestSearchQuery contracts
         // returns a list of DefaultTestSearchQuery contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d

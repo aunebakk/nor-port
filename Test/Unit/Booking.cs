@@ -16,8 +16,7 @@ namespace Test {
             afterDatabaseInit.Step05_CheckEmail();
             afterDatabaseInit.Step06_CheckReportsAfterBooking();
             afterDatabaseInit.Step07_Checkin();
-            afterDatabaseInit.Step08_Board();
-            afterDatabaseInit.Step09_CheckReportsAfterFlight();
+            afterDatabaseInit.Step08_CheckReportsAfterFlight();
         }
     }
 
@@ -204,16 +203,71 @@ namespace Test {
 
         [TestMethod]
         public void Step07_Checkin() {
+            List<FlightsOpenForCheckinWithDescriptionContract> flights =
+                new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                        departureAirportId: Guid.Empty,
+                        arrivalAirportId: Guid.Empty,
+                        fromDateTime: DateTime.UtcNow.Date,
+                        untilDateTime: DateTime.UtcNow.Date.AddDays(1)
+                        );
+
+            foreach (FlightsOpenForCheckinWithDescriptionContract flight in flights) { 
+                List<PassengersOnFlightContract> passengers = 
+                    new PassengerSearchService().PassengersOnFlight(
+                        flightId: flight.FlightId
+                        );
+
+                // check in every 3rd passenger
+                for (int p = 0; p < passengers.Count; p++) {
+                    if (p % 3 == 0) {
+                        if (!passengers[p].CheckedinFlag) {
+                            new BookingServiceClient()
+                                .PassengerCheckIn(
+                                    passengers[p].BookingPassengerId,
+                                    passengers[p].BookingFlightSegmentId,
+                                    userId: DefaultUserId
+                                    );
+                        }
+                    }
+                }
+            }
         }
 
         [TestMethod]
-        public void Step08_Board() {
-        }
+        public void Step08_CheckReportsAfterFlight() {
+            // get flights for the next 24 hours
+            List<FlightsOpenForCheckinWithDescriptionContract> flights =
+                new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                        departureAirportId: Guid.Empty,
+                        arrivalAirportId: Guid.Empty,
+                        fromDateTime: DateTime.UtcNow.Date,
+                        untilDateTime: DateTime.UtcNow.Date.AddDays(1)
+                        );
 
-        [TestMethod]
-        public void Step09_CheckReportsAfterFlight() {
-        }
+            // iterate all flights
+            foreach (FlightsOpenForCheckinWithDescriptionContract flight in flights) {
 
+                // all passengers on flight
+                List<PassengersOnFlightContract> passengers =
+                    new PassengerSearchService().PassengersOnFlight(
+                        flightId: flight.FlightId
+                        );
+
+                // checked in passengers
+                List<PassengersOnFlightCheckedInContract> passengersCheckedIn =
+                    new PassengerSearchService().PassengersOnFlightCheckedIn(
+                        flightId: flight.FlightId
+                        );
+
+                // checked in passengers should be a third of actual passengers ( TODO: +- 15 for some reason )
+                Assert.AreEqual(
+                    expected: passengers.Count / 3,
+                    actual: passengersCheckedIn.Count,
+                    delta: 15,
+                    message: $"flight {flight.AirlineIdentifierCode}{flight.FlightNumber} has too few checked in passengers"
+                    );
+            }
+        }
     }
 }
 

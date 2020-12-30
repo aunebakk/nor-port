@@ -10,7 +10,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{197E8775-2B85-43DB-A387-DDD30EEFE77A}</ProjectGuid>
+    <ProjectGuid>{C9F9F206-5C2C-4B5B-B542-40B126484C0D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -1924,11 +1924,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{ffe088a3-0af5-46ec-9e30-3346a459a170}</Project>
+      <Project>{db217e5e-7072-49e1-83de-e9bf02b925d4}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{704293a5-d33f-4b04-b2a3-94cc87575bd2}</Project>
+      <Project>{ebd0d7e1-20e9-43ce-95bc-17f9454a2b6f}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1958,7 +1958,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>60085</DevelopmentServerPort>
+          <DevelopmentServerPort>60554</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:36:45 PM
+  Generated Date: 12/30/2020 9:11:35 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -14,30 +14,36 @@ using System;
 using Microsoft.AspNetCore.Mvc;
 
 // Namespace for a Business Logic Layer in a Controller using ModelViewController
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
+//  the Business Logic Layer contains domain logic that encodes real world business rules
+//   that determine how data is created, stored and changed. Typically it will also deal with
+//   import and export of data and integration with API's from other parts of the system or other systems
+// Namespace for a Business Logic Layer in a Controller using ModelViewController
 //  the Business Logic Layer contains domain logic that encodes real world business rules
 //   that determine how data is created, stored and changed. Typically it will also deal with
 //   import and export of data and integration with API's from other parts of the system or other systems
 //  the BusinessLogicLayer is where the DataAccessLayer is exposed as
 //   REST http services
 // links:
-//  business logic layer: https://en.wikipedia.org/wiki/Business_logic
-//  application programming interface: https://en.wikipedia.org/wiki/API
 //  docLink: http://sql2x.org/documentationLink/6382691f-5a87-466f-89a7-ab9d8e28b367
 namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Produces("application/json")]
     [Route("api/1/crudeflight")]
+    // this class serves as Controller to the data access layer between c# and sql server
+    // this class serves as Controller to the data access layer between c# and sql server
+    //  primarily it calls the data access layer to get to the serialized CRUDE tables data
+    //   and transfers that data with an to REST API Contract through the JSON string format
     // this class serves as Controller to the data access layer between c# and sql server
     //  primarily it calls the data access layer to get to the serialized CRUDE tables data
     //   and transfers that data with an to REST API Contract through the JSON string format
     //  this contract is an identical representation of a Durian's columns
     //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  MVC ( Model View Controller): https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller
-    //  REST ( REpresentational State Transfer ): https://en.wikipedia.org/wiki/REST
-    //  JSON ( JavaScript Object Notation ): https://en.wikipedia.org/wiki/JSON
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class CrudeFlightController : Controller {
 
+        // help page for controller
+        // help page for controller
         // help page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
@@ -48,6 +54,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return View(@"Views\Templates\Flight\CrudeFlight.cshtml");
         }
 
+        // fetch all page for controller
+        // fetch all page for controller
         // fetch all page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/949b0295-718b-4eaf-8118-083f50045ec5
@@ -61,6 +69,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // fetch all count page for controller
+        // fetch all count page for controller
+        // fetch all count page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/29cc8429-6a4e-4854-91dc-9ad3027eb3d0
         [HttpGet("fetchallcount")]
@@ -69,6 +79,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new CrudeFlightBusiness().FetchAllCount();
         }
 
+        // fetch all with limit page for controller
+        // fetch all with limit page for controller
         // fetch all with limit page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/2eda6a92-1bc1-43d8-9285-87d26d50f574
@@ -85,6 +97,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return flights;
         }
 
+        // fetch all with limit and offset page for controller
+        // fetch all with limit and offset page for controller
         // fetch all with limit and offset page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/320ad742-0b46-4155-a5c9-2a82277b1f96
@@ -104,6 +118,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // fetch by primary key page for controller
+        // fetch by primary key page for controller
+        // fetch by primary key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/b08faa47-a306-4a01-99f5-1125963b5d47
         // parameters:
@@ -117,6 +133,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return flight;
         }
 
+        // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
@@ -132,6 +150,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -145,6 +165,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return flight;
         }
 
+        // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
@@ -160,6 +182,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -173,6 +197,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return flight;
         }
 
+        // fetch by foreign key page for controller
+        // fetch by foreign key page for controller
         // fetch by foreign key page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
@@ -188,6 +214,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // create Flight POST page for controller
+        // create Flight POST page for controller
+        // create Flight POST page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/fa6b4ff5-5a11-4563-b6de-449d1bb6a5e7
         // parameters:
@@ -201,6 +229,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // create POST test page for controller
+        // create POST test page for controller
+        // create POST test page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/96b8b62a-7bd6-4e9b-a1b4-c10a4b027dc5
         [HttpGet("createtest")]
@@ -211,10 +241,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 1:36:45 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 9:11:35 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 9:11:35 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 9:11:35 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -235,6 +265,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // Update Flight POST page for controller
+        // Update Flight POST page for controller
+        // Update Flight POST page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/5c88b29b-595f-4435-b8cd-6db26d0f958d
         // parameters:
@@ -248,6 +280,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // update test page for controller
+        // update test page for controller
+        // update test page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/8f62f04e-393c-4162-b1c1-0b0aa12c5fe9
         [HttpGet("updatetest")]
@@ -258,10 +292,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 1:36:45 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "12/30/2020 9:11:35 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "12/30/2020 9:11:35 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 1:36:45 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/30/2020 9:11:35 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
@@ -282,6 +316,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
         }
 
         // DELETE page for controller
+        // DELETE page for controller
+        // DELETE page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/c5cd4292-e198-4631-9b3f-a67451a48cac
         [HttpDelete("flightdelete/{flightid?}")]
@@ -290,6 +326,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new CrudeFlightBusiness().Delete(flightId);
         }
 
+        // delete test page for controller
+        // delete test page for controller
         // delete test page for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/1b411c05-2eda-44e5-99ef-733fd609cead

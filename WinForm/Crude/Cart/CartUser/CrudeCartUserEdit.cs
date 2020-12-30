@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:23:29 PM
+  Generated Date: 12/30/2020 8:58:06 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateCrudeWinForm.WinFormGenerateEditStyle3
 */
@@ -13,17 +13,23 @@ using System.IO;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 
 // Client WinForm Layer
+// Client WinForm Layer
+// the Client WinForm Layer uses the Proxy Layer to tie into SOAP services
+// Client WinForm Layer
 // the Client WinForm Layer uses the Proxy Layer to tie into SOAP services
 // links:
-//  client winform layer: https://docs.microsoft.com/en-us/dotnet/framework/winforms/
 //  docLink: http://sql2x.org/documentationLink/cd82fac1-15df-4881-b376-80b77ab185d0
 namespace SolutionNorSolutionPort.UserInterface {
 
+    // this form class is used to consume Crude SOAP Services through a WCF Proxy Client
+    // this form class is used to consume Crude SOAP Services through a WCF Proxy Client
     // this form class is used to consume Crude SOAP Services through a WCF Proxy Client
     // links:
     //  docLink: http://sql2x.org/documentationLink/43b6be6f-d1b6-4470-937c-dbf4588a80ee
     public partial class CrudeCartUserEdit : Form {
         
+        // holds the contract, with default values if in New modus, and fetched values in Edit modus
+        // holds the contract, with default values if in New modus, and fetched values in Edit modus
         // holds the contract, with default values if in New modus, and fetched values in Edit modus
         // links:
         //  docLink: http://sql2x.org/documentationLink/295992ed-7cde-4e32-bf12-1e9163411a56
@@ -31,6 +37,10 @@ namespace SolutionNorSolutionPort.UserInterface {
         
         private Boolean _isNew;
         
+        // Constructs the form with a Save button which is default on Enter
+        //  and a Close button which works with the esc key
+        // Constructs the form with a Save button which is default on Enter
+        //  and a Close button which works with the esc key
         // Constructs the form with a Save button which is default on Enter
         //  and a Close button which works with the esc key
         // links:
@@ -41,6 +51,8 @@ namespace SolutionNorSolutionPort.UserInterface {
             this.CancelButton = buttonClose;
         }
         
+        // shows the form with default values for comboboxes and pickers
+        // shows the form with default values for comboboxes and pickers
         // shows the form with default values for comboboxes and pickers
         // links:
         //  docLink: http://sql2x.org/documentationLink/e04d0806-55ef-41cc-8669-acf0ddd850c7
@@ -57,6 +69,8 @@ namespace SolutionNorSolutionPort.UserInterface {
             }
         }
         
+        // shows the form in edit modus
+        // shows the form in edit modus
         // shows the form in edit modus
         // links:
         //  docLink: http://sql2x.org/documentationLink/49afd26c-4f21-4992-967b-be190eacef77
@@ -77,6 +91,8 @@ namespace SolutionNorSolutionPort.UserInterface {
             }
         }
         
+        // saves the form
+        // saves the form
         // saves the form
         // links:
         //  docLink: http://sql2x.org/documentationLink/c9522930-91f8-4468-a936-8030bb2a6482
@@ -100,6 +116,8 @@ namespace SolutionNorSolutionPort.UserInterface {
             Close();
         }
         
+        // closes the form
+        // closes the form
         // closes the form
         // links:
         //  docLink: http://sql2x.org/documentationLink/876f1492-f546-42ac-aae3-11837d1d842a

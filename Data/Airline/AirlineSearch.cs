@@ -14,6 +14,8 @@ namespace SolutionNorSolutionPort.DataAccessLayer
     {
         /// <summary>
         /// Get Airline Identifier
+        /// Get Airline Identifier
+        /// Get Airline Identifier
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
         /// </summary>
@@ -68,6 +70,8 @@ where 1 = 1
         }
 
         /// <summary>
+        /// Get Airline
+        /// Get Airline
         /// Get Airline
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:30:18 PM
+  Generated Date: 12/30/2020 9:04:58 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeDataAccessLayer
 */
@@ -13,19 +13,24 @@ using System.Data;
 using System.Data.SqlClient;
 
 // Data Access Layer
+// Data Access Layer
+// the DataAccessLayer is the first layer that has access to data coming from
+//  sql server after being streamed over a net or internal process
+// Data Access Layer
 // the DataAccessLayer is the first layer that has access to data coming from
 //  sql server after being streamed over a net or internal process
 // links:
-//  data access layer: https://en.wikipedia.org/wiki/Data_access_layer
 //  docLink: http://sql2x.org/documentationLink/e4965a5f-c9fd-4584-85f0-b4d308f48f29
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
     // this class serves as a data access layer between c# and sql server
+    // this class serves as a data access layer between c# and sql server
+    // this class start with an identical representation of booking_identifier's columns
+    //  formatted to follow C# casing guidelines ( Pascal casing )
+    // this class serves as a data access layer between c# and sql server
     // this class start with an identical representation of booking_identifier's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
-    //  POCO ( Plain old CLR object ): https://en.wikipedia.org/wiki/Plain_old_CLR_object
-    // crud definition: https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
     //  docLink: http://sql2x.org/documentationLink/e32ed6d4-57c7-43b1-8f2e-918c702e730a
     public partial class CrudeBookingIdentifierData {
         
@@ -43,6 +48,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         public System.DateTime DateTime { get; set; }
         
+        // fetch by Primary key into current object
+        // fetch by Primary key into current object
         // fetch by Primary key into current object
         // links:
         //  docLink: http://sql2x.org/documentationLink/71a3c70c-2d6d-4115-911c-a61f0383dbd5
@@ -97,6 +104,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch by Primary key into new class instance
+        // fetch by Primary key into new class instance
+        // fetch by Primary key into new class instance
         // links:
         //  docLink: http://sql2x.org/documentationLink/7a625d0a-3028-42ce-a543-72ea3673cef4
         // parameters:
@@ -145,6 +154,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return ret;
         }
         
+        // fetch by Foreign key into new List of class instances
+        // fetch by Foreign key into new List of class instances
         // fetch by Foreign key into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/13095cd7-f136-4532-8969-c50c62cc05ef
@@ -201,6 +212,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch by Foreign key into new List of class instances
+        // fetch by Foreign key into new List of class instances
+        // fetch by Foreign key into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/13095cd7-f136-4532-8969-c50c62cc05ef
         public static List<CrudeBookingIdentifierData> FetchByUserId(System.Guid userId) {
@@ -255,6 +268,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
+        // fetch by Foreign key into new List of class instances
+        // fetch by Foreign key into new List of class instances
         // fetch by Foreign key into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/13095cd7-f136-4532-8969-c50c62cc05ef
@@ -311,6 +326,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch all rows from table booking_identifier into new List of class instances
+        // fetch all rows from table booking_identifier into new List of class instances
+        // fetch all rows from table booking_identifier into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/7ca0c014-527e-4a0a-bd1f-12f4d8ea4b43
         public static List<CrudeBookingIdentifierData> FetchAll() {
@@ -359,6 +376,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
+        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
+        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // links:
         //  docLink: http://sql2x.org/documentationLink/dfaa482b-059b-4f17-a9a9-4885138dbb46
         public static List<CrudeBookingIdentifierData> FetchAllWithLimit(int limit) {
@@ -406,6 +425,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
+        // fetch all from table into new List of class instances, only populating specific columns,
+        //  with a limit on number of returned rows and order by columns starting at a specific row
+        // fetch all from table into new List of class instances, only populating specific columns,
+        //  with a limit on number of returned rows and order by columns starting at a specific row
         // fetch all from table into new List of class instances, only populating specific columns,
         //  with a limit on number of returned rows and order by columns starting at a specific row
         // links:
@@ -462,6 +485,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // get a count of rows in table
+        // get a count of rows in table
+        // get a count of rows in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/58c70863-ab7a-49e1-a0f9-809a0528eb50
         public static int FetchAllCount() {
@@ -499,6 +524,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
+        // fetch all from table into new List of class instances, filtered by any column
+        // fetch all from table into new List of class instances, filtered by any column
         // fetch all from table into new List of class instances, filtered by any column
         // links:
         //  docLink: http://sql2x.org/documentationLink/a736bbfd-030d-492e-a86a-7a5e478eeb79
@@ -582,6 +609,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // read all columns out and populate object members
+        // read all columns out and populate object members
+        // read all columns out and populate object members
         // links:
         //  docLink: http://sql2x.org/documentationLink/8305cd6c-8739-45a7-b02b-d68ac4a1b704
         public void Populate(IDataReader reader) {
@@ -594,6 +623,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             if (reader["date_time"] != System.DBNull.Value) DateTime = (System.DateTime) reader["date_time"];
         }
         
+        // insert all object members as a new row in table
+        // insert all object members as a new row in table
         // insert all object members as a new row in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/7bdedca5-6a3e-4862-9899-e1e6f0786a65
@@ -643,6 +674,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // insert all object members as a new row in table, in a transaction
+        // insert all object members as a new row in table, in a transaction
+        // the transaction and or connection state is not changed in any way other than what SqlClient does to it.
+        // insert all object members as a new row in table, in a transaction
         // the transaction and or connection state is not changed in any way other than what SqlClient does to it.
         // it is the callers responsibility to commit or rollback the transaction
         // links:
@@ -688,6 +722,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
+        // update all object members on a row in table based on primary key
+        // update all object members on a row in table based on primary key
         // update all object members on a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/128da2b2-c713-4ca8-ab97-9497c39cd400
@@ -741,6 +777,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // update all object members on a row in table based on primary key, on a transaction
+        // update all object members on a row in table based on primary key, on a transaction
+        // update all object members on a row in table based on primary key, on a transaction
         // links:
         //  docLink: http://sql2x.org/documentationLink/a5ace3c5-884e-46e2-97e0-05c0878ebfa2
         public void Update(SqlConnection connection, SqlTransaction transaction) {
@@ -787,6 +825,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             }
         }
         
+        // delete a row in table based on primary key
+        // delete a row in table based on primary key
         // delete a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/92ea3c6c-f90b-4c76-a6a1-5f440075b3ba

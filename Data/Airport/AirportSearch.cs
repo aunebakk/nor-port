@@ -12,6 +12,8 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
     public partial class AirportSearch {
         /// <summary>
         /// Get Airport Identifier
+        /// Get Airport Identifier
+        /// Get Airport Identifier
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
         /// </summary>
@@ -65,6 +67,8 @@ where 1 = 1
         }
 
         /// <summary>
+        /// Get Airport
+        /// Get Airport
         /// Get Airport
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f

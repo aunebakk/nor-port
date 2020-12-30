@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 1:54:22 PM
+  Generated Date: 12/30/2020 9:29:18 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.GenerateDurian.DataCodeClassMakeAsString
 */
@@ -15,12 +15,16 @@ using System.Data.SqlClient;
 namespace SolutionNorSolutionPort.DataAccessLayer {
     /// <summary>
     /// Provides search with different parameter and result sets
+    /// Provides search with different parameter and result sets
+    /// Provides search with different parameter and result sets
     /// links:
     ///  docLink: http://sql2x.org/documentationLink/e0a5f4fb-b246-4074-bfd7-d19e48bcd057
     /// </summary>
     /// <domain>Aircraft</domain>
     public partial class AircraftSearch {
         /// <summary>
+        /// Get Aircraft Identifier
+        /// Get Aircraft Identifier
         /// Get Aircraft Identifier
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
@@ -82,6 +86,8 @@ where 1 = 1
         }
 
         /// <summary>
+        /// Get Aircraft Document
+        /// Get Aircraft Document
         /// Get Aircraft Document
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
@@ -146,6 +152,8 @@ where 1 = 1
 
         /// <summary>
         /// Get Aircraft Compartment
+        /// Get Aircraft Compartment
+        /// Get Aircraft Compartment
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
         /// </summary>
@@ -208,6 +216,8 @@ where 1 = 1
         }
 
         /// <summary>
+        /// Get Aircraft
+        /// Get Aircraft
         /// Get Aircraft
         /// links:
         ///  docLink: http://sql2x.org/documentationLink/06760f02-f3ec-45ad-bbfe-db43d7a0378f
