@@ -10,7 +10,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3E0D6333-51C9-48B4-A537-05B4D1448197}</ProjectGuid>
+    <ProjectGuid>{5D489798-987F-4991-874F-8613CB4393F5}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -738,7 +738,6 @@
     <Content Include="install\WinForm.exe.config" />
     <Content Include="install\WinForm.exe.manifest" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\Contract.dll.deploy" />
-    <Content Include="install\Application Files\WinForm_0_0_0_1\Newtonsoft.Json.dll.deploy" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\Proxy.dll.deploy" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\WinForm.exe.config.deploy" />
     <Content Include="install\Application Files\WinForm_0_0_0_1\WinForm.exe.deploy" />
@@ -967,6 +966,8 @@
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierIndex.cshtml" />
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierCreate.cshtml" />
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierEdit.cshtml" />
+    <Content Include="Views\Templates\DefaultTest\DefaultTest\DefaultTestCreate.cshtml" />
+    <Content Include="Views\Templates\DefaultTest\DefaultTest\DefaultTestEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1924,11 +1925,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
+      <Project>{4072491b-d6d2-44f7-925c-509ee5c7682d}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{d7603737-5c61-4360-9513-c883d9f8676f}</Project>
+      <Project>{42a22408-0686-42d1-bed7-3ab43496e6b4}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1958,7 +1959,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61164</DevelopmentServerPort>
+          <DevelopmentServerPort>61464</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

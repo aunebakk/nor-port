@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 7:47:37 AM
+  Generated Date: 12/31/2020 11:02:03 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -26,6 +26,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IDefaultTestSearchService")]
     public interface IDefaultTestSearchService {
+        // returns a list of DefaultTestSearchWithFilter contracts from DefaultTestSearchService
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDefaultTestSearchService/DefaultTestSearchWithFilter", ReplyAction="http://tempuri.org/IDefaultTestSearchService/DefaultTestSearchWithFilterResponse")]
+        List<DefaultTestSearchWithFilterContract> DefaultTestSearchWithFilter ();
         // returns a list of DefaultTestSearchQuery contracts from DefaultTestSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -38,6 +43,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     public class DefaultTestSearchService : System.ServiceModel.ClientBase<IDefaultTestSearchService>, IDefaultTestSearchService {
+        // returns a list of DefaultTestSearchWithFilter contracts from DefaultTestSearchService
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        public List<DefaultTestSearchWithFilterContract> DefaultTestSearchWithFilter () {
+            return base.Channel.DefaultTestSearchWithFilter();
+        }
         // returns a list of DefaultTestSearchQuery contracts from DefaultTestSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03

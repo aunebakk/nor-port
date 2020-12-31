@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7603737-5C61-4360-9513-C883D9F8676F}</ProjectGuid>
+    <ProjectGuid>{42A22408-0686-42D1-BED7-3AB43496E6B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Proxy</RootNamespace>
@@ -229,33 +229,12 @@
     <Compile Include="Durian\Search\ServiceSearchProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BookingProxy.cs" />
-    <Compile Include="Service\DefaultTestProxy.cs" />
+    <Compile Include="Service\DefaultTest\DefaultTest.cs" />
     <Compile Include="Service\DefaultUserActivityProxy.cs" />
     <Compile Include="Service\DiagnosticsProxy.cs" />
     <Compile Include="Service\FlightProxy.cs" />
     <Compile Include="Service\ScheduleProxy.cs" />
     <Compile Include="Service\ServiceProxy.cs" />
-    <Compile Include="Service\Templates\AircraftMaintenanceSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\AircraftSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\AirportSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\BookingSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\BookingServiceProxy.cs" />
-    <Compile Include="Service\Templates\CarRentalSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\ClientSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\DefaultSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\DefaultTestSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\DefaultUserActivityServiceProxy.cs" />
-    <Compile Include="Service\Templates\DiagnosticsServiceProxy.cs" />
-    <Compile Include="Service\Templates\FerrySearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\FinancialSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\FlightSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\FlightServiceProxy.cs" />
-    <Compile Include="Service\Templates\HotelSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\PassengerSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\ScheduleSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\ScheduleServiceProxy.cs" />
-    <Compile Include="Service\Templates\ServiceSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\ServiceServiceProxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CustomTemplates\Rest\Proxy.json" />
@@ -430,7 +409,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
+      <Project>{4072491b-d6d2-44f7-925c-509ee5c7682d}</Project>
       <Name>Contract</Name>
     </ProjectReference>
   </ItemGroup>

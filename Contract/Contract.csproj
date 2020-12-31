@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1109B24A-E5E0-42A8-B283-7C0F82DACCFE}</ProjectGuid>
+    <ProjectGuid>{4072491B-D6D2-44F7-925C-509EE5C7682D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Contract</RootNamespace>
@@ -255,6 +255,7 @@
     <Compile Include="Durian\DefaultSearch\DefaultUserListForDashboard.cs" />
     <Compile Include="Durian\DefaultSearch\GetDefaultChangeLog.cs" />
     <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchQuery.cs" />
+    <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchWithFilter.cs" />
     <Compile Include="Durian\FerrySearch\GetFerryIndexWithFilter.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialFares.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialServiceDetailsForBooking.cs" />
@@ -298,6 +299,7 @@
     <Compile Include="Service\Airport\AirportContract.cs" />
     <Compile Include="Service\Airport\AirportIdentifierContract.cs" />
     <Compile Include="Service\BookingContract.cs" />
+    <Compile Include="Service\DefaultTest\DefaultTestContract.cs" />
     <Compile Include="Service\FlightContract.cs" />
     <Compile Include="Service\FlightsForPeriodLiveContract.cs" />
     <Compile Include="Service\FlightsWithBookingInformationLive.cs" />

@@ -14,7 +14,7 @@
     "Children": null
   },
   "Style": {
-    "TemplateStyle": "DotNetFrameworkBusinessToDotNetFrameworkRestProxy",
+    "TemplateStyle": "None",
     "Name": "DotNetFrameworkBusinessToDotNetFrameworkRestProxy",
     "DesignTypeScript": "",
     "PrimaryKey": "",

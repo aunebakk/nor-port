@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E9D71BCE-96AE-48D5-AB52-5B74FB2EFF55}</ProjectGuid>
+    <ProjectGuid>{0D914107-3D5D-4C62-976D-03BD6320F817}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -245,6 +245,7 @@
     <Content Include="Crude\Templates\Timezone\CrudeTimezoneService.svc" />
     <Content Include="Crude\Templates\Title\CrudeTitleRefService.svc" />
     <Content Include="DefaultTest\DefaultTestSearchService.svc" />
+    <Content Include="DefaultTest\DefaultTestService.svc" />
     <Content Include="Default\DefaultSearchService.svc" />
     <Content Include="Default\DefaultUserActivityService.svc" />
     <Content Include="Default\DiagnosticsService.svc" />
@@ -445,6 +446,7 @@
     <Compile Include="Crude\Templates\Timezone\CrudeTimezoneService.cs" />
     <Compile Include="Crude\Templates\Title\CrudeTitleRefService.cs" />
     <Compile Include="DefaultTest\DefaultTestSearchService.cs" />
+    <Compile Include="DefaultTest\DefaultTestService.cs" />
     <Compile Include="DefaultTest\Live\DefaultTestService.cs" />
     <Compile Include="Default\DefaultSearchService.cs" />
     <Compile Include="Default\DefaultUserActivityService.cs" />
@@ -497,6 +499,7 @@
     <Compile Include="Durian\DefaultSearch\DefaultUserListForDashboard.cs" />
     <Compile Include="Durian\DefaultSearch\GetDefaultChangeLog.cs" />
     <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchQuery.cs" />
+    <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchWithFilter.cs" />
     <Compile Include="Durian\FerrySearch\GetFerryIndexWithFilter.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialFares.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialServiceDetailsForBooking.cs" />
@@ -726,11 +729,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
+      <Project>{4072491b-d6d2-44f7-925c-509ee5c7682d}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{61537902-0170-47c6-940d-a571d48b9b5c}</Project>
+      <Project>{d8951625-aa21-4f6d-bfe1-d5a64076c1a4}</Project>
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 7:52:15 AM
+  Generated Date: 12/31/2020 11:07:01 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,16 +32,16 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class DefaultTestSearchServiceController : Controller {
-        // get a JSON Array Contract with data for DefaultTestSearchQuery
+        // get a JSON Array Contract with data for DefaultTestSearchWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
         //  docLink: http://sql2x.org/documentationLink/54f84e72-c830-419e-a66e-f5bb6a9c700e
-        [HttpGet("DefaultTestSearchQuery")]
-        public IEnumerable<DefaultTestSearchQueryContract> DefaultTestSearchQuery(
+        [HttpGet("DefaultTestSearchWithFilter")]
+        public IEnumerable<DefaultTestSearchWithFilterContract> DefaultTestSearchWithFilter(
             ) {
 
-            List<DefaultTestSearchQueryContract> list =
-                new DefaultTestSearchService().DefaultTestSearchQuery();
+            List<DefaultTestSearchWithFilterContract> list =
+                new DefaultTestSearchService().DefaultTestSearchWithFilter();
 
             return list;
         }

@@ -14,7 +14,7 @@
     "Children": []
   },
   "Style": {
-    "TemplateStyle": "None",
+    "TemplateStyle": "DotNetFrameworkByServiceTableCrud",
     "Name": "DotNetFrameworkByServiceTableCrud",
     "DesignTypeScript": "",
     "PrimaryKey": "",

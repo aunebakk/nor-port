@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{61537902-0170-47C6-940D-A571D48B9B5C}</ProjectGuid>
+    <ProjectGuid>{D8951625-AA21-4F6D-BFE1-D5A64076C1A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Data</RootNamespace>
@@ -272,6 +272,7 @@
     <Compile Include="Durian\DefaultSearch\DefaultUserListForDashboardData.cs" />
     <Compile Include="Durian\DefaultSearch\GetDefaultChangeLogData.cs" />
     <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchQueryData.cs" />
+    <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchWithFilterData.cs" />
     <Compile Include="Durian\FerrySearch\GetFerryIndexWithFilterData.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialFaresData.cs" />
     <Compile Include="Durian\FinancialSearch\FinancialServiceDetailsForBookingData.cs" />
@@ -495,7 +496,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
+      <Project>{4072491b-d6d2-44f7-925c-509ee5c7682d}</Project>
       <Name>Contract</Name>
     </ProjectReference>
   </ItemGroup>
