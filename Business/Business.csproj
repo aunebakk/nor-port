@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{F2D62B69-C064-4168-8635-D66DFC77ED9D}</ProjectGuid>
+    <ProjectGuid>{E9D71BCE-96AE-48D5-AB52-5B74FB2EFF55}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -245,7 +245,6 @@
     <Content Include="Crude\Templates\Timezone\CrudeTimezoneService.svc" />
     <Content Include="Crude\Templates\Title\CrudeTitleRefService.svc" />
     <Content Include="DefaultTest\DefaultTestSearchService.svc" />
-    <Content Include="DefaultTest\DefaultTestService.svc" />
     <Content Include="Default\DefaultSearchService.svc" />
     <Content Include="Default\DefaultUserActivityService.svc" />
     <Content Include="Default\DiagnosticsService.svc" />
@@ -446,7 +445,7 @@
     <Compile Include="Crude\Templates\Timezone\CrudeTimezoneService.cs" />
     <Compile Include="Crude\Templates\Title\CrudeTitleRefService.cs" />
     <Compile Include="DefaultTest\DefaultTestSearchService.cs" />
-    <Compile Include="DefaultTest\DefaultTestService.cs" />
+    <Compile Include="DefaultTest\Live\DefaultTestService.cs" />
     <Compile Include="Default\DefaultSearchService.cs" />
     <Compile Include="Default\DefaultUserActivityService.cs" />
     <Compile Include="Default\DiagnosticsService.cs" />
@@ -727,11 +726,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{db217e5e-7072-49e1-83de-e9bf02b925d4}</Project>
+      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{eae3349d-fce1-4599-a939-01263586923c}</Project>
+      <Project>{61537902-0170-47c6-940d-a571d48b9b5c}</Project>
       <Name>Data</Name>
     </ProjectReference>
   </ItemGroup>

@@ -8,8 +8,8 @@ using SolutionNorSolutionPort.DataAccessLayer;
 
 namespace SolutionNorSolutionPort.BusinessLogicLayer
 {
-    [ServiceContract()]
-    public interface IDefaultTestService
+    //[ServiceContract()]
+    public partial interface IDefaultTestService
     {
         // add test run
         [OperationContract()]
@@ -35,7 +35,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer
 
     /// <domain>DefaultTest</domain>
     /// <class></class>
-    public class DefaultTestService : IDefaultTestService
+    public partial class DefaultTestService : IDefaultTestService
     {
         /// <summary>
         /// run all tests

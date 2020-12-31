@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 8:57:51 PM
+  Generated Date: 12/31/2020 7:19:37 AM
   From Machine: DESKTOP-LSRVP12
   Filename: LanguageRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
@@ -16,11 +16,6 @@ using System.Runtime.Serialization;
 using System.Collections.Generic;
 
 // Client Proxy Layer
-// Client Proxy Layer
-// the ClientProxyLayer is where the SOAP services ties into the Client layer
-//  this layer is used for, among other technologies, dotNetFramework WinForm,
-//  ASP and TypeScript User Interfaces or from one business layer to another
-// Client Proxy Layer
 // the ClientProxyLayer is where the SOAP services ties into the Client layer
 //  this layer is used for, among other technologies, dotNetFramework WinForm,
 //  ASP and TypeScript User Interfaces or from one business layer to another
@@ -28,8 +23,6 @@ using System.Collections.Generic;
 //  docLink: http://sql2x.org/documentationLink/a58883c6-e6e2-4265-98ad-0268dbbdb1b1
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this class is used to expose reference codes from the database
-    // this class is used to expose reference codes from the database
     // this class is used to expose reference codes from the database
     // links:
     //  docLink: http://sql2x.org/documentationLink/77de0aeb-bfe6-4aa6-a070-ded79284f0d1
@@ -43,9 +36,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
-    // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
@@ -55,15 +45,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     public partial interface ICrudeLanguageRefService {
         
         // fetch one row by the tables primary key
-        // fetch one row by the tables primary key
-        // fetch one row by the tables primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/70a1f934-1d8a-43a0-8896-3ec370944938
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/FetchByLanguageRcd", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/FetchByLanguageRcdResponse")]
         SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract FetchByLanguageRcd(string languageRcd);
         
-        // fetch all rows matching foreign key: UserId
-        // fetch all rows matching foreign key: UserId
         // fetch all rows matching foreign key: UserId
         // links:
         //  docLink: http://sql2x.org/documentationLink/d406f233-a526-4a0c-b685-872ce5bf4be2
@@ -71,15 +57,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchByUserId(System.Guid userId);
         
         // insert all object members as a new row in table
-        // insert all object members as a new row in table
-        // insert all object members as a new row in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/54a1998f-1667-4680-ae80-cb0c31dd5872
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/Insert", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/InsertResponse")]
         void Insert(SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract contract);
         
-        // update all object members on a row in table based on primary key
-        // update all object members on a row in table based on primary key
         // update all object members on a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/c1ccee6d-504c-4fe8-bf7c-57624012598a
@@ -87,15 +69,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         void Update(SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract contract);
         
         // delete a row in table based on primary key
-        // delete a row in table based on primary key
-        // delete a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/3d2e5c69-6801-43a2-9daf-0ff04fa6c996
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/Delete", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/DeleteResponse")]
         void Delete(string languageRcd);
         
-        // fetch by Picker Member into new class instance
-        // fetch by Picker Member into new class instance
         // fetch by Picker Member into new class instance
         // links:
         //  docLink: http://sql2x.org/documentationLink/7f612728-6fe0-427e-aed2-1be23a33d821
@@ -103,15 +81,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract FetchByLanguageName(string languageName);
         
         // fetch all rows from table language_ref into new List of class instances
-        // fetch all rows from table language_ref into new List of class instances
-        // fetch all rows from table language_ref into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/4ac8b1d2-0562-43e9-b63f-8973ca381a0a
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/FetchAll", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/FetchAllResponse")]
         List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchAll();
         
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // links:
         //  docLink: http://sql2x.org/documentationLink/7e45d3c9-f66e-4ad7-8620-df8a4eae6177
@@ -120,17 +94,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch all from table into new List of class instances, only populating specific columns,
         //  with a limit on number of returned rows and order by columns starting at a specific row
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
         // links:
         //  docLink: http://sql2x.org/documentationLink/886cf296-7b9c-4a1a-8b40-8150e605ba11
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/FetchAllWithLimitAndOffset", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/FetchAllWithLimitAndOffsetResponse")]
         List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchAllWithLimitAndOffset(int limit, int offset);
         
-        // get a count of rows in table
-        // get a count of rows in table
         // get a count of rows in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/dd08755c-f264-4c12-8d69-18c190b13a6e
@@ -138,17 +106,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         int FetchAllCount();
         
         // fetch all from table into new List of class instances, filtered by any column
-        // fetch all from table into new List of class instances, filtered by any column
-        // fetch all from table into new List of class instances, filtered by any column
         // links:
         //  docLink: http://sql2x.org/documentationLink/754c25f9-c499-45f3-9fdb-03850db5c79d
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICrudeLanguageRefService/FetchWithFilter", ReplyAction="http://tempuri.org/ICrudeLanguageRefService/FetchWithFilterResponse")]
         List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchWithFilter(string languageRcd, string languageName, System.Guid userId, System.DateTime dateTime);
     }
     
-    // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
     // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
@@ -159,9 +122,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
-    // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
@@ -171,8 +131,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         public CrudeLanguageRefServiceClient() {
         }
         
-        // constructors for end point address, binding and contracts
-        // constructors for end point address, binding and contracts
         // constructors for end point address, binding and contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/9b6c163a-8411-40ba-bb08-e390673c9ab3
@@ -193,16 +151,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch one row by the tables primary key
-        // fetch one row by the tables primary key
-        // fetch one row by the tables primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/0bf226bb-0d8e-4930-90b9-d0e53a1f9c2a
         public SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract FetchByLanguageRcd(string languageRcd) {
             return base.Channel.FetchByLanguageRcd(languageRcd);
         }
         
-        // fetch all rows matching foreign key: UserId
-        // fetch all rows matching foreign key: UserId
         // fetch all rows matching foreign key: UserId
         // links:
         //  docLink: http://sql2x.org/documentationLink/7f3c31d9-2d99-4f93-b9b1-b866fa1c64dc
@@ -211,16 +165,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // insert all object members as a new row in table
-        // insert all object members as a new row in table
-        // insert all object members as a new row in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/606647e9-2bdb-4b55-9541-449812c123d2
         public void Insert(SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract contract) {
             base.Channel.Insert(contract);
         }
         
-        // update all object members on a row in table based on primary key
-        // update all object members on a row in table based on primary key
         // update all object members on a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/cda8cbb1-dc3e-461a-8c98-5c277efe7e86
@@ -229,16 +179,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // delete a row in table based on primary key
-        // delete a row in table based on primary key
-        // delete a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/8513f38a-4552-4020-95b2-78c872a82ffe
         public void Delete(string languageRcd) {
             base.Channel.Delete(languageRcd);
         }
         
-        // fetch by Picker Member into new class instance
-        // fetch by Picker Member into new class instance
         // fetch by Picker Member into new class instance
         // links:
         //  docLink: http://sql2x.org/documentationLink/34a8863d-4df9-48e2-a23d-707b546d506b
@@ -247,16 +193,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // fetch all rows from table language_ref into new List of class instances
-        // fetch all rows from table language_ref into new List of class instances
-        // fetch all rows from table language_ref into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/168c348a-8e3d-463e-8e60-727047f10afc
         public List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchAll() {
             return base.Channel.FetchAll();
         }
         
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // links:
         //  docLink: http://sql2x.org/documentationLink/05a908ff-897b-49a5-a5e4-fd57e1ddca0d
@@ -266,10 +208,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         
         // fetch all from table into new List of class instances, only populating specific columns,
         //  with a limit on number of returned rows and order by columns starting at a specific row
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
         // links:
         //  docLink: http://sql2x.org/documentationLink/b9ac77a1-e367-4bbd-89ed-c65f56d14f3c
         public List<SolutionNorSolutionPort.BusinessLogicLayer.CrudeLanguageRefContract> FetchAllWithLimitAndOffset(int limit, int offset) {
@@ -277,16 +215,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // get a count of rows in table
-        // get a count of rows in table
-        // get a count of rows in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b5f68e2-e3e0-4f82-8f99-f3ce860dc8fe
         public int FetchAllCount() {
             return base.Channel.FetchAllCount();
         }
         
-        // fetch all from table into new List of class instances, filtered by any column
-        // fetch all from table into new List of class instances, filtered by any column
         // fetch all from table into new List of class instances, filtered by any column
         // links:
         //  docLink: http://sql2x.org/documentationLink/c10bac90-d91e-47a6-bd52-f537c96471cd

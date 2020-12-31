@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:23:32 PM
+  Generated Date: 12/31/2020 7:44:58 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
@@ -14,11 +14,6 @@ using System.Data;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 
 // Namespace for the Business Logic Layer
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
 //  import and export of data and integration with API's from other parts of the system or other systems
@@ -29,17 +24,12 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
     // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
-    // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
     //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
     [ServiceContract()]
     public partial interface IBookingSearchService {
-        // returns a list of BookingStatistics contracts from BookingSearchService
-        // returns a list of BookingStatistics contracts from BookingSearchService
         // returns a list of BookingStatistics contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
@@ -51,8 +41,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         List<BookingStatisticsContract> BookingStatistics (System.Guid departureAirportId,System.Guid arrivalAirportId,System.DateTime fromDateTime,System.DateTime untilDateTime);
         // returns a list of BookingEventHistory contracts from BookingSearchService
-        // returns a list of BookingEventHistory contracts from BookingSearchService
-        // returns a list of BookingEventHistory contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
@@ -60,16 +48,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         List<BookingEventHistoryContract> BookingEventHistory (System.Guid bookingId);
         // returns a list of BookingsOpen contracts from BookingSearchService
-        // returns a list of BookingsOpen contracts from BookingSearchService
-        // returns a list of BookingsOpen contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
-        // parameters:
-        //
         [OperationContract()]
         List<BookingsOpenContract> BookingsOpen ();
-        // returns a list of BookingPassengerWithExtra contracts from BookingSearchService
-        // returns a list of BookingPassengerWithExtra contracts from BookingSearchService
         // returns a list of BookingPassengerWithExtra contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
@@ -78,16 +60,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         BookingPassengerWithExtraContract BookingPassengerWithExtra (System.Guid bookingPassengerId);
         // returns a list of BookingPassengers contracts from BookingSearchService
-        // returns a list of BookingPassengers contracts from BookingSearchService
-        // returns a list of BookingPassengers contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
         //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<BookingPassengersContract> BookingPassengers (System.Guid bookingId);
-        // returns a list of BookingFlights contracts from BookingSearchService
-        // returns a list of BookingFlights contracts from BookingSearchService
         // returns a list of BookingFlights contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
@@ -96,16 +74,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         List<BookingFlightsContract> BookingFlights (System.Guid bookingId);
         // returns a list of BookingFinancialTransactions contracts from BookingSearchService
-        // returns a list of BookingFinancialTransactions contracts from BookingSearchService
-        // returns a list of BookingFinancialTransactions contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
         //  bookingId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [OperationContract()]
         List<BookingFinancialTransactionsContract> BookingFinancialTransactions (System.Guid bookingId);
-        // returns a list of BookingServiceSummary contracts from BookingSearchService
-        // returns a list of BookingServiceSummary contracts from BookingSearchService
         // returns a list of BookingServiceSummary contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
@@ -114,8 +88,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         List<BookingServiceSummaryContract> BookingServiceSummary (System.Guid bookingId);
         // returns a list of BookingFinancialPayments contracts from BookingSearchService
-        // returns a list of BookingFinancialPayments contracts from BookingSearchService
-        // returns a list of BookingFinancialPayments contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/5fe72920-1923-416a-93bb-a2396990ec67
         // parameters:
@@ -123,8 +95,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [OperationContract()]
         List<BookingFinancialPaymentsContract> BookingFinancialPayments (System.Guid bookingId);
         
-        // returns a list of BookingEventCount contracts from BookingSearchService
-        // returns a list of BookingEventCount contracts from BookingSearchService
         // returns a list of BookingEventCount contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/cdd86da0-630c-402b-b72a-8dabf924530d
@@ -135,17 +105,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     // this class serves as a link to the data access layer between c# and sql server
-    // this class serves as a link to the data access layer between c# and sql server
-    // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //  and transfers that data to a Contract
-    // this class serves as a link to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
     //  and transfers that data to a Contract
     // links:
     //  docLink: http://sql2x.org/documentationLink/0b3269e5-2c52-47e6-a294-51407ea7c523
     public partial class BookingSearchService : IBookingSearchService {
-        // returns a list of BookingStatistics contracts
-        // returns a list of BookingStatistics contracts
         // returns a list of BookingStatistics contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
@@ -161,8 +125,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingStatisticsFromDal(dataAccessLayer.BookingStatistics(departureAirportId, arrivalAirportId, fromDateTime, untilDateTime));
         }
         // returns a list of BookingEventHistory contracts
-        // returns a list of BookingEventHistory contracts
-        // returns a list of BookingEventHistory contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
@@ -174,20 +136,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingEventHistoryFromDal(dataAccessLayer.BookingEventHistory(bookingId));
         }
         // returns a list of BookingsOpen contracts
-        // returns a list of BookingsOpen contracts
-        // returns a list of BookingsOpen contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
-        // parameters:
-        //
         public List<BookingsOpenContract> BookingsOpen () {
             // transfer all BookingsOpen serialized objects from BookingSearch as BookingsOpen contracts
             var dataAccessLayer = new SolutionNorSolutionPort.DataAccessLayer.BookingSearch();
             var businessLogicLayer = new BookingsOpen();
             return businessLogicLayer.BookingsOpenFromDal(dataAccessLayer.BookingsOpen());
         }
-        // returns a list of BookingPassengerWithExtra contracts
-        // returns a list of BookingPassengerWithExtra contracts
         // returns a list of BookingPassengerWithExtra contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
@@ -200,8 +156,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingPassengerWithExtraFromDal(dataAccessLayer.BookingPassengerWithExtra(bookingPassengerId));
         }
         // returns a list of BookingPassengers contracts
-        // returns a list of BookingPassengers contracts
-        // returns a list of BookingPassengers contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
@@ -212,8 +166,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             var businessLogicLayer = new BookingPassengers();
             return businessLogicLayer.BookingPassengersFromDal(dataAccessLayer.BookingPassengers(bookingId));
         }
-        // returns a list of BookingFlights contracts
-        // returns a list of BookingFlights contracts
         // returns a list of BookingFlights contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
@@ -226,8 +178,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingFlightsFromDal(dataAccessLayer.BookingFlights(bookingId));
         }
         // returns a list of BookingFinancialTransactions contracts
-        // returns a list of BookingFinancialTransactions contracts
-        // returns a list of BookingFinancialTransactions contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
@@ -238,8 +188,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             var businessLogicLayer = new BookingFinancialTransactions();
             return businessLogicLayer.BookingFinancialTransactionsFromDal(dataAccessLayer.BookingFinancialTransactions(bookingId));
         }
-        // returns a list of BookingServiceSummary contracts
-        // returns a list of BookingServiceSummary contracts
         // returns a list of BookingServiceSummary contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
@@ -252,8 +200,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingServiceSummaryFromDal(dataAccessLayer.BookingServiceSummary(bookingId));
         }
         // returns a list of BookingFinancialPayments contracts
-        // returns a list of BookingFinancialPayments contracts
-        // returns a list of BookingFinancialPayments contracts
         // links:
         //  docLink: http://sql2x.org/documentationLink/eb26aecd-6edc-44ae-938f-42f53929062d
         // parameters:
@@ -265,8 +211,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return businessLogicLayer.BookingFinancialPaymentsFromDal(dataAccessLayer.BookingFinancialPayments(bookingId));
         }
         
-        // returns a list of BookingEventCount contracts from BookingSearchService
-        // returns a list of BookingEventCount contracts from BookingSearchService
         // returns a list of BookingEventCount contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b582d9b-64df-473e-9f42-7ce7701e67f0

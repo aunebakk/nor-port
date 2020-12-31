@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 8:58:09 PM
+  Generated Date: 12/31/2020 7:19:54 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateCrudeWinForm.WinFormGenerateComboStyle1
 */
@@ -16,23 +16,16 @@ using System.Windows.Forms;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 
 // Client WinForm Layer
-// Client WinForm Layer
-// the Client WinForm Layer uses the Proxy Layer to tie into SOAP services
-// Client WinForm Layer
 // the Client WinForm Layer uses the Proxy Layer to tie into SOAP services
 // links:
 //  docLink: http://sql2x.org/documentationLink/ac33e44f-c6b2-47e4-87bb-e9d860932135
 namespace SolutionNorSolutionPort.UserInterface {
 
     // this ComboBox UserControl class is used to consume Crude SOAP Services through a WCF Proxy Client
-    // this ComboBox UserControl class is used to consume Crude SOAP Services through a WCF Proxy Client
-    // this ComboBox UserControl class is used to consume Crude SOAP Services through a WCF Proxy Client
     // links:
     //  docLink: http://sql2x.org/documentationLink/8b849122-8bc9-488b-a02d-552199fecf97
     public partial class FinancialCouponTypeRefCombo : UserControl {
         
-        // Constructs the control with an empty ComboBox
-        // Constructs the control with an empty ComboBox
         // Constructs the control with an empty ComboBox
         // links:
         //  docLink: http://sql2x.org/documentationLink/e32382ca-f57c-4018-b820-232f0f777f07
@@ -40,8 +33,6 @@ namespace SolutionNorSolutionPort.UserInterface {
            InitializeComponent();
         }
         
-        // get or sets the current combobox row
-        // get or sets the current combobox row
         // get or sets the current combobox row
         // links:
         //  docLink: http://sql2x.org/documentationLink/31d80c19-b0f4-4dfa-95e1-89511bb1d396
@@ -60,14 +51,10 @@ namespace SolutionNorSolutionPort.UserInterface {
         }
         
         // event for when a new item is selected in the ComboBox
-        // event for when a new item is selected in the ComboBox
-        // event for when a new item is selected in the ComboBox
         // links:
         //  docLink: http://sql2x.org/documentationLink/47d2488c-a52e-42c7-ace3-ee8aa0e558d1
         public event EventHandler Picked;
         
-        // populates the ComboBox with all rows from the SOAP service
-        // populates the ComboBox with all rows from the SOAP service
         // populates the ComboBox with all rows from the SOAP service
         // links:
         //  docLink: http://sql2x.org/documentationLink/e9ba8805-decd-4b61-84ee-539e166d5d4c
@@ -76,8 +63,6 @@ namespace SolutionNorSolutionPort.UserInterface {
         }
         
         // trigger Picked event when selected row in the ComboBox changes
-        // trigger Picked event when selected row in the ComboBox changes
-        // trigger Picked event when selected row in the ComboBox changes
         // links:
         //  docLink: http://sql2x.org/documentationLink/a01e6973-8625-476c-89e1-a43aab4bce17
         private void cboRef_SelectedIndexChanged(object sender, EventArgs e) {
@@ -85,8 +70,6 @@ namespace SolutionNorSolutionPort.UserInterface {
                 this.Picked(new object(), new EventArgs());
         }
         
-        // fetch all rows from the SOAP layer and populate the ComboBox with it
-        // fetch all rows from the SOAP layer and populate the ComboBox with it
         // fetch all rows from the SOAP layer and populate the ComboBox with it
         // links:
         //  docLink: http://sql2x.org/documentationLink/4ccfdfd8-9986-4cfe-8743-e0bcde887284

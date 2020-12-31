@@ -2,15 +2,10 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:34:49 PM
+  Generated Date: 12/31/2020 7:55:35 AM
   Template: SQL2XExtensionV3.SQL2XExtensionCreatorCoreV3.ProxyClient
 */
 using System;
-// Namespace for the Business Logic Layer
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
 // Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
@@ -21,10 +16,6 @@ using System;
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface serves as a link to the data access layer between c# and sql server
-    // this interface serves as a link to the data access layer between c# and sql server
-    // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //  and transfers that data to a SOAP Contract ready to be exposed through WCF
     // this interface serves as a link to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
     //  and transfers that data to a SOAP Contract ready to be exposed through WCF
@@ -37,15 +28,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     public partial interface IDiagnosticsService {
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDiagnosticsService/WorkingSet", ReplyAction="http://tempuri.org/IDiagnosticsService/WorkingSetResponse")]
         long WorkingSet();
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -53,15 +40,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         System.Threading.Tasks.Task<System.Int64> WorkingSetAsync();
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDiagnosticsService/PingTest", ReplyAction="http://tempuri.org/IDiagnosticsService/PingTestResponse")]
         System.DateTime PingTest();
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -69,15 +52,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         System.Threading.Tasks.Task<System.DateTime> PingTestAsync();
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDiagnosticsService/Database", ReplyAction="http://tempuri.org/IDiagnosticsService/DatabaseResponse")]
         string Database();
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -85,15 +64,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         System.Threading.Tasks.Task<System.String> DatabaseAsync();
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDiagnosticsService/ComputerName", ReplyAction="http://tempuri.org/IDiagnosticsService/ComputerNameResponse")]
         string ComputerName();
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -127,16 +102,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public long WorkingSet() {
             return base.Channel.WorkingSet();
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -145,16 +116,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public System.DateTime PingTest() {
             return base.Channel.PingTest();
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -163,16 +130,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public string Database() {
             return base.Channel.Database();
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -181,16 +144,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public string ComputerName() {
             return base.Channel.ComputerName();
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f

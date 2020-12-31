@@ -2,17 +2,12 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 8:56:38 PM
+  Generated Date: 12/31/2020 7:18:24 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateCrudeContract.CrudeContract
 */
 using System.Runtime.Serialization;
 
-// Namespace for the Business Logic Layer
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
 // Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
@@ -23,10 +18,6 @@ using System.Runtime.Serialization;
 //  docLink: http://sql2x.org/documentationLink/89dc5b67-2bf9-4c88-8911-c3b6294c3a64
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this class serves as a data access contract between c# and sql server
-    // this class serves as a data access contract between c# and sql server
-    // this class start with an identical representation of CrudeFinancialBankAccountNumberTypeRef's columns
-    //  formatted to follow C# casing guidelines ( Pascal casing )
     // this class serves as a data access contract between c# and sql server
     // this class start with an identical representation of CrudeFinancialBankAccountNumberTypeRef's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )

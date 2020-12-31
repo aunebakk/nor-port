@@ -2,15 +2,10 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:34:44 PM
+  Generated Date: 12/31/2020 7:55:30 AM
   Template: SQL2XExtensionV3.SQL2XExtensionCreatorCoreV3.ProxyClient
 */
 using System;
-// Namespace for the Business Logic Layer
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
 // Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
@@ -21,10 +16,6 @@ using System;
 //  docLink: http://sql2x.org/documentationLink/0f3a62ca-e301-4d44-8e1a-de9198ba8967
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
-    // this interface serves as a link to the data access layer between c# and sql server
-    // this interface serves as a link to the data access layer between c# and sql server
-    // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //  and transfers that data to a SOAP Contract ready to be exposed through WCF
     // this interface serves as a link to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
     //  and transfers that data to a SOAP Contract ready to be exposed through WCF
@@ -37,15 +28,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     public partial interface IFlightService {
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFlightService/GetFlight", ReplyAction="http://tempuri.org/IFlightService/GetFlightResponse")]
         SolutionNorSolutionPort.BusinessLogicLayer.FlightContract GetFlight(System.Guid flightId, System.Guid userId);
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -53,15 +40,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         System.Threading.Tasks.Task<SolutionNorSolutionPort.BusinessLogicLayer.FlightContract> GetFlightAsync(System.Guid flightId, System.Guid userId);
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFlightService/UpdateFlight", ReplyAction="http://tempuri.org/IFlightService/UpdateFlightResponse")]
         void UpdateFlight(SolutionNorSolutionPort.BusinessLogicLayer.FlightContract flightContract, System.Guid userId);
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -69,15 +52,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         System.Threading.Tasks.Task UpdateFlightAsync(SolutionNorSolutionPort.BusinessLogicLayer.FlightContract flightContract, System.Guid userId);
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFlightService/CheckFlightStatuses", ReplyAction="http://tempuri.org/IFlightService/CheckFlightStatusesResponse")]
         void CheckFlightStatuses(System.DateTime dateFrom, System.DateTime dateUntil, System.Guid userId);
         
-        // method derived from SOAP layer, Async version
-        // method derived from SOAP layer, Async version
         // method derived from SOAP layer, Async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/1cad607d-ab40-465a-bd0b-930736b15402
@@ -111,16 +90,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public SolutionNorSolutionPort.BusinessLogicLayer.FlightContract GetFlight(System.Guid flightId, System.Guid userId) {
             return base.Channel.GetFlight(flightId, userId);
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -129,16 +104,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void UpdateFlight(SolutionNorSolutionPort.BusinessLogicLayer.FlightContract flightContract, System.Guid userId) {
             base.Channel.UpdateFlight(flightContract, userId);
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f
@@ -147,16 +118,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         }
         
         // method derived from SOAP layer
-        // method derived from SOAP layer
-        // method derived from SOAP layer
         // links:
         //  docLink: http://sql2x.org/documentationLink/2814d348-759d-425b-841e-456ed83f3f20
         public void CheckFlightStatuses(System.DateTime dateFrom, System.DateTime dateUntil, System.Guid userId) {
             base.Channel.CheckFlightStatuses(dateFrom, dateUntil, userId);
         }
         
-        // method derived from SOAP layer, async version
-        // method derived from SOAP layer, async version
         // method derived from SOAP layer, async version
         // links:
         //  docLink: http://sql2x.org/documentationLink/97727d48-326b-4648-9d81-67853713d87f

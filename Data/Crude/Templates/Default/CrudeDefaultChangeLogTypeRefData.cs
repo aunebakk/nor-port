@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 8:56:51 PM
+  Generated Date: 12/31/2020 7:18:37 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateChildCrudeData.UsingDotNetFramework
 */
@@ -12,10 +12,6 @@ using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Configuration;
 
-// Data Access Layer
-// Data Access Layer
-// the DataAccessLayer is the first layer that has access to data coming from
-//  sql server after being streamed over a net or internal process
 // Data Access Layer
 // the DataAccessLayer is the first layer that has access to data coming from
 //  sql server after being streamed over a net or internal process
@@ -35,10 +31,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
     }
     
     // this class serves as a data access layer between c# and sql server
-    // this class serves as a data access layer between c# and sql server
-    // this class start with an identical representation of default_change_log_type_ref's columns
-    //  formatted to follow C# casing guidelines ( Pascal casing )
-    // this class serves as a data access layer between c# and sql server
     // this class start with an identical representation of default_change_log_type_ref's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
     // links:
@@ -53,8 +45,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         
         public System.DateTime DateTime { get; set; }
         
-        // fetch by Primary key into current object
-        // fetch by Primary key into current object
         // fetch by Primary key into current object
         // links:
         //  docLink: http://sql2x.org/documentationLink/71a3c70c-2d6d-4115-911c-a61f0383dbd5
@@ -110,8 +100,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // fetch by Primary key into new class instance
-        // fetch by Primary key into new class instance
-        // fetch by Primary key into new class instance
         // links:
         //  docLink: http://sql2x.org/documentationLink/7a625d0a-3028-42ce-a543-72ea3673cef4
         // parameters:
@@ -161,8 +149,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             return ret;
         }
         
-        // fetch by Foreign key into new List of class instances
-        // fetch by Foreign key into new List of class instances
         // fetch by Foreign key into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/13095cd7-f136-4532-8969-c50c62cc05ef
@@ -220,8 +206,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // fetch by Picker Member into new class instance
-        // fetch by Picker Member into new class instance
-        // fetch by Picker Member into new class instance
         // links:
         //  docLink: http://sql2x.org/documentationLink/05fb7828-eb28-411a-9678-713bfd445d93
         public void FetchByDefaultChangeLogTypeName(string defaultChangeLogTypeName) {
@@ -264,8 +248,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             }
         }
         
-        // fetch all rows from table default_change_log_type_ref into new List of class instances
-        // fetch all rows from table default_change_log_type_ref into new List of class instances
         // fetch all rows from table default_change_log_type_ref into new List of class instances
         // links:
         //  docLink: http://sql2x.org/documentationLink/7ca0c014-527e-4a0a-bd1f-12f4d8ea4b43
@@ -316,8 +298,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
-        // fetch all from table into new List of class instances, with a limit on number of returned rows and order by columns
         // links:
         //  docLink: http://sql2x.org/documentationLink/dfaa482b-059b-4f17-a9a9-4885138dbb46
         public static List<CrudeDefaultChangeLogTypeRefData> FetchAllWithLimit(int limit) {
@@ -366,10 +346,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             }
         }
         
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
-        // fetch all from table into new List of class instances, only populating specific columns,
-        //  with a limit on number of returned rows and order by columns starting at a specific row
         // fetch all from table into new List of class instances, only populating specific columns,
         //  with a limit on number of returned rows and order by columns starting at a specific row
         // links:
@@ -427,8 +403,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // get a count of rows in table
-        // get a count of rows in table
-        // get a count of rows in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/58c70863-ab7a-49e1-a0f9-809a0528eb50
         public static int FetchAllCount() {
@@ -466,8 +440,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             }
         }
         
-        // fetch all from table into new List of class instances, filtered by any column
-        // fetch all from table into new List of class instances, filtered by any column
         // fetch all from table into new List of class instances, filtered by any column
         // links:
         //  docLink: http://sql2x.org/documentationLink/a736bbfd-030d-492e-a86a-7a5e478eeb79
@@ -541,8 +513,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // read all columns out and populate object members
-        // read all columns out and populate object members
-        // read all columns out and populate object members
         // links:
         //  docLink: http://sql2x.org/documentationLink/8305cd6c-8739-45a7-b02b-d68ac4a1b704
         public void Populate(IDataReader reader) {
@@ -552,8 +522,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             if (reader["date_time"] != System.DBNull.Value) DateTime = (System.DateTime) reader["date_time"];
         }
         
-        // insert all object members as a new row in table
-        // insert all object members as a new row in table
         // insert all object members as a new row in table
         // links:
         //  docLink: http://sql2x.org/documentationLink/7bdedca5-6a3e-4862-9899-e1e6f0786a65
@@ -597,9 +565,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // insert all object members as a new row in table, in a transaction
-        // insert all object members as a new row in table, in a transaction
-        // the transaction and or connection state is not changed in any way other than what SqlClient does to it.
-        // insert all object members as a new row in table, in a transaction
         // the transaction and or connection state is not changed in any way other than what SqlClient does to it.
         // it is the callers responsibility to commit or rollback the transaction
         // links:
@@ -639,8 +604,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             }
         }
         
-        // update all object members on a row in table based on primary key
-        // update all object members on a row in table based on primary key
         // update all object members on a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/128da2b2-c713-4ca8-ab97-9497c39cd400
@@ -688,8 +651,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
         }
         
         // update all object members on a row in table based on primary key, on a transaction
-        // update all object members on a row in table based on primary key, on a transaction
-        // update all object members on a row in table based on primary key, on a transaction
         // links:
         //  docLink: http://sql2x.org/documentationLink/a5ace3c5-884e-46e2-97e0-05c0878ebfa2
         public void Update(SqlConnection connection, SqlTransaction transaction) {
@@ -730,8 +691,6 @@ namespace SolutionNorSolutionPort.DataAccessLayer {
             }
         }
         
-        // delete a row in table based on primary key
-        // delete a row in table based on primary key
         // delete a row in table based on primary key
         // links:
         //  docLink: http://sql2x.org/documentationLink/92ea3c6c-f90b-4c76-a6a1-5f440075b3ba

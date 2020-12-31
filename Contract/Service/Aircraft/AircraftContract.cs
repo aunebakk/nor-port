@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:29:18 PM
+  Generated Date: 12/31/2020 7:50:42 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateWithDurianGenerator.ContractUsing
 */
@@ -13,9 +13,6 @@ using System.Runtime.Serialization;
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
     // this class is the contract for WCF between business and client proxy
-    // this class is the contract for WCF between business and client proxy
-    // data class is serializable in order to speed up processing between the data access and business layers
-    // this class is the contract for WCF between business and client proxy
     // data class is serializable in order to speed up processing between the data access and business layers
     // this class start with an identical representation of a ansi sql select statement in Aircraft's columns
     //  formatted to follow C# casing guidelines ( Pascal casing )
@@ -24,9 +21,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     [DataContract()]
     public partial class AircraftContract {
         
-        // this class is a DataMember for WCF between business and client proxy for parent class Aircraft
-        // this class is a DataMember for WCF between business and client proxy for parent class Aircraft
-        // data class is serializable in order to speed up processing between the data access and business layers
         // this class is a DataMember for WCF between business and client proxy for parent class Aircraft
         // data class is serializable in order to speed up processing between the data access and business layers
         // this class start with an identical representation of a ansi sql select statement in Aircraft's columns

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:29:44 PM
+  Generated Date: 12/31/2020 7:51:08 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateWithDurianGenerator.ControllerBeginning
 */
@@ -11,25 +11,16 @@ using System;
 using System.Web.Mvc;
 
 // Client ASP Controller
-// Client ASP Controller
-// the Client ASP Controller Layer uses the Proxy Layer to tie into SOAP services
-// Client ASP Controller
 // the Client ASP Controller Layer uses the Proxy Layer to tie into SOAP services
 // links:
 //  docLink: http://sql2x.org/documentationLink/4fbcc19b-c130-4190-b31b-e28bc3aaf29f
 namespace SolutionNorSolutionPort.AspMvc.Controllers {
-    // AircraftIdentifier Controller
-    // AircraftIdentifier Controller
-    // the AircraftIdentifier Controller contains pages for adding, editing and listing AircraftIdentifier's
     // AircraftIdentifier Controller
     // the AircraftIdentifier Controller contains pages for adding, editing and listing AircraftIdentifier's
     // links:
     //  docLink: http://sql2x.org/documentationLink/1d284965-6123-4b40-9d9b-e5f19f1e50c2
     public class AircraftIdentifierController : Controller {
 
-        // Index page
-        // Index page
-        // Index page grid shows all displayable columns and includes methods for adding new, editing and deleting rows
         // Index page
         // Index page grid shows all displayable columns and includes methods for adding new, editing and deleting rows
         // links:
@@ -44,9 +35,6 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
                 );
         }
 
-        // Edit page GET
-        // Edit page GET
-        // Edit page GET fetches all displayable columns for editing in a view
         // Edit page GET
         // Edit page GET fetches all displayable columns for editing in a view
         // links:
@@ -87,9 +75,6 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
         }
 
         // Edit page POST
-        // Edit page POST
-        // Edit page POST saves all displayable columns
-        // Edit page POST
         // Edit page POST saves all displayable columns
         // links:
         //  docLink: http://sql2x.org/documentationLink/28c3318f-58bb-471e-b8e4-1a72faccf2ee
@@ -113,9 +98,6 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
                 );
         }
 
-        // Create page GET
-        // Create page GET
-        // Create page GET fetches all displayable columns for editing in a view
         // Create page GET
         // Create page GET fetches all displayable columns for editing in a view
         // links:
@@ -156,9 +138,6 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
                 );
         }
 
-        // Create page POST
-        // Create page POST
-        // Create page POST fetches all displayable columns for editing in a view
         // Create page POST
         // Create page POST fetches all displayable columns for editing in a view
         // links:

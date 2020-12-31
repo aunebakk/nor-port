@@ -2,16 +2,11 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:26:27 PM
+  Generated Date: 12/31/2020 7:47:53 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
 using System.Collections.Generic;
-// Namespace for a Business Logic Layer in a Proxy
-// Namespace for a Business Logic Layer in a Proxy
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
 // Namespace for a Business Logic Layer in a Proxy
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
@@ -24,9 +19,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     
     
     // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
-    // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
@@ -34,8 +26,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IFinancialSearchService")]
     public interface IFinancialSearchService {
-        // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
-        // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
         // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -45,16 +35,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/GetAvailableCurrencies", ReplyAction="http://tempuri.org/IFinancialSearchService/GetAvailableCurrenciesResponse")]
         List<GetAvailableCurrenciesContract> GetAvailableCurrencies (System.Guid financialCurrencyId,System.DateTime currencyDateTime);
         // returns a list of FinancialFares contracts from FinancialSearchService
-        // returns a list of FinancialFares contracts from FinancialSearchService
-        // returns a list of FinancialFares contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/FinancialFares", ReplyAction="http://tempuri.org/IFinancialSearchService/FinancialFaresResponse")]
         List<FinancialFaresContract> FinancialFares ();
-        // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
-        // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
         // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -63,16 +47,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/VoucherSearchWithRemainingAmount", ReplyAction="http://tempuri.org/IFinancialSearchService/VoucherSearchWithRemainingAmountResponse")]
         List<VoucherSearchWithRemainingAmountContract> VoucherSearchWithRemainingAmount (System.DateTime voucherValidOnDateTime);
         // returns a list of VoucherTransactions contracts from FinancialSearchService
-        // returns a list of VoucherTransactions contracts from FinancialSearchService
-        // returns a list of VoucherTransactions contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
         // parameters:
         //  financialVoucherId: filter by this key, 00000000-0000-0000-0000-000000000000 for no filter
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/VoucherTransactions", ReplyAction="http://tempuri.org/IFinancialSearchService/VoucherTransactionsResponse")]
         List<VoucherTransactionsContract> VoucherTransactions (System.Guid financialVoucherId);
-        // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
-        // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
         // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -81,43 +61,25 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/FinancialServiceDetailsForBooking", ReplyAction="http://tempuri.org/IFinancialSearchService/FinancialServiceDetailsForBookingResponse")]
         List<FinancialServiceDetailsForBookingContract> FinancialServiceDetailsForBooking (System.Guid bookingId);
         // returns a list of ServiceFerryList contracts from FinancialSearchService
-        // returns a list of ServiceFerryList contracts from FinancialSearchService
-        // returns a list of ServiceFerryList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/ServiceFerryList", ReplyAction="http://tempuri.org/IFinancialSearchService/ServiceFerryListResponse")]
         List<ServiceFerryListContract> ServiceFerryList ();
         // returns a list of ServiceCarRentalList contracts from FinancialSearchService
-        // returns a list of ServiceCarRentalList contracts from FinancialSearchService
-        // returns a list of ServiceCarRentalList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/ServiceCarRentalList", ReplyAction="http://tempuri.org/IFinancialSearchService/ServiceCarRentalListResponse")]
         List<ServiceCarRentalListContract> ServiceCarRentalList ();
         // returns a list of ServiceHotelList contracts from FinancialSearchService
-        // returns a list of ServiceHotelList contracts from FinancialSearchService
-        // returns a list of ServiceHotelList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/ServiceHotelList", ReplyAction="http://tempuri.org/IFinancialSearchService/ServiceHotelListResponse")]
         List<ServiceHotelListContract> ServiceHotelList ();
         // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
-        // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
-        // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IFinancialSearchService/SpecialServiceRequestList", ReplyAction="http://tempuri.org/IFinancialSearchService/SpecialServiceRequestListResponse")]
         List<SpecialServiceRequestListContract> SpecialServiceRequestList ();
-        // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
-        // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
         // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -134,8 +96,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     
     public class FinancialSearchService : System.ServiceModel.ClientBase<IFinancialSearchService>, IFinancialSearchService {
         // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
-        // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
-        // returns a list of GetAvailableCurrencies contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
         // parameters:
@@ -145,17 +105,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.GetAvailableCurrencies(financialCurrencyId, currencyDateTime);
         }
         // returns a list of FinancialFares contracts from FinancialSearchService
-        // returns a list of FinancialFares contracts from FinancialSearchService
-        // returns a list of FinancialFares contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         public List<FinancialFaresContract> FinancialFares () {
             return base.Channel.FinancialFares();
         }
-        // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
-        // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
         // returns a list of VoucherSearchWithRemainingAmount contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -165,8 +119,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.VoucherSearchWithRemainingAmount(voucherValidOnDateTime);
         }
         // returns a list of VoucherTransactions contracts from FinancialSearchService
-        // returns a list of VoucherTransactions contracts from FinancialSearchService
-        // returns a list of VoucherTransactions contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
         // parameters:
@@ -174,8 +126,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         public List<VoucherTransactionsContract> VoucherTransactions (System.Guid financialVoucherId) {
             return base.Channel.VoucherTransactions(financialVoucherId);
         }
-        // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
-        // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
         // returns a list of FinancialServiceDetailsForBooking contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -185,47 +135,29 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.FinancialServiceDetailsForBooking(bookingId);
         }
         // returns a list of ServiceFerryList contracts from FinancialSearchService
-        // returns a list of ServiceFerryList contracts from FinancialSearchService
-        // returns a list of ServiceFerryList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         public List<ServiceFerryListContract> ServiceFerryList () {
             return base.Channel.ServiceFerryList();
         }
         // returns a list of ServiceCarRentalList contracts from FinancialSearchService
-        // returns a list of ServiceCarRentalList contracts from FinancialSearchService
-        // returns a list of ServiceCarRentalList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         public List<ServiceCarRentalListContract> ServiceCarRentalList () {
             return base.Channel.ServiceCarRentalList();
         }
         // returns a list of ServiceHotelList contracts from FinancialSearchService
-        // returns a list of ServiceHotelList contracts from FinancialSearchService
-        // returns a list of ServiceHotelList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         public List<ServiceHotelListContract> ServiceHotelList () {
             return base.Channel.ServiceHotelList();
         }
         // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
-        // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
-        // returns a list of SpecialServiceRequestList contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        // parameters:
-        //
         public List<SpecialServiceRequestListContract> SpecialServiceRequestList () {
             return base.Channel.SpecialServiceRequestList();
         }
-        // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
-        // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
         // returns a list of TransactionsCreditDebitBalance contracts from FinancialSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03

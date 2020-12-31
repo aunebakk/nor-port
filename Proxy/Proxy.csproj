@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EBD0D7E1-20E9-43CE-95BC-17F9454A2B6F}</ProjectGuid>
+    <ProjectGuid>{D7603737-5C61-4360-9513-C883D9F8676F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Proxy</RootNamespace>
@@ -244,7 +244,6 @@
     <Compile Include="Service\Templates\ClientSearchServiceProxy.cs" />
     <Compile Include="Service\Templates\DefaultSearchServiceProxy.cs" />
     <Compile Include="Service\Templates\DefaultTestSearchServiceProxy.cs" />
-    <Compile Include="Service\Templates\DefaultTestServiceProxy.cs" />
     <Compile Include="Service\Templates\DefaultUserActivityServiceProxy.cs" />
     <Compile Include="Service\Templates\DiagnosticsServiceProxy.cs" />
     <Compile Include="Service\Templates\FerrySearchServiceProxy.cs" />
@@ -431,7 +430,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{db217e5e-7072-49e1-83de-e9bf02b925d4}</Project>
+      <Project>{1109b24a-e5e0-42a8-b283-7c0f82daccfe}</Project>
       <Name>Contract</Name>
     </ProjectReference>
   </ItemGroup>

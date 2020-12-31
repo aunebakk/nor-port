@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/30/2020 9:24:28 PM
+  Generated Date: 12/31/2020 7:45:51 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
@@ -14,11 +14,6 @@ using System.Data;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 
 // Namespace for the Business Logic Layer
-// Namespace for the Business Logic Layer
-// the Business Logic Layer contains domain logic that encodes real world business rules
-//  that determine how data is created, stored and changed. Typically it will also deal with
-//  import and export of data and integration with API's from other parts of the system or other systems
-// Namespace for the Business Logic Layer
 // the Business Logic Layer contains domain logic that encodes real world business rules
 //  that determine how data is created, stored and changed. Typically it will also deal with
 //  import and export of data and integration with API's from other parts of the system or other systems
@@ -29,9 +24,6 @@ using SolutionNorSolutionPort.BusinessLogicLayer;
 namespace SolutionNorSolutionPort.BusinessLogicLayer {
 
     // Interface class for an WCF Service contract
-    // Interface class for an WCF Service contract
-    // this interface is used to expose C# objects as SOAP services using WCF
-    // Interface class for an WCF Service contract
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
@@ -39,8 +31,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     [ServiceContract()]
     public partial interface IClientSearchService {
         
-        // returns a list of GetClientWithFilter contracts from ClientSearchService
-        // returns a list of GetClientWithFilter contracts from ClientSearchService
         // returns a list of GetClientWithFilter contracts from ClientSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/cdd86da0-630c-402b-b72a-8dabf924530d
@@ -52,18 +42,12 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     // this class serves as a link to the data access layer between c# and sql server
-    // this class serves as a link to the data access layer between c# and sql server
-    // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //  and transfers that data to a Contract
-    // this class serves as a link to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
     //  and transfers that data to a Contract
     // links:
     //  docLink: http://sql2x.org/documentationLink/0b3269e5-2c52-47e6-a294-51407ea7c523
     public partial class ClientSearchService : IClientSearchService {
         
-        // returns a list of GetClientWithFilter contracts from ClientSearchService
-        // returns a list of GetClientWithFilter contracts from ClientSearchService
         // returns a list of GetClientWithFilter contracts from ClientSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/0b582d9b-64df-473e-9f42-7ce7701e67f0
