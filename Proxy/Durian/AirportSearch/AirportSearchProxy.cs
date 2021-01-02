@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 4:43:07 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/2/2021 7:39:28 PM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
 using System.Collections.Generic;
@@ -36,11 +36,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilter", ReplyAction="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilterResponse")]
         List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter ();
-        // returns a list of GetAirportIndexWithFilter contracts from AirportSearchService
-        // links:
-        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        //[System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilter", ReplyAction="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilterResponse")]
-        //List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter ();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -60,12 +55,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         public List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter () {
             return base.Channel.GetAirportIndexWithFilter();
         }
-        // returns a list of GetAirportIndexWithFilter contracts from AirportSearchService
-        // links:
-        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
-        //public List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter () {
-        //    return base.Channel.GetAirportIndexWithFilter();
-        //}
         
         public AirportSearchServiceClient() {
         }

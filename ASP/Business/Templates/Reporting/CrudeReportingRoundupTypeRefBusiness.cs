@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 4:34:01 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/2/2021 7:26:19 PM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.CrudeDotNetCoreGenerator.CrudeRESTDotNetCoreBusiness
 */
 using System.Linq;

@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 using SolutionNorSolutionPort.UserInterface;
-using SQL2XPrototype.DataAccessLayer;
+//using SQL2XPrototype.DataAccessLayer;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -256,15 +256,15 @@ namespace Test {
         public void DoCifudeTests() {
             try {
                 // run all tests
-                List<CifudeTestData> allTests = CifudeTestData.FetchAll();
-                foreach (CifudeTestData test in allTests) {
-                    TryCall(
-                        "NorPort",
-                        "All",
-                        test.Address
-                        );
+                //List<CifudeTestData> allTests = CifudeTestData.FetchAll();
+                //foreach (CifudeTestData test in allTests) {
+                //    TryCall(
+                //        "NorPort",
+                //        "All",
+                //        test.Address
+                //        );
 
-                }
+                //}
             } catch (Exception ex) {
                 Assert.Fail(message: $"Failed to call test area, message: {ex.Message}");
             }

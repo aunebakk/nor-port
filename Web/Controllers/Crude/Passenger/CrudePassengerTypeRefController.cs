@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 4:22:05 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/2/2021 7:11:36 PM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.TemplateFromCrudeMvcGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;

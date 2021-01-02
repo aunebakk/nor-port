@@ -157,12 +157,20 @@ NuGet.exe restore .\SolutionNorSolutionPort.sln ( Download NuGet here: https://d
 ```
 At this point the FrontEnd can only be used to bring up the start page and the about box.
 
-**The Business Layer**
+**The SOAP/WCF Business Layer**
 ```
 & '.\Business\Operational\Get-Web-App-PublishingProfile.ps1'
 & '.\Business\Operational\Build package to disk.bat'
 & '.\Business\Operational\Publish To Azure.bat'
 ```
+
+**The REST/API Interface Layer**
+```
+& '.\ASP\Operational\Get-Web-App-PublishingProfile.ps1'
+& '.\ASP\Operational\Build package to disk.bat'
+& '.\ASP\Operational\Publish To Azure.bat'
+```
+
 **The Database**
 
 The web FrontEnd is responsible for creating and updating the database, so the FrontEnd needs to be published before the database can be created. 
@@ -171,7 +179,7 @@ The web FrontEnd is responsible for creating and updating the database, so the F
    - Database Management Create Database
    - Database Management Set Version Zero Database
    - Database Management Increase Version To Latest step by step
-   - Database Management Version Object ( Should be 0.14.0 )
+   - Database Management Version Object ( Should be 0.8.7 )
 
 ## Test
 

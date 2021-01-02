@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 4:31:11 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/2/2021 7:23:10 PM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -172,7 +172,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "IssuedMonth" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ExpiryYear" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ExpiryMonth" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 4:31:11 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 7:23:10 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -224,7 +224,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "IssuedMonth" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ExpiryYear" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ExpiryMonth" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 4:31:11 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 7:23:10 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

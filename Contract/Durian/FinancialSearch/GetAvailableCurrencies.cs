@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 4:47:08 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/2/2021 7:47:42 PM
+  From Machine: DESKTOP-BP3OHLH
   Template: sql2x.ContractsGenerator.MethodNewStyle
 */
 using System.Runtime.Serialization;
