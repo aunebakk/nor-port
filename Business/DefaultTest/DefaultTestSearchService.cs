@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:06:32 AM
+  Generated Date: 1/2/2021 2:46:16 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */
@@ -27,7 +27,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/c8b78807-5be0-4da9-89f2-2d7f8dac1c12
     [ServiceContract()]
     public partial interface IDefaultTestSearchService {
         

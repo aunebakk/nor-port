@@ -12,7 +12,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultUserActivityGroupedByAddressIndex.cshtml",
-                new DefaultSearchService().DefaultUserActivityGroupedByAddress()
+                new DefaultSearchServiceClient().DefaultUserActivityGroupedByAddress()
                 );
         }
 

@@ -18,7 +18,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     Logging.UserId(User.Identity, ViewBag)
                     );
 
-            bookingPassengerContract.Passengers = new BookingSearchService().BookingPassengers(bookingId);
+            bookingPassengerContract.Passengers = new BookingSearchServiceClient().BookingPassengers(bookingId);
             bookingPassengerContract.NewPassengerTypeRcd = PassengerTypeRef.Adult;
 
             ViewBag.NewPassengerTypeRcd =

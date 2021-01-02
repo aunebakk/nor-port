@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:59:13 AM
+  Generated Date: 1/2/2021 2:38:56 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IAirportSearchService")]
-    public interface IAirportSearchService {
+    public interface IAirportSearchServiceClient {
         // returns a list of AirportIdentifierIndexWithFilter contracts from AirportSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -36,13 +36,18 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilter", ReplyAction="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilterResponse")]
         List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter ();
+        // returns a list of GetAirportIndexWithFilter contracts from AirportSearchService
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        //[System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilter", ReplyAction="http://tempuri.org/IAirportSearchService/GetAirportIndexWithFilterResponse")]
+        //List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter ();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAirportSearchServiceChannel : IAirportSearchService, System.ServiceModel.IClientChannel {
+    public interface IAirportSearchServiceChannel : IAirportSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class AirportSearchService : System.ServiceModel.ClientBase<IAirportSearchService>, IAirportSearchService {
+    public class AirportSearchServiceClient : System.ServiceModel.ClientBase<IAirportSearchServiceClient>, IAirportSearchServiceClient {
         // returns a list of AirportIdentifierIndexWithFilter contracts from AirportSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -55,23 +60,29 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
         public List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter () {
             return base.Channel.GetAirportIndexWithFilter();
         }
+        // returns a list of GetAirportIndexWithFilter contracts from AirportSearchService
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
+        //public List<GetAirportIndexWithFilterContract> GetAirportIndexWithFilter () {
+        //    return base.Channel.GetAirportIndexWithFilter();
+        //}
         
-        public AirportSearchService() {
+        public AirportSearchServiceClient() {
         }
         
-        public AirportSearchService(string endpointConfigurationName) : 
+        public AirportSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public AirportSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public AirportSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AirportSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AirportSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AirportSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AirportSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

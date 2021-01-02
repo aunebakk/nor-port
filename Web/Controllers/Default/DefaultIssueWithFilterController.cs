@@ -30,7 +30,7 @@ namespace SolutionNorSolutionPort.Controllers.Default
 
             return View(
                 "~/Views/Default/DefaultIssueWithFilter/DefaultIssueWithFilterIndex.cshtml",
-                new DefaultSearchService().DefaultIssueWithFilter(defaultIssueTypeRcd, defaultIssueStatusRcd)
+                new DefaultSearchServiceClient().DefaultIssueWithFilter(defaultIssueTypeRcd, defaultIssueStatusRcd)
                 );
         }
 
@@ -51,7 +51,7 @@ namespace SolutionNorSolutionPort.Controllers.Default
 
             return View(
                 "~/Views/Default/DefaultIssueWithFilterLive/DefaultIssueWithFilterIndex.cshtml",
-                new DefaultSearchService().DefaultIssueWithFilter(defaultIssueTypeRcd, defaultIssueStatusRcd)
+                new DefaultSearchServiceClient().DefaultIssueWithFilter(defaultIssueTypeRcd, defaultIssueStatusRcd)
                 );
         }
     }

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:02:03 AM
+  Generated Date: 1/2/2021 2:41:43 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IDefaultTestSearchService")]
-    public interface IDefaultTestSearchService {
+    public interface IDefaultTestSearchServiceClient {
         // returns a list of DefaultTestSearchWithFilter contracts from DefaultTestSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -39,10 +39,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IDefaultTestSearchServiceChannel : IDefaultTestSearchService, System.ServiceModel.IClientChannel {
+    public interface IDefaultTestSearchServiceChannel : IDefaultTestSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class DefaultTestSearchService : System.ServiceModel.ClientBase<IDefaultTestSearchService>, IDefaultTestSearchService {
+    public class DefaultTestSearchServiceClient : System.ServiceModel.ClientBase<IDefaultTestSearchServiceClient>, IDefaultTestSearchServiceClient {
         // returns a list of DefaultTestSearchWithFilter contracts from DefaultTestSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -56,22 +56,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.DefaultTestSearchQuery();
         }
         
-        public DefaultTestSearchService() {
+        public DefaultTestSearchServiceClient() {
         }
         
-        public DefaultTestSearchService(string endpointConfigurationName) : 
+        public DefaultTestSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public DefaultTestSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public DefaultTestSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DefaultTestSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public DefaultTestSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public DefaultTestSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public DefaultTestSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

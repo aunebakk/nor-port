@@ -98,7 +98,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new AircraftMaintenanceSearchService().AircraftMaintenanceCompartmentIndexWithFilter(aircraftId);
+                bindingSource.DataSource =  new AircraftMaintenanceSearchServiceClient().AircraftMaintenanceCompartmentIndexWithFilter(aircraftId);
                 dataGridViewAircraftMaintenanceCompartmentIndexWithFilter.AutoGenerateColumns = true;
                 dataGridViewAircraftMaintenanceCompartmentIndexWithFilter.DataSource = bindingSource;
                 dataGridViewAircraftMaintenanceCompartmentIndexWithFilter.AutoResizeColumns();

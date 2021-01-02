@@ -86,7 +86,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new PassengerSearchService().PassengersOnFlightCheckedIn(flightId);
+                bindingSource.DataSource =  new PassengerSearchServiceClient().PassengersOnFlightCheckedIn(flightId);
                 dataGridViewPassengersOnFlightCheckedIn.AutoGenerateColumns = true;
                 dataGridViewPassengersOnFlightCheckedIn.DataSource = bindingSource;
                 dataGridViewPassengersOnFlightCheckedIn.AutoResizeColumns();

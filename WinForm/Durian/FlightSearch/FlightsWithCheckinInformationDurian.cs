@@ -134,7 +134,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightsWithCheckinInformation(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightsWithCheckinInformation(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewFlightsWithCheckinInformation.AutoGenerateColumns = true;
                 dataGridViewFlightsWithCheckinInformation.DataSource = bindingSource;
                 dataGridViewFlightsWithCheckinInformation.AutoResizeColumns();

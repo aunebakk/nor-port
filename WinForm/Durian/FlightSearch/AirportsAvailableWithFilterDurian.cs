@@ -56,7 +56,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().AirportsAvailableWithFilter(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FlightSearchServiceClient().AirportsAvailableWithFilter(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewAirportsAvailableWithFilter.AutoGenerateColumns = true;
                 dataGridViewAirportsAvailableWithFilter.DataSource = bindingSource;
                 dataGridViewAirportsAvailableWithFilter.AutoResizeColumns();

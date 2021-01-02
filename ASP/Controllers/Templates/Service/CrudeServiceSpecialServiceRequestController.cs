@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:51:27 AM
+  Generated Date: 1/2/2021 2:31:06 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -26,7 +26,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Route("api/1/crudeservicespecialservicerequest")]
     // this class serves as Controller to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //   and transfers that data with an to REST API Contract through the JSON string format
+    //   and transfers that data with a REST API Contract using JSON string format
     // this contract is an identical representation of a Durian's columns
     //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
@@ -43,7 +43,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return View(@"Views\Templates\Service\CrudeServiceSpecialServiceRequest.cshtml");
         }
 
-        // fetch all page for controller
+        // fetch all API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/949b0295-718b-4eaf-8118-083f50045ec5
         [HttpGet("fetchall")]
@@ -55,7 +55,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequests;
         }
 
-        // fetch all count page for controller
+        // fetch all count API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/29cc8429-6a4e-4854-91dc-9ad3027eb3d0
         [HttpGet("fetchallcount")]
@@ -64,7 +64,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new CrudeServiceSpecialServiceRequestBusiness().FetchAllCount();
         }
 
-        // fetch all with limit page for controller
+        // fetch all with limit API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/2eda6a92-1bc1-43d8-9285-87d26d50f574
         // parameters:
@@ -80,7 +80,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequests;
         }
 
-        // fetch all with limit and offset page for controller
+        // fetch all with limit and offset API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/320ad742-0b46-4155-a5c9-2a82277b1f96
         // parameters:
@@ -98,7 +98,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequests;
         }
 
-        // fetch by primary key page for controller
+        // fetch by primary key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/b08faa47-a306-4a01-99f5-1125963b5d47
         // parameters:
@@ -112,7 +112,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key (simple) page for controller
+        // fetch by foreign key (simple) API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/82335188-ebea-40e3-a07d-094026340e92
         [HttpGet("fetchbyservicespecialservicerequestcode/{servicespecialservicerequestcode?}")]
@@ -124,7 +124,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -138,7 +138,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -152,7 +152,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -166,7 +166,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -180,7 +180,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -194,7 +194,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return serviceSpecialServiceRequest;
         }
 
-        // create ServiceSpecialServiceRequest POST page for controller
+        // create ServiceSpecialServiceRequest POST API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/fa6b4ff5-5a11-4563-b6de-449d1bb6a5e7
         // parameters:
@@ -224,7 +224,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "RequestServiceSpecialServiceRequestRequirementRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ReplyServiceSpecialServiceRequestRequirementRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ServiceSpecialServiceRequestOperationRuleRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/31/2020 10:51:27 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:31:06 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -244,7 +244,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // Update ServiceSpecialServiceRequest POST page for controller
+        // ppdate ServiceSpecialServiceRequest POST API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/5c88b29b-595f-4435-b8cd-6db26d0f958d
         // parameters:
@@ -274,7 +274,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "RequestServiceSpecialServiceRequestRequirementRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ReplyServiceSpecialServiceRequestRequirementRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ServiceSpecialServiceRequestOperationRuleRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/31/2020 10:51:27 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:31:06 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
@@ -294,7 +294,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // DELETE page for controller
+        // DELETE API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/c5cd4292-e198-4631-9b3f-a67451a48cac
         [HttpDelete("servicespecialservicerequestdelete/{servicespecialservicerequestid?}")]

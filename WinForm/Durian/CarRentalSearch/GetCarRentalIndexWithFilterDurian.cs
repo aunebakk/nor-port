@@ -98,7 +98,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new CarRentalSearchService().GetCarRentalIndexWithFilter();
+                bindingSource.DataSource =  new CarRentalSearchServiceClient().GetCarRentalIndexWithFilter();
                 dataGridViewGetCarRentalIndexWithFilter.AutoGenerateColumns = true;
                 dataGridViewGetCarRentalIndexWithFilter.DataSource = bindingSource;
                 dataGridViewGetCarRentalIndexWithFilter.AutoResizeColumns();

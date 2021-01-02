@@ -19,7 +19,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
 
             return View(
                 "~/Views/DurianLive/FlightSearch/FlightSegmentsIndex.cshtml",
-                new FlightSearchService().FlightSegments(flightId)
+                new FlightSearchServiceClient().FlightSegments(flightId)
                 );
         }
 

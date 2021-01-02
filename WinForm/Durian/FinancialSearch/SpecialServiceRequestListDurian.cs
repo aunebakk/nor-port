@@ -92,7 +92,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().SpecialServiceRequestList();
+                bindingSource.DataSource =  new FinancialSearchServiceClient().SpecialServiceRequestList();
                 dataGridViewSpecialServiceRequestList.AutoGenerateColumns = true;
                 dataGridViewSpecialServiceRequestList.DataSource = bindingSource;
                 dataGridViewSpecialServiceRequestList.AutoResizeColumns();

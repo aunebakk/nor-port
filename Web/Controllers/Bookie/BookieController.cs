@@ -21,7 +21,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
             contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             contract.Flights =
-                new FlightSearchService().FlightsForBookingWithFare(
+                new FlightSearchServiceClient().FlightsForBookingWithFare(
                     contract.DepartureAirportId,
                     contract.ArrivalAirportId,
                     contract.FromDateTime,
@@ -47,7 +47,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             List<AirportsAvailableWithFilterContract> airports =
-                    new FlightSearchService().AirportsAvailableWithFilter(
+                    new FlightSearchServiceClient().AirportsAvailableWithFilter(
                              Guid.Empty
                             , Guid.Empty
                             , contract.FromDateTime
@@ -75,7 +75,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     );
 
             contract.Flights =
-                new FlightSearchService().FlightsForBookingWithFare(
+                new FlightSearchServiceClient().FlightsForBookingWithFare(
                     contract.DepartureAirportId,
                     contract.ArrivalAirportId,
                     contract.FromDateTime,
@@ -102,7 +102,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             List<AirportsAvailableWithFilterContract> airports =
-                    new FlightSearchService().AirportsAvailableWithFilter(
+                    new FlightSearchServiceClient().AirportsAvailableWithFilter(
                              Guid.Empty
                             , Guid.Empty
                             , contract.FromDateTime
@@ -129,7 +129,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     );
 
             contract.Flights =
-                new FlightSearchService().FlightsForBookingWithFare(
+                new FlightSearchServiceClient().FlightsForBookingWithFare(
                     contract.DepartureAirportId,
                     contract.ArrivalAirportId,
                     contract.FromDateTime,

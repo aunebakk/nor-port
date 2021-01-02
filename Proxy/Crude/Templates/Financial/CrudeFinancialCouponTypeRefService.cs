@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:34:53 AM
+  Generated Date: 1/2/2021 2:14:51 PM
   From Machine: DESKTOP-LSRVP12
   Filename: FinancialCouponTypeRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/8638d459-df50-43f0-9fb3-f120e7937ccb
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ICrudeFinancialCouponTypeRefService")]
     public partial interface ICrudeFinancialCouponTypeRefService {
@@ -120,7 +120,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/ccc2e33d-a5a7-4751-a433-07dd3f2b90a4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ICrudeFinancialCouponTypeRefServiceChannel : ICrudeFinancialCouponTypeRefService, System.ServiceModel.IClientChannel {
     }
@@ -129,7 +129,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/2ec85c1f-4aad-46ef-a4d4-179312974bf1
     public class CrudeFinancialCouponTypeRefServiceClient : System.ServiceModel.ClientBase<ICrudeFinancialCouponTypeRefService>, ICrudeFinancialCouponTypeRefService {
         
         public CrudeFinancialCouponTypeRefServiceClient() {

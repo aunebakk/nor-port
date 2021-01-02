@@ -18,7 +18,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     );
 
             bookingFinancialTransactionsContract.Transactions =
-                new SolutionNorSolutionPort.BusinessLogicLayer.BookingSearchService().BookingFinancialTransactions(bookingId);
+                new SolutionNorSolutionPort.BusinessLogicLayer.BookingSearchServiceClient().BookingFinancialTransactions(bookingId);
 
             return bookingFinancialTransactionsContract;
         }

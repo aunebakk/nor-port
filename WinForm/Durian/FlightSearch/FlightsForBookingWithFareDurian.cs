@@ -122,7 +122,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightsForBookingWithFare(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightsForBookingWithFare(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewFlightsForBookingWithFare.AutoGenerateColumns = true;
                 dataGridViewFlightsForBookingWithFare.DataSource = bindingSource;
                 dataGridViewFlightsForBookingWithFare.AutoResizeColumns();

@@ -134,7 +134,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new ServiceSearchService().GetServicePackage(servicePackageId);
+                bindingSource.DataSource =  new ServiceSearchServiceClient().GetServicePackage(servicePackageId);
                 dataGridViewGetServicePackage.AutoGenerateColumns = true;
                 dataGridViewGetServicePackage.DataSource = bindingSource;
                 dataGridViewGetServicePackage.AutoResizeColumns();

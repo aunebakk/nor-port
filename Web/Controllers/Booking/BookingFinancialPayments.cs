@@ -94,7 +94,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             // payments
             bookingFinancialPayment.Payments =
-                new BookingSearchService().BookingFinancialPayments(bookingId);
+                new BookingSearchServiceClient().BookingFinancialPayments(bookingId);
 
             bookingFinancialPayment.PaymentFinancialPaymentTypeRcd = financialPaymentTypeRcd;
 
@@ -109,7 +109,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     bookingFinancialPayment.PaymentFinancialCurrencyId;
 
                 ViewBag.PaymentSelectedFinancialCurrencyId =
-                    new SelectList(new FinancialSearchService().
+                    new SelectList(new FinancialSearchServiceClient().
                                         GetAvailableCurrencies(
                                             bookingFinancialPayment.BookingBalanceFinancialCurrencyId,
                                             DateTime.UtcNow
@@ -158,7 +158,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 // voucher
                 if ( financialPaymentId == Guid.Empty )
                     bookingFinancialPayment.Vouchers =
-                        new FinancialSearchService().VoucherSearchWithRemainingAmount(DateTime.UtcNow);
+                        new FinancialSearchServiceClient().VoucherSearchWithRemainingAmount(DateTime.UtcNow);
             }
 
             return bookingFinancialPayment;

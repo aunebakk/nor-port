@@ -39,7 +39,7 @@ namespace SolutionNorSolutionPort.UserInterface
             if ( !DesignMode && cboRef.DataSource == null ) {
                 try {
                     List<FlightsOpenForCheckinWithDescriptionContract> flights =
-                            new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                            new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(
                                      Guid.Empty
                                     , Guid.Empty
                                     , DateTime.UtcNow.Date

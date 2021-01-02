@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:04:08 AM
+  Generated Date: 1/2/2021 2:43:43 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IHotelSearchService")]
-    public interface IHotelSearchService {
+    public interface IHotelSearchServiceClient {
         // returns a list of GetHotelIndexWithFilter contracts from HotelSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -34,10 +34,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IHotelSearchServiceChannel : IHotelSearchService, System.ServiceModel.IClientChannel {
+    public interface IHotelSearchServiceChannel : IHotelSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class HotelSearchService : System.ServiceModel.ClientBase<IHotelSearchService>, IHotelSearchService {
+    public class HotelSearchServiceClient : System.ServiceModel.ClientBase<IHotelSearchServiceClient>, IHotelSearchServiceClient {
         // returns a list of GetHotelIndexWithFilter contracts from HotelSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -45,22 +45,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.GetHotelIndexWithFilter();
         }
         
-        public HotelSearchService() {
+        public HotelSearchServiceClient() {
         }
         
-        public HotelSearchService(string endpointConfigurationName) : 
+        public HotelSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public HotelSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public HotelSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public HotelSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public HotelSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public HotelSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public HotelSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

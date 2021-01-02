@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:05:52 AM
+  Generated Date: 1/2/2021 2:45:34 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -21,10 +21,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IAirlineSearchService")]
-    public interface IAirlineSearchService {
+    public interface IAirlineSearchServiceClient {
         // returns a list of AirlineIdentifierIndexWithFilter contracts from AirlineSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -38,10 +38,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IAirlineSearchServiceChannel : IAirlineSearchService, System.ServiceModel.IClientChannel {
+    public interface IAirlineSearchServiceChannel : IAirlineSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class AirlineSearchService : System.ServiceModel.ClientBase<IAirlineSearchService>, IAirlineSearchService {
+    public class AirlineSearchServiceClient : System.ServiceModel.ClientBase<IAirlineSearchServiceClient>, IAirlineSearchServiceClient {
         // returns a list of AirlineIdentifierIndexWithFilter contracts from AirlineSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -55,22 +55,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.GetAirlineIndexWithFilter();
         }
         
-        public AirlineSearchService() {
+        public AirlineSearchServiceClient() {
         }
         
-        public AirlineSearchService(string endpointConfigurationName) : 
+        public AirlineSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public AirlineSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public AirlineSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AirlineSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AirlineSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public AirlineSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public AirlineSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

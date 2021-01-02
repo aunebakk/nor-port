@@ -22,7 +22,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void buttonSearch_Click(object sender, EventArgs e) {
-            ScheduleSearchService flightSchedule = new ScheduleSearchService();
+            ScheduleSearchServiceClient flightSchedule = new ScheduleSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

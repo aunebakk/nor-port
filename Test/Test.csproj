@@ -72,8 +72,12 @@
       <Project>{AC2DEA02-592F-4D40-B3A6-74D46D34D0EB}</Project>
       <Name>Contract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProxyRest\ProxyRest.csproj">
+      <Project>{d043a1a5-ca53-47b0-909e-4710fa2b3a98}</Project>
+      <Name>ProxyRest</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{ec914a7f-8dbc-43f1-bbe2-b72777080111}</Project>
+      <Project>{629d66b8-5c42-4d5d-b997-7b862b8b9ad8}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>

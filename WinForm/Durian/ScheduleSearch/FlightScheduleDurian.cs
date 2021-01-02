@@ -110,7 +110,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new ScheduleSearchService().FlightSchedule();
+                bindingSource.DataSource =  new ScheduleSearchServiceClient().FlightSchedule();
                 dataGridViewFlightSchedule.AutoGenerateColumns = true;
                 dataGridViewFlightSchedule.DataSource = bindingSource;
                 dataGridViewFlightSchedule.AutoResizeColumns();

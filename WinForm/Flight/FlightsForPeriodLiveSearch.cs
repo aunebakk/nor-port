@@ -59,7 +59,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         public void RefreshFlightsForPeriod() {
-            FlightSearchService flightsForPeriod = new FlightSearchService();
+            FlightSearchServiceClient flightsForPeriod = new FlightSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

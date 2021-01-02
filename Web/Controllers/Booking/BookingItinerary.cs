@@ -19,7 +19,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     );
 
             // todo, move the following into get booking service
-            bookingItineraryContract.Flights = new BookingSearchService().BookingFlights(bookingId);
+            bookingItineraryContract.Flights = new BookingSearchServiceClient().BookingFlights(bookingId);
 
             // default search flight dates
             bookingItineraryContract.SearchFlights = new FlightsForPeriodLiveContract();
@@ -27,7 +27,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
             bookingItineraryContract.SearchFlights.UntilDateTime = DateTime.UtcNow.Date.AddDays(1);
 
             bookingItineraryContract.SearchFlights.Flights =
-                new FlightSearchService().FlightsForPeriod(
+                new FlightSearchServiceClient().FlightsForPeriod(
                     Guid.Empty,
                     Guid.Empty,
                     bookingItineraryContract.SearchFlights.FromDateTime,
@@ -45,11 +45,11 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
             [Bind()] BookingItineraryContract bookingItineraryContract
             ) {
             // move the following into get booking service
-            bookingItineraryContract.Flights = new BookingSearchService().BookingFlights(bookingItineraryContract.BookingId);
+            bookingItineraryContract.Flights = new BookingSearchServiceClient().BookingFlights(bookingItineraryContract.BookingId);
 
             // search for flights
             bookingItineraryContract.SearchFlights.Flights =
-                new FlightSearchService().FlightsForPeriod(
+                new FlightSearchServiceClient().FlightsForPeriod(
                     Guid.Empty,
                     Guid.Empty,
                     bookingItineraryContract.SearchFlights.FromDateTime,

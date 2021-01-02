@@ -68,7 +68,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightEvents(flightId);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightEvents(flightId);
                 dataGridViewFlightEvents.AutoGenerateColumns = true;
                 dataGridViewFlightEvents.DataSource = bindingSource;
                 dataGridViewFlightEvents.AutoResizeColumns();

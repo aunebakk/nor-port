@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:42:56 AM
+  Generated Date: 1/2/2021 2:22:31 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -26,7 +26,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     [Route("api/1/crudeclientcontactmethod")]
     // this class serves as Controller to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //   and transfers that data with an to REST API Contract through the JSON string format
+    //   and transfers that data with a REST API Contract using JSON string format
     // this contract is an identical representation of a Durian's columns
     //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:
@@ -43,7 +43,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return View(@"Views\Templates\Client\CrudeClientContactMethod.cshtml");
         }
 
-        // fetch all page for controller
+        // fetch all API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/949b0295-718b-4eaf-8118-083f50045ec5
         [HttpGet("fetchall")]
@@ -55,7 +55,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethods;
         }
 
-        // fetch all count page for controller
+        // fetch all count API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/29cc8429-6a4e-4854-91dc-9ad3027eb3d0
         [HttpGet("fetchallcount")]
@@ -64,7 +64,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new CrudeClientContactMethodBusiness().FetchAllCount();
         }
 
-        // fetch all with limit page for controller
+        // fetch all with limit API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/2eda6a92-1bc1-43d8-9285-87d26d50f574
         // parameters:
@@ -80,7 +80,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethods;
         }
 
-        // fetch all with limit and offset page for controller
+        // fetch all with limit and offset API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/320ad742-0b46-4155-a5c9-2a82277b1f96
         // parameters:
@@ -98,7 +98,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethods;
         }
 
-        // fetch by primary key page for controller
+        // fetch by primary key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/b08faa47-a306-4a01-99f5-1125963b5d47
         // parameters:
@@ -112,7 +112,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethod;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -126,7 +126,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethod;
         }
 
-        // fetch by foreign key page for controller
+        // fetch by foreign key API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/eab9ad20-fad5-4bde-8f34-a84e2b1e2a18
         // parameters:
@@ -140,7 +140,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return clientContactMethod;
         }
 
-        // create ClientContactMethod POST page for controller
+        // create ClientContactMethod POST API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/fa6b4ff5-5a11-4563-b6de-449d1bb6a5e7
         // parameters:
@@ -166,7 +166,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodWay" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/31/2020 10:42:56 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:22:31 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -186,7 +186,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // Update ClientContactMethod POST page for controller
+        // ppdate ClientContactMethod POST API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/5c88b29b-595f-4435-b8cd-6db26d0f958d
         // parameters:
@@ -212,7 +212,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodWay" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Comment" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "12/31/2020 10:42:56 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:22:31 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
@@ -232,7 +232,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return result;
         }
 
-        // DELETE page for controller
+        // DELETE API for controller
         // links:
         //  docLink: http://sql2x.org/documentationLink/c5cd4292-e198-4631-9b3f-a67451a48cac
         [HttpDelete("clientcontactmethoddelete/{clientcontactmethodid?}")]

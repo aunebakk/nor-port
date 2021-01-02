@@ -98,7 +98,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new HotelSearchService().GetHotelIndexWithFilter();
+                bindingSource.DataSource =  new HotelSearchServiceClient().GetHotelIndexWithFilter();
                 dataGridViewGetHotelIndexWithFilter.AutoGenerateColumns = true;
                 dataGridViewGetHotelIndexWithFilter.DataSource = bindingSource;
                 dataGridViewGetHotelIndexWithFilter.AutoResizeColumns();

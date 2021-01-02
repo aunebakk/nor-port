@@ -104,7 +104,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshBookingEventHistory() {
-            BookingSearchService bookingEventHistory = new BookingSearchService();
+            BookingSearchServiceClient bookingEventHistory = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {
@@ -143,7 +143,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshBookingFinancialTransactions() {
-            BookingSearchService bookingFinancialTransactions = new BookingSearchService();
+            BookingSearchServiceClient bookingFinancialTransactions = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {
@@ -456,7 +456,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshBookingPassengers() {
-            BookingSearchService bookingPassengers = new BookingSearchService();
+            BookingSearchServiceClient bookingPassengers = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {
@@ -534,7 +534,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshBookingFlights() {
-            BookingSearchService bookingFlights = new BookingSearchService();
+            BookingSearchServiceClient bookingFlights = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {
@@ -625,7 +625,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshBookingFinancialPayments() {
-            BookingSearchService bookingFinancialPayments = new BookingSearchService();
+            BookingSearchServiceClient bookingFinancialPayments = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

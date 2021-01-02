@@ -23,7 +23,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = DateTime.UtcNow.Date.AddDays(1);
 
             contract.Flights =
-                    new FlightSearchService().FlightsWithBookingInformation(
+                    new FlightSearchServiceClient().FlightsWithBookingInformation(
                         Guid.Empty,
                         Guid.Empty,
                         contract.FromDateTime,
@@ -50,7 +50,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             contract.Flights =
-                new FlightSearchService().FlightsWithBookingInformation(
+                new FlightSearchServiceClient().FlightsWithBookingInformation(
                     Guid.Empty,
                     Guid.Empty,
                     contract.FromDateTime,

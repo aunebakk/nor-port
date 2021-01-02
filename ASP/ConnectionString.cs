@@ -6,10 +6,10 @@
   From Machine: DESKTOP-517I8BU
   Template: sql2x.PrototypeDotNetCoreTwoOone.Content_ConnectionStringDOTcs
 */
-public static class Conn {
-    public const string ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;";
-    public const string ConnectionStringLocal = @"Data Source=(localdb)\MSSQLLocalDB;";
-    public const string ConnectionStringRemote = @"Data Source=(localdb)\MSSQLLocalDB;";
-};
+//internal static class Conn {
+//    public const string ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;";
+//    public const string ConnectionStringLocal = @"Data Source=(localdb)\MSSQLLocalDB;";
+//    public const string ConnectionStringRemote = @"Data Source=(localdb)\MSSQLLocalDB;";
+//};
 
 

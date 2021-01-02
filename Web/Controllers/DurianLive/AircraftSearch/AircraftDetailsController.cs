@@ -17,7 +17,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
 
             return View(
                 "~/Views/DurianLive/AircraftSearch/AircraftDetailsIndex.cshtml",
-                new AircraftSearchService().AircraftDetails()
+                new AircraftSearchServiceClient().AircraftDetails()
                 );
         }
 

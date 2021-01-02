@@ -1,16 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{351A6A7A-56D1-41B3-B076-D3FF96FFDE34}</ProjectGuid>
+    <ProjectGuid>{D043A1A5-CA53-47B0-909E-4710FA2B3A98}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Proxy</RootNamespace>
-    <AssemblyName>Proxy</AssemblyName>
+    <RootNamespace>ProxyRest</RootNamespace>
+    <AssemblyName>ProxyRest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -30,19 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ServiceModel" />
-    <Reference Include="System.ServiceModel.Web" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\sql2x\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -69,9 +69,22 @@
     <Compile Include="Service\Templates\ServiceServiceProxy.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Crude\" />
+    <Folder Include="Durian\" />
+    <Folder Include="Service\DefaultTest\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{bbc0e7ac-156d-4947-bbea-d1f3ab59b916}</Project>
+      <Name>Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Information\architecture.txt" />
+    <Content Include="Information\description.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="CustomTemplates\Rest\Proxy.json" />
-    <None Include="Information\architecture.txt" />
-    <None Include="Information\description.txt" />
     <None Include="SchemaTemplates\Address\Address.json" />
     <None Include="SchemaTemplates\Address\AddressTypeRef.json" />
     <None Include="SchemaTemplates\Agency\Agency.json" />
@@ -239,23 +252,5 @@
     <None Include="SchemaTemplates\Timezone\Timezone.json" />
     <None Include="SchemaTemplates\Title\TitleRef.json" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{bbc0e7ac-156d-4947-bbea-d1f3ab59b916}</Project>
-      <Name>Contract</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Crude\" />
-    <Folder Include="Durian\" />
-    <Folder Include="Service\DefaultTest\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

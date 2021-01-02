@@ -116,7 +116,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightsForPeriod(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightsForPeriod(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewFlightsForPeriod.AutoGenerateColumns = true;
                 dataGridViewFlightsForPeriod.DataSource = bindingSource;
                 dataGridViewFlightsForPeriod.AutoResizeColumns();

@@ -74,7 +74,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new DefaultTestSearchService().DefaultTestSearchQuery();
+                bindingSource.DataSource =  new DefaultTestSearchServiceClient().DefaultTestSearchQuery();
                 dataGridViewDefaultTestSearchQuery.AutoGenerateColumns = true;
                 dataGridViewDefaultTestSearchQuery.DataSource = bindingSource;
                 dataGridViewDefaultTestSearchQuery.AutoResizeColumns();

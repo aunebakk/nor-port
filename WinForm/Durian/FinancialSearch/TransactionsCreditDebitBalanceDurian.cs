@@ -56,7 +56,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().TransactionsCreditDebitBalance(fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FinancialSearchServiceClient().TransactionsCreditDebitBalance(fromDateTime,untilDateTime);
                 dataGridViewTransactionsCreditDebitBalance.AutoGenerateColumns = true;
                 dataGridViewTransactionsCreditDebitBalance.DataSource = bindingSource;
                 dataGridViewTransactionsCreditDebitBalance.AutoResizeColumns();

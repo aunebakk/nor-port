@@ -164,7 +164,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new AirportSearchService().GetAirportIndexWithFilter();
+                bindingSource.DataSource =  new AirportSearchServiceClient().GetAirportIndexWithFilter();
                 dataGridViewGetAirportIndexWithFilter.AutoGenerateColumns = true;
                 dataGridViewGetAirportIndexWithFilter.DataSource = bindingSource;
                 dataGridViewGetAirportIndexWithFilter.AutoResizeColumns();

@@ -20,7 +20,7 @@ namespace SolutionNorSolutionPort.UserInterface {
         }
 
         private void btnSearch_Click(object sender, EventArgs e) {
-            BookingSearchService bookingsOpen = new BookingSearchService();
+            BookingSearchServiceClient bookingsOpen = new BookingSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

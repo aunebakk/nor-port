@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:59:20 AM
+  Generated Date: 1/2/2021 2:39:03 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IBookingSearchService")]
-    public interface IBookingSearchService {
+    public interface IBookingSearchServiceClient {
         // returns a list of BookingStatistics contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -100,10 +100,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IBookingSearchServiceChannel : IBookingSearchService, System.ServiceModel.IClientChannel {
+    public interface IBookingSearchServiceChannel : IBookingSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class BookingSearchService : System.ServiceModel.ClientBase<IBookingSearchService>, IBookingSearchService {
+    public class BookingSearchServiceClient : System.ServiceModel.ClientBase<IBookingSearchServiceClient>, IBookingSearchServiceClient {
         // returns a list of BookingStatistics contracts from BookingSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -186,22 +186,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.BookingEventCount(bookingId);
         }
         
-        public BookingSearchService() {
+        public BookingSearchServiceClient() {
         }
         
-        public BookingSearchService(string endpointConfigurationName) : 
+        public BookingSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public BookingSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public BookingSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public BookingSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public BookingSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public BookingSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public BookingSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

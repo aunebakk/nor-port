@@ -50,7 +50,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new DefaultSearchService().DefaultStatistics();
+                bindingSource.DataSource =  new DefaultSearchServiceClient().DefaultStatistics();
                 dataGridViewDefaultStatistics.AutoGenerateColumns = true;
                 dataGridViewDefaultStatistics.DataSource = bindingSource;
                 dataGridViewDefaultStatistics.AutoResizeColumns();

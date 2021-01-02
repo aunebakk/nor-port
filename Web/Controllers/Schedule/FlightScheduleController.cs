@@ -11,7 +11,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         public ActionResult FlightScheduleIndex() {
             return View(
                 MVCHelper.Resolve(Request, "Schedule", "FlightScheduleIndex"),
-                new ScheduleSearchService().FlightSchedule()
+                new ScheduleSearchServiceClient().FlightSchedule()
                 );
         }
 

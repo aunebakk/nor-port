@@ -11,7 +11,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         public ActionResult VoucherSearchWithRemainingAmountIndex() {
             return View(
                 MVCHelper.Resolve(Request, "Financial", "VoucherSearchWithRemainingAmountIndex"),
-                new FinancialSearchService().VoucherSearchWithRemainingAmount(DateTime.MinValue)
+                new FinancialSearchServiceClient().VoucherSearchWithRemainingAmount(DateTime.MinValue)
                 );
         }
 

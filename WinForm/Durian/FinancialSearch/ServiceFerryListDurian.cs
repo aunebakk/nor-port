@@ -74,7 +74,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().ServiceFerryList();
+                bindingSource.DataSource =  new FinancialSearchServiceClient().ServiceFerryList();
                 dataGridViewServiceFerryList.AutoGenerateColumns = true;
                 dataGridViewServiceFerryList.DataSource = bindingSource;
                 dataGridViewServiceFerryList.AutoResizeColumns();

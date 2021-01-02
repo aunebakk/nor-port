@@ -260,14 +260,24 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer
             Guid userId
             ) {
 
-            var scheduleList = new CrudeFlightScheduleService().FetchAll();
-            foreach ( var scheduleItem in scheduleList ) {
-                if ( scheduleItem.BecameFlightScheduleId == Guid.Empty )
-                    MakeFlightsFromSchedule(
-                        scheduleItem.FlightScheduleId,
-                        userId
-                        );
+            Logging log = Logging.PerformanceTimeStart(
+                "Schedule", "BusinessLogicLayer", "ScheduleService", "MakeFlightsFromScheduleAll", userId);
+
+            try { 
+                var scheduleList = new CrudeFlightScheduleService().FetchAll();
+                foreach ( var scheduleItem in scheduleList ) {
+                    if ( scheduleItem.BecameFlightScheduleId == Guid.Empty )
+                        MakeFlightsFromSchedule(
+                            scheduleItem.FlightScheduleId,
+                            userId
+                            );
+                }
+            } catch ( Exception ex ) {
+                log.Error(ex);
+                throw ex;
             }
+
+            log.PerformanceTimeStop();
         }
 
         /// <summary>Create all flights based on schedule record</summary>

@@ -20,12 +20,12 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             // get service attached to booking
             bookingServicesContract.Services =
-                new FinancialSearchService().FinancialServiceDetailsForBooking(
+                new FinancialSearchServiceClient().FinancialServiceDetailsForBooking(
                     bookingId);
 
             // get available hotels
             bookingServicesContract.ServiceCarList =
-                new FinancialSearchService().ServiceCarRentalList();
+                new FinancialSearchServiceClient().ServiceCarRentalList();
 
             return bookingServicesContract;
         }

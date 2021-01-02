@@ -152,7 +152,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new ServiceSearchService().FetchServiceSpecialServiceRequestWithFilter(serviceSpecialServiceRequestGroupRcd,serviceSpecialServiceRequestCode,requestServiceSpecialServiceRequestRequirementRcd,replyServiceSpecialServiceRequestRequirementRcd,serviceSpecialServiceRequestOperationRuleRcd);
+                bindingSource.DataSource =  new ServiceSearchServiceClient().FetchServiceSpecialServiceRequestWithFilter(serviceSpecialServiceRequestGroupRcd,serviceSpecialServiceRequestCode,requestServiceSpecialServiceRequestRequirementRcd,replyServiceSpecialServiceRequestRequirementRcd,serviceSpecialServiceRequestOperationRuleRcd);
                 dataGridViewFetchServiceSpecialServiceRequestWithFilter.AutoGenerateColumns = true;
                 dataGridViewFetchServiceSpecialServiceRequestWithFilter.DataSource = bindingSource;
                 dataGridViewFetchServiceSpecialServiceRequestWithFilter.AutoResizeColumns();

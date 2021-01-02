@@ -11,7 +11,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         public ActionResult SpecialServiceRequestIndex() {
             return View(
                 MVCHelper.Resolve(Request, "Service", "SpecialServiceRequestIndex"),
-                new ServiceSearchService().FetchServiceSpecialServiceRequestWithFilter(
+                new ServiceSearchServiceClient().FetchServiceSpecialServiceRequestWithFilter(
                     String.Empty, String.Empty, String.Empty, String.Empty, String.Empty)
                 );
         }
@@ -30,7 +30,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                                 );
 
             ViewBag.FinancialCurrencyId =
-                    new SelectList(new FinancialSearchService().
+                    new SelectList(new FinancialSearchServiceClient().
                                         GetAvailableCurrencies(
                                             Guid.Empty,
                                             DateTime.UtcNow
@@ -115,7 +115,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                                 );
             */
             ViewBag.FinancialCurrencyId =
-                    new SelectList(new FinancialSearchService().
+                    new SelectList(new FinancialSearchServiceClient().
                                         GetAvailableCurrencies(
                                             Guid.Empty,
                                             DateTime.UtcNow

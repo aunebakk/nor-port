@@ -41,7 +41,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         public void ShowAsEdit(System.Guid bookingPassengerId) {
-            var service = new BookingSearchService();
+            var service = new BookingSearchServiceClient();
             _isNew = false;
             try {
                 _contract = service.BookingPassengerWithExtra(bookingPassengerId);

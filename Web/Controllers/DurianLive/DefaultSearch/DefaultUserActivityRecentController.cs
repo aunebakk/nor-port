@@ -17,7 +17,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultUserActivityRecentIndex.cshtml",
-                new DefaultSearchService().DefaultUserActivityRecent(defaultUserId)
+                new DefaultSearchServiceClient().DefaultUserActivityRecent(defaultUserId)
                 );
         }
 

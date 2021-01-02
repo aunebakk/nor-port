@@ -21,7 +21,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             List<FlightsOpenForCheckinWithDescriptionContract> flights =
-                    new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                    new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(
                              Guid.Empty
                             , Guid.Empty
                             , contract.FromDateTime
@@ -39,7 +39,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     contract.FlightId
                     );
 
-            contract.Passengers = new PassengerSearchService().PassengersOnFlight(contract.FlightId);
+            contract.Passengers = new PassengerSearchServiceClient().PassengersOnFlight(contract.FlightId);
 
             return View(
                 MVCHelper.Resolve(Request, "Checkin", "CheckinIndex"),
@@ -61,7 +61,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                 contract.UntilDateTime = contract.FromDateTime.AddDays(1);
 
             List<FlightsOpenForCheckinWithDescriptionContract> flights =
-                    new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                    new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(
                              Guid.Empty
                             , Guid.Empty
                             , contract.FromDateTime
@@ -76,7 +76,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     contract.FlightId
                     );
 
-            contract.Passengers = new PassengerSearchService().PassengersOnFlight(contract.FlightId);
+            contract.Passengers = new PassengerSearchServiceClient().PassengersOnFlight(contract.FlightId);
 
             return View(
                 MVCHelper.Resolve(Request, "Checkin", "CheckinIndex"),

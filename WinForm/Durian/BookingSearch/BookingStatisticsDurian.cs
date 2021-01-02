@@ -68,7 +68,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new BookingSearchService().BookingStatistics(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new BookingSearchServiceClient().BookingStatistics(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewBookingStatistics.AutoGenerateColumns = true;
                 dataGridViewBookingStatistics.DataSource = bindingSource;
                 dataGridViewBookingStatistics.AutoResizeColumns();

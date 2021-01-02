@@ -122,7 +122,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().FinancialFares();
+                bindingSource.DataSource =  new FinancialSearchServiceClient().FinancialFares();
                 dataGridViewFinancialFares.AutoGenerateColumns = true;
                 dataGridViewFinancialFares.DataSource = bindingSource;
                 dataGridViewFinancialFares.AutoResizeColumns();

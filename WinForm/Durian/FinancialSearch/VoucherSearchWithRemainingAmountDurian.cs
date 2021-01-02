@@ -92,7 +92,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().VoucherSearchWithRemainingAmount(voucherValidOnDateTime);
+                bindingSource.DataSource =  new FinancialSearchServiceClient().VoucherSearchWithRemainingAmount(voucherValidOnDateTime);
                 dataGridViewVoucherSearchWithRemainingAmount.AutoGenerateColumns = true;
                 dataGridViewVoucherSearchWithRemainingAmount.DataSource = bindingSource;
                 dataGridViewVoucherSearchWithRemainingAmount.AutoResizeColumns();

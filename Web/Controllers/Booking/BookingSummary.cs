@@ -21,7 +21,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             // get service attached to booking
             bookingSummaryContract.Summary =
-                new BookingSearchService().BookingServiceSummary(
+                new BookingSearchServiceClient().BookingServiceSummary(
                         bookingId);
 
             return bookingSummaryContract;

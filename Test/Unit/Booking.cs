@@ -56,7 +56,7 @@ namespace Test {
                 message: "arlanda airport id is not correct");
 
             // check availability
-            FlightSearchService flightsWithBookingInformation = new FlightSearchService();
+            FlightSearchServiceClient flightsWithBookingInformation = new FlightSearchServiceClient();
             List<FlightsWithBookingInformationContract> flights = 
                 flightsWithBookingInformation.FlightsWithBookingInformation(
                     departureAirportId: airportGardermoen.AirportId, 
@@ -186,7 +186,7 @@ namespace Test {
                         );
 
             List<BookingsOpenContract> bookingList =
-                new BookingSearchService().BookingsOpen();
+                new BookingSearchServiceClient().BookingsOpen();
 
             BookingsOpenContract bookingsOpenContract = null;
             foreach (BookingsOpenContract boc in bookingList) {
@@ -204,7 +204,7 @@ namespace Test {
         [TestMethod]
         public void Step07_Checkin() {
             List<FlightsOpenForCheckinWithDescriptionContract> flights =
-                new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(
                         departureAirportId: Guid.Empty,
                         arrivalAirportId: Guid.Empty,
                         fromDateTime: DateTime.UtcNow.Date,
@@ -213,7 +213,7 @@ namespace Test {
 
             foreach (FlightsOpenForCheckinWithDescriptionContract flight in flights) { 
                 List<PassengersOnFlightContract> passengers = 
-                    new PassengerSearchService().PassengersOnFlight(
+                    new PassengerSearchServiceClient().PassengersOnFlight(
                         flightId: flight.FlightId
                         );
 
@@ -237,7 +237,7 @@ namespace Test {
         public void Step08_CheckReportsAfterFlight() {
             // get flights for the next 24 hours
             List<FlightsOpenForCheckinWithDescriptionContract> flights =
-                new FlightSearchService().FlightsOpenForCheckinWithDescription(
+                new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(
                         departureAirportId: Guid.Empty,
                         arrivalAirportId: Guid.Empty,
                         fromDateTime: DateTime.UtcNow.Date,
@@ -249,13 +249,13 @@ namespace Test {
 
                 // all passengers on flight
                 List<PassengersOnFlightContract> passengers =
-                    new PassengerSearchService().PassengersOnFlight(
+                    new PassengerSearchServiceClient().PassengersOnFlight(
                         flightId: flight.FlightId
                         );
 
                 // checked in passengers
                 List<PassengersOnFlightCheckedInContract> passengersCheckedIn =
-                    new PassengerSearchService().PassengersOnFlightCheckedIn(
+                    new PassengerSearchServiceClient().PassengersOnFlightCheckedIn(
                         flightId: flight.FlightId
                         );
 

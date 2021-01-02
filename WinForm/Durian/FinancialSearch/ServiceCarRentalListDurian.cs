@@ -62,7 +62,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().ServiceCarRentalList();
+                bindingSource.DataSource =  new FinancialSearchServiceClient().ServiceCarRentalList();
                 dataGridViewServiceCarRentalList.AutoGenerateColumns = true;
                 dataGridViewServiceCarRentalList.DataSource = bindingSource;
                 dataGridViewServiceCarRentalList.AutoResizeColumns();

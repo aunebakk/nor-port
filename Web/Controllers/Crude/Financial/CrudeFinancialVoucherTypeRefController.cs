@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:37:50 AM
+  Generated Date: 1/2/2021 2:17:49 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateFromCrudeMvcGenerator.ControllerBeginning
 */
@@ -18,7 +18,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
 
     // this class serves as Controller to the data access layer between c# and sql server
     // primarily it calls the data access layer to get to the serialized CRUDE tables data
-    //   and transfers that data with an to REST API Contract through the JSON string format
+    //   and transfers that data with a REST API Contract using JSON string format
     // this contract is an identical representation of a Durian's columns
     //   formatted to follow C# casing guidelines ( Pascal casing )
     // links:

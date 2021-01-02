@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SolutionNorSolutionPort.BusinessLogicLayer;
-//using SolutionNorSolutionPort.BusinessLogicLayer;
+//using SolutionNorSolutionPort.BusinessLogicLayer.Proxy;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -153,7 +153,7 @@ namespace Test {
         public void Step05_SOAP_Count_Aircrafts() {
             Assert.AreEqual(
                     expected: 3,
-                    actual: new SolutionNorSolutionPort.BusinessLogicLayer.AircraftSearchService().AircraftIndexWithFilter().Count,
+                    actual: new SolutionNorSolutionPort.BusinessLogicLayer.AircraftSearchServiceClient().AircraftIndexWithFilter().Count,
                     message: "Number of aircrafts must be 3 after database has been initialized"
                 );
         }
@@ -234,24 +234,26 @@ namespace Test {
         [TestMethod]
         public void Step09_REST_and_SOAP_Proxy_test() {
             // using the same contract
-            List<AircraftIndexWithFilterContract> aircraftIndexWithFilterContractListSoap = null;
-            List<AircraftIndexWithFilterContract> aircraftIndexWithFilterContractListRest = null;
+            List<SolutionNorSolutionPort.BusinessLogicLayer.AircraftIndexWithFilterContract> aircraftIndexWithFilterContractListSoap = null;
+            List<SolutionNorSolutionPort.BusinessLogicLayer.AircraftIndexWithFilterContract> aircraftIndexWithFilterContractListRest = null;
 
             // Rest
-            //SolutionNorSolutionPort.BusinessLogicLayer.Proxy
-            //    .AircraftSearchServiceClient aircraftSearchServiceProxyRest = 
-            //        new SolutionNorSolutionPort.BusinessLogicLayer.Proxy
-            //            .AircraftSearchServiceClient();
+            SolutionNorSolutionPort.BusinessLogicLayer.Proxy
+                .AircraftSearchServiceClient aircraftSearchServiceProxyRest =
+                    new 
+                        SolutionNorSolutionPort.BusinessLogicLayer.Proxy.
+                        AircraftSearchServiceClient();
 
-            //aircraftIndexWithFilterContractListRest = 
-            //    aircraftSearchServiceProxyRest
-            //        .AircraftIndexWithFilter();
+            aircraftIndexWithFilterContractListRest =
+                aircraftSearchServiceProxyRest
+                    .AircraftIndexWithFilter();
 
             // Soap
             SolutionNorSolutionPort.BusinessLogicLayer
-                .AircraftSearchService aircraftSearchServiceProxySoap = 
-                    new SolutionNorSolutionPort.BusinessLogicLayer
-                        .AircraftSearchService();
+                .AircraftSearchServiceClient aircraftSearchServiceProxySoap = 
+                    new 
+                        SolutionNorSolutionPort.BusinessLogicLayer.
+                        AircraftSearchServiceClient();
 
             aircraftIndexWithFilterContractListSoap =
                 aircraftSearchServiceProxySoap

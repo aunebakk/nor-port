@@ -316,7 +316,8 @@ select 'Created database: " + databaseName + @"'
                 returnMessage += "" + "\r\n";
                 returnMessage += "" + "\r\n";
 
-                if (databaseManager.IsConnectionGood())
+                string whyNot = string.Empty;
+                if (databaseManager.IsConnectionGood(out whyNot))
                     returnMessage += DateTime.UtcNow + " " + "Connection is good" + "\r\n";
 
                 if (databaseManager.IsDatabaseGood())
@@ -384,7 +385,8 @@ select 'Created database: " + databaseName + @"'
                 returnMessage += "" + "\r\n";
                 returnMessage += "" + "\r\n";
 
-                if (databaseManager.IsConnectionGood())
+                string whyNot = string.Empty;
+                if (databaseManager.IsConnectionGood(out whyNot))
                     returnMessage += DateTime.UtcNow + " " + "Connection is good" + "\r\n";
 
                 if (databaseManager.IsDatabaseGood())
@@ -441,7 +443,8 @@ select 'Created database: " + databaseName + @"'
                 returnMessage += "" + "\r\n";
                 returnMessage += "" + "\r\n";
 
-                if (databaseManager.IsConnectionGood())
+                string whyNot = string.Empty;
+                if (databaseManager.IsConnectionGood(out whyNot))
                     returnMessage += DateTime.UtcNow + " " + "Connection is good" + "\r\n";
 
                 if (databaseManager.IsDatabaseGood())

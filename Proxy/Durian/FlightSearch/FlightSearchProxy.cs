@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:03:15 AM
+  Generated Date: 1/2/2021 2:42:51 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IFlightSearchService")]
-    public interface IFlightSearchService {
+    public interface IFlightSearchServiceClient {
         // returns a list of FlightsOnBooking contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -117,10 +117,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IFlightSearchServiceChannel : IFlightSearchService, System.ServiceModel.IClientChannel {
+    public interface IFlightSearchServiceChannel : IFlightSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class FlightSearchService : System.ServiceModel.ClientBase<IFlightSearchService>, IFlightSearchService {
+    public class FlightSearchServiceClient : System.ServiceModel.ClientBase<IFlightSearchServiceClient>, IFlightSearchServiceClient {
         // returns a list of FlightsOnBooking contracts from FlightSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -220,22 +220,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.FlightEvents(flightId);
         }
         
-        public FlightSearchService() {
+        public FlightSearchServiceClient() {
         }
         
-        public FlightSearchService(string endpointConfigurationName) : 
+        public FlightSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public FlightSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public FlightSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public FlightSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public FlightSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public FlightSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public FlightSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

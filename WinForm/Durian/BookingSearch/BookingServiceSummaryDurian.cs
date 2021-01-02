@@ -86,7 +86,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new BookingSearchService().BookingServiceSummary(bookingId);
+                bindingSource.DataSource =  new BookingSearchServiceClient().BookingServiceSummary(bookingId);
                 dataGridViewBookingServiceSummary.AutoGenerateColumns = true;
                 dataGridViewBookingServiceSummary.DataSource = bindingSource;
                 dataGridViewBookingServiceSummary.AutoResizeColumns();

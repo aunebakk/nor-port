@@ -80,7 +80,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new AircraftSearchService().AircraftDetails();
+                bindingSource.DataSource =  new AircraftSearchServiceClient().AircraftDetails();
                 dataGridViewAircraftDetails.AutoGenerateColumns = true;
                 dataGridViewAircraftDetails.DataSource = bindingSource;
                 dataGridViewAircraftDetails.AutoResizeColumns();

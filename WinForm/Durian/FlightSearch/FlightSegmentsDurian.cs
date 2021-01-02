@@ -128,7 +128,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightSegments(flightId);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightSegments(flightId);
                 dataGridViewFlightSegments.AutoGenerateColumns = true;
                 dataGridViewFlightSegments.DataSource = bindingSource;
                 dataGridViewFlightSegments.AutoResizeColumns();

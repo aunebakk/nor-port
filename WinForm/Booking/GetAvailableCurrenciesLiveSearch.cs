@@ -37,7 +37,7 @@ namespace SolutionNorSolutionPort.UserInterface
             System.Guid financialCurrencyId,
             System.DateTime currencyDateTime
             ) {
-            FinancialSearchService getAvailableCurrencies = new FinancialSearchService();
+            FinancialSearchServiceClient getAvailableCurrencies = new FinancialSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

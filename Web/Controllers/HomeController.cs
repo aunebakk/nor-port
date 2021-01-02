@@ -61,7 +61,7 @@ namespace XXPrototypeDotNetFrameworkWebAppMvcAndOAuthCrudeAspMvc.Controllers {
             var measurement = new CrudeDefaultResourceMeasurementContract();
             measurement.BusinessWorkingsetBytes = ((int)ViewBag.SoapWorkingSet) * 1024 * 1024;
             measurement.ClientWorkingsetBytes = (int)myProcess.WorkingSet64;
-            measurement.DatabaseSizeBytes = new DefaultSearchService().DefaultResourceDatabaseStatistics()[0].ReservedPageCount * 1024;
+            measurement.DatabaseSizeBytes = new DefaultSearchServiceClient().DefaultResourceDatabaseStatistics()[0].ReservedPageCount * 1024;
             measurement.DefaultUserId = Logging.UserId(User.Identity, ViewBag);
             measurement.DateTime = DateTime.UtcNow;
 

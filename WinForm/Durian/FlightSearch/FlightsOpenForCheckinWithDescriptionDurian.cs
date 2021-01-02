@@ -104,7 +104,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FlightSearchService().FlightsOpenForCheckinWithDescription(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
+                bindingSource.DataSource =  new FlightSearchServiceClient().FlightsOpenForCheckinWithDescription(departureAirportId,arrivalAirportId,fromDateTime,untilDateTime);
                 dataGridViewFlightsOpenForCheckinWithDescription.AutoGenerateColumns = true;
                 dataGridViewFlightsOpenForCheckinWithDescription.DataSource = bindingSource;
                 dataGridViewFlightsOpenForCheckinWithDescription.AutoResizeColumns();

@@ -11,7 +11,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         public ActionResult ServicePackagePromotionWithFilterIndex() {
             return View(
                 MVCHelper.Resolve(Request, "Service", "ServicePackagePromotionWithFilterIndex"),
-                new ServiceSearchService().ServicePackagePromotionWithFilter(Guid.Empty)
+                new ServiceSearchServiceClient().ServicePackagePromotionWithFilter(Guid.Empty)
                 );
         }
 

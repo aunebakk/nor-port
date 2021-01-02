@@ -35,7 +35,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshFlightsWithBookingInformation() {
-            FlightSearchService flightsWithBookingInformation = new FlightSearchService();
+            FlightSearchServiceClient flightsWithBookingInformation = new FlightSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {

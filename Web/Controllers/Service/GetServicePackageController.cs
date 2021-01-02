@@ -11,7 +11,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         public ActionResult GetServicePackageIndex(System.Guid servicePackageId) {
             return View(
                 MVCHelper.Resolve(Request, "Service", "GetServicePackageIndex"),
-                new ServiceSearchService().GetServicePackage(servicePackageId)
+                new ServiceSearchServiceClient().GetServicePackage(servicePackageId)
                 );
         }
 

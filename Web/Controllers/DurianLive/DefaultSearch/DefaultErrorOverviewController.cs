@@ -12,7 +12,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultErrorOverviewIndex.cshtml",
-                new DefaultSearchService().DefaultErrorOverview()
+                new DefaultSearchServiceClient().DefaultErrorOverview()
                 );
         }
 

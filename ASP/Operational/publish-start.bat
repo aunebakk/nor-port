@@ -1,7 +1,7 @@
 ﻿rem SQL2X Generated code based on a SQL Server Schema
 rem SQL2X Version: 1.0
 rem http://sql2x.org/
-rem Generated Date: 12/31/2020 10:39:10 AM
+rem Generated Date: 1/2/2021 2:19:09 PM
 rem From Machine: DESKTOP-LSRVP12
 rem Template: sql2x.PrototypeDotNetCoreTwoOoneV3.Content_publishStartDOTbat
 @echo off

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:04:58 AM
+  Generated Date: 1/2/2021 2:44:36 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.ProxyGenerator.ProxyForMethodNewStyle
 */
@@ -22,10 +22,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/179373dc-6fcc-4fc3-a7aa-e57c35d4d1d4
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="IServiceSearchService")]
-    public interface IServiceSearchService {
+    public interface IServiceSearchServiceClient {
         // returns a list of GetServicePackage contracts from ServiceSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -54,10 +54,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IServiceSearchServiceChannel : IServiceSearchService, System.ServiceModel.IClientChannel {
+    public interface IServiceSearchServiceChannel : IServiceSearchServiceClient, System.ServiceModel.IClientChannel {
     }
     
-    public class ServiceSearchService : System.ServiceModel.ClientBase<IServiceSearchService>, IServiceSearchService {
+    public class ServiceSearchServiceClient : System.ServiceModel.ClientBase<IServiceSearchServiceClient>, IServiceSearchServiceClient {
         // returns a list of GetServicePackage contracts from ServiceSearchService
         // links:
         //  docLink: http://sql2x.org/documentationLink/ca70bf3f-58a1-476b-8441-3946d79cbe03
@@ -87,22 +87,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
             return base.Channel.ServicePackagePromotionWithFilter(clientId);
         }
         
-        public ServiceSearchService() {
+        public ServiceSearchServiceClient() {
         }
         
-        public ServiceSearchService(string endpointConfigurationName) : 
+        public ServiceSearchServiceClient(string endpointConfigurationName) : 
                 base(endpointConfigurationName) {
         }
         
-        public ServiceSearchService(string endpointConfigurationName, string remoteAddress) : 
+        public ServiceSearchServiceClient(string endpointConfigurationName, string remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceSearchService(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceSearchServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(endpointConfigurationName, remoteAddress) {
         }
         
-        public ServiceSearchService(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+        public ServiceSearchServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
         }
     }

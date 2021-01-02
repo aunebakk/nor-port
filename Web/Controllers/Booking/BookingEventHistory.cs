@@ -19,7 +19,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
                     );
 
             bookingEventHistoryContract.EventHistory =
-                new BookingSearchService().BookingEventHistory(bookingId);
+                new BookingSearchServiceClient().BookingEventHistory(bookingId);
 
             return bookingEventHistoryContract;
         }

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 11:05:52 AM
+  Generated Date: 1/2/2021 2:45:34 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateWithDurianGenerator.UsingWinForm
 */
@@ -12,6 +12,10 @@ using System.IO;
 using System.Drawing;
 using SolutionNorSolutionPort.BusinessLogicLayer;
 
+// Client WinForm Layer
+// the Client WinForm Layer uses the Proxy Layer to tie into SOAP services
+// links:
+//  docLink: http://sql2x.org/documentationLink/c4e2b5ff-4b03-4e33-b63a-7c9899829434
 namespace SolutionNorSolutionPort.UserInterface {
 
     // this form class is used to consume Crude SOAP Services through a WCF Proxy Client
@@ -99,7 +103,7 @@ namespace SolutionNorSolutionPort.UserInterface {
         // links:
         //  docLink: http://sql2x.org/documentationLink/75fb8ca9-978e-42eb-b15f-4a9f56dc6454
         public void RefreshAirline() {
-            var airline = new AirlineSearchService();
+            var airline = new AirlineSearchServiceClient();
             var bindingSource = new BindingSource();
 
             try {

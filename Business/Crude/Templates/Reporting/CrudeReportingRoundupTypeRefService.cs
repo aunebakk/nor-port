@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 12/31/2020 10:34:44 AM
+  Generated Date: 1/2/2021 2:14:42 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateCrudeSoap.DefaultUsing
 */
@@ -30,10 +30,15 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer {
     // this interface is used to expose C# objects as SOAP services using WCF
     // interface is a common means for discrete objects to communicate with each other
     // links:
-    //  docLink: http://sql2x.org/documentationLink/54dd6dfa-2ac2-4032-a68d-47e4f658ece7
+    //  docLink: http://sql2x.org/documentationLink/a968e8fb-5158-4625-8911-47504426078b
     [ServiceContract()]
     public partial interface ICrudeReportingRoundupTypeRefService {
         
+        // fetch by Primary key into current object
+        // links:
+        //  docLink: http://sql2x.org/documentationLink/bbab4791-c9e7-49bf-90d5-fca19b1fedaa
+        // parameters:
+        //  reportingRoundupTypeRcd: primary key of table reporting_roundup_type_ref
         [OperationContract()]
         CrudeReportingRoundupTypeRefContract FetchByReportingRoundupTypeRcd(string reportingRoundupTypeRcd);
         

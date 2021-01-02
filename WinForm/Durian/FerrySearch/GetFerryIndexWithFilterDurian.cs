@@ -116,7 +116,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FerrySearchService().GetFerryIndexWithFilter();
+                bindingSource.DataSource =  new FerrySearchServiceClient().GetFerryIndexWithFilter();
                 dataGridViewGetFerryIndexWithFilter.AutoGenerateColumns = true;
                 dataGridViewGetFerryIndexWithFilter.DataSource = bindingSource;
                 dataGridViewGetFerryIndexWithFilter.AutoResizeColumns();

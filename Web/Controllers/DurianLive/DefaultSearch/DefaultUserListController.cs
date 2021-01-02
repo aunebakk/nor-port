@@ -16,7 +16,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultUserListIndex.cshtml",
-                new DefaultSearchService().DefaultUserList()
+                new DefaultSearchServiceClient().DefaultUserList()
                 );
         }
 
@@ -30,7 +30,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultUserListIndex.cshtml",
-                new DefaultSearchService().DefaultUserList()
+                new DefaultSearchServiceClient().DefaultUserList()
                 );
         }
 
@@ -40,7 +40,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
 
             return View(
                 "~/Views/DurianLive/DefaultSearch/DefaultUserListIndex.cshtml",
-                new DefaultSearchService().DefaultUserList()
+                new DefaultSearchServiceClient().DefaultUserList()
                 );
         }
     }

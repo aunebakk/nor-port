@@ -38,7 +38,7 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers
         [HttpGet]
         public ActionResult BookingListIndex() {
             return View(MVCHelper.Resolve(Request, "", "Booking", "BookingListIndex"),
-                            new BookingSearchService().BookingsOpen()
+                            new BookingSearchServiceClient().BookingsOpen()
                             );
         }
 

@@ -74,7 +74,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new FinancialSearchService().GetAvailableCurrencies(financialCurrencyId,currencyDateTime);
+                bindingSource.DataSource =  new FinancialSearchServiceClient().GetAvailableCurrencies(financialCurrencyId,currencyDateTime);
                 dataGridViewGetAvailableCurrencies.AutoGenerateColumns = true;
                 dataGridViewGetAvailableCurrencies.DataSource = bindingSource;
                 dataGridViewGetAvailableCurrencies.AutoResizeColumns();

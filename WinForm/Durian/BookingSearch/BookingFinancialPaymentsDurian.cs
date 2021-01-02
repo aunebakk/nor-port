@@ -128,7 +128,7 @@ namespace SolutionNorSolutionPort.UserInterface {
 
                 // fetch new dataset
                 var bindingSource = new BindingSource();
-                bindingSource.DataSource =  new BookingSearchService().BookingFinancialPayments(bookingId);
+                bindingSource.DataSource =  new BookingSearchServiceClient().BookingFinancialPayments(bookingId);
                 dataGridViewBookingFinancialPayments.AutoGenerateColumns = true;
                 dataGridViewBookingFinancialPayments.DataSource = bindingSource;
                 dataGridViewBookingFinancialPayments.AutoResizeColumns();

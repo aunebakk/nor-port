@@ -47,7 +47,7 @@ namespace HighlightsChart.Controllers
         public ActionResult UserActivityIndex() {
             Logging.ActionLog(Request, "UserActivityIndex ( ASP MVC WCF )");
 
-            List<DefaultStatisticsContract> statistics = new DefaultSearchService().DefaultStatistics();
+            List<DefaultStatisticsContract> statistics = new DefaultSearchServiceClient().DefaultStatistics();
 
             //create a collection of data
             var transactionCounts = new List<UserActivities>();
@@ -111,7 +111,7 @@ namespace HighlightsChart.Controllers
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+20);
 
             List<BookingStatisticsContract> statistics = 
-                new BookingSearchService().BookingStatistics(
+                new BookingSearchServiceClient().BookingStatistics(
                     Guid.Empty,
                     Guid.Empty,
                     fromDateTime,
@@ -191,7 +191,7 @@ namespace HighlightsChart.Controllers
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
             List<TransactionsCreditDebitBalanceContract> statistics = 
-                new FinancialSearchService().TransactionsCreditDebitBalance(
+                new FinancialSearchServiceClient().TransactionsCreditDebitBalance(
                     fromDateTime,
                     untilDateTime
                     );
@@ -264,7 +264,7 @@ namespace HighlightsChart.Controllers
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
             List<DefaultPerformanceTimesContract> times = 
-                new DefaultSearchService().DefaultPerformanceTimes(
+                new DefaultSearchServiceClient().DefaultPerformanceTimes(
                     commandName
                     );
 
@@ -334,7 +334,7 @@ namespace HighlightsChart.Controllers
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
             List<DefaultPerformanceTimeCommandsContract> commands = 
-                new DefaultSearchService().DefaultPerformanceTimeCommands();
+                new DefaultSearchServiceClient().DefaultPerformanceTimeCommands();
 
             ViewBag.CommandName =
                 new SelectList(
@@ -344,7 +344,7 @@ namespace HighlightsChart.Controllers
                     );
 
             List<DefaultPerformanceTimesContract> times = 
-                new DefaultSearchService().DefaultPerformanceTimes(
+                new DefaultSearchServiceClient().DefaultPerformanceTimes(
                     commandName
                     );
 
@@ -413,7 +413,7 @@ namespace HighlightsChart.Controllers
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
             List<DefaultPerformanceTimeCommandsContract> commands = 
-                new DefaultSearchService().DefaultPerformanceTimeCommands();
+                new DefaultSearchServiceClient().DefaultPerformanceTimeCommands();
 
             ViewBag.CommandName =
                 new SelectList(
@@ -423,7 +423,7 @@ namespace HighlightsChart.Controllers
                     );
 
             List<DefaultPerformanceTimesContract> times = 
-                new DefaultSearchService().DefaultPerformanceTimes(
+                new DefaultSearchServiceClient().DefaultPerformanceTimes(
                     commandName
                     );
 

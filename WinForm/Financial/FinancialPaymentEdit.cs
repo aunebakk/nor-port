@@ -196,7 +196,7 @@ namespace SolutionNorSolutionPort.UserInterface
         }
 
         private void RefreshVoucherSearchWithRemainingAmount() {
-            FinancialSearchService voucherSearchWithRemaindingAmount = new FinancialSearchService();
+            FinancialSearchServiceClient voucherSearchWithRemaindingAmount = new FinancialSearchServiceClient();
             BindingSource bindingSource = new BindingSource();
 
             try {
