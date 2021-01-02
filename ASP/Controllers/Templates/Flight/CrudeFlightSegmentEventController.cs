@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 2:29:02 PM
+  Generated Date: 1/2/2021 4:33:07 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -165,9 +165,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightSegmentEventNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DateTimeTypeRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "NewDateTime" , "1/2/2021 2:29:02 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "NewDateTime" , "1/2/2021 4:33:07 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:29:02 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 4:33:07 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -212,9 +212,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "FlightSegmentEventNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DateTimeTypeRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "NewDateTime" , "1/2/2021 2:29:02 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "NewDateTime" , "1/2/2021 4:33:07 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 2:29:02 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/2/2021 4:33:07 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
