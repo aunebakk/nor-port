@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/3/2021 2:13:07 PM
+  Generated Date: 1/3/2021 3:55:49 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -179,11 +179,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "LogicalSegmentNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PhysicalSegmentNumber" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "1/3/2021 2:13:07 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "1/3/2021 2:13:07 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "1/3/2021 3:55:49 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "1/3/2021 3:55:49 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DepartureGate" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ArrivalGate" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 2:13:07 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 3:55:49 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -228,11 +228,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "LogicalSegmentNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PhysicalSegmentNumber" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "1/3/2021 2:13:07 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "1/3/2021 2:13:07 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FromDateTime" , "1/3/2021 3:55:49 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "UntilDateTime" , "1/3/2021 3:55:49 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DepartureGate" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ArrivalGate" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 2:13:07 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 3:55:49 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

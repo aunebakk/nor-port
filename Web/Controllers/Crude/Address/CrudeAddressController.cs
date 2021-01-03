@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/3/2021 2:00:54 PM
+  Generated Date: 1/3/2021 3:43:10 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateFromCrudeMvcGenerator.ControllerBeginning
 */
