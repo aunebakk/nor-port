@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/3/2021 8:01:36 AM
+  Generated Date: 1/3/2021 1:59:39 PM
   From Machine: DESKTOP-LSRVP12
   Filename: ReportingRoundupTypeRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy

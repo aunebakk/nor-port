@@ -121,7 +121,7 @@ namespace Test {
             int iPos = html.IndexOf("Gardermoen");
 
             Assert.IsTrue(
-                            condition: iPos > 22000 && iPos < 24000,
+                            condition: iPos > 20000 && iPos < 24000,
                             message: $"airport not in expected position, found in {iPos}"
                             );
 
@@ -133,8 +133,8 @@ namespace Test {
             int dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("M/d/yyyy")} 5:00:00 AM");
 
             Assert.IsTrue(
-                            condition: dateTimePosition > 24000 && dateTimePosition < 26000,
-                            message: $"SAS 620 not in position {"24000 to 26000"} but in {dateTimePosition}"
+                            condition: dateTimePosition > 22000 && dateTimePosition < 26000,
+                            message: $"SAS 620 not in position {"22000 to 26000"} but in {dateTimePosition}"
                             );
 
             // SAS 638 ( last flight arrival )

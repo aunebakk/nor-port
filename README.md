@@ -179,7 +179,7 @@ The web FrontEnd is responsible for creating and updating the database, so the F
    - Database Management Create Database
    - Database Management Set Version Zero Database
    - Database Management Increase Version To Latest step by step
-   - Database Management Version Object ( Should be 0.8.7 )
+   - Database Management Version Object ( Should be 0.10.0 )
 
 ## Test
 
