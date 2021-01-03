@@ -130,7 +130,7 @@ namespace Test {
 
             // SAS 620
             html = client.DownloadString("https://NorSolutionPort.azurewebsites.net/FlightsForPeriodLive/FlightsForPeriodIndex");
-            int dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("MM/dd/2020")} 5:00:00 AM");
+            int dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("M/d/yyyy")} 5:00:00 AM");
 
             Assert.IsTrue(
                             condition: dateTimePosition > 24000 && dateTimePosition < 26000,
@@ -138,7 +138,7 @@ namespace Test {
                             );
 
             // SAS 638 ( last flight arrival )
-            dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("MM/dd/2020")} 11:00:00 PM");
+            dateTimePosition = html.IndexOf($"{DateTime.UtcNow.ToString("M/d/yyyy")} 11:00:00 PM");
 
             Assert.IsTrue(
                             condition: dateTimePosition >= 36300,
@@ -208,12 +208,12 @@ namespace Test {
             JArray flightIdentifierList = JArray.Parse(client.DownloadString("http://NorSolutionPortCore.azurewebsites.net/api/1/crudeflightidentifier/fetchall"));
 
             // Flight Identifier type FN3 for today
-            int dateTimePosition = jsonString.IndexOf($"{DateTime.UtcNow.ToString("MM/dd/2020")} 5:00:00 AM");
+            int dateTimePosition = jsonString.IndexOf($"{DateTime.UtcNow.ToString("M/d/yyyy")} 5:00:00 AM");
 
             bool foundIt = false;
             foreach (JObject flight in flightList) {
 
-                if (flight["fromDateTime"].ToString().Equals($"{DateTime.UtcNow.ToString("MM/dd/2020")} 5:00:00 AM")) {
+                if (flight["fromDateTime"].ToString().Equals($"{DateTime.UtcNow.ToString("M/d/yyyy")} 5:00:00 AM")) {
                     foreach (JObject identifier in flightIdentifierList) {
                         if (identifier["flightIdentifierTypeRcd"].ToString().Equals("FN3")) {
                             foundIt = true;
@@ -224,7 +224,7 @@ namespace Test {
 
             Assert.IsTrue(
                             condition: foundIt,
-                            message: $"SAS ID:FN3 on date {DateTime.UtcNow.ToString("MM/dd/2020")} not found"
+                            message: $"SAS ID:FN3 on date {DateTime.UtcNow.ToString("M/d/yyyy")} not found"
                             );
         }
 

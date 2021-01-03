@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/2/2021 7:52:28 PM
-  From Machine: DESKTOP-BP3OHLH
+  Generated Date: 1/3/2021 4:15:08 AM
+  From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateWithDurianGenerator.ContractUsing
 */
 using System;
