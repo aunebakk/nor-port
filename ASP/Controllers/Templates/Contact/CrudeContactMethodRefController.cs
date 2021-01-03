@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/3/2021 3:53:17 AM
+  Generated Date: 1/3/2021 8:09:21 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -137,7 +137,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodName" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 3:53:17 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 8:09:21 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -182,7 +182,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "ContactMethodName" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 3:53:17 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/3/2021 8:09:21 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

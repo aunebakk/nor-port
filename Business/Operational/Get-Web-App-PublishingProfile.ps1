@@ -1,7 +1,7 @@
 # SQL2X Generated code based on a SQL Server Schema
 # SQL2X Version: 1.0
 # http://sql2x.org/
-# Generated Date: 1/3/2021 4:18:54 AM
+# Generated Date: 1/3/2021 8:35:50 AM
 # Template: sql2x.AzureBase.ExecutePowerShell
 # From: sql2x.AzureBase.WebAppPublishingProfileGet
 $username = 'emailPersonal@Second.com';

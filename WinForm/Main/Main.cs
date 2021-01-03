@@ -1039,16 +1039,17 @@ namespace SolutionNorSolutionPort.UserInterface
             try {
                 FormOpened("Aircrafts");
 
-                //var mdiChild = new Aircrafts();
-                //CheckForm(mdiChild);
-                //mdiChild.MdiParent = this;
-                //mdiChild.Show(
-                //        aircraftConfigurationRcd: string.Empty,
-                //        aircraftBodyRcd: string.Empty,
-                //        aircraftTypeRcd: string.Empty,
-                //        aircraftMeasurementId: Guid.Empty,
-                //        userId: Singleton.Instance.UserId
-                //        );
+                var mdiChild = new AircraftSearch();
+                CheckForm(mdiChild);
+                mdiChild.MdiParent = this;
+                mdiChild.Show(
+                        aircraftTypeRcd: string.Empty,
+                        aircraftConfigurationRcd: string.Empty,
+                        aircraftBodyRcd: string.Empty,
+                        aircraftMeasurementId: Guid.Empty,
+                        productId: Guid.Empty,
+                        userId: Singleton.Instance.UserId
+                        );
 
             } catch ( Exception ex ) {
                 Error(ex);
