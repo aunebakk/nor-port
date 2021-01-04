@@ -123,16 +123,16 @@ namespace XXPrototypeDotNetFrameworkWebAppMvcAndOAuthCrudeAspMvc.Controllers {
             Logging.ActionLog ( Request , "Create Issue" );
 
             //// save result of call
-            //new DefaultTestServiceClient().
-            //    AddTestRun(
-            //        "SolutionNorPort", "MVC", from,
-            //        Request.UrlReferrer.AbsoluteUri,
-            //        DateTime.UtcNow, DateTime.UtcNow,
-            //        1,
-            //        DefaultTestRunResultRef.OK,
-            //        string.Empty,
-            //        Logging.UserId(User.Identity, ViewBag)
-            //    );
+            new DefaultTestServiceClient().
+                AddTestRun(
+                    "SolutionNorPort", "MVC", from,
+                    Request.UrlReferrer.AbsoluteUri,
+                    DateTime.UtcNow, DateTime.UtcNow,
+                    1,
+                    DefaultTestRunResultRef.OK,
+                    string.Empty,
+                    Logging.UserId(User.Identity, ViewBag)
+                );
 
             return RedirectToAction (
                 "DefaultIssueCreateWithUrl" ,

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CA464736-BAFF-49E1-9B8A-B47BC8E7DE9D}</ProjectGuid>
+    <ProjectGuid>{B1BACB4E-24C8-4A87-B20C-84BF6120D8D2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Proxy</RootNamespace>
@@ -229,6 +229,7 @@
     <Compile Include="Durian\ServiceSearch\ServiceSearchProxy.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BookingProxy.cs" />
+    <Compile Include="Service\DefaultTest\DefaultTest.cs" />
     <Compile Include="Service\DefaultUserActivityProxy.cs" />
     <Compile Include="Service\DiagnosticsProxy.cs" />
     <Compile Include="Service\FlightProxy.cs" />
@@ -408,7 +409,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{47d5cc37-12ce-4d79-b8c5-572917915ad9}</Project>
+      <Project>{7ac39e20-fbff-4f24-9eb9-613e6afe8f8d}</Project>
       <Name>Contract</Name>
     </ProjectReference>
   </ItemGroup>

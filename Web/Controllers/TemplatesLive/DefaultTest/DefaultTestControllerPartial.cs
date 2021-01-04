@@ -36,16 +36,16 @@ namespace SolutionNorSolutionPort.AspMvc.Controllers {
 
             // save result of call
             try {
-                //new DefaultTestServiceClient().
-                //        AddTestRun(
-                //            "NorPort", "MVC", "ASPMenu",
-                //            urlReferrer,
-                //            DateTime.UtcNow, DateTime.UtcNow,
-                //            1,
-                //            DefaultTestRunResultRef.OK,
-                //            "new",
-                //            Logging.UserId(User.Identity, ViewBag)
-                //            );
+                new DefaultTestServiceClient().
+                        AddTestRun(
+                            "NorPort", "MVC", "ASPMenu",
+                            urlReferrer,
+                            DateTime.UtcNow, DateTime.UtcNow,
+                            1,
+                            DefaultTestRunResultRef.OK,
+                            "new",
+                            Logging.UserId(User.Identity, ViewBag)
+                            );
             } catch (Exception ex) {
                 Logging.ErrorLog("DefaultTestController", "AddTest", ex);
             }

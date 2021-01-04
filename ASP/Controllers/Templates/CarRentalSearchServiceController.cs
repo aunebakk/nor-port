@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 1:50:46 PM
+  Generated Date: 1/4/2021 5:01:12 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -39,7 +39,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             return View(@"Views\Templates\CarRentalSearchService\CarRentalSearchServiceHelp.cshtml");
         }
-
 
         [HttpGet("GetCarRentalIndexWithFilterHelp")]
         public IActionResult GetCarRentalIndexWithFilterHelp(

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 1:51:03 PM
+  Generated Date: 1/4/2021 5:02:00 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -39,7 +39,6 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
 
             return View(@"Views\Templates\ServiceService\ServiceServiceHelp.cshtml");
         }
-
 
         [HttpGet("PromotionSendHelp")]
         public IActionResult PromotionSendHelp(

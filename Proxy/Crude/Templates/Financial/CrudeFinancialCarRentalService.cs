@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 1:20:05 PM
+  Generated Date: 1/4/2021 4:29:59 PM
   From Machine: DESKTOP-LSRVP12
   Filename: FinancialCarRental.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
