@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 8:33:23 PM
+  Generated Date: 1/4/2021 9:58:40 PM
   From Machine: DESKTOP-LSRVP12
   Filename: AirlineIdentifierTypeRef.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
