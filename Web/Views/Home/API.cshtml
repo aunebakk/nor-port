@@ -1,46 +1,180 @@
 @{
-    ViewBag.Title = "nor-port API";
+    ViewBag.Title = "Nor-Port API";
 }
 <br />
-<i>nor-port</i> is a Passenger Service System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile<br>
+<h1>Services</h1>
 <br />
-
-<h1>CRUD ( Create Read Update Delete ) Services:</h1>
-
-<a href="~/Documentation/Crude/_Index.html">SOAP Documentation</a><br><br />
-<a href="https://NorSolutionPortcore.azurewebsites.net/">REST Documentation</a><br><br />
 <br />
-
-<h1>SOAP services:</h1>
-<br />
-
-<h2>Maintenance</h2>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Aircraft/AircraftSearchService.svc">Aircraft Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Airline/AirlineSearchService.svc">Airline Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Airport/AirportSearchService.svc">Airport Search</a><br>
-
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/CarRental/CarRentalSearchService.svc">CarRental Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Ferry/FerrySearchService.svc">Ferry Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Hotel/HotelSearchService.svc">Hotel Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Client/ClientSearchService.svc">Client Search</a><br>
-
-<h2>Booking</h2>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Booking/BookingSearchService.svc">Booking Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Booking/BookingService.svc">Booking</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Passenger/PassengerSearchService.svc">Passenger Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Service/ServiceSearchService.svc">Service Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Service/ServiceService.svc">Special Service Request</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Financial/FinancialSearchService.svc">Financial Search</a><br>
-
-<h2>Flight Schedule</h2>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Flight/FlightSearchService.svc">Flight Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Flight/FlightService.svc">Flight</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Schedule/ScheduleSearchService.svc">Schedule Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Schedule/ScheduleService.svc">Schedule</a><br>
-
 <h2>System</h2>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Default/DefaultSearchService.svc">Default Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Default/DefaultUserActivityService.svc">DefaultUserActivity</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/DefaultTest/DefaultTestSearchService.svc">Test Search</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/DefaultTest/DefaultTestService.svc">Test</a><br>
-<a href="http://NorSolutionPortBusiness.azurewebsites.net/Default/DiagnosticsService.svc">Diagnostics</a><br>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th width="400px">Name</th>
+            <th width="100px">Protocol</th>
+            <th>Protocol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CRUD ( Create Read Update Delete )</td>
+            <td><a href="https://NorSolutionPortcore.AzureWebSites.net/Templates/Index2">REST</a></td>
+            <td><a href="~/Documentation/Crude/_Index.html">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Default Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Default/DefaultSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Default User Activity</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Default/DefaultUserActivityService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Test Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/DefaultTest/DefaultTestSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/DefaultTest/DefaultTestService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Diagnostics</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Default/DiagnosticsService.svc">SOAP</a></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<h2>Maintenance</h2>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th width="400px">Name</th>
+            <th width="100px">Protocol</th>
+            <th>Protocol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Aircraft Search</td>
+            <td><a href="http://NorSolutionPortCore.AzureWebSites.net/api/1/AircraftSearchService/Help">REST</a></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Aircraft/AircraftSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Airline Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Airline/AirlineSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Airport Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Airport/AirportSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>CarRental Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/CarRental/CarRentalSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Ferry Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Ferry/FerrySearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Hotel Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Hotel/HotelSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Client Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Client/ClientSearchService.svc">SOAP</a></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<h2>Booking</h2>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th width="400px">Name</th>
+            <th width="100px">Protocol</th>
+            <th>Protocol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Booking Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Booking/BookingSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Booking</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Booking/BookingService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Passenger Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Passenger/PassengerSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Service Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Service/ServiceSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Special Service Request</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Service/ServiceService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Financial Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Financial/FinancialSearchService.svc">SOAP</a></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<br />
+<h2>Flight Schedule</h2>
+<br />
+<table>
+    <thead>
+        <tr>
+            <th width="400px">Name</th>
+            <th width="100px">Protocol</th>
+            <th>Protocol</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Flight Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Flight/FlightSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Flight</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Flight/FlightService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Schedule Search</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Schedule/ScheduleSearchService.svc">SOAP</a></td>
+        </tr>
+        <tr>
+            <td>Schedule</td>
+            <td></td>
+            <td><a href="http://NorSolutionPortBusiness.AzureWebSites.net/Schedule/ScheduleService.svc">SOAP</a></td>
+        </tr>
+    </tbody>
+</table>
