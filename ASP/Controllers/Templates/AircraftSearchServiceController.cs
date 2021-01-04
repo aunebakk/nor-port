@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:18 AM
+  Generated Date: 1/4/2021 1:50:40 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class AircraftSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("AircraftIdentifierIndexWithFilterHelp")]
+        public IActionResult AircraftIdentifierIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftIdentifierIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftIdentifierIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -47,6 +63,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new AircraftSearchService().AircraftIdentifierIndexWithFilter(aircraftId: aircraftId);
 
             return list;
+        }
+
+
+        [HttpGet("AircraftDocumentIndexWithFilterHelp")]
+        public IActionResult AircraftDocumentIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftDocumentIndexWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for AircraftDocumentIndexWithFilter
@@ -66,6 +90,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("AircraftCompartmentIndexWithFilterHelp")]
+        public IActionResult AircraftCompartmentIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftCompartmentIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftCompartmentIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -83,6 +115,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("AircraftIndexWithFilterHelp")]
+        public IActionResult AircraftIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -95,6 +135,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new AircraftSearchService().AircraftIndexWithFilter();
 
             return list;
+        }
+
+
+        [HttpGet("AircraftDetailsHelp")]
+        public IActionResult AircraftDetailsHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftSearchService\AircraftDetailsHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for AircraftDetails

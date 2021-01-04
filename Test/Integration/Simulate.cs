@@ -214,12 +214,12 @@ namespace Test {
 
                 Console.WriteLine($"{testRun.DefaultTestRunResultRcd} {testRun.ElapsedMilliseconds} {test.TestAddress}");
 
-                var defaultTest = new DefaultTestServiceClient();
-                defaultTest.AddTestRun(
-                    test.SystemName, test.TestArea, test.TestSubArea, test.TestAddress,
-                    testRun.StartDateTime, testRun.EndDateTime, testRun.ElapsedMilliseconds, testRun.DefaultTestRunResultRcd,
-                    testRun.Result, testRun.UserId
-                    );
+                //var defaultTest = new DefaultTestServiceClient();
+                //defaultTest.AddTestRun(
+                //    test.SystemName, test.TestArea, test.TestSubArea, test.TestAddress,
+                //    testRun.StartDateTime, testRun.EndDateTime, testRun.ElapsedMilliseconds, testRun.DefaultTestRunResultRcd,
+                //    testRun.Result, testRun.UserId
+                //    );
 
             } catch (Exception ex) {
                 if (ex != null) { }

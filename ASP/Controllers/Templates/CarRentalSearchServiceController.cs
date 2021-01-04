@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:26 AM
+  Generated Date: 1/4/2021 1:50:46 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class CarRentalSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\CarRentalSearchService\CarRentalSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("GetCarRentalIndexWithFilterHelp")]
+        public IActionResult GetCarRentalIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\CarRentalSearchService\GetCarRentalIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for GetCarRentalIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:

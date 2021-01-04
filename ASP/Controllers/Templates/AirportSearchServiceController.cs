@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:21 AM
+  Generated Date: 1/4/2021 1:50:44 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class AirportSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\AirportSearchService\AirportSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("AirportIdentifierIndexWithFilterHelp")]
+        public IActionResult AirportIdentifierIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AirportSearchService\AirportIdentifierIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AirportIdentifierIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -44,6 +60,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new AirportSearchService().AirportIdentifierIndexWithFilter();
 
             return list;
+        }
+
+
+        [HttpGet("GetAirportIndexWithFilterHelp")]
+        public IActionResult GetAirportIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AirportSearchService\GetAirportIndexWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for GetAirportIndexWithFilter

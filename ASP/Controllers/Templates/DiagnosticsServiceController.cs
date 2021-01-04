@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:30 AM
+  Generated Date: 1/4/2021 1:50:51 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class DiagnosticsServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\DiagnosticsService\DiagnosticsServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("WorkingSetHelp")]
+        public IActionResult WorkingSetHelp(
+            ) {
+
+            return View(@"Views\Templates\DiagnosticsService\WorkingSetHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for WorkingSet
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -41,6 +57,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             ) {
 
             return new DiagnosticsService().WorkingSet();
+        }
+
+
+        [HttpGet("PingTestHelp")]
+        public IActionResult PingTestHelp(
+            ) {
+
+            return View(@"Views\Templates\DiagnosticsService\PingTestHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for PingTest
@@ -54,6 +78,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return new DiagnosticsService().PingTest();
         }
 
+
+        [HttpGet("DatabaseHelp")]
+        public IActionResult DatabaseHelp(
+            ) {
+
+            return View(@"Views\Templates\DiagnosticsService\DatabaseHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for Database
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -63,6 +95,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             ) {
 
             return new DiagnosticsService().Database();
+        }
+
+
+        [HttpGet("ComputerNameHelp")]
+        public IActionResult ComputerNameHelp(
+            ) {
+
+            return View(@"Views\Templates\DiagnosticsService\ComputerNameHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for ComputerName

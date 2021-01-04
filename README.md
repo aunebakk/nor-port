@@ -2,15 +2,15 @@
 
 Nor-Port is a Passenger Service System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile. It is centered around Microsoft products like SQL Server, Azure, Visual Studio, C# and TypeScript.
 
-A major part of the code is produced by a Code Generator [sql2x](www.sql2x.org). The general idea is to use as few frameworks and dependencies as possible in order to make a product that will stand the test of time without having to be rewritten when technology shifts happens and frameworks and dependencies become incompatible.
+A major part of the code is produced by a Code Generator [sql2x](www.sql2x.org). The general idea is to use as few frameworks and dependencies as possible in order to make a product that will stand the test of time without having to be rewritten when technology shifts happens and frameworks and dependencies become incompatible and/or insecure.
 
 The remaining part of code mainly consists of user interface tweaks to support new user interface trends and fads, business layer code to interact with other systems, import/export, etc. 
 
-The example schedule and passenger data is all Latin "Lorem ipsum" Gibberish, this to take focus away from the data but most language specific data can be handled by Nor-Port.
+Test schedule is a "ping-pong" flight between Oslo and Stockholm and passenger data is randomly created at a rate of 10 thousands a day spread over 3000 bookings when the test engine is invoked.
 
 The goal of Open Sourcing Nor-Port is to attract airlines to improve functionality and make user interfaces tailored towards more specialized businesses cases, while keeping the core sturdy enough to handle both small and large passenger bases as effective as possible on the infrastructure it runs on. 
 
-Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is shared between dot net core's REST interface and dot net framework's SOAP interface. And the tailored user interface code stays the same as SQL2X provides the same client side proxy for REST interfaces as SOAP does.
+Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is shared between dot net core's REST interface and dot net framework's SOAP interface. And the tailored user interface code stays the same as SQL2X provides the same client side proxy for REST interfaces as SOAP does. (NOT QUITE YET)
 
 Live [Nor-Port running under Azure](http://www.NorPort.org). In this configuration all 3 FrontEnds runs under one Azure App, SOAP/WCF & REST/ASP layer in separate instances ( with shared business layer code ) and finally a Azure SQL Database on a whichever Azure SQL server configuration suits the airline's needs.
 
@@ -37,10 +37,20 @@ Nor-Port also acts as a proof of concept for a three tiered cloud based "Line-of
 
 Nor-Port uses no special frameworks outside of the dotNetFramework ecosystem in an effort to make it as scalable and maintainable as possible, this is made possible by using a tool to generate boiler plate code for efficient communication between layers ( SQL2X ). Since the code is bare bone C# and TypeScript it is easier to find developers to maintain / enhance the code.
 
+Functionality that includes SOAP and REST API’s with Windows and Web User Interface:
+ - Flight Schedule 
+ - Booking 
+ - Check-in
+ - Double-entry accounting principles
+ - Car / Ferry & Hotel reservation on same booking
+ - Package and Promotion
+ - Coupon and Voucher
+ - Reporting
+
 # Instructions for running Nor-Port
 
-## Visual Studio 2019
-Nor-Port requires Visual Studio 2019 which can be downloaded [here](https://visualstudio.microsoft.com/vs/older-downloads/)
+## Visual Studio 2017
+Nor-Port requires Visual Studio 2017 which can be downloaded [here](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 You will need the following WorkLoad:
  - Azure
@@ -99,7 +109,7 @@ Use PowerShell to rename the sql server connection string for the various projec
 & '.\Operational\Environment Switch.ps1' `
    -toRemote:$false
 ```
- **From Visual Studio 2019**
+ **From Visual Studio 2017**
  - Clean build
  - Run DatabaseManager to create the Database and populate it's tables
  - Select Business and Web as startup

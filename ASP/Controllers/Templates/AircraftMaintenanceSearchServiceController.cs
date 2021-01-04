@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:19 AM
+  Generated Date: 1/4/2021 1:50:42 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class AircraftMaintenanceSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftMaintenanceSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("AircraftPIMDetailsHelp")]
+        public IActionResult AircraftPIMDetailsHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftPIMDetailsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftPIMDetails
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -46,6 +62,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("AircraftMaintenanceIndexWithFilterHelp")]
+        public IActionResult AircraftMaintenanceIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftMaintenanceIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftMaintenanceIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -58,6 +82,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new AircraftMaintenanceSearchService().AircraftMaintenanceIndexWithFilter();
 
             return list;
+        }
+
+
+        [HttpGet("AircraftMaintenanceCompartmentIndexWithFilterHelp")]
+        public IActionResult AircraftMaintenanceCompartmentIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftMaintenanceCompartmentIndexWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for AircraftMaintenanceCompartmentIndexWithFilter
@@ -77,6 +109,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("AircraftMaintenanceIdentifierIndexWithFilterHelp")]
+        public IActionResult AircraftMaintenanceIdentifierIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftMaintenanceIdentifierIndexWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for AircraftMaintenanceIdentifierIndexWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -92,6 +132,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new AircraftMaintenanceSearchService().AircraftMaintenanceIdentifierIndexWithFilter(aircraftId: aircraftId);
 
             return list;
+        }
+
+
+        [HttpGet("AircraftMaintenanceDocumentIndexWithFilterHelp")]
+        public IActionResult AircraftMaintenanceDocumentIndexWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\AircraftMaintenanceSearchService\AircraftMaintenanceDocumentIndexWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for AircraftMaintenanceDocumentIndexWithFilter

@@ -10,7 +10,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E8753C0A-2BCA-4341-AC53-DB98FD5440C5}</ProjectGuid>
+    <ProjectGuid>{C13958BA-3529-4AD7-85FD-8FAB1C6D31D3}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -966,8 +966,6 @@
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierIndex.cshtml" />
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierCreate.cshtml" />
     <Content Include="Views\Templates\Airport\AirportIdentifier\AirportIdentifierEdit.cshtml" />
-    <Content Include="Views\Templates\DefaultTest\DefaultTest\DefaultTestCreate.cshtml" />
-    <Content Include="Views\Templates\DefaultTest\DefaultTest\DefaultTestEdit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1925,11 +1923,11 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Contract\Contract.csproj">
-      <Project>{cc43aa37-160b-45e7-8fa5-b65be6ba86aa}</Project>
+      <Project>{47d5cc37-12ce-4d79-b8c5-572917915ad9}</Project>
       <Name>Contract</Name>
     </ProjectReference>
     <ProjectReference Include="..\Proxy\Proxy.csproj">
-      <Project>{7701d57e-015c-48e8-8190-a982d2b66e7d}</Project>
+      <Project>{ca464736-baff-49e1-9b8a-b47bc8e7de9d}</Project>
       <Name>Proxy</Name>
     </ProjectReference>
   </ItemGroup>
@@ -1959,7 +1957,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50915</DevelopmentServerPort>
+          <DevelopmentServerPort>51715</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>https://localhost:44341/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

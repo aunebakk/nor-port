@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:34 AM
+  Generated Date: 1/4/2021 1:50:55 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class FinancialSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\FinancialSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("GetAvailableCurrenciesHelp")]
+        public IActionResult GetAvailableCurrenciesHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\GetAvailableCurrenciesHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for GetAvailableCurrencies
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -51,6 +67,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("FinancialFaresHelp")]
+        public IActionResult FinancialFaresHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\FinancialFaresHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for FinancialFares
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -63,6 +87,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new FinancialSearchService().FinancialFares();
 
             return list;
+        }
+
+
+        [HttpGet("VoucherSearchWithRemainingAmountHelp")]
+        public IActionResult VoucherSearchWithRemainingAmountHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\VoucherSearchWithRemainingAmountHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for VoucherSearchWithRemainingAmount
@@ -82,6 +114,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("VoucherTransactionsHelp")]
+        public IActionResult VoucherTransactionsHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\VoucherTransactionsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for VoucherTransactions
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -97,6 +137,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new FinancialSearchService().VoucherTransactions(financialVoucherId: financialVoucherId);
 
             return list;
+        }
+
+
+        [HttpGet("FinancialServiceDetailsForBookingHelp")]
+        public IActionResult FinancialServiceDetailsForBookingHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\FinancialServiceDetailsForBookingHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for FinancialServiceDetailsForBooking
@@ -116,6 +164,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("ServiceFerryListHelp")]
+        public IActionResult ServiceFerryListHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\ServiceFerryListHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for ServiceFerryList
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -128,6 +184,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new FinancialSearchService().ServiceFerryList();
 
             return list;
+        }
+
+
+        [HttpGet("ServiceCarRentalListHelp")]
+        public IActionResult ServiceCarRentalListHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\ServiceCarRentalListHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for ServiceCarRentalList
@@ -144,6 +208,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("ServiceHotelListHelp")]
+        public IActionResult ServiceHotelListHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\ServiceHotelListHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for ServiceHotelList
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -158,6 +230,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("SpecialServiceRequestListHelp")]
+        public IActionResult SpecialServiceRequestListHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\SpecialServiceRequestListHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for SpecialServiceRequestList
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -170,6 +250,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new FinancialSearchService().SpecialServiceRequestList();
 
             return list;
+        }
+
+
+        [HttpGet("TransactionsCreditDebitBalanceHelp")]
+        public IActionResult TransactionsCreditDebitBalanceHelp(
+            ) {
+
+            return View(@"Views\Templates\FinancialSearchService\TransactionsCreditDebitBalanceHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for TransactionsCreditDebitBalance

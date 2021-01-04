@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:39 AM
+  Generated Date: 1/4/2021 1:51:00 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class ScheduleSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\ScheduleSearchService\ScheduleSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("FlightSegmentsScheduleHelp")]
+        public IActionResult FlightSegmentsScheduleHelp(
+            ) {
+
+            return View(@"Views\Templates\ScheduleSearchService\FlightSegmentsScheduleHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for FlightSegmentsSchedule
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -49,6 +65,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("FlightScheduleHistoryHelp")]
+        public IActionResult FlightScheduleHistoryHelp(
+            ) {
+
+            return View(@"Views\Templates\ScheduleSearchService\FlightScheduleHistoryHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for FlightScheduleHistory
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -64,6 +88,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new ScheduleSearchService().FlightScheduleHistory(flightScheduleId: flightScheduleId);
 
             return list;
+        }
+
+
+        [HttpGet("FlightScheduleHelp")]
+        public IActionResult FlightScheduleHelp(
+            ) {
+
+            return View(@"Views\Templates\ScheduleSearchService\FlightScheduleHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for FlightSchedule

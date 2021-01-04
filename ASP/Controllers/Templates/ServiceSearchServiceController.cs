@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:41 AM
+  Generated Date: 1/4/2021 1:51:02 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class ServiceSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\ServiceSearchService\ServiceSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("GetServicePackageHelp")]
+        public IActionResult GetServicePackageHelp(
+            ) {
+
+            return View(@"Views\Templates\ServiceSearchService\GetServicePackageHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for GetServicePackage
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -47,6 +63,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new ServiceSearchService().GetServicePackage(servicePackageId: servicePackageId);
 
             return list;
+        }
+
+
+        [HttpGet("FetchServiceSpecialServiceRequestWithFilterHelp")]
+        public IActionResult FetchServiceSpecialServiceRequestWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\ServiceSearchService\FetchServiceSpecialServiceRequestWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for FetchServiceSpecialServiceRequestWithFilter
@@ -72,6 +96,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new ServiceSearchService().FetchServiceSpecialServiceRequestWithFilter(serviceSpecialServiceRequestGroupRcd: serviceSpecialServiceRequestGroupRcd, serviceSpecialServiceRequestCode: serviceSpecialServiceRequestCode, requestServiceSpecialServiceRequestRequirementRcd: requestServiceSpecialServiceRequestRequirementRcd, replyServiceSpecialServiceRequestRequirementRcd: replyServiceSpecialServiceRequestRequirementRcd, serviceSpecialServiceRequestOperationRuleRcd: serviceSpecialServiceRequestOperationRuleRcd);
 
             return list;
+        }
+
+
+        [HttpGet("ServicePackagePromotionWithFilterHelp")]
+        public IActionResult ServicePackagePromotionWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\ServiceSearchService\ServicePackagePromotionWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for ServicePackagePromotionWithFilter

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:27 AM
+  Generated Date: 1/4/2021 1:50:49 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class DefaultSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("DefaultResourceDatabaseStatisticsHelp")]
+        public IActionResult DefaultResourceDatabaseStatisticsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultResourceDatabaseStatisticsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultResourceDatabaseStatistics
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -46,6 +62,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultResourceStatisticsHelp")]
+        public IActionResult DefaultResourceStatisticsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultResourceStatisticsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultResourceStatistics
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -58,6 +82,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultResourceStatistics();
 
             return list;
+        }
+
+
+        [HttpGet("GetDefaultChangeLogHelp")]
+        public IActionResult GetDefaultChangeLogHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\GetDefaultChangeLogHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for GetDefaultChangeLog
@@ -83,6 +115,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultUserListForDashboardHelp")]
+        public IActionResult DefaultUserListForDashboardHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserListForDashboardHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultUserListForDashboard
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -95,6 +135,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultUserListForDashboard();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultUserListHelp")]
+        public IActionResult DefaultUserListHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserListHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultUserList
@@ -111,6 +159,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultUserActivityGroupedByAddressHelp")]
+        public IActionResult DefaultUserActivityGroupedByAddressHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserActivityGroupedByAddressHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultUserActivityGroupedByAddress
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -125,6 +181,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultUserActivityGroupedHelp")]
+        public IActionResult DefaultUserActivityGroupedHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserActivityGroupedHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultUserActivityGrouped
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -137,6 +201,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultUserActivityGrouped();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultUserActivityOnAddressHelp")]
+        public IActionResult DefaultUserActivityOnAddressHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserActivityOnAddressHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultUserActivityOnAddress
@@ -156,6 +228,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultUserActivityRecentHelp")]
+        public IActionResult DefaultUserActivityRecentHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserActivityRecentHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultUserActivityRecent
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -173,6 +253,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultPerformanceTimeCommandsHelp")]
+        public IActionResult DefaultPerformanceTimeCommandsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultPerformanceTimeCommandsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultPerformanceTimeCommands
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -185,6 +273,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultPerformanceTimeCommands();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultPerformanceTimesHelp")]
+        public IActionResult DefaultPerformanceTimesHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultPerformanceTimesHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultPerformanceTimes
@@ -204,6 +300,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultStatisticsTop5Help")]
+        public IActionResult DefaultStatisticsTop5Help(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultStatisticsTop5Help.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultStatisticsTop5
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -216,6 +320,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultStatisticsTop5();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultStatisticsByMonthHelp")]
+        public IActionResult DefaultStatisticsByMonthHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultStatisticsByMonthHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultStatisticsByMonth
@@ -232,6 +344,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultUserActivityByHourHelp")]
+        public IActionResult DefaultUserActivityByHourHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultUserActivityByHourHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultUserActivityByHour
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -244,6 +364,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultUserActivityByHour();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultStatisticsHelp")]
+        public IActionResult DefaultStatisticsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultStatisticsHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultStatistics
@@ -260,6 +388,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultPerformanceIndicatorsHelp")]
+        public IActionResult DefaultPerformanceIndicatorsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultPerformanceIndicatorsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultPerformanceIndicators
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -274,6 +410,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultErrorOverviewHelp")]
+        public IActionResult DefaultErrorOverviewHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultErrorOverviewHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultErrorOverview
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -286,6 +430,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DefaultErrorOverview();
 
             return list;
+        }
+
+
+        [HttpGet("DefaultIssueWithFilterHelp")]
+        public IActionResult DefaultIssueWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultIssueWithFilterHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultIssueWithFilter
@@ -307,6 +459,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DefaultPerformanceIssueFetchWithFilterHelp")]
+        public IActionResult DefaultPerformanceIssueFetchWithFilterHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultPerformanceIssueFetchWithFilterHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DefaultPerformanceIssueFetchWithFilter
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -324,6 +484,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("DashboardCountsHelp")]
+        public IActionResult DashboardCountsHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DashboardCountsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for DashboardCounts
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -339,6 +507,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new DefaultSearchService().DashboardCounts(dashboardLayoutRcd: dashboardLayoutRcd);
 
             return list;
+        }
+
+
+        [HttpGet("DefaultTestOverviewHelp")]
+        public IActionResult DefaultTestOverviewHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultSearchService\DefaultTestOverviewHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for DefaultTestOverview

@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:37 AM
+  Generated Date: 1/4/2021 1:50:59 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class PassengerSearchServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\PassengerSearchService\PassengerSearchServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("PassengersOnFlightWithoutEventsHelp")]
+        public IActionResult PassengersOnFlightWithoutEventsHelp(
+            ) {
+
+            return View(@"Views\Templates\PassengerSearchService\PassengersOnFlightWithoutEventsHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for PassengersOnFlightWithoutEvents
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -47,6 +63,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new PassengerSearchService().PassengersOnFlightWithoutEvents(flightId: flightId);
 
             return list;
+        }
+
+
+        [HttpGet("PassengersOnFlightCheckedInHelp")]
+        public IActionResult PassengersOnFlightCheckedInHelp(
+            ) {
+
+            return View(@"Views\Templates\PassengerSearchService\PassengersOnFlightCheckedInHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for PassengersOnFlightCheckedIn
@@ -66,6 +90,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             return list;
         }
 
+
+        [HttpGet("PassengersOnFlightHelp")]
+        public IActionResult PassengersOnFlightHelp(
+            ) {
+
+            return View(@"Views\Templates\PassengerSearchService\PassengersOnFlightHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for PassengersOnFlight
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -81,6 +113,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 new PassengerSearchService().PassengersOnFlight(flightId: flightId);
 
             return list;
+        }
+
+
+        [HttpGet("PassengersOnBookingHelp")]
+        public IActionResult PassengersOnBookingHelp(
+            ) {
+
+            return View(@"Views\Templates\PassengerSearchService\PassengersOnBookingHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for PassengersOnBooking

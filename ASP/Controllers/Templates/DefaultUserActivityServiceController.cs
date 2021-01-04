@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 3:18:28 AM
+  Generated Date: 1/4/2021 1:50:50 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.DotNetFrameworkBusinessToDotNetCoreRest.ControllerMake
 */
@@ -32,6 +32,22 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
     // links:
     //  docLink: http://sql2x.org/documentationLink/c30e2417-f529-43cb-9bc0-9d58745aa64f
     public class DefaultUserActivityServiceController : Controller {
+
+        [HttpGet("Help")]
+        public IActionResult Help(
+            ) {
+
+            return View(@"Views\Templates\DefaultUserActivityService\DefaultUserActivityServiceHelp.cshtml");
+        }
+
+
+        [HttpGet("ResolveNetnameFromIpV4Help")]
+        public IActionResult ResolveNetnameFromIpV4Help(
+            ) {
+
+            return View(@"Views\Templates\DefaultUserActivityService\ResolveNetnameFromIpV4Help.cshtml");
+        }
+
         // get a JSON Array Contract with data for ResolveNetnameFromIpV4
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -44,6 +60,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             ) {
 
             return new DefaultUserActivityService().ResolveNetnameFromIpV4(ipAddress: ipAddress);
+        }
+
+
+        [HttpGet("AddActivityHelp")]
+        public IActionResult AddActivityHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultUserActivityService\AddActivityHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for AddActivity
@@ -66,6 +90,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             new DefaultUserActivityService().AddActivity(userId: userId, userActivityTypeRcd: userActivityTypeRcd, activityNote: activityNote, originatingAddress: originatingAddress);
         }
 
+
+        [HttpGet("LoginHelp")]
+        public IActionResult LoginHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultUserActivityService\LoginHelp.cshtml");
+        }
+
         // get a JSON Array Contract with data for Login
         //  from the dot net framework business logic layer in SolutionNorSolutionPort.BusinessLogicLayer
         // links:
@@ -78,6 +110,14 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
             ) {
 
             return new DefaultUserActivityService().Login(userCode: userCode);
+        }
+
+
+        [HttpGet("LoginOverrideUserNameHelp")]
+        public IActionResult LoginOverrideUserNameHelp(
+            ) {
+
+            return View(@"Views\Templates\DefaultUserActivityService\LoginOverrideUserNameHelp.cshtml");
         }
 
         // get a JSON Array Contract with data for LoginOverrideUserName
