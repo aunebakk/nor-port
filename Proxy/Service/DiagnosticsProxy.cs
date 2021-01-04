@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 7:27:13 PM
+  Generated Date: 1/4/2021 9:18:10 PM
   Template: SQL2XExtensionV3.SQL2XExtensionCreatorCoreV3.ProxyClient
 */
 using System;
