@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 4:37:54 PM
+  Generated Date: 1/4/2021 6:54:48 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -191,7 +191,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeName" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeDescription" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 4:37:54 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 6:54:48 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeLogTypeRcd" , "create" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
@@ -237,7 +237,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeName" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeDescription" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 4:37:54 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 6:54:48 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultChangeLogTypeRcd" , "update" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 

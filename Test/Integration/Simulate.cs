@@ -256,14 +256,37 @@ namespace Test {
         public void DoCifudeTests() {
             try {
                 // run all tests
-                //List<CifudeTestData> allTests = CifudeTestData.FetchAll();
-                //foreach (CifudeTestData test in allTests) {
+                //List<SQL2XPrototype.DataAccessLayer.CifudeTestData> allTests = SQL2XPrototype.DataAccessLayer.CifudeTestData.FetchAll();
+                //foreach (SQL2XPrototype.DataAccessLayer.CifudeTestData test in allTests) {
                 //    TryCall(
                 //        "NorPort",
                 //        "All",
                 //        test.Address
                 //        );
 
+                //    Console.WriteLine($"{test.Address}");
+                //}
+            } catch (Exception ex) {
+                Assert.Fail(message: $"Failed to call test area, message: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// try calling all default tests
+        /// </summary>
+        [TestMethod]
+        public void DoCrudeTests() {
+            try {
+                // run all tests
+                //List<SQL2XPrototype.DataAccessLayer.CifudeTestData> allTests = SQL2XPrototype.DataAccessLayer.CifudeTestData.FetchAll();
+                //foreach (SQL2XPrototype.DataAccessLayer.CifudeTestData test in allTests) {
+                //    TryCall(
+                //        "NorPort",
+                //        "All",
+                //        test.Address
+                //        );
+
+                //    Console.WriteLine($"{test.Address}");
                 //}
             } catch (Exception ex) {
                 Assert.Fail(message: $"Failed to call test area, message: {ex.Message}");

@@ -1,7 +1,7 @@
 ﻿# SQL2X Generated code based on a SQL Server Schema
 # SQL2X Version: 1.0
 # http://sql2x.org/
-# Generated Date: 1/4/2021 5:20:32 PM
+# Generated Date: 1/4/2021 7:39:40 PM
 # From Machine: DESKTOP-LSRVP12
 # Template: SQL2XExtensionV3.SQL2XExtensionCreatorNorSolution.Content_SanitizeConnectionUndo
 
@@ -255,25 +255,25 @@ foreach ($file in Get-ChildItem -recurse -include $match | Where-Object { Test-P
     # replace client secrets in javascript cshtml files?
     if ($PSBoundParameters.ContainsKey('azureClientId')) {
         [string] $find = 'var clientId = .+' 
-        [string] $replace = 'var clientId = ' + ('"' + $azureClientId + '"')
+        [string] $replace = 'var clientId = ' + ('"' + $azureClientId + '";')
         $fileContent = $fileContent | ForEach-Object { $_ -Replace $find, $replace }
     }
 
     if ($PSBoundParameters.ContainsKey('azureClientSecret')) {
         [string] $find = 'var secret = .+' 
-        [string] $replace = 'var secret = ' + ('"' + $azureClientSecret + '"')
+        [string] $replace = 'var secret = ' + ('"' + $azureClientSecret + '";')
         $fileContent = $fileContent | ForEach-Object { $_ -Replace $find, $replace }
     }
 
     if ($PSBoundParameters.ContainsKey('azureClientTenantId')) {
         [string] $find = 'var tenantId = .+' 
-        [string] $replace = 'var tenantId = ' + ('"' + $azureClientTenantId + '"')
+        [string] $replace = 'var tenantId = ' + ('"' + $azureClientTenantId + '";')
         $fileContent = $fileContent | ForEach-Object { $_ -Replace $find, $replace }
     }
 
     if ($PSBoundParameters.ContainsKey('azureClientSubscriptionId')) {
         [string] $find = 'var subscriptionId = .+' 
-        [string] $replace = 'var subscriptionId = ' + ('"' + $azureClientSubscriptionId + '"')
+        [string] $replace = 'var subscriptionId = ' + ('"' + $azureClientSubscriptionId + '";')
         $fileContent = $fileContent | ForEach-Object { $_ -Replace $find, $replace }
     }
 
