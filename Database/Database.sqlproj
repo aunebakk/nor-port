@@ -7,7 +7,7 @@
     <Name>Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{8bc84b8e-a233-4741-a44d-795ee4a212a2}</ProjectGuid>
+    <ProjectGuid>{6d0cca6e-3d3d-4083-ab12-2450d1f3612a}</ProjectGuid>
     <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
