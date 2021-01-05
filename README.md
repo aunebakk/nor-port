@@ -1,29 +1,27 @@
 # Nor-Port - Open Source
 
-Nor-Port is a Passenger Service System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile. It is centered around Microsoft products like SQL Server, Azure, Visual Studio, C# and TypeScript.
+[Nor-Port](http://www.NorPort.org) is a Passenger Service System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile. It is centered around Microsoft products like SQL Server, Azure, Visual Studio, C#, TypeScript and Powershell.
 
-A major part of the code is produced by a Code Generator [sql2x](www.sql2x.org). The general idea is to use as few frameworks and dependencies as possible in order to make a product that will stand the test of time without having to be rewritten when technology shifts happens and frameworks and dependencies become incompatible and/or insecure.
+# SQL2X
+A major part of the code is produced by a Code Generator [sql2x](www.sql2x.org). The general idea is to use as few frameworks and dependencies as possible in order to make a product that will stand the test of time without having to be rewritten when technology shifts happens and frameworks and dependencies become incompatible and/or insecure. Refactoring will be limited to edge cases like the database engine or user interfaces and the core C# business layer will stay the same with SQL2X ready to help in case security issues are found in core code. If SQL2X is not available however all code that needs to adapt is available and there are no black boxes with outdated code that no-one knows how to deal with.
 
 The remaining part of code mainly consists of user interface tweaks to support new user interface trends and fads, business layer code to interact with other systems, import/export, etc. 
 
+# Test system
 Test schedule is a "ping-pong" flight between Oslo and Stockholm and passenger data is randomly created at a rate of 10 thousands a day spread over 3000 bookings when the test engine is invoked.
 
 The goal of Open Sourcing Nor-Port is to attract airlines to improve functionality and make user interfaces tailored towards more specialized businesses cases, while keeping the core sturdy enough to handle both small and large passenger bases as effective as possible on the infrastructure it runs on. 
 
-Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is shared between dot net core's REST interface and dot net framework's SOAP interface. And the tailored user interface code stays the same as SQL2X provides the same client side proxy for REST interfaces as SOAP does. (NOT QUITE YET)
+Currently Nor-Port runs on SQL Server using only Tables, Columns and Relations, no Stored Procedures or Functions. This makes Nor-Port easily adaptable to other databases. Same with the business layer where dotNetCore under Linux is in the [pipeline](#pipeline). The business logic in the tailored code of Nor-Port is shared between dot net core's REST interface and dot net framework's SOAP interface. And the tailored user interface code stays the same as SQL2X provides the same client side proxy for REST interfaces as SOAP does.
 
 Live [Nor-Port running under Azure](http://www.NorPort.org). In this configuration all 3 FrontEnds runs under one Azure App, SOAP/WCF & REST/ASP layer in separate instances ( with shared business layer code ) and finally a Azure SQL Database on a whichever Azure SQL server configuration suits the airline's needs.
 
 # Nor-Port
-[Nor-Port](http://www.NorPort.org) Passenger Service System - for Windows / Web and Mobile platform.
-
-Nor-Port is a Passenger Service System System written for enterprise cloud environments with user interfaces tailored for PC, Web and Mobile.
-
 Nor-Port is used for managing a fleet and a schedule with inventory which is either maintained manually or automatically through SOAP/REST interfaces to other systems.
 
 Nor-Port provides full access to it's fleet, schedule and inventory with a fixed or customized API through SOAP and REST interfaces.
 
-Nor-Port also acts as a proof of concept for a three tiered cloud based "Line-of-Business" system that features:
+Nor-Port is a three tiered cloud based "Line-of-Business" system that features:
 
  - SQL Server database
  - Business layer through SOAP/WCF / REST/ASP
@@ -35,11 +33,12 @@ Nor-Port also acts as a proof of concept for a three tiered cloud based "Line-of
  - FrontEnd's consuming the REST/ASP layer :
    - MS Test
 
-The system is based on a database first approach where a major part of the code is written by a tool I’ve been tinkering with for years, SQL2X. Documentation level has been turned on max for this release, which means the following is included for all namespaces, classes and methods:
+# Documentation
+Documentation level has been turned on High for this release, which means the following is included for all namespaces, classes and methods:
  - Header: sql2x internal documentation block
  - Level one comment: block comment, a high level one liner about the following code
  - Level two comment: in depth comment, comprehensive information about the following code
- - Level three comment: ELI5 ( explain like I’m five ) comments, meant for educational purposes
+ - Level three comment: low level comments, meant for educational purposes
  - Links: Wikipedia and or Microsoft documentation links for in-depth study 
  - DocGuid: SQL2X internal GUID used for debugging
 

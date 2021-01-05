@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 7:49:01 AM
+  Generated Date: 1/5/2021 9:51:30 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.GenerateBusinessLogicLayer.DefaultUsing
 */

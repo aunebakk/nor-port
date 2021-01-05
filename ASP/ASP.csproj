@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="Views\Templates\DefaultSearchService\DefaultUserActivityByHourHelp.cshtml" />
+    <Content Remove="Views\Templates\ScheduleService\CreateScheduleHelp.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,15 +25,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Templates\DefaultSearchService\DefaultUserActivityByHourHelp.cshtml" />
+    <UpToDateCheckInput Remove="Views\Templates\ScheduleService\CreateScheduleHelp.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Templates\DefaultSearchService\DefaultUserActivityByHourHelp.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Templates\ScheduleService\CreateScheduleHelp.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Views\Templates\DefaultSearchService\DefaultUserActivityByHourHelp.cshtml" />
+    <None Include="Views\Templates\ScheduleService\CreateScheduleHelp.cshtml" />
   </ItemGroup>
 
 </Project>
