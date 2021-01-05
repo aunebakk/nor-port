@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 9:33:42 AM
+  Generated Date: 1/5/2021 12:55:55 PM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -209,7 +209,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "IssueDescription" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "StepsToReproduce" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Link" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 9:33:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 12:55:55 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FixedNote" , "create" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
@@ -259,7 +259,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "IssueDescription" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "StepsToReproduce" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Link" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 9:33:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 12:55:55 PM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FixedNote" , "update" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 

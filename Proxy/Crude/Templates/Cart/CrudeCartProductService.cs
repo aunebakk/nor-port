@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 9:25:08 AM
+  Generated Date: 1/5/2021 12:47:28 PM
   From Machine: DESKTOP-LSRVP12
   Filename: CartProduct.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy

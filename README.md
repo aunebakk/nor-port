@@ -183,9 +183,10 @@ At this point the FrontEnd can only be used to bring up the start page and the a
 
 **The REST/API Interface Layer**
 ```
-& '.\ASP\Operational\Get-Web-App-PublishingProfile.ps1'
-& '.\ASP\Operational\Build package to disk.bat'
-& '.\ASP\Operational\Publish To Azure.bat'
+& '.\ASP\Operational\extract-publishing-password-from-existing-web-app.ps1'
+& '.\ASP\Operational\publish-create.bat'
+& '.\ASP\Operational\dotNetpublish.bat'
+& '.\ASP\Operational\publish.bat'
 ```
 
 **The Database**
