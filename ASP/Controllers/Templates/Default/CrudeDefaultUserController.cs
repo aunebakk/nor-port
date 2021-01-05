@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/4/2021 10:08:26 PM
+  Generated Date: 1/5/2021 3:07:01 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -180,8 +180,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "Email" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Password" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultStateRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 10:08:26 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "LastActivityDateTime" , "1/4/2021 10:08:26 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 3:07:01 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "LastActivityDateTime" , "1/5/2021 3:07:01 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -229,8 +229,8 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "Email" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Password" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DefaultStateRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/4/2021 10:08:26 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "LastActivityDateTime" , "1/4/2021 10:08:26 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 3:07:01 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "LastActivityDateTime" , "1/5/2021 3:07:01 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself
