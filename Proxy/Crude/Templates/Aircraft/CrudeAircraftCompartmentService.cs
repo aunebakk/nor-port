@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 12:47:28 PM
+  Generated Date: 1/5/2021 2:01:27 PM
   From Machine: DESKTOP-LSRVP12
   Filename: AircraftCompartment.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy

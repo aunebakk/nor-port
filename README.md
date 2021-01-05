@@ -185,6 +185,7 @@ At this point the FrontEnd can only be used to bring up the start page and the a
 ```
 & '.\ASP\Operational\extract-publishing-password-from-existing-web-app.ps1'
 & '.\ASP\Operational\publish-create.bat'
+*build*
 & '.\ASP\Operational\dotNetpublish.bat'
 & '.\ASP\Operational\publish.bat'
 ```
