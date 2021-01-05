@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 5:37:30 AM
+  Generated Date: 1/5/2021 7:27:36 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -177,9 +177,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftDocumentTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DocumentName" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DocumentDateTime" , "1/5/2021 5:37:30 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ExpiryDateTime" , "1/5/2021 5:37:30 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:37:30 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DocumentDateTime" , "1/5/2021 7:27:36 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ExpiryDateTime" , "1/5/2021 7:27:36 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:27:36 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -224,9 +224,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftDocumentTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DocumentName" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DocumentDateTime" , "1/5/2021 5:37:30 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ExpiryDateTime" , "1/5/2021 5:37:30 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:37:30 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DocumentDateTime" , "1/5/2021 7:27:36 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ExpiryDateTime" , "1/5/2021 7:27:36 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:27:36 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

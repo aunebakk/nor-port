@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 5:37:16 AM
+  Generated Date: 1/5/2021 7:27:22 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -221,11 +221,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftConfigurationRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftBodyRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "1/5/2021 5:37:16 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "1/5/2021 5:37:16 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "1/5/2021 7:27:22 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "1/5/2021 7:27:22 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "EngineType" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PassengerCapacity" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:37:16 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:27:22 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -272,11 +272,11 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftConfigurationRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "AircraftBodyRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "1/5/2021 5:37:16 AM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "1/5/2021 5:37:16 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "OperationalDateTime" , "1/5/2021 7:27:22 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "FirstFlightDateTime" , "1/5/2021 7:27:22 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "EngineType" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "PassengerCapacity" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:37:16 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:27:22 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

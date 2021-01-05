@@ -36,12 +36,12 @@ Nor-Port also acts as a proof of concept for a three tiered cloud based "Line-of
    - MS Test
 
 The system is based on a database first approach where a major part of the code is written by a tool I’ve been tinkering with for years, SQL2X. Documentation level has been turned on max for this release, which means the following is included for all namespaces, classes and methods:
-	Header: sql2x internal documentation block
-	Level one comment: block comment, a high level one liner about the following code
-	Level two comment: in depth comment, comprehensive information about the following code
-	Level three comment: ELI5 ( explain like I’m five ) comments, meant for educational purposes
-	Links: Wikipedia and or Microsoft documentation links for in-depth study 
-	DocGuid: SQL2X internal GUID used for debugging
+ - Header: sql2x internal documentation block
+ - Level one comment: block comment, a high level one liner about the following code
+ - Level two comment: in depth comment, comprehensive information about the following code
+ - Level three comment: ELI5 ( explain like I’m five ) comments, meant for educational purposes
+ - Links: Wikipedia and or Microsoft documentation links for in-depth study 
+ - DocGuid: SQL2X internal GUID used for debugging
 
 Nor-Port uses no special frameworks outside of the dotNetFramework ecosystem in an effort to make it as scalable and maintainable as possible, this is made possible by using a tool to generate boiler plate code for efficient communication between layers ( SQL2X ). Since the code is bare bone C# and TypeScript it is easier to find developers to maintain / enhance the code.
 

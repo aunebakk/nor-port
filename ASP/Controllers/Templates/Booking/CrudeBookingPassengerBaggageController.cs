@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 5:39:20 AM
+  Generated Date: 1/5/2021 7:29:25 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -136,7 +136,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "ItemCount" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:39:20 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:29:25 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "create" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
@@ -181,7 +181,7 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 // pair name and value from model
                 var pairs = new List<KeyValuePair<string , string>> ();
                 pairs.Add ( new KeyValuePair<string , string> ( "ItemCount" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 5:39:20 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 7:29:25 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "Remarks" , "update" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
