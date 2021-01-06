@@ -1,0 +1,40 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateFromSchema",
+  "Filename": "BookingEventTypeRef.json",
+  "Table": {
+    "DomainName": "Booking",
+    "TableName": "booking_event_type_ref",
+    "ClassNamePascalCase": "CrudeBookingEventTypeRef",
+    "VariableNameCamelCase": "bookingEventTypeRef",
+    "AutoUpdateScheme": "autoupdatereference",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": null,
+    "Children": []
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkCrudeSoap",
+    "Name": "DotNetFrameworkCrudeSoap",
+    "DesignTypeScript": "TypeScriptHagtorn",
+    "PrimaryKey": null,
+    "AzureAppName": null,
+    "OverrideDisplayableName": null,
+    "WebStyle": "None",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "",
+    "DurianParameterToOwner": false,
+    "DurianParameters": false,
+    "DurianMethod": ""
+  },
+  "Header": [],
+  "RefreshLink": null,
+  "Injection": null,
+  "Result": {
+    "RunDateTime": null,
+    "Urls": null
+  }
+}

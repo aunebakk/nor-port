@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:12 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightScheduleContract>
+
+@{
+    ViewBag.Title = "Index Flight Schedule";
+}
+
+<h2>Index for Flight Schedule</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeFlightScheduleCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Type</th>
+        <th>Comment</th>
+        <th>From Date Time</th>
+        <th>Until Date Time</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>@Html.DisplayFor(modelItem => item.FromDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UntilDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeFlightScheduleEdit", new { flightScheduleId = item.FlightScheduleId })
+                | @Html.ActionLink("Delete", "CrudeFlightScheduleDelete", new { flightScheduleId = item.FlightScheduleId })
+            </td>
+        </tr>
+    }
+
+</table>

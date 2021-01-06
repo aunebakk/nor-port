@@ -1,0 +1,37 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateManual",
+  "Filename": "_airlineidentifier.json",
+  "Table": {
+    "DomainName": "Airline",
+    "TableName": "airline_identifier",
+    "ClassNamePascalCase": "AirlineIdentifier",
+    "VariableNameCamelCase": "airlineIdentifier",
+    "AutoUpdateScheme": "autoupdatenormal",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": "airline",
+    "Children": []
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkWithDurian",
+    "Name": "Durian",
+    "DesignTypeScript": "",
+    "PrimaryKey": "",
+    "AzureAppName": "",
+    "OverrideDisplayableName": null,
+    "WebStyle": "Tabular",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "AirlineSearch",
+    "DurianParameterToOwner": false,
+    "DurianParameters": false,
+    "DurianMethod": "AirlineIdentifierIndexWithFilter"
+  },
+  "Header": [],
+  "RefreshLink": "",
+  "Injection": "",
+  "Result": null
+}

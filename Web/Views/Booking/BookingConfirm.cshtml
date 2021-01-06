@@ -1,0 +1,42 @@
+@model SolutionNorSolutionPort.AspMvc.Controllers.BookingConfirmContract
+
+@{
+    ViewBag.Title = "BookingConfirm";
+}
+
+<h2>Confirm Booking ( @Html.Raw(Model.Locator) )</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.Partial("_tab")
+
+        <hr />
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    </div>
+    <div>
+        You are about to confirm the booking, this will add fee's, taxes and other charges, and create a ticket.<br />
+        <br />
+        Any further changes to this booking will add booking change charges.
+    </div>
+    <hr />
+        @Html.ActionLink("Send Confirmation Mail Only", "BookingSendConfirmationMail", "Booking", new { bookingId = Model.BookingId }, null)
+    <hr />
+    
+    <div class="form-group">
+        <input type="submit" value="Confirm" class="btn-primary" style="display:inline-block" />
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

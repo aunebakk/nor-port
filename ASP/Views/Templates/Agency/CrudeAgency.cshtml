@@ -1,0 +1,96 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:19:18 AM
+  From Machine: DESKTOP-LSRVP12
+  Filename: Agency.json
+  Template: sql2x.TemplateDotNetCoreApiGenerator.View
+  Style: DotNetCoreApi
+-->
+
+<style>
+    a {
+        color: lightgray;
+    } 
+
+    html {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    table {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        border-color: red;
+        font-weight: 100;
+        margin: 0px;
+        max-width: 100%;
+        align-content: flex-start
+    }
+
+    th {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        text-align: left;
+    }
+
+    tr {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    td {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<h2><a id="CrudeAgency">CrudeAgency</a> ( DotNetCoreApi )</h2><br>
+<br>
+        <table>
+            <tr><td>Agency Id            </td><td>System.Guid</td></tr>
+            <tr><td>Agency Code            </td><td>System.String</td></tr>
+            <tr><td>Agency Name            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+<br>
+<br>
+<i>GET</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchAll'>FetchAll</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchAllCount'>FetchAllCount</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchAllWithLimit' asp-route-limit='1'>FetchAllWithLimit</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchAllWithLimitAndOffset' asp-route-limit='1' asp-route-offset='1'>FetchAllWithLimitAndOffset</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchByAgencyId' asp-route-agencyid=00000000-0000-0000-0000-000000000001>FetchByAgencyId</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyFetchByAgencyCode' asp-route-agencycode=String.Empty>FetchByAgencyCode</a><br>
+<br>
+<br>
+<i>POST</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyCreate'>CrudeAgencyCreate</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyCreateTest'>Create Test (GET)</a><br>
+<br>
+<br>
+<i>PUT</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyUpdate'>CrudeAgencyUpdate</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyUpdateTest'>Update Test (GET)</a><br>
+<br>
+<br>
+<i>DELETE</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyDelete'>CrudeAgencyDelete</a><br>
+<a asp-area='' asp-controller='CrudeAgency' asp-action='CrudeAgencyDeleteTest'>Delete Test (GET)</a><br>

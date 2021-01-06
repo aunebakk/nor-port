@@ -1,0 +1,30 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:16:33 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeFerryIdentifierTypeRefContract
+
+@{
+    ViewBag.Title = "Details Ferry Identifier Type Ref";
+}
+
+<h2>Details for Ferry Identifier Type Ref</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Ferry Identifier Type Name</dt> <dd>@Html.DisplayFor(model => model.FerryIdentifierTypeName)</dd>
+        <dt>State</dt> <dd>@Html.DisplayFor(model => model.StateRcd)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeFerryIdentifierTypeRefEdit", new { ferryIdentifierTypeRcd = Model.FerryIdentifierTypeRcd }) |
+    @Html.ActionLink("New", "CrudeFerryIdentifierTypeRefCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeFerryIdentifierTypeRefIndex")
+</p>

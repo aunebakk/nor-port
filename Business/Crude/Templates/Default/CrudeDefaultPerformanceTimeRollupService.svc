@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeDefaultPerformanceTimeRollupService" CodeBehind="Crude\Templates\Default\\\CrudeDefaultPerformanceTimeRollup.cs"%>

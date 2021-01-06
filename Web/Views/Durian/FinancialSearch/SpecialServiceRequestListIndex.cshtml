@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:43:17 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.SpecialServiceRequestListContract>
+
+@{
+    ViewBag.Title = "Special Service Request List";
+}
+
+<h2>Special Service Request List</h2>
+
+<table class="table">
+    <tr>
+        <th>Service Special Service Request Group</th>
+        <th>Service Special Service Request Code</th>
+        <th>Service Special Service Request Name</th>
+        <th>Amount</th>
+        <th>Financial Currency Type Name</th>
+        <th>Service Description</th>
+        <th>Service Special Service Request Requirement Name</th>
+        <th>Service Special Service Request Operation Rule Name</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestGroupRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestName) </td>
+            <td>@Html.DisplayFor(modelItem => item.Amount) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialCurrencyTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceDescription) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestRequirementName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleName) </td>
+        </tr>
+    }
+
+</table>

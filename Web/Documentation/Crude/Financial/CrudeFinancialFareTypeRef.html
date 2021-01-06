@@ -1,0 +1,70 @@
+﻿
+<html>
+    <head>
+        <title>FinancialFareTypeRef</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FinancialFareTypeRef Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFinancialFareTypeRefService</label>
+        <br /><label>Contract name: CrudeFinancialFareTypeRefContract</label>
+        <br /><label>Fetcher: FetchByFinancialFareTypeRcd</label>
+        <br /><label>Id: FinancialFareTypeRcd, System.String</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Financial Fare Type            </td><td>System.String</td></tr>
+            <tr><td>Financial Fare Type Name            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFinancialFareTypeRefContract<b> FetchByFinancialFareTypeRcd </b>(System.String financialFareTypeRcd);
+        <br />
+        <br />List&lt;CrudeFinancialFareTypeRefContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />CrudeFinancialFareTypeRefContract<b> FetchByFinancialFareTypeName </b>(System.String financialFareTypeName);
+        <br />
+        <br />List&lt;CrudeFinancialFareTypeRefContract&gt;<b> FetchWithFilter </b>(System.String financialFareTypeRcd,System.String financialFareTypeName,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFinancialFareTypeRefContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFinancialFareTypeRefContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFinancialFareTypeRefContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFinancialFareTypeRefContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFinancialFareTypeRefContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.String financialFareTypeRcd);
+        <br />
+        <br />
+    </body>
+</html>
+

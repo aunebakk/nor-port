@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:26 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftDocumentContract>
+
+@{
+    ViewBag.Title = "Index Aircraft Document";
+}
+
+<h2>Index for Aircraft Document</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAircraftDocumentCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Document Type</th>
+        <th>Document Name</th>
+        <th>Document Date Time</th>
+        <th>Expiry Date Time</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftDocumentTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DocumentName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DocumentDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.ExpiryDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAircraftDocumentEdit", new { aircraftDocumentId = item.AircraftDocumentId })
+                | @Html.ActionLink("Delete", "CrudeAircraftDocumentDelete", new { aircraftDocumentId = item.AircraftDocumentId })
+            </td>
+        </tr>
+    }
+
+</table>

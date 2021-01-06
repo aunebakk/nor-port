@@ -1,0 +1,37 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:43:43 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.FinancialServiceDetailsForBookingContract>
+
+@{
+    ViewBag.Title = "Financial Service Details For Booking";
+}
+
+<h2>Financial Service Details For Booking</h2>
+
+<table class="table">
+    <tr>
+        <th>Service Type Name</th>
+        <th>Service Description</th>
+        <th>Service Request Status Name</th>
+        <th>Service Amount</th>
+        <th>Service Currency Type Name</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceDescription) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceRequestStatusName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceAmount) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceCurrencyTypeName) </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,40 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateFromSchema",
+  "Filename": "AirportSupplier.json",
+  "Table": {
+    "DomainName": "Airport",
+    "TableName": "airport_supplier",
+    "ClassNamePascalCase": "CrudeAirportSupplier",
+    "VariableNameCamelCase": "airportSupplier",
+    "AutoUpdateScheme": "autoupdatenormal",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": null,
+    "Children": []
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkCrudeContract",
+    "Name": "DotNetFrameworkCrudeContract",
+    "DesignTypeScript": "TypeScriptHagtorn",
+    "PrimaryKey": null,
+    "AzureAppName": null,
+    "OverrideDisplayableName": null,
+    "WebStyle": "None",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "",
+    "DurianParameterToOwner": false,
+    "DurianParameters": false,
+    "DurianMethod": ""
+  },
+  "Header": [],
+  "RefreshLink": null,
+  "Injection": null,
+  "Result": {
+    "RunDateTime": null,
+    "Urls": null
+  }
+}

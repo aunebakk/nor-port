@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:36 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServicePackageContract>
+
+@{
+    ViewBag.Title = "Index Service Package";
+}
+
+<h2>Index for Service Package</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServicePackageCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Package Name</th>
+        <th>Stay Duration Days</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServicePackageName) </td>
+            <td>@Html.DisplayFor(modelItem => item.StayDurationDays) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServicePackageEdit", new { servicePackageId = item.ServicePackageId })
+                | @Html.ActionLink("Delete", "CrudeServicePackageDelete", new { servicePackageId = item.ServicePackageId })
+            </td>
+        </tr>
+    }
+
+</table>

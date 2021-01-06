@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:52 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingIdentifierContract>
+
+@{
+    ViewBag.Title = "Index Booking Identifier";
+}
+
+<h2>Index for Booking Identifier</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingIdentifierCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Booking Identifier Type</th>
+        <th>Booking Identifier Value</th>
+        <th>Comment</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingIdentifierTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingIdentifierValue) </td>
+            <td>@Html.DisplayFor(modelItem => item.Comment) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingIdentifierEdit", new { bookingIdentifierId = item.BookingIdentifierId })
+                | @Html.ActionLink("Delete", "CrudeBookingIdentifierDelete", new { bookingIdentifierId = item.BookingIdentifierId })
+            </td>
+        </tr>
+    }
+
+</table>

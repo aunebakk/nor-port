@@ -1,0 +1,32 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateManual",
+  "Filename": "Proxy.json",
+  "Table": {
+    "DomainName": "Rest",
+    "TableName": null,
+    "ClassNamePascalCase": null,
+    "VariableNameCamelCase": null,
+    "AutoUpdateScheme": null,
+    "AutoFillColumnName": null,
+    "AutoFillSQLType": null,
+    "ParentTableName": null,
+    "Children": null
+  },
+  "Style": {
+    "TemplateStyle": "None",
+    "Name": "DotNetFrameworkBusinessToDotNetFrameworkRestProxy",
+    "DesignTypeScript": "",
+    "PrimaryKey": "",
+    "AzureAppName": "",
+    "OverrideDisplayableName": null,
+    "WebStyle": "None",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": null,
+  "Header": [],
+  "RefreshLink": "",
+  "Injection": "",
+  "Result": null
+}

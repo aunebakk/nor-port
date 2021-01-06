@@ -1,0 +1,31 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:18 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightSegmentEventContract
+
+@{
+    ViewBag.Title = "Details Flight Segment Event";
+}
+
+<h2>Details for Flight Segment Event</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Flight Segment Event Number</dt> <dd>@Html.DisplayFor(model => model.FlightSegmentEventNumber)</dd>
+        <dt>New Date Time</dt> <dd>@Html.DisplayFor(model => model.NewDateTime)</dd>
+        <dt>Remarks</dt> <dd>@Html.DisplayFor(model => model.Remarks)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeFlightSegmentEventEdit", new { flightSegmentEventId = Model.FlightSegmentEventId }) |
+    @Html.ActionLink("New", "CrudeFlightSegmentEventCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeFlightSegmentEventIndex")
+</p>

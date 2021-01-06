@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:34 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceHotelLinkContract>
+
+@{
+    ViewBag.Title = "Index Service Hotel Link";
+}
+
+<h2>Index for Service Hotel Link</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServiceHotelLinkCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Link Type</th>
+        <th>Link</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.LinkTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.Link) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServiceHotelLinkEdit", new { serviceHotelLinkId = item.ServiceHotelLinkId })
+                | @Html.ActionLink("Delete", "CrudeServiceHotelLinkDelete", new { serviceHotelLinkId = item.ServiceHotelLinkId })
+            </td>
+        </tr>
+    }
+
+</table>

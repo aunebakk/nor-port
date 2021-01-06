@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:37 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceRequestStatusRefContract>
+
+@{
+    ViewBag.Title = "Index Service Request Status Ref";
+}
+
+<h2>Index for Service Request Status Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServiceRequestStatusRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Request Status</th>
+        <th>Service Request Status Name</th>
+        <th>Date Time</th>
+        <th>Description</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceRequestStatusRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceRequestStatusName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.Description) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServiceRequestStatusRefEdit", new { serviceRequestStatusRcd = item.ServiceRequestStatusRcd })
+                | @Html.ActionLink("Delete", "CrudeServiceRequestStatusRefDelete", new { serviceRequestStatusRcd = item.ServiceRequestStatusRcd })
+            </td>
+        </tr>
+    }
+
+</table>

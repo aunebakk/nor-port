@@ -1,0 +1,43 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:16:33 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeFerryIdentifierTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Ferry Identifier Type Ref";
+}
+
+<h2>Index for Ferry Identifier Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeFerryIdentifierTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Ferry Identifier Type</th>
+        <th>Ferry Identifier Type Name</th>
+        <th>State</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.FerryIdentifierTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.FerryIdentifierTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.StateRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeFerryIdentifierTypeRefEdit", new { ferryIdentifierTypeRcd = item.FerryIdentifierTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeFerryIdentifierTypeRefDelete", new { ferryIdentifierTypeRcd = item.FerryIdentifierTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

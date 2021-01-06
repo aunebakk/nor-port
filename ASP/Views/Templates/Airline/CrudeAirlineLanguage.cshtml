@@ -1,0 +1,99 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:20:10 AM
+  From Machine: DESKTOP-LSRVP12
+  Filename: AirlineLanguage.json
+  Template: sql2x.TemplateDotNetCoreApiGenerator.View
+  Style: DotNetCoreApi
+-->
+
+<style>
+    a {
+        color: lightgray;
+    } 
+
+    html {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    table {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        border-color: red;
+        font-weight: 100;
+        margin: 0px;
+        max-width: 100%;
+        align-content: flex-start
+    }
+
+    th {
+        background-color: rgb(20, 18, 18);
+        color: white;
+        text-align: left;
+    }
+
+    tr {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    td {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    h2 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 30px;
+        color: white;
+    }
+
+    h3 {
+        font-family: 'Product Sans', Arial, sans-serif;
+        font-size: 20px;
+        color: white;
+    }
+</style>
+<h2><a id="CrudeAirlineLanguage">CrudeAirlineLanguage</a> ( DotNetCoreApi )</h2><br>
+<br>
+        <table>
+            <tr><td>Airline Language Id            </td><td>System.Guid</td></tr>
+            <tr><td>Airline Id            </td><td>System.Guid</td></tr>
+            <tr><td>Language            </td><td>System.String</td></tr>
+            <tr><td>Airline Language Name            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+<br>
+<br>
+<i>GET</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchAll'>FetchAll</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchAllCount'>FetchAllCount</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchAllWithLimit' asp-route-limit='1'>FetchAllWithLimit</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchAllWithLimitAndOffset' asp-route-limit='1' asp-route-offset='1'>FetchAllWithLimitAndOffset</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchByAirlineLanguageId' asp-route-airlinelanguageid=00000000-0000-0000-0000-000000000001>FetchByAirlineLanguageId</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchByAirlineId' asp-route-airlineid=00000000-0000-0000-0000-000000000001>FetchByAirlineId</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchByLanguageRcd' asp-route-languagercd=00000000-0000-0000-0000-000000000001>FetchByLanguageRcd</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageFetchByAirlineLanguageName' asp-route-airlinelanguagename=String.Empty>FetchByAirlineLanguageName</a><br>
+<br>
+<br>
+<i>POST</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageCreate'>CrudeAirlineLanguageCreate</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageCreateTest'>Create Test (GET)</a><br>
+<br>
+<br>
+<i>PUT</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageUpdate'>CrudeAirlineLanguageUpdate</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageUpdateTest'>Update Test (GET)</a><br>
+<br>
+<br>
+<i>DELETE</i><br>
+<br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageDelete'>CrudeAirlineLanguageDelete</a><br>
+<a asp-area='' asp-controller='CrudeAirlineLanguage' asp-action='CrudeAirlineLanguageDeleteTest'>Delete Test (GET)</a><br>

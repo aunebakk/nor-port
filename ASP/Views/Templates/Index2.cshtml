@@ -1,0 +1,399 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:32:36 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: SQL2XExtensionV3.SQL2XExtensionCreatorNorSolutionPort.Content_ViewsHomeIndexDOTcshtml
+-->
+@{
+    ViewData["Title"] = "NorSolutionPortCore";
+    Layout = "";
+}
+<style>
+    a {
+        color: antiquewhite;
+    }
+
+    html {
+        background-color: rgb(20, 18, 18);
+        color: white;
+    }
+
+    body {
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+        margin: 20px;
+    }
+</style>
+
+<h2>@ViewData["Title"].</h2>
+
+<br>
+
+    <font size="4" color="DarkGreen">CRUD members and operators</font>
+<br>
+    <h3>Address</h3>
+<a asp-area="" asp-controller="CrudeAddress" asp-action="CrudeAddressHelp">Address</a><br>
+<a asp-area="" asp-controller="CrudeAddressTypeRef" asp-action="CrudeAddressTypeRefHelp">AddressTypeRef</a><br>
+    <h3>Agency</h3>
+<a asp-area="" asp-controller="CrudeAgency" asp-action="CrudeAgencyHelp">Agency</a><br>
+    <h3>Aircraft</h3>
+<a asp-area="" asp-controller="CrudeAircraft" asp-action="CrudeAircraftHelp">Aircraft</a><br>
+<a asp-area="" asp-controller="CrudeAircraftBodyRef" asp-action="CrudeAircraftBodyRefHelp">AircraftBodyRef</a><br>
+<a asp-area="" asp-controller="CrudeAircraftCompartment" asp-action="CrudeAircraftCompartmentHelp">AircraftCompartment</a><br>
+<a asp-area="" asp-controller="CrudeAircraftCompartmentMeasurement" asp-action="CrudeAircraftCompartmentMeasurementHelp">AircraftCompartmentMeasurement</a><br>
+<a asp-area="" asp-controller="CrudeAircraftCompartmentTypeRef" asp-action="CrudeAircraftCompartmentTypeRefHelp">AircraftCompartmentTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAircraftConfigurationRef" asp-action="CrudeAircraftConfigurationRefHelp">AircraftConfigurationRef</a><br>
+<a asp-area="" asp-controller="CrudeAircraftDocument" asp-action="CrudeAircraftDocumentHelp">AircraftDocument</a><br>
+<a asp-area="" asp-controller="CrudeAircraftDocumentTypeRef" asp-action="CrudeAircraftDocumentTypeRefHelp">AircraftDocumentTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAircraftIdentifier" asp-action="CrudeAircraftIdentifierHelp">AircraftIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeAircraftIdentifierTypeRef" asp-action="CrudeAircraftIdentifierTypeRefHelp">AircraftIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAircraftMeasurement" asp-action="CrudeAircraftMeasurementHelp">AircraftMeasurement</a><br>
+<a asp-area="" asp-controller="CrudeAircraftTypeRef" asp-action="CrudeAircraftTypeRefHelp">AircraftTypeRef</a><br>
+    <h3>Airline</h3>
+<a asp-area="" asp-controller="CrudeAirline" asp-action="CrudeAirlineHelp">Airline</a><br>
+<a asp-area="" asp-controller="CrudeAirlineBaseAirport" asp-action="CrudeAirlineBaseAirportHelp">AirlineBaseAirport</a><br>
+<a asp-area="" asp-controller="CrudeAirlineContactMethod" asp-action="CrudeAirlineContactMethodHelp">AirlineContactMethod</a><br>
+<a asp-area="" asp-controller="CrudeAirlineIdentifier" asp-action="CrudeAirlineIdentifierHelp">AirlineIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeAirlineIdentifierTypeRef" asp-action="CrudeAirlineIdentifierTypeRefHelp">AirlineIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAirlineLanguage" asp-action="CrudeAirlineLanguageHelp">AirlineLanguage</a><br>
+<a asp-area="" asp-controller="CrudeAirlineLink" asp-action="CrudeAirlineLinkHelp">AirlineLink</a><br>
+<a asp-area="" asp-controller="CrudeAirlineTypeRef" asp-action="CrudeAirlineTypeRefHelp">AirlineTypeRef</a><br>
+    <h3>Airport</h3>
+<a asp-area="" asp-controller="CrudeAirport" asp-action="CrudeAirportHelp">Airport</a><br>
+<a asp-area="" asp-controller="CrudeAirportFacility" asp-action="CrudeAirportFacilityHelp">AirportFacility</a><br>
+<a asp-area="" asp-controller="CrudeAirportFacilityTypeRef" asp-action="CrudeAirportFacilityTypeRefHelp">AirportFacilityTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAirportHotelLink" asp-action="CrudeAirportHotelLinkHelp">AirportHotelLink</a><br>
+<a asp-area="" asp-controller="CrudeAirportIdentifier" asp-action="CrudeAirportIdentifierHelp">AirportIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeAirportIdentifierTypeRef" asp-action="CrudeAirportIdentifierTypeRefHelp">AirportIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeAirportLink" asp-action="CrudeAirportLinkHelp">AirportLink</a><br>
+<a asp-area="" asp-controller="CrudeAirportRunway" asp-action="CrudeAirportRunwayHelp">AirportRunway</a><br>
+<a asp-area="" asp-controller="CrudeAirportSupplier" asp-action="CrudeAirportSupplierHelp">AirportSupplier</a><br>
+<a asp-area="" asp-controller="CrudeAirportSupplierLink" asp-action="CrudeAirportSupplierLinkHelp">AirportSupplierLink</a><br>
+<a asp-area="" asp-controller="CrudeAirportTerminal" asp-action="CrudeAirportTerminalHelp">AirportTerminal</a><br>
+<a asp-area="" asp-controller="CrudeAirportTerminalAirline" asp-action="CrudeAirportTerminalAirlineHelp">AirportTerminalAirline</a><br>
+<a asp-area="" asp-controller="CrudeAirportTypeRef" asp-action="CrudeAirportTypeRefHelp">AirportTypeRef</a><br>
+    <h3>Booking</h3>
+<a asp-area="" asp-controller="CrudeBooking" asp-action="CrudeBookingHelp">Booking</a><br>
+<a asp-area="" asp-controller="CrudeBookingContactMethod" asp-action="CrudeBookingContactMethodHelp">BookingContactMethod</a><br>
+<a asp-area="" asp-controller="CrudeBookingDocument" asp-action="CrudeBookingDocumentHelp">BookingDocument</a><br>
+<a asp-area="" asp-controller="CrudeBookingDocumentTypeRef" asp-action="CrudeBookingDocumentTypeRefHelp">BookingDocumentTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeBookingEvent" asp-action="CrudeBookingEventHelp">BookingEvent</a><br>
+<a asp-area="" asp-controller="CrudeBookingEventTypeRef" asp-action="CrudeBookingEventTypeRefHelp">BookingEventTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeBookingFlightSegment" asp-action="CrudeBookingFlightSegmentHelp">BookingFlightSegment</a><br>
+<a asp-area="" asp-controller="CrudeBookingIdentifier" asp-action="CrudeBookingIdentifierHelp">BookingIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeBookingIdentifierTypeRef" asp-action="CrudeBookingIdentifierTypeRefHelp">BookingIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassenger" asp-action="CrudeBookingPassengerHelp">BookingPassenger</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassengerBaggage" asp-action="CrudeBookingPassengerBaggageHelp">BookingPassengerBaggage</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassengerEvent" asp-action="CrudeBookingPassengerEventHelp">BookingPassengerEvent</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassengerEventTypeRef" asp-action="CrudeBookingPassengerEventTypeRefHelp">BookingPassengerEventTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassengerSeat" asp-action="CrudeBookingPassengerSeatHelp">BookingPassengerSeat</a><br>
+<a asp-area="" asp-controller="CrudeBookingPassengerTicket" asp-action="CrudeBookingPassengerTicketHelp">BookingPassengerTicket</a><br>
+<a asp-area="" asp-controller="CrudeBookingServiceRequest" asp-action="CrudeBookingServiceRequestHelp">BookingServiceRequest</a><br>
+<a asp-area="" asp-controller="CrudeBookingSourceRef" asp-action="CrudeBookingSourceRefHelp">BookingSourceRef</a><br>
+    <h3>Cart</h3>
+<a asp-area="" asp-controller="CrudeCartProduct" asp-action="CrudeCartProductHelp">CartProduct</a><br>
+<a asp-area="" asp-controller="CrudeCartProductPrice" asp-action="CrudeCartProductPriceHelp">CartProductPrice</a><br>
+<a asp-area="" asp-controller="CrudeCartUser" asp-action="CrudeCartUserHelp">CartUser</a><br>
+    <h3>City</h3>
+<a asp-area="" asp-controller="CrudeCity" asp-action="CrudeCityHelp">City</a><br>
+    <h3>Client</h3>
+<a asp-area="" asp-controller="CrudeClient" asp-action="CrudeClientHelp">Client</a><br>
+<a asp-area="" asp-controller="CrudeClientContactMethod" asp-action="CrudeClientContactMethodHelp">ClientContactMethod</a><br>
+<a asp-area="" asp-controller="CrudeClientEvent" asp-action="CrudeClientEventHelp">ClientEvent</a><br>
+<a asp-area="" asp-controller="CrudeClientEventTypeRef" asp-action="CrudeClientEventTypeRefHelp">ClientEventTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeClientLink" asp-action="CrudeClientLinkHelp">ClientLink</a><br>
+<a asp-area="" asp-controller="CrudeClientTypeRef" asp-action="CrudeClientTypeRefHelp">ClientTypeRef</a><br>
+    <h3>Contact</h3>
+<a asp-area="" asp-controller="CrudeContactMethodRef" asp-action="CrudeContactMethodRefHelp">ContactMethodRef</a><br>
+    <h3>Country</h3>
+<a asp-area="" asp-controller="CrudeCountry" asp-action="CrudeCountryHelp">Country</a><br>
+    <h3>Date</h3>
+<a asp-area="" asp-controller="CrudeDateTimeTypeRef" asp-action="CrudeDateTimeTypeRefHelp">DateTimeTypeRef</a><br>
+    <h3>Default</h3>
+<a asp-area="" asp-controller="CrudeDefaultChangeLog" asp-action="CrudeDefaultChangeLogHelp">DefaultChangeLog</a><br>
+<a asp-area="" asp-controller="CrudeDefaultChangeLogTypeRef" asp-action="CrudeDefaultChangeLogTypeRefHelp">DefaultChangeLogTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultError" asp-action="CrudeDefaultErrorHelp">DefaultError</a><br>
+<a asp-area="" asp-controller="CrudeDefaultErrorLayerRef" asp-action="CrudeDefaultErrorLayerRefHelp">DefaultErrorLayerRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultErrorTypeRef" asp-action="CrudeDefaultErrorTypeRefHelp">DefaultErrorTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultIssue" asp-action="CrudeDefaultIssueHelp">DefaultIssue</a><br>
+<a asp-area="" asp-controller="CrudeDefaultIssueStatusRef" asp-action="CrudeDefaultIssueStatusRefHelp">DefaultIssueStatusRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultIssueTypeRef" asp-action="CrudeDefaultIssueTypeRefHelp">DefaultIssueTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultPerformanceIssue" asp-action="CrudeDefaultPerformanceIssueHelp">DefaultPerformanceIssue</a><br>
+<a asp-area="" asp-controller="CrudeDefaultPerformanceTime" asp-action="CrudeDefaultPerformanceTimeHelp">DefaultPerformanceTime</a><br>
+<a asp-area="" asp-controller="CrudeDefaultPerformanceTimeRollup" asp-action="CrudeDefaultPerformanceTimeRollupHelp">DefaultPerformanceTimeRollup</a><br>
+<a asp-area="" asp-controller="CrudeDefaultResourceMeasurement" asp-action="CrudeDefaultResourceMeasurementHelp">DefaultResourceMeasurement</a><br>
+<a asp-area="" asp-controller="CrudeDefaultRule" asp-action="CrudeDefaultRuleHelp">DefaultRule</a><br>
+<a asp-area="" asp-controller="CrudeDefaultRuleTypeRef" asp-action="CrudeDefaultRuleTypeRefHelp">DefaultRuleTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultStateRef" asp-action="CrudeDefaultStateRefHelp">DefaultStateRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultSystemReferenceTable" asp-action="CrudeDefaultSystemReferenceTableHelp">DefaultSystemReferenceTable</a><br>
+<a asp-area="" asp-controller="CrudeDefaultSystemSetting" asp-action="CrudeDefaultSystemSettingHelp">DefaultSystemSetting</a><br>
+<a asp-area="" asp-controller="CrudeDefaultSystemSettingRef" asp-action="CrudeDefaultSystemSettingRefHelp">DefaultSystemSettingRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultTest" asp-action="CrudeDefaultTestHelp">DefaultTest</a><br>
+<a asp-area="" asp-controller="CrudeDefaultTestRun" asp-action="CrudeDefaultTestRunHelp">DefaultTestRun</a><br>
+<a asp-area="" asp-controller="CrudeDefaultTestRunResultRef" asp-action="CrudeDefaultTestRunResultRefHelp">DefaultTestRunResultRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultUser" asp-action="CrudeDefaultUserHelp">DefaultUser</a><br>
+<a asp-area="" asp-controller="CrudeDefaultUserActivity" asp-action="CrudeDefaultUserActivityHelp">DefaultUserActivity</a><br>
+<a asp-area="" asp-controller="CrudeDefaultUserActivityTypeRef" asp-action="CrudeDefaultUserActivityTypeRefHelp">DefaultUserActivityTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeDefaultVersion" asp-action="CrudeDefaultVersionHelp">DefaultVersion</a><br>
+    <h3>External</h3>
+<a asp-area="" asp-controller="CrudeExternalSystem" asp-action="CrudeExternalSystemHelp">ExternalSystem</a><br>
+    <h3>Ferry</h3>
+<a asp-area="" asp-controller="CrudeFerry" asp-action="CrudeFerryHelp">Ferry</a><br>
+<a asp-area="" asp-controller="CrudeFerryIdentifier" asp-action="CrudeFerryIdentifierHelp">FerryIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeFerryIdentifierTypeRef" asp-action="CrudeFerryIdentifierTypeRefHelp">FerryIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFerryTypeRef" asp-action="CrudeFerryTypeRefHelp">FerryTypeRef</a><br>
+    <h3>Financial</h3>
+<a asp-area="" asp-controller="CrudeFinancialAdjustment" asp-action="CrudeFinancialAdjustmentHelp">FinancialAdjustment</a><br>
+<a asp-area="" asp-controller="CrudeFinancialAdjustmentTypeRef" asp-action="CrudeFinancialAdjustmentTypeRefHelp">FinancialAdjustmentTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialBankAccountNumberTypeRef" asp-action="CrudeFinancialBankAccountNumberTypeRefHelp">FinancialBankAccountNumberTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialBookingTransaction" asp-action="CrudeFinancialBookingTransactionHelp">FinancialBookingTransaction</a><br>
+<a asp-area="" asp-controller="CrudeFinancialBookingTransactionTypeRef" asp-action="CrudeFinancialBookingTransactionTypeRefHelp">FinancialBookingTransactionTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCarRental" asp-action="CrudeFinancialCarRentalHelp">FinancialCarRental</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCardTypeRef" asp-action="CrudeFinancialCardTypeRefHelp">FinancialCardTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCompany" asp-action="CrudeFinancialCompanyHelp">FinancialCompany</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCostcentre" asp-action="CrudeFinancialCostcentreHelp">FinancialCostcentre</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCoupon" asp-action="CrudeFinancialCouponHelp">FinancialCoupon</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCouponTypeRef" asp-action="CrudeFinancialCouponTypeRefHelp">FinancialCouponTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCurrency" asp-action="CrudeFinancialCurrencyHelp">FinancialCurrency</a><br>
+<a asp-area="" asp-controller="CrudeFinancialCurrencyTypeRef" asp-action="CrudeFinancialCurrencyTypeRefHelp">FinancialCurrencyTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialFare" asp-action="CrudeFinancialFareHelp">FinancialFare</a><br>
+<a asp-area="" asp-controller="CrudeFinancialFareTypeRef" asp-action="CrudeFinancialFareTypeRefHelp">FinancialFareTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialFee" asp-action="CrudeFinancialFeeHelp">FinancialFee</a><br>
+<a asp-area="" asp-controller="CrudeFinancialFeeTypeRef" asp-action="CrudeFinancialFeeTypeRefHelp">FinancialFeeTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialFerryBooking" asp-action="CrudeFinancialFerryBookingHelp">FinancialFerryBooking</a><br>
+<a asp-area="" asp-controller="CrudeFinancialHotelBooking" asp-action="CrudeFinancialHotelBookingHelp">FinancialHotelBooking</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPayment" asp-action="CrudeFinancialPaymentHelp">FinancialPayment</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentAccounting" asp-action="CrudeFinancialPaymentAccountingHelp">FinancialPaymentAccounting</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentBank" asp-action="CrudeFinancialPaymentBankHelp">FinancialPaymentBank</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentCard" asp-action="CrudeFinancialPaymentCardHelp">FinancialPaymentCard</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentCash" asp-action="CrudeFinancialPaymentCashHelp">FinancialPaymentCash</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentCoupon" asp-action="CrudeFinancialPaymentCouponHelp">FinancialPaymentCoupon</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentTypeRef" asp-action="CrudeFinancialPaymentTypeRefHelp">FinancialPaymentTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialPaymentVoucher" asp-action="CrudeFinancialPaymentVoucherHelp">FinancialPaymentVoucher</a><br>
+<a asp-area="" asp-controller="CrudeFinancialService" asp-action="CrudeFinancialServiceHelp">FinancialService</a><br>
+<a asp-area="" asp-controller="CrudeFinancialSpecialService" asp-action="CrudeFinancialSpecialServiceHelp">FinancialSpecialService</a><br>
+<a asp-area="" asp-controller="CrudeFinancialTax" asp-action="CrudeFinancialTaxHelp">FinancialTax</a><br>
+<a asp-area="" asp-controller="CrudeFinancialTaxTypeRef" asp-action="CrudeFinancialTaxTypeRefHelp">FinancialTaxTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFinancialVoucher" asp-action="CrudeFinancialVoucherHelp">FinancialVoucher</a><br>
+<a asp-area="" asp-controller="CrudeFinancialVoucherTypeRef" asp-action="CrudeFinancialVoucherTypeRefHelp">FinancialVoucherTypeRef</a><br>
+    <h3>Flight</h3>
+<a asp-area="" asp-controller="CrudeFlight" asp-action="CrudeFlightHelp">Flight</a><br>
+<a asp-area="" asp-controller="CrudeFlightEvent" asp-action="CrudeFlightEventHelp">FlightEvent</a><br>
+<a asp-area="" asp-controller="CrudeFlightIdentifier" asp-action="CrudeFlightIdentifierHelp">FlightIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeFlightIdentifierTypeRef" asp-action="CrudeFlightIdentifierTypeRefHelp">FlightIdentifierTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeFlightSchedule" asp-action="CrudeFlightScheduleHelp">FlightSchedule</a><br>
+<a asp-area="" asp-controller="CrudeFlightScheduleIdentifier" asp-action="CrudeFlightScheduleIdentifierHelp">FlightScheduleIdentifier</a><br>
+<a asp-area="" asp-controller="CrudeFlightScheduleSegment" asp-action="CrudeFlightScheduleSegmentHelp">FlightScheduleSegment</a><br>
+<a asp-area="" asp-controller="CrudeFlightScheduleSegmentRule" asp-action="CrudeFlightScheduleSegmentRuleHelp">FlightScheduleSegmentRule</a><br>
+<a asp-area="" asp-controller="CrudeFlightScheduleSegmentRuleRef" asp-action="CrudeFlightScheduleSegmentRuleRefHelp">FlightScheduleSegmentRuleRef</a><br>
+<a asp-area="" asp-controller="CrudeFlightSegment" asp-action="CrudeFlightSegmentHelp">FlightSegment</a><br>
+<a asp-area="" asp-controller="CrudeFlightSegmentEvent" asp-action="CrudeFlightSegmentEventHelp">FlightSegmentEvent</a><br>
+    <h3>Gender</h3>
+<a asp-area="" asp-controller="CrudeGenderRef" asp-action="CrudeGenderRefHelp">GenderRef</a><br>
+    <h3>Language</h3>
+<a asp-area="" asp-controller="CrudeLanguageRef" asp-action="CrudeLanguageRefHelp">LanguageRef</a><br>
+    <h3>Link</h3>
+<a asp-area="" asp-controller="CrudeLinkTypeRef" asp-action="CrudeLinkTypeRefHelp">LinkTypeRef</a><br>
+    <h3>Nationality</h3>
+<a asp-area="" asp-controller="CrudeNationalityRef" asp-action="CrudeNationalityRefHelp">NationalityRef</a><br>
+    <h3>Passenger</h3>
+<a asp-area="" asp-controller="CrudePassenger" asp-action="CrudePassengerHelp">Passenger</a><br>
+<a asp-area="" asp-controller="CrudePassengerTypeRef" asp-action="CrudePassengerTypeRefHelp">PassengerTypeRef</a><br>
+    <h3>Product</h3>
+<a asp-area="" asp-controller="CrudeProduct" asp-action="CrudeProductHelp">Product</a><br>
+    <h3>Reporting</h3>
+<a asp-area="" asp-controller="CrudeReportingRoundup" asp-action="CrudeReportingRoundupHelp">ReportingRoundup</a><br>
+<a asp-area="" asp-controller="CrudeReportingRoundupTypeRef" asp-action="CrudeReportingRoundupTypeRefHelp">ReportingRoundupTypeRef</a><br>
+    <h3>Service</h3>
+<a asp-area="" asp-controller="CrudeServiceCarRental" asp-action="CrudeServiceCarRentalHelp">ServiceCarRental</a><br>
+<a asp-area="" asp-controller="CrudeServiceCarRentalLink" asp-action="CrudeServiceCarRentalLinkHelp">ServiceCarRentalLink</a><br>
+<a asp-area="" asp-controller="CrudeServiceFerry" asp-action="CrudeServiceFerryHelp">ServiceFerry</a><br>
+<a asp-area="" asp-controller="CrudeServiceHotel" asp-action="CrudeServiceHotelHelp">ServiceHotel</a><br>
+<a asp-area="" asp-controller="CrudeServiceHotelImage" asp-action="CrudeServiceHotelImageHelp">ServiceHotelImage</a><br>
+<a asp-area="" asp-controller="CrudeServiceHotelLink" asp-action="CrudeServiceHotelLinkHelp">ServiceHotelLink</a><br>
+<a asp-area="" asp-controller="CrudeServiceImageTypeRef" asp-action="CrudeServiceImageTypeRefHelp">ServiceImageTypeRef</a><br>
+<a asp-area="" asp-controller="CrudeServicePackage" asp-action="CrudeServicePackageHelp">ServicePackage</a><br>
+<a asp-area="" asp-controller="CrudeServicePackagePromotion" asp-action="CrudeServicePackagePromotionHelp">ServicePackagePromotion</a><br>
+<a asp-area="" asp-controller="CrudeServiceRequestStatusRef" asp-action="CrudeServiceRequestStatusRefHelp">ServiceRequestStatusRef</a><br>
+<a asp-area="" asp-controller="CrudeServiceSpecialServiceRequest" asp-action="CrudeServiceSpecialServiceRequestHelp">ServiceSpecialServiceRequest</a><br>
+<a asp-area="" asp-controller="CrudeServiceSpecialServiceRequestGroupRef" asp-action="CrudeServiceSpecialServiceRequestGroupRefHelp">ServiceSpecialServiceRequestGroupRef</a><br>
+<a asp-area="" asp-controller="CrudeServiceSpecialServiceRequestOperationRuleRef" asp-action="CrudeServiceSpecialServiceRequestOperationRuleRefHelp">ServiceSpecialServiceRequestOperationRuleRef</a><br>
+<a asp-area="" asp-controller="CrudeServiceSpecialServiceRequestRequirementRef" asp-action="CrudeServiceSpecialServiceRequestRequirementRefHelp">ServiceSpecialServiceRequestRequirementRef</a><br>
+<a asp-area="" asp-controller="CrudeServiceTypeRef" asp-action="CrudeServiceTypeRefHelp">ServiceTypeRef</a><br>
+    <h3>Timezone</h3>
+<a asp-area="" asp-controller="CrudeTimezone" asp-action="CrudeTimezoneHelp">Timezone</a><br>
+    <h3>Title</h3>
+<a asp-area="" asp-controller="CrudeTitleRef" asp-action="CrudeTitleRefHelp">TitleRef</a><br>
+<br>
+<br>
+<br>
+<h2>Definition</h2>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

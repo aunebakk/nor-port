@@ -1,0 +1,24 @@
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeDefaultUserContract
+
+@{
+    ViewBag.Title = "Details Default User";
+}
+
+<h2>Details for Default User</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Default User Code</dt> <dd>@Html.DisplayFor(model => model.DefaultUserCode)</dd>
+        <dt>Default User Name</dt> <dd>@Html.DisplayFor(model => model.DefaultUserName)</dd>
+        <dt>Email</dt> <dd>@Html.DisplayFor(model => model.Email)</dd>
+        <dt>Password</dt> <dd>@Html.DisplayFor(model => model.Password)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+        <dt>Last Activity Date Time</dt> <dd>@Html.DisplayFor(model => model.LastActivityDateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "DefaultUserEdit", new { defaultUserId = Model.DefaultUserId }) |
+    @Html.ActionLink("New", "DefaultUserCreate", new { }) |
+    @Html.ActionLink("Back to List", "DefaultUserIndex")
+</p>

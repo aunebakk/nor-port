@@ -1,0 +1,26 @@
+<div>
+    @Html.ActionLink("Back to Aircrafts", "FlightsForPeriodIndex", "FlightsForPeriodLive") |
+    @if (ViewBag.Title == "Edit Flight") {
+        <b>@Html.ActionLink("Edit", "FlightEdit", "Flight", new { flightId = @ViewBag.FlightId }, null)</b>
+    } else { 
+        @Html.ActionLink("Edit", "FlightEdit", "Flight", new { flightId = @ViewBag.FlightId }, null)
+    }
+    |
+    @if (ViewBag.Title == "Flight History") {
+        <b>@Html.ActionLink("History", "FlightHistoryIndex", "FlightHistoryLive", new { flightId = @ViewBag.FlightId }, null)</b>
+    } else { 
+        @Html.ActionLink("History", "FlightHistoryIndex", "FlightHistoryLive", new { flightId = @ViewBag.FlightId }, null)
+    }
+    |
+    @if (ViewBag.Title == "Flight Events") {
+        <b>@Html.ActionLink("Events", "FlightEventsIndex", "FlightEventsLive", new { flightId = @ViewBag.FlightId }, null)</b>
+    } else { 
+        @Html.ActionLink("Events", "FlightEventsIndex", "FlightEventsLive", new { flightId = @ViewBag.FlightId }, null)
+    }
+    |
+    @if (ViewBag.Title == "Flight Segments") {
+        <b>@Html.ActionLink("Segments", "FlightSegmentsIndex", "FlightSegmentsLive", new { flightId = @ViewBag.FlightId }, null)</b>
+    } else { 
+        @Html.ActionLink("Segments", "FlightSegmentsIndex", "FlightSegmentsLive", new { flightId = @ViewBag.FlightId }, null) 
+    }
+</div>

@@ -1,0 +1,32 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:23 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudePassengerContract
+
+@{
+    ViewBag.Title = "Details Passenger";
+}
+
+<h2>Details for Passenger</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Became Passenger Id</dt> <dd>@Html.DisplayFor(model => model.BecamePassengerId)</dd>
+        <dt>Binding Passenger Id</dt> <dd>@Html.DisplayFor(model => model.BindingPassengerId)</dd>
+        <dt>Passenger Name</dt> <dd>@Html.DisplayFor(model => model.PassengerName)</dd>
+        <dt>Default State</dt> <dd>@Html.DisplayFor(model => model.DefaultStateRcd)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudePassengerEdit", new { passengerId = Model.PassengerId }) |
+    @Html.ActionLink("New", "CrudePassengerCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudePassengerIndex")
+</p>

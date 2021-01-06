@@ -1,0 +1,41 @@
+<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 0.d
+  http://sql2x.azurewebsites.net/
+  Generated Date: 1/16/2019 5:33:46 PM
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AircraftDetailsContract>
+
+@{
+    ViewBag.Title = "Aircraft Details";
+}
+
+<h2>Aircraft Details</h2>
+
+<table class="table">
+    <tr>
+        <th>Aircraft Name</th>
+        <th>Aircraft Configuration Name</th>
+        <th>Aircraft Body Name</th>
+        <th>Aircraft Type Name</th>
+        <th>Product Info Value</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AircraftName) </td>
+            <td>
+                @if (item.AircraftFamilyImage != null) {
+                    <img src="data:image/png;base64,@Convert.ToBase64String(item.AircraftFamilyImage)" alt="html_inline_image.png" title="html_inline_image.png" style="background-color:white; border:3px groove">
+                }
+            </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftConfigurationName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftBodyName) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ProductInfoValue) </td>
+        </tr>
+    }
+
+</table>

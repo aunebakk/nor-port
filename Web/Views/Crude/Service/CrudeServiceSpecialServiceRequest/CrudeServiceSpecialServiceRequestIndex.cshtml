@@ -1,0 +1,55 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:39 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceSpecialServiceRequestContract>
+
+@{
+    ViewBag.Title = "Index Service Special Service Request";
+}
+
+<h2>Index for Service Special Service Request</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServiceSpecialServiceRequestCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Special Service Request Group</th>
+        <th>Service Special Service Request Code</th>
+        <th>Service Special Service Request Name</th>
+        <th>Service Description</th>
+        <th>Amount</th>
+        <th>Inventory Controlled Flag</th>
+        <th>Request Service Special Service Request Requirement</th>
+        <th>Reply Service Special Service Request Requirement</th>
+        <th>Service Special Service Request Operation Rule</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestGroupRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceDescription) </td>
+            <td>@Html.DisplayFor(modelItem => item.Amount) </td>
+            <td>@Html.DisplayFor(modelItem => item.InventoryControlledFlag) </td>
+            <td>@Html.DisplayFor(modelItem => item.RequestServiceSpecialServiceRequestRequirementRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ReplyServiceSpecialServiceRequestRequirementRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceSpecialServiceRequestOperationRuleRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServiceSpecialServiceRequestEdit", new { serviceSpecialServiceRequestId = item.ServiceSpecialServiceRequestId })
+                | @Html.ActionLink("Delete", "CrudeServiceSpecialServiceRequestDelete", new { serviceSpecialServiceRequestId = item.ServiceSpecialServiceRequestId })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,31 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:44:47 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.AirportsAvailableWithFilterContract>
+
+@{
+    ViewBag.Title = "Airports Available With Filter";
+}
+
+<h2>Airports Available With Filter</h2>
+
+<table class="table">
+    <tr>
+        <th>Airport Identifier Code</th>
+        <th>Airport Name</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportName) </td>
+        </tr>
+    }
+
+</table>

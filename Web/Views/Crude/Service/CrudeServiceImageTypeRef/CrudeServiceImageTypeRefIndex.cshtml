@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:35 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceImageTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Service Image Type Ref";
+}
+
+<h2>Index for Service Image Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeServiceImageTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Image Type</th>
+        <th>Service Image Type Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceImageTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.ServiceImageTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeServiceImageTypeRefEdit", new { serviceImageTypeRcd = item.ServiceImageTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeServiceImageTypeRefDelete", new { serviceImageTypeRcd = item.ServiceImageTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

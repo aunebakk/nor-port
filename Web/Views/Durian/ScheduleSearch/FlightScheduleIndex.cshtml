@@ -1,0 +1,49 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:45:43 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.FlightScheduleContract>
+
+@{
+    ViewBag.Title = "Flight Schedule";
+}
+
+<h2>Flight Schedule</h2>
+
+<table class="table">
+    <tr>
+        <th>Airline Identifier Code</th>
+        <th>Airline Name</th>
+        <th>Flight Number</th>
+        <th>Aircraft Type Name</th>
+        <th>Departure Airport Identifier Code</th>
+        <th>Departure Airport Name</th>
+        <th>Arrival Airport Identifier Code</th>
+        <th>Arrival Airport Name</th>
+        <th>From Date Time</th>
+        <th>Until Date Time</th>
+        <th>Segment Count</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirlineIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirlineName) </td>
+            <td>@Html.DisplayFor(modelItem => item.FlightNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.AircraftTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportIdentifierCode) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalAirportName) </td>
+            <td>@Html.DisplayFor(modelItem => item.FromDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UntilDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.SegmentCount) </td>
+        </tr>
+    }
+
+</table>

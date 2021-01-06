@@ -1,0 +1,29 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:23 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeAircraftCompartmentContract
+
+@{
+    ViewBag.Title = "Details Aircraft Compartment";
+}
+
+<h2>Details for Aircraft Compartment</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Aircraft Compartment Name</dt> <dd>@Html.DisplayFor(model => model.AircraftCompartmentName)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeAircraftCompartmentEdit", new { aircraftCompartmentId = Model.AircraftCompartmentId }) |
+    @Html.ActionLink("New", "CrudeAircraftCompartmentCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeAircraftCompartmentIndex")
+</p>

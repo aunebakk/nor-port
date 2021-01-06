@@ -1,0 +1,82 @@
+﻿
+<html>
+    <head>
+        <title>FlightSegment</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FlightSegment Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFlightSegmentService</label>
+        <br /><label>Contract name: CrudeFlightSegmentContract</label>
+        <br /><label>Fetcher: FetchByFlightSegmentId</label>
+        <br /><label>Id: FlightSegmentId, System.Guid</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Flight Segment Id            </td><td>System.Guid</td></tr>
+            <tr><td>Flight Id            </td><td>System.Guid</td></tr>
+            <tr><td>Departure Airport Id            </td><td>System.Guid</td></tr>
+            <tr><td>Arrival Airport Id            </td><td>System.Guid</td></tr>
+            <tr><td>Logical Segment Number            </td><td>System.Int32</td></tr>
+            <tr><td>Physical Segment Number            </td><td>System.Int32</td></tr>
+            <tr><td>From Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Until Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Departure Gate            </td><td>System.String</td></tr>
+            <tr><td>Arrival Gate            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFlightSegmentContract<b> FetchByFlightSegmentId </b>(System.Guid flightSegmentId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchByFlightId </b>(System.Guid flightId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchByDepartureAirportId </b>(System.Guid departureAirportId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchByArrivalAirportId </b>(System.Guid arrivalAirportId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchWithFilter </b>(System.Guid flightSegmentId,System.Guid flightId,System.Guid departureAirportId,System.Guid arrivalAirportId,System.Int32 logicalSegmentNumber,System.Int32 physicalSegmentNumber,System.DateTime fromDateTime,System.DateTime untilDateTime,System.String departureGate,System.String arrivalGate,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFlightSegmentContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFlightSegmentContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFlightSegmentContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid flightSegmentId);
+        <br />
+        <br />
+    </body>
+</html>
+

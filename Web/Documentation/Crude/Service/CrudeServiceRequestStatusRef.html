@@ -1,0 +1,71 @@
+﻿
+<html>
+    <head>
+        <title>ServiceRequestStatusRef</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>ServiceRequestStatusRef Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeServiceRequestStatusRefService</label>
+        <br /><label>Contract name: CrudeServiceRequestStatusRefContract</label>
+        <br /><label>Fetcher: FetchByServiceRequestStatusRcd</label>
+        <br /><label>Id: ServiceRequestStatusRcd, System.String</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Service Request Status            </td><td>System.String</td></tr>
+            <tr><td>Service Request Status Name            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>Description            </td><td>System.String</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeServiceRequestStatusRefContract<b> FetchByServiceRequestStatusRcd </b>(System.String serviceRequestStatusRcd);
+        <br />
+        <br />List&lt;CrudeServiceRequestStatusRefContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />CrudeServiceRequestStatusRefContract<b> FetchByServiceRequestStatusName </b>(System.String serviceRequestStatusName);
+        <br />
+        <br />List&lt;CrudeServiceRequestStatusRefContract&gt;<b> FetchWithFilter </b>(System.String serviceRequestStatusRcd,System.String serviceRequestStatusName,System.Guid userId,System.DateTime dateTime,System.String description);
+        <br />
+        <br />List&lt;CrudeServiceRequestStatusRefContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeServiceRequestStatusRefContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeServiceRequestStatusRefContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeServiceRequestStatusRefContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeServiceRequestStatusRefContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.String serviceRequestStatusRcd);
+        <br />
+        <br />
+    </body>
+</html>
+

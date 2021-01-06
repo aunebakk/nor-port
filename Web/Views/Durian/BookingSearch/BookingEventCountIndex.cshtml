@@ -1,0 +1,45 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:39:56 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.BookingEventCountContract>
+
+@{
+    ViewBag.Title = "Booking Event Count";
+}
+
+<h2>Booking Event Count</h2>
+
+<table class="table">
+    <tr>
+        <th>Booking Contact Count</th>
+        <th>Booking Identifier Count</th>
+        <th>Booking Service Request Count</th>
+        <th>Booking Event Count</th>
+        <th>Booking Flight Segment Count</th>
+        <th>Booking Passenger Count</th>
+        <th>Financial Booking Transaction Count</th>
+        <th>Financial Payment Count</th>
+        <th>Confirmed Flag</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingContactCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingIdentifierCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingServiceRequestCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingEventCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingFlightSegmentCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingPassengerCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialBookingTransactionCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.FinancialPaymentCount) </td>
+            <td>@Html.DisplayFor(modelItem => item.ConfirmedFlag) </td>
+        </tr>
+    }
+
+</table>

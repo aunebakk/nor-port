@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:50 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingEventTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Booking Event Type Ref";
+}
+
+<h2>Index for Booking Event Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeBookingEventTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Booking Event Type</th>
+        <th>Booking Event Type Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.BookingEventTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.BookingEventTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeBookingEventTypeRefEdit", new { bookingEventTypeRcd = item.BookingEventTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeBookingEventTypeRefDelete", new { bookingEventTypeRcd = item.BookingEventTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,159 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:47:00 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateWithDurianGenerator.ParentViewEdit
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.AirlineContract
+
+@{
+    ViewBag.Title = "Edit Airline";
+}
+
+<h2>Edit Airline</h2>
+
+<br />
+@Html.Partial("~/Views/Templates/Airline/_tab.cshtml")
+<br />
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Airline.AirlineId)
+        @Html.HiddenFor(model => model.Airline.UserId)
+        @Html.HiddenFor(model => model.Airline.DateTime)
+
+        <div class="form-group">
+            @Html.Label("Airline Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Airline.AirlineName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Airline.AirlineName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Airline Type", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AirlineTypeRcd", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Legal Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Airline.LegalName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Airline.LegalName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Product Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Stock Market Symbol", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Airline.StockMarketSymbol, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Airline.StockMarketSymbol, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Aircraft Count", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Airline.AircraftCount, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Airline.AircraftCount, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("User Id", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DefaultUserName")
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Date Time", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayText("DateTime")
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn-primary" />
+            </div>
+        </div>
+    </div>
+
+    <p>
+        @Html.ActionLink(
+            "Add New Entry for Airline Contact Method",
+            "AirlineContactMethodCreate",
+            "AirlineAirlineContactMethod",
+            new { airlineId = Model.Airline.AirlineId },
+            null
+            )
+    </p>
+
+    <table class="table">
+        <tr>
+            <th>Contact Method</th>
+            <th>Contact Method Way</th>
+            <th>Comment</th>
+            <th>Date Time</th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.AirlineContactMethod) {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ContactMethodRcd)</td>
+                <td>@Html.DisplayFor(modelItem => item.ContactMethodWay)</td>
+                <td>@Html.DisplayFor(modelItem => item.Comment)</td>
+                <td>@Html.DisplayFor(modelItem => item.DateTime)</td>
+                <td>
+                    @Html.ActionLink(
+                        "Edit",
+                        "AirlineContactMethodEdit",
+                        "AirlineAirlineContactMethod",
+                        new { airlineContactMethodId = item.AirlineContactMethodId },
+                        null
+                        )
+                    | @Html.ActionLink(
+                        "Remove",
+                        "AirlineRemoveAirlineContactMethod",
+                        "Airline",
+                        new { airlineContactMethodId = item.AirlineContactMethodId,
+                              airlineId = item.AirlineId
+                            },
+                        null
+                        )
+                </td>
+            </tr>
+        }
+    </table>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "AirlineIndex")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/themes/base/all.css")
+    <script type="text/javascript">
+        $(function () {
+            // This will make every element with the class "date-picker" into a DatePicker element
+            $('.date-picker').datepicker(({ dateFormat: "yy-mm-dd" }));
+        })
+    </script>
+}

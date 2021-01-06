@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:02 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeFinancialServiceContract>
+
+@{
+    ViewBag.Title = "Index Financial Service";
+}
+
+<h2>Index for Financial Service</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeFinancialServiceCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Service Type</th>
+        <th>Amount</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.ServiceTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.Amount) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeFinancialServiceEdit", new { financialServiceId = item.FinancialServiceId })
+                | @Html.ActionLink("Delete", "CrudeFinancialServiceDelete", new { financialServiceId = item.FinancialServiceId })
+            </td>
+        </tr>
+    }
+
+</table>

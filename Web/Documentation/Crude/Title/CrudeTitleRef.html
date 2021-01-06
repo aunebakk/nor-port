@@ -1,0 +1,70 @@
+﻿
+<html>
+    <head>
+        <title>TitleRef</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>TitleRef Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeTitleRefService</label>
+        <br /><label>Contract name: CrudeTitleRefContract</label>
+        <br /><label>Fetcher: FetchByTitleRcd</label>
+        <br /><label>Id: TitleRcd, System.String</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Title            </td><td>System.String</td></tr>
+            <tr><td>Title Name            </td><td>System.String</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeTitleRefContract<b> FetchByTitleRcd </b>(System.String titleRcd);
+        <br />
+        <br />List&lt;CrudeTitleRefContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />CrudeTitleRefContract<b> FetchByTitleName </b>(System.String titleName);
+        <br />
+        <br />List&lt;CrudeTitleRefContract&gt;<b> FetchWithFilter </b>(System.String titleRcd,System.String titleName,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeTitleRefContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeTitleRefContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeTitleRefContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeTitleRefContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeTitleRefContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.String titleRcd);
+        <br />
+        <br />
+    </body>
+</html>
+

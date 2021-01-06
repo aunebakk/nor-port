@@ -1,0 +1,30 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:46 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewDetails
+-->
+@model SolutionNorSolutionPort.BusinessLogicLayer.CrudeBookingContract
+
+@{
+    ViewBag.Title = "Details Booking";
+}
+
+<h2>Details for Booking</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Received From</dt> <dd>@Html.DisplayFor(model => model.ReceivedFrom)</dd>
+        <dt>Comment</dt> <dd>@Html.DisplayFor(model => model.Comment)</dd>
+        <dt>User Id</dt> <dd>@Html.DisplayFor(model => model.UserId)</dd>
+        <dt>Date Time</dt> <dd>@Html.DisplayFor(model => model.DateTime)</dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "CrudeBookingEdit", new { bookingId = Model.BookingId }) |
+    @Html.ActionLink("New", "CrudeBookingCreate", new { }) |
+    @Html.ActionLink("Back to List", "CrudeBookingIndex")
+</p>

@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:15:45 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeAirportTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Airport Type Ref";
+}
+
+<h2>Index for Airport Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeAirportTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Airport Type</th>
+        <th>Airport Type Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.AirportTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.AirportTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeAirportTypeRefEdit", new { airportTypeRcd = item.AirportTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeAirportTypeRefDelete", new { airportTypeRcd = item.AirportTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,91 @@
+﻿
+<html>
+    <head>
+        <title>Airport</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>Airport Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeAirportService</label>
+        <br /><label>Contract name: CrudeAirportContract</label>
+        <br /><label>Fetcher: FetchByAirportId</label>
+        <br /><label>Id: AirportId, System.Guid</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Airport Id            </td><td>System.Guid</td></tr>
+            <tr><td>Airport Name            </td><td>System.String</td></tr>
+            <tr><td>Airport Type            </td><td>System.String</td></tr>
+            <tr><td>City Id            </td><td>System.Guid</td></tr>
+            <tr><td>Product Id            </td><td>System.Guid</td></tr>
+            <tr><td>Utc Offset            </td><td>System.Decimal</td></tr>
+            <tr><td>Elevation In Meters            </td><td>System.Decimal</td></tr>
+            <tr><td>Runway In Meters            </td><td>System.Decimal</td></tr>
+            <tr><td>Latitude            </td><td>System.String</td></tr>
+            <tr><td>Longitude            </td><td>System.String</td></tr>
+            <tr><td>Timezone Id            </td><td>System.Guid</td></tr>
+            <tr><td>Variation            </td><td>System.String</td></tr>
+            <tr><td>Attendance            </td><td>System.String</td></tr>
+            <tr><td>Control Tower Flag            </td><td>System.Boolean</td></tr>
+            <tr><td>Activation Date Time            </td><td>System.DateTime</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeAirportContract<b> FetchByAirportId </b>(System.Guid airportId);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchByCityId </b>(System.Guid cityId);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchByProductId </b>(System.Guid productId);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchByTimezoneId </b>(System.Guid timezoneId);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchByAirportTypeRcd </b>(System.String airportTypeRcd);
+        <br />
+        <br />CrudeAirportContract<b> FetchByAirportName </b>(System.String airportName);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchWithFilter </b>(System.Guid airportId,System.String airportName,System.String airportTypeRcd,System.Guid cityId,System.Guid productId,System.Decimal utcOffset,System.Decimal elevationInMeters,System.Decimal runwayInMeters,System.String latitude,System.String longitude,System.Guid timezoneId,System.String variation,System.String attendance,System.Boolean controlTowerFlag,System.DateTime activationDateTime,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeAirportContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeAirportContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeAirportContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid airportId);
+        <br />
+        <br />
+    </body>
+</html>
+

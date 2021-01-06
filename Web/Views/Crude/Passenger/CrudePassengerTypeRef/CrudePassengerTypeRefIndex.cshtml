@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:24 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudePassengerTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Passenger Type Ref";
+}
+
+<h2>Index for Passenger Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudePassengerTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Passenger Type</th>
+        <th>Passenger Type Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.PassengerTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.PassengerTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudePassengerTypeRefEdit", new { passengerTypeRcd = item.PassengerTypeRcd })
+                | @Html.ActionLink("Delete", "CrudePassengerTypeRefDelete", new { passengerTypeRcd = item.PassengerTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>

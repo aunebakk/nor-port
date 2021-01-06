@@ -1,0 +1,49 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:17:17 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeFlightSegmentContract>
+
+@{
+    ViewBag.Title = "Index Flight Segment";
+}
+
+<h2>Index for Flight Segment</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeFlightSegmentCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Logical Segment Number</th>
+        <th>Physical Segment Number</th>
+        <th>From Date Time</th>
+        <th>Until Date Time</th>
+        <th>Departure Gate</th>
+        <th>Arrival Gate</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.LogicalSegmentNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.PhysicalSegmentNumber) </td>
+            <td>@Html.DisplayFor(modelItem => item.FromDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UntilDateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.DepartureGate) </td>
+            <td>@Html.DisplayFor(modelItem => item.ArrivalGate) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeFlightSegmentEdit", new { flightSegmentId = item.FlightSegmentId })
+                | @Html.ActionLink("Delete", "CrudeFlightSegmentDelete", new { flightSegmentId = item.FlightSegmentId })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{31A66478-8C25-4C4A-A4CA-E185C4318C7C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Proxy</RootNamespace>
+    <AssemblyName>Proxy</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\sql2x\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crude\Templates\Address\CrudeAddressService.cs" />
+    <Compile Include="Crude\Templates\Address\CrudeAddressTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Agency\CrudeAgencyService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftBodyRefService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftCompartmentMeasurementService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftCompartmentService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftCompartmentTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftConfigurationRefService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftDocumentService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftDocumentTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftMeasurementService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftService.cs" />
+    <Compile Include="Crude\Templates\Aircraft\CrudeAircraftTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineBaseAirportService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineContactMethodService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineLanguageService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineLinkService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineService.cs" />
+    <Compile Include="Crude\Templates\Airline\CrudeAirlineTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportFacilityService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportFacilityTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportHotelLinkService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportLinkService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportRunwayService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportSupplierLinkService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportSupplierService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportTerminalAirlineService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportTerminalService.cs" />
+    <Compile Include="Crude\Templates\Airport\CrudeAirportTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingContactMethodService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingDocumentService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingDocumentTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingEventService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingEventTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingFlightSegmentService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerBaggageService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerEventService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerEventTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerSeatService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingPassengerTicketService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingServiceRequestService.cs" />
+    <Compile Include="Crude\Templates\Booking\CrudeBookingSourceRefService.cs" />
+    <Compile Include="Crude\Templates\Cart\CrudeCartProductPriceService.cs" />
+    <Compile Include="Crude\Templates\Cart\CrudeCartProductService.cs" />
+    <Compile Include="Crude\Templates\Cart\CrudeCartUserService.cs" />
+    <Compile Include="Crude\Templates\City\CrudeCityService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientContactMethodService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientEventService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientEventTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientLinkService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientService.cs" />
+    <Compile Include="Crude\Templates\Client\CrudeClientTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Contact\CrudeContactMethodRefService.cs" />
+    <Compile Include="Crude\Templates\Country\CrudeCountryService.cs" />
+    <Compile Include="Crude\Templates\Date\CrudeDateTimeTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultChangeLogService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultChangeLogTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultErrorLayerRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultErrorService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultErrorTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultIssueService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultIssueStatusRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultIssueTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultPerformanceIssueService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultPerformanceTimeRollupService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultPerformanceTimeService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultResourceMeasurementService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultRuleService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultRuleTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultStateRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultSystemReferenceTableService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultSystemSettingRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultSystemSettingService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultTestRunResultRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultTestRunService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultTestService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultUserActivityService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultUserActivityTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultUserService.cs" />
+    <Compile Include="Crude\Templates\Default\CrudeDefaultVersionService.cs" />
+    <Compile Include="Crude\Templates\External\CrudeExternalSystemService.cs" />
+    <Compile Include="Crude\Templates\Ferry\CrudeFerryIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Ferry\CrudeFerryIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Ferry\CrudeFerryService.cs" />
+    <Compile Include="Crude\Templates\Ferry\CrudeFerryTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialAdjustmentService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialAdjustmentTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialBankAccountNumberTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialBookingTransactionService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialBookingTransactionTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCardTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCarRentalService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCompanyService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCostcentreService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCouponService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCouponTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCurrencyService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialCurrencyTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialFareService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialFareTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialFeeService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialFeeTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialFerryBookingService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialHotelBookingService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentAccountingService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentBankService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentCardService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentCashService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentCouponService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialPaymentVoucherService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialServiceService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialSpecialServiceService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialTaxService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialTaxTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialVoucherService.cs" />
+    <Compile Include="Crude\Templates\Financial\CrudeFinancialVoucherTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightEventService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightIdentifierTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightScheduleIdentifierService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightScheduleSegmentRuleRefService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightScheduleSegmentRuleService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightScheduleSegmentService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightScheduleService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightSegmentEventService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightSegmentService.cs" />
+    <Compile Include="Crude\Templates\Flight\CrudeFlightService.cs" />
+    <Compile Include="Crude\Templates\Gender\CrudeGenderRefService.cs" />
+    <Compile Include="Crude\Templates\Language\CrudeLanguageRefService.cs" />
+    <Compile Include="Crude\Templates\Link\CrudeLinkTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Nationality\CrudeNationalityRefService.cs" />
+    <Compile Include="Crude\Templates\Passenger\CrudePassengerService.cs" />
+    <Compile Include="Crude\Templates\Passenger\CrudePassengerTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Product\CrudeProductService.cs" />
+    <Compile Include="Crude\Templates\Reporting\CrudeReportingRoundupService.cs" />
+    <Compile Include="Crude\Templates\Reporting\CrudeReportingRoundupTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceCarRentalLinkService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceCarRentalService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceFerryService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceHotelImageService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceHotelLinkService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceHotelService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceImageTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServicePackagePromotionService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServicePackageService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceRequestStatusRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceSpecialServiceRequestGroupRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceSpecialServiceRequestOperationRuleRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceSpecialServiceRequestRequirementRefService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceSpecialServiceRequestService.cs" />
+    <Compile Include="Crude\Templates\Service\CrudeServiceTypeRefService.cs" />
+    <Compile Include="Crude\Templates\Timezone\CrudeTimezoneService.cs" />
+    <Compile Include="Crude\Templates\Title\CrudeTitleRefService.cs" />
+    <Compile Include="Durian\AircraftMaintenanceSearch\AircraftMaintenanceSearchProxy.cs" />
+    <Compile Include="Durian\AircraftSearch\AircraftSearchProxy.cs" />
+    <Compile Include="Durian\AirlineSearch\AirlineSearchProxy.cs" />
+    <Compile Include="Durian\AirportSearch\AirportSearchProxy.cs" />
+    <Compile Include="Durian\BookingSearch\BookingSearchProxy.cs" />
+    <Compile Include="Durian\CarRentalSearch\CarRentalSearchProxy.cs" />
+    <Compile Include="Durian\ClientSearch\ClientSearchProxy.cs" />
+    <Compile Include="Durian\DefaultSearch\DefaultSearchProxy.cs" />
+    <Compile Include="Durian\DefaultTestSearch\DefaultTestSearchProxy.cs" />
+    <Compile Include="Durian\FerrySearch\FerrySearchProxy.cs" />
+    <Compile Include="Durian\FinancialSearch\FinancialSearchProxy.cs" />
+    <Compile Include="Durian\FlightSearch\FlightSearchProxy.cs" />
+    <Compile Include="Durian\HotelSearch\HotelSearchProxy.cs" />
+    <Compile Include="Durian\PassengerSearch\PassengerSearchProxy.cs" />
+    <Compile Include="Durian\ScheduleSearch\ScheduleSearchProxy.cs" />
+    <Compile Include="Durian\ServiceSearch\ServiceSearchProxy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BookingProxy.cs" />
+    <Compile Include="Service\DefaultTest\DefaultTest.cs" />
+    <Compile Include="Service\DefaultUserActivityProxy.cs" />
+    <Compile Include="Service\DiagnosticsProxy.cs" />
+    <Compile Include="Service\FlightProxy.cs" />
+    <Compile Include="Service\ScheduleProxy.cs" />
+    <Compile Include="Service\ServiceProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CustomTemplates\Rest\Proxy.json" />
+    <None Include="Information\architecture.txt" />
+    <None Include="Information\description.txt" />
+    <None Include="SchemaTemplates\Address\Address.json" />
+    <None Include="SchemaTemplates\Address\AddressTypeRef.json" />
+    <None Include="SchemaTemplates\Agency\Agency.json" />
+    <None Include="SchemaTemplates\Aircraft\Aircraft.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftBodyRef.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftCompartment.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftCompartmentMeasurement.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftCompartmentTypeRef.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftConfigurationRef.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftDocument.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftDocumentTypeRef.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftIdentifier.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftMeasurement.json" />
+    <None Include="SchemaTemplates\Aircraft\AircraftTypeRef.json" />
+    <None Include="SchemaTemplates\Airline\Airline.json" />
+    <None Include="SchemaTemplates\Airline\AirlineBaseAirport.json" />
+    <None Include="SchemaTemplates\Airline\AirlineContactMethod.json" />
+    <None Include="SchemaTemplates\Airline\AirlineIdentifier.json" />
+    <None Include="SchemaTemplates\Airline\AirlineIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Airline\AirlineLanguage.json" />
+    <None Include="SchemaTemplates\Airline\AirlineLink.json" />
+    <None Include="SchemaTemplates\Airline\AirlineTypeRef.json" />
+    <None Include="SchemaTemplates\Airport\Airport.json" />
+    <None Include="SchemaTemplates\Airport\AirportFacility.json" />
+    <None Include="SchemaTemplates\Airport\AirportFacilityTypeRef.json" />
+    <None Include="SchemaTemplates\Airport\AirportHotelLink.json" />
+    <None Include="SchemaTemplates\Airport\AirportIdentifier.json" />
+    <None Include="SchemaTemplates\Airport\AirportIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Airport\AirportLink.json" />
+    <None Include="SchemaTemplates\Airport\AirportRunway.json" />
+    <None Include="SchemaTemplates\Airport\AirportSupplier.json" />
+    <None Include="SchemaTemplates\Airport\AirportSupplierLink.json" />
+    <None Include="SchemaTemplates\Airport\AirportTerminal.json" />
+    <None Include="SchemaTemplates\Airport\AirportTerminalAirline.json" />
+    <None Include="SchemaTemplates\Airport\AirportTypeRef.json" />
+    <None Include="SchemaTemplates\Booking\Booking.json" />
+    <None Include="SchemaTemplates\Booking\BookingContactMethod.json" />
+    <None Include="SchemaTemplates\Booking\BookingDocument.json" />
+    <None Include="SchemaTemplates\Booking\BookingDocumentTypeRef.json" />
+    <None Include="SchemaTemplates\Booking\BookingEvent.json" />
+    <None Include="SchemaTemplates\Booking\BookingEventTypeRef.json" />
+    <None Include="SchemaTemplates\Booking\BookingFlightSegment.json" />
+    <None Include="SchemaTemplates\Booking\BookingIdentifier.json" />
+    <None Include="SchemaTemplates\Booking\BookingIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassenger.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassengerBaggage.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassengerEvent.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassengerEventTypeRef.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassengerSeat.json" />
+    <None Include="SchemaTemplates\Booking\BookingPassengerTicket.json" />
+    <None Include="SchemaTemplates\Booking\BookingServiceRequest.json" />
+    <None Include="SchemaTemplates\Booking\BookingSourceRef.json" />
+    <None Include="SchemaTemplates\Cart\CartProduct.json" />
+    <None Include="SchemaTemplates\Cart\CartProductPrice.json" />
+    <None Include="SchemaTemplates\Cart\CartUser.json" />
+    <None Include="SchemaTemplates\City\City.json" />
+    <None Include="SchemaTemplates\Client\Client.json" />
+    <None Include="SchemaTemplates\Client\ClientContactMethod.json" />
+    <None Include="SchemaTemplates\Client\ClientEvent.json" />
+    <None Include="SchemaTemplates\Client\ClientEventTypeRef.json" />
+    <None Include="SchemaTemplates\Client\ClientLink.json" />
+    <None Include="SchemaTemplates\Client\ClientTypeRef.json" />
+    <None Include="SchemaTemplates\Contact\ContactMethodRef.json" />
+    <None Include="SchemaTemplates\Country\Country.json" />
+    <None Include="SchemaTemplates\Date\DateTimeTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultChangeLog.json" />
+    <None Include="SchemaTemplates\Default\DefaultChangeLogTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultError.json" />
+    <None Include="SchemaTemplates\Default\DefaultErrorLayerRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultErrorTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultIssue.json" />
+    <None Include="SchemaTemplates\Default\DefaultIssueStatusRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultIssueTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultPerformanceIssue.json" />
+    <None Include="SchemaTemplates\Default\DefaultPerformanceTime.json" />
+    <None Include="SchemaTemplates\Default\DefaultPerformanceTimeRollup.json" />
+    <None Include="SchemaTemplates\Default\DefaultResourceMeasurement.json" />
+    <None Include="SchemaTemplates\Default\DefaultRule.json" />
+    <None Include="SchemaTemplates\Default\DefaultRuleTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultStateRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultSystemReferenceTable.json" />
+    <None Include="SchemaTemplates\Default\DefaultSystemSetting.json" />
+    <None Include="SchemaTemplates\Default\DefaultSystemSettingRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultTest.json" />
+    <None Include="SchemaTemplates\Default\DefaultTestRun.json" />
+    <None Include="SchemaTemplates\Default\DefaultTestRunResultRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultUser.json" />
+    <None Include="SchemaTemplates\Default\DefaultUserActivity.json" />
+    <None Include="SchemaTemplates\Default\DefaultUserActivityTypeRef.json" />
+    <None Include="SchemaTemplates\Default\DefaultVersion.json" />
+    <None Include="SchemaTemplates\External\ExternalSystem.json" />
+    <None Include="SchemaTemplates\Ferry\Ferry.json" />
+    <None Include="SchemaTemplates\Ferry\FerryIdentifier.json" />
+    <None Include="SchemaTemplates\Ferry\FerryIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Ferry\FerryTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialAdjustment.json" />
+    <None Include="SchemaTemplates\Financial\FinancialAdjustmentTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialBankAccountNumberTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialBookingTransaction.json" />
+    <None Include="SchemaTemplates\Financial\FinancialBookingTransactionTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCardTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCarRental.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCompany.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCostcentre.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCoupon.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCouponTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCurrency.json" />
+    <None Include="SchemaTemplates\Financial\FinancialCurrencyTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialFare.json" />
+    <None Include="SchemaTemplates\Financial\FinancialFareTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialFee.json" />
+    <None Include="SchemaTemplates\Financial\FinancialFeeTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialFerryBooking.json" />
+    <None Include="SchemaTemplates\Financial\FinancialHotelBooking.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPayment.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentAccounting.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentBank.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentCard.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentCash.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentCoupon.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialPaymentVoucher.json" />
+    <None Include="SchemaTemplates\Financial\FinancialService.json" />
+    <None Include="SchemaTemplates\Financial\FinancialSpecialService.json" />
+    <None Include="SchemaTemplates\Financial\FinancialTax.json" />
+    <None Include="SchemaTemplates\Financial\FinancialTaxTypeRef.json" />
+    <None Include="SchemaTemplates\Financial\FinancialVoucher.json" />
+    <None Include="SchemaTemplates\Financial\FinancialVoucherTypeRef.json" />
+    <None Include="SchemaTemplates\Flight\Flight.json" />
+    <None Include="SchemaTemplates\Flight\FlightEvent.json" />
+    <None Include="SchemaTemplates\Flight\FlightIdentifier.json" />
+    <None Include="SchemaTemplates\Flight\FlightIdentifierTypeRef.json" />
+    <None Include="SchemaTemplates\Flight\FlightSchedule.json" />
+    <None Include="SchemaTemplates\Flight\FlightScheduleIdentifier.json" />
+    <None Include="SchemaTemplates\Flight\FlightScheduleSegment.json" />
+    <None Include="SchemaTemplates\Flight\FlightScheduleSegmentRule.json" />
+    <None Include="SchemaTemplates\Flight\FlightScheduleSegmentRuleRef.json" />
+    <None Include="SchemaTemplates\Flight\FlightSegment.json" />
+    <None Include="SchemaTemplates\Flight\FlightSegmentEvent.json" />
+    <None Include="SchemaTemplates\Gender\GenderRef.json" />
+    <None Include="SchemaTemplates\Language\LanguageRef.json" />
+    <None Include="SchemaTemplates\Link\LinkTypeRef.json" />
+    <None Include="SchemaTemplates\Nationality\NationalityRef.json" />
+    <None Include="SchemaTemplates\Passenger\Passenger.json" />
+    <None Include="SchemaTemplates\Passenger\PassengerTypeRef.json" />
+    <None Include="SchemaTemplates\Product\Product.json" />
+    <None Include="SchemaTemplates\Reporting\ReportingRoundup.json" />
+    <None Include="SchemaTemplates\Reporting\ReportingRoundupTypeRef.json" />
+    <None Include="SchemaTemplates\Service\ServiceCarRental.json" />
+    <None Include="SchemaTemplates\Service\ServiceCarRentalLink.json" />
+    <None Include="SchemaTemplates\Service\ServiceFerry.json" />
+    <None Include="SchemaTemplates\Service\ServiceHotel.json" />
+    <None Include="SchemaTemplates\Service\ServiceHotelImage.json" />
+    <None Include="SchemaTemplates\Service\ServiceHotelLink.json" />
+    <None Include="SchemaTemplates\Service\ServiceImageTypeRef.json" />
+    <None Include="SchemaTemplates\Service\ServicePackage.json" />
+    <None Include="SchemaTemplates\Service\ServicePackagePromotion.json" />
+    <None Include="SchemaTemplates\Service\ServiceRequestStatusRef.json" />
+    <None Include="SchemaTemplates\Service\ServiceSpecialServiceRequest.json" />
+    <None Include="SchemaTemplates\Service\ServiceSpecialServiceRequestGroupRef.json" />
+    <None Include="SchemaTemplates\Service\ServiceSpecialServiceRequestOperationRuleRef.json" />
+    <None Include="SchemaTemplates\Service\ServiceSpecialServiceRequestRequirementRef.json" />
+    <None Include="SchemaTemplates\Service\ServiceTypeRef.json" />
+    <None Include="SchemaTemplates\Timezone\Timezone.json" />
+    <None Include="SchemaTemplates\Title\TitleRef.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Contract\Contract.csproj">
+      <Project>{9b481bca-a684-4784-8822-f41694d3e4ba}</Project>
+      <Name>Contract</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

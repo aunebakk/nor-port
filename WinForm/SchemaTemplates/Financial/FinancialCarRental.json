@@ -1,0 +1,40 @@
+﻿{
+  "Version": 4,
+  "JsonType": "TemplateFromSchema",
+  "Filename": "FinancialCarRental.json",
+  "Table": {
+    "DomainName": "Financial",
+    "TableName": "financial_car_rental",
+    "ClassNamePascalCase": "CrudeFinancialCarRental",
+    "VariableNameCamelCase": "financialCarRental",
+    "AutoUpdateScheme": "autoupdatenormal",
+    "AutoFillColumnName": "user_id",
+    "AutoFillSQLType": "uniqueidentifier",
+    "ParentTableName": null,
+    "Children": []
+  },
+  "Style": {
+    "TemplateStyle": "DotNetFrameworkCrudeWinForm",
+    "Name": "DotNetFrameworkCrudeWinForm",
+    "DesignTypeScript": "TypeScriptHagtorn",
+    "PrimaryKey": null,
+    "AzureAppName": null,
+    "OverrideDisplayableName": null,
+    "WebStyle": "None",
+    "Actions": [],
+    "ShowPrimary": false
+  },
+  "Durian": {
+    "DurianClass": "",
+    "DurianParameterToOwner": false,
+    "DurianParameters": false,
+    "DurianMethod": ""
+  },
+  "Header": [],
+  "RefreshLink": null,
+  "Injection": null,
+  "Result": {
+    "RunDateTime": null,
+    "Urls": null
+  }
+}

@@ -1,0 +1,39 @@
+<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 0.d
+  http://sql2x.azurewebsites.net/
+  Generated Date: 12/29/2018 11:35:17 AM
+  Template: sql2x.MVCDurianGenerator.MethodViewIndexCode
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.DefaultUserActivityRecentContract>
+
+@{
+    ViewBag.Title = "Default User Activity Recent";
+}
+
+<h2>Default User Activity Recent</h2>
+
+<table class="table">
+    <tr>
+        <th>Date Time</th>
+        <th>User Activity Type Name</th>
+        <th>Originating Address</th>
+        <th>Referrer</th>
+        <th>User Activity Note</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>@Html.DisplayFor(modelItem => item.UserActivityTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.OriginatingAddress) </td>
+            <td>@Html.DisplayFor(modelItem => item.Referrer) </td>
+            <td>@Html.DisplayFor(modelItem => item.UserActivityNote) </td>
+            <td>@Html.ActionLink("Resolve", "ResolveNetnameFromIpV4", "DefaultUserActivity", new { ipAddress = item.OriginatingAddress }, null)</td>
+            <td><a href=@Html.Raw("http://www.whois.com/whois/" + item.OriginatingAddress) } target="_blank">whois</a></td>
+            <td><a href=@Html.Raw("http://whois.arin.net/rest/nets;q=" + item.OriginatingAddress + "?showDetails=true&showARIN=false&showNonArinTopLevelNet=false&ext=netref2") } target="_blank">arin</a></td>
+        </tr>
+    }
+
+</table>

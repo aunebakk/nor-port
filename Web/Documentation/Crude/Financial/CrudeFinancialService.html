@@ -1,0 +1,89 @@
+﻿
+<html>
+    <head>
+        <title>FinancialService</title>
+        <link href="/Content/bootstrap.css" rel="stylesheet" type="text/css">
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function ( ) {
+                $('table tr:even').addClass('even');
+            });
+        </script>
+        <style>
+            body {
+              background-color: #ffffff; 
+              margin-left: 40px; 
+              margin-top: 40px; 
+              margin-right: 40px; 
+              margin-bottom: 40px; 
+              font-family: Tahoma; 
+              font-size: small; 
+            }
+            h1   {color:blue}
+            p    {color:green}
+        </style>
+    </head>
+    <body>
+        <h1>FinancialService Contract Members</h1>
+              <label>Namespace: SolutionNorSolutionPort.BusinessLogicLayer</label>
+        <br /><label>Service name: CrudeFinancialServiceService</label>
+        <br /><label>Contract name: CrudeFinancialServiceContract</label>
+        <br /><label>Fetcher: FetchByFinancialServiceId</label>
+        <br /><label>Id: FinancialServiceId, System.Guid</label>
+        <br />
+        <br /><label>Create Read Update Delete (CRUD) members, operators for database table</label>
+        <br />
+        <br />
+        <table>
+            <tr><td>Financial Service Id            </td><td>System.Guid</td></tr>
+            <tr><td>Booking Service Request Id            </td><td>System.Guid</td></tr>
+            <tr><td>Service Type            </td><td>System.String</td></tr>
+            <tr><td>Amount            </td><td>System.Decimal</td></tr>
+            <tr><td>Financial Currency Id            </td><td>System.Guid</td></tr>
+            <tr><td>Financial Special Service Id            </td><td>System.Guid</td></tr>
+            <tr><td>Financial Hotel Booking Id            </td><td>System.Guid</td></tr>
+            <tr><td>Financial Car Rental Id            </td><td>System.Guid</td></tr>
+            <tr><td>Financial Ferry Booking Id            </td><td>System.Guid</td></tr>
+            <tr><td>User Id            </td><td>System.Guid</td></tr>
+            <tr><td>Date Time            </td><td>System.DateTime</td></tr>
+        </table>
+        <br />
+        <h2>Service Operations</h2>
+        <br />CrudeFinancialServiceContract<b> FetchByFinancialServiceId </b>(System.Guid financialServiceId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByBookingServiceRequestId </b>(System.Guid bookingServiceRequestId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByFinancialCurrencyId </b>(System.Guid financialCurrencyId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByFinancialSpecialServiceId </b>(System.Guid financialSpecialServiceId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByFinancialHotelBookingId </b>(System.Guid financialHotelBookingId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByFinancialCarRentalId </b>(System.Guid financialCarRentalId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByFinancialFerryBookingId </b>(System.Guid financialFerryBookingId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByUserId </b>(System.Guid userId);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchByServiceTypeRcd </b>(System.String serviceTypeRcd);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchWithFilter </b>(System.Guid financialServiceId,System.Guid bookingServiceRequestId,System.String serviceTypeRcd,System.Decimal amount,System.Guid financialCurrencyId,System.Guid financialSpecialServiceId,System.Guid financialHotelBookingId,System.Guid financialCarRentalId,System.Guid financialFerryBookingId,System.Guid userId,System.DateTime dateTime);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchAll </b>();
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchAllWithLimit </b>(System.Int32 limit);
+        <br />
+        <br />List&lt;CrudeFinancialServiceContract&gt;<b> FetchAllWithLimitAndOffset </b>(System.Int32 limit,System.Int32 offset);
+        <br />
+        <br />System.Int32<b> FetchAllCount </b>();
+        <br />
+        <br />System.Void<b> Insert </b>(CrudeFinancialServiceContract contract);
+        <br />
+        <br />System.Void<b> Update </b>(CrudeFinancialServiceContract contract);
+        <br />
+        <br />System.Void<b> Delete </b>(System.Guid financialServiceId);
+        <br />
+        <br />
+    </body>
+</html>
+

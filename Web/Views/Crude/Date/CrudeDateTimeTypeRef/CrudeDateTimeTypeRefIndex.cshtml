@@ -1,0 +1,41 @@
+﻿<!--
+  SQL2X Generated code based on a SQL Server Schema
+  SQL2X Version: 1.0
+  http://sql2x.org/
+  Generated Date: 1/6/2021 7:16:09 AM
+  From Machine: DESKTOP-LSRVP12
+  Template: sql2x.TemplateFromCrudeMvcGenerator.FromCrudeViewIndex
+-->
+@model IEnumerable<SolutionNorSolutionPort.BusinessLogicLayer.CrudeDateTimeTypeRefContract>
+
+@{
+    ViewBag.Title = "Index Date Time Type Ref";
+}
+
+<h2>Index for Date Time Type Ref</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CrudeDateTimeTypeRefCreate")
+</p>
+
+<table class="table">
+    <tr>
+        <th>Date Time Type</th>
+        <th>Date Time Type Name</th>
+        <th>Date Time</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.DateTimeTypeRcd) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTimeTypeName) </td>
+            <td>@Html.DisplayFor(modelItem => item.DateTime) </td>
+            <td>
+                @Html.ActionLink("Edit", "CrudeDateTimeTypeRefEdit", new { dateTimeTypeRcd = item.DateTimeTypeRcd })
+                | @Html.ActionLink("Delete", "CrudeDateTimeTypeRefDelete", new { dateTimeTypeRcd = item.DateTimeTypeRcd })
+            </td>
+        </tr>
+    }
+
+</table>
