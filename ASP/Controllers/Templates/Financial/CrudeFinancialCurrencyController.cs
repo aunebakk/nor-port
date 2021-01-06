@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/5/2021 2:13:16 PM
+  Generated Date: 1/6/2021 5:26:42 AM
   From Machine: DESKTOP-LSRVP12
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
@@ -179,10 +179,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyTypeCode" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyTypeName" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyAgainstFinancialCurrencyTypeRcd" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/5/2021 2:13:16 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/5/2021 2:13:16 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/6/2021 5:26:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/6/2021 5:26:42 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DecimalCount" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 2:13:16 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/6/2021 5:26:42 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -229,10 +229,10 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyTypeCode" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyTypeName" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialCurrencyAgainstFinancialCurrencyTypeRcd" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/5/2021 2:13:16 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/5/2021 2:13:16 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/6/2021 5:26:42 AM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/6/2021 5:26:42 AM" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "DecimalCount" , "1" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/5/2021 2:13:16 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/6/2021 5:26:42 AM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

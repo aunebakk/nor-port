@@ -44,6 +44,17 @@ Documentation level has been turned on High for this release, which means the fo
 
 Nor-Port uses no special frameworks outside of the dotNetFramework ecosystem in an effort to make it as scalable and maintainable as possible, this is made possible by using a tool to generate boiler plate code for efficient communication between layers ( SQL2X ). Since the code is bare bone C# and TypeScript it is easier to find developers to maintain / enhance the code.
 
+# Cost
+Cost per booking is at below cent level with the current load of 10k passengers a day. 
+
+The 4 web apps run under Azure on a Windows Standard (S1: 1) App Service Plan with a monthly cost of 40 USD with an Azure SQL server tier speced at Standard S0: 10 DTUs with a monthly cost of 12 USD.
+The system could run on a lower spec but would obviously be slower than it currently is. 
+
+This is a development setup however and it would deliver a bad customer experience in terms of response time should the requests per minute increase beyond what the test engine currently delivers. 
+
+But scaling up is where Nor-Port and Azure shines. There are no legacy Virtual Machine software involved, no old software running behind some fancy API in a Microservice setup, just clean C# in dotNetCore and dotNetFramework running without expensive frameworks which is hard to beat performance wise on the same hardware specification.
+
+# Functionality
 Functionality that includes SOAP and REST API’s with Windows and Web User Interface:
  - Flight Schedule 
  - Booking 
@@ -194,7 +205,7 @@ At this point the FrontEnd can only be used to bring up the start page and the a
 
 The web FrontEnd is responsible for creating and updating the database, so the FrontEnd needs to be published before the database can be created. 
 
- - https://XXX.azurewebsites.net/database
+ - https://XXX.AzureWebSites.net/database
    - Database Management Create Database
    - Database Management Set Version Zero Database
    - Database Management Increase Version To Latest step by step
@@ -209,6 +220,12 @@ Is an top-down view of Nor-Port, starting with all user visible aspects, going t
 
 ## The Repository
 This repository ("`Nor-Port`") is where we ( NorGate ) develop the [Nor-Port](http://www.NorPort.org) product. This source code is available to everyone under the standard [MIT](https://github.com/aunebakk/nor-port/blob/master/Documentation/license.txt) license.
+
+Resources needed for further development of this Open Source project is:
+ - Access to distributor of Flight Schedule data like Aviationstack, FlightAware, OpenSky, etc
+ - Documentation writer for User Manuals, etc
+ - Web Page developer for a customer facing booking site
+ - Access to IATA Standards, Manuals, Guidelines & Test data for development of Gateways
 
 ## DashBoard web
 This is the starting page for the Web side of Nor-Port. 
@@ -270,15 +287,15 @@ For editing all product data, including an all inclusive history of all changes 
  - PowerShell for DevOps tasks
 
 ## Software architecture
- - [Schematic Overview](https://norsolutionsql2xcore.azurewebsites.net/api/1/dashboard/DashboardArchitectureFramework)
- - sql2x.org [Code Generator](https://norsolutionsql2xcore.azurewebsites.net/sql2xIndex)
+ - [Schematic Overview](https://norsolutionsql2xcore.AzureWebSites.net/api/1/dashboard/DashboardArchitectureFramework)
+ - sql2x.org [Code Generator](http://sql2x.org)
  - dotNetFramework
  - WinForm
  - Active Server Pages
  - Windows Communication Foundation
 
 ## System architecture
- - [Azure](https://norsolutionsql2xcore.azurewebsites.net/Azure)
+ - [Azure](https://norsolutionsql2xcore.AzureWebSites.net/Home/Azure)
  - SQL Server
  - Internet Information Server
  - Windows Server
@@ -304,7 +321,7 @@ Nor-Port uses a database handler that takes care of upgrading the database schem
 * Follow [@sql2x](https://twitter.com/sql2x) and let us know what you think!
 * Follow [reddit](https://www.reddit.com/r/sql2x/) and let us know what you think!
 * [File an issue ( GitHub issue tracker )](https://github.com/aunebakk/nor-port/issues)
-* [File an issue ( Nor-Port's own issue tracker )](https://NorSolutionPort.azurewebsites.net/DefaultIssueWithFilterLive/DefaultIssueWithFilterLiveIndex)
+* [File an issue ( Nor-Port's own issue tracker )](https://norsolutionport.AzureWebSites.net/DefaultIssueWithFilterLive/DefaultIssueWithFilterIndex)
 * Ask a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/Nor-Port)
 
 ## SQL2X
