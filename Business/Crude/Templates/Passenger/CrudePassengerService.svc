@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudePassengerService" CodeBehind="Crude\Templates\Passenger\\\CrudePassenger.cs"%>

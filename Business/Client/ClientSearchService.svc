@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.ClientSearchService" CodeBehind="C:\SQL2XProjects\SolutionNorSolutionPort\Business\Client\\ClientSearchService.cs"%>

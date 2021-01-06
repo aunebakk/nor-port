@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceHotelImageService" CodeBehind="Crude\Templates\Service\\\CrudeServiceHotelImage.cs"%>

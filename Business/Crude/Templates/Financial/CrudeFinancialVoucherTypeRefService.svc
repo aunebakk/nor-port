@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeFinancialVoucherTypeRefService" CodeBehind="Crude\Templates\Financial\\\CrudeFinancialVoucherTypeRef.cs"%>

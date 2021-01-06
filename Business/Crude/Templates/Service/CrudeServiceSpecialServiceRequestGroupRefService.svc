@@ -1,1 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="SolutionNorSolutionPort.BusinessLogicLayer.CrudeServiceSpecialServiceRequestGroupRefService" CodeBehind="Crude\Templates\Service\\\CrudeServiceSpecialServiceRequestGroupRef.cs"%>
