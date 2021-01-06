@@ -2,7 +2,7 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/6/2021 1:09:05 PM
+  Generated Date: 1/6/2021 4:18:26 PM
   From Machine: DESKTOP-LSRVP12
   Filename: FerryIdentifier.json
   MethodName: sql2x.TemplateCrudeProxy.CrudeProxy
