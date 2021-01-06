@@ -1,7 +1,7 @@
 # SQL2X Generated code based on a SQL Server Schema
 # SQL2X Version: 1.0
 # http://sql2x.org/
-# Generated Date: 1/6/2021 10:45:06 AM
+# Generated Date: 1/6/2021 2:10:24 PM
 # From Machine: DESKTOP-LSRVP12
 # Template: SQL2XExtensionV3.SQL2XExtensionCreatorNorSolution.Content_EnvironmentSwitch
 param (
@@ -35,9 +35,9 @@ foreach ($file in Get-ChildItem -recurse -include $match | Where-Object { Test-P
 
     # replace
     if ($toRemote) {
-        $fileContent = $fileContent | ForEach-Object { $_.Replace('ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;', 'ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;') }
+        $fileContent = $fileContent | ForEach-Object { $_.Replace('ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=NorSolutionPort;', 'ConnectionString = @"Data Source=sqlServerName.database.windows.net;Persist Security Info=True;User ID=sqlServerUserName;Password=sqlServerPassword;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=120;Initial Catalog=NorSolutionPort;') }
     } else {
-        $fileContent = $fileContent | ForEach-Object { $_.Replace('ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;', 'ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;') }
+        $fileContent = $fileContent | ForEach-Object { $_.Replace('ConnectionString = @"Data Source=sqlServerName.database.windows.net;Persist Security Info=True;User ID=sqlServerUserName;Password=sqlServerPassword;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=120;Initial Catalog=NorSolutionPort;', 'ConnectionString = @"Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=NorSolutionPort;') }
     }
 
     # save file and show filename if changed
@@ -66,9 +66,9 @@ foreach ($file in Get-ChildItem -recurse -include $match | Where-Object { Test-P
 
     # replace
     if ($toRemote) {
-        $fileContent = $fileContent | ForEach-Object { $_.Replace('Data Source=(localdb)\MSSQLLocalDB;', 'Data Source=(localdb)\MSSQLLocalDB;') }
+        $fileContent = $fileContent | ForEach-Object { $_.Replace('Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=NorSolutionPort;', 'Data Source=sqlServerName.database.windows.net;Persist Security Info=True;User ID=sqlServerUserName;Password=sqlServerPassword;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=120;Initial Catalog=NorSolutionPort;') }
     } else {
-        $fileContent = $fileContent | ForEach-Object { $_.Replace('Data Source=(localdb)\MSSQLLocalDB;', 'Data Source=(localdb)\MSSQLLocalDB;') }
+        $fileContent = $fileContent | ForEach-Object { $_.Replace('Data Source=sqlServerName.database.windows.net;Persist Security Info=True;User ID=sqlServerUserName;Password=sqlServerPassword;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=120;Initial Catalog=NorSolutionPort;', 'Data Source=(localdb)\MSSQLLocalDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False;Initial Catalog=NorSolutionPort;') }
     }
 
     # save file and show filename if changed
