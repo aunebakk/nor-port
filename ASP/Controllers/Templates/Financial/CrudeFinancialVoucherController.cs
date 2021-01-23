@@ -2,8 +2,8 @@
   SQL2X Generated code based on a SQL Server Schema
   SQL2X Version: 1.0
   http://sql2x.org/
-  Generated Date: 1/6/2021 4:32:44 PM
-  From Machine: DESKTOP-LSRVP12
+  Generated Date: 1/23/2021 5:14:31 PM
+  From Machine: DESKTOP-9A2DH39
   Template: sql2x.TemplateDotNetCoreApiGenerator.ControllerBeginning
 */
 using SolutionNorSolutionPort.BusinessLogicLayer;
@@ -166,9 +166,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialVoucherTypeRcd" , "create" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "VoucherNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "VoucherDescription" , "create" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/6/2021 4:32:44 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/6/2021 4:32:44 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/6/2021 4:32:44 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/23/2021 5:14:31 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/23/2021 5:14:31 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/23/2021 5:14:31 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // POST model to myself
@@ -214,9 +214,9 @@ namespace SolutionNorSolutionPort.BusinessLogicLayer.Controllers {
                 pairs.Add ( new KeyValuePair<string , string> ( "FinancialVoucherTypeRcd" , "update" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "VoucherNumber" , "1" ) );
                 pairs.Add ( new KeyValuePair<string , string> ( "VoucherDescription" , "update" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/6/2021 4:32:44 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/6/2021 4:32:44 PM" ) );
-                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/6/2021 4:32:44 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidFromDateTime" , "1/23/2021 5:14:31 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "ValidUntilDateTime" , "1/23/2021 5:14:31 PM" ) );
+                pairs.Add ( new KeyValuePair<string , string> ( "DateTime" , "1/23/2021 5:14:31 PM" ) );
                 var content = new FormUrlEncodedContent ( pairs );
 
                 // PUT model to myself

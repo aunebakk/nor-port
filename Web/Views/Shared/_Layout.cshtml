@@ -132,7 +132,7 @@
                             <li>@Html.ActionLink("Transactions Balance", "TransactionsCreditDebitBalanceIndex", "TransactionsCreditDebitBalance", new { fromDateTime = DateTime.UtcNow.AddDays(-2), untilDateTime = DateTime.UtcNow.AddDays(+2) }, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("Transactions Balance Chart", "TransactionsBalance", "Chart", null, new { @class = "dropdown-item" })</li>
                             <li>@Html.ActionLink("Performance Time", "CrudeDefaultPerformanceTimeIndex", "CrudeDefaultPerformanceTime", null, new { @class = "dropdown-item" })</li>
-                            <li>@Html.ActionLink("Performance Time Chart", "PerformanceTimesAndCombo", "Chart", new { commandName = "SolutionNorSolutionPortBusinessLogicLayer.BookingService.SimulateBookings" }, new { @class = "dropdown-item" })</li>
+                            <li>@Html.ActionLink("Performance Time Chart", "PerformanceTimesAndCombo", "Chart", new { commandName = "SimulateBookings" }, new { @class = "dropdown-item" })</li>
                         </ul>
                     </li>
 

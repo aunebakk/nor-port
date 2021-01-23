@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -100,7 +100,7 @@
                             <li>@Html.ActionLink("Transactions Balance", "TransactionsCreditDebitBalanceIndex", "TransactionsCreditDebitBalance", new { fromDateTime = DateTime.UtcNow.AddDays(-2), untilDateTime = DateTime.UtcNow.AddDays(+2) }, null)</li>
                             <li>@Html.ActionLink("Transactions Balance Chart", "TransactionsBalance", "Chart")</li>
                             <li>@Html.ActionLink("Performance Time", "CrudeDefaultPerformanceTimeIndex", "CrudeDefaultPerformanceTime")</li>
-                            <li>@Html.ActionLink("Performance Time Chart", "PerformanceTimesAndCombo", "Chart", new { commandName = "SolutionNorSolutionPortBusinessLogicLayer.BookingService.SimulateBookings" }, null)</li>
+                            <li>@Html.ActionLink("Performance Time Chart", "PerformanceTimesAndCombo", "Chart", new { commandName = "SimulateBookings" }, null)</li>
                         </ul>
                     </li>
 

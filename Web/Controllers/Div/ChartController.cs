@@ -330,6 +330,8 @@ namespace HighlightsChart.Controllers
             ) {
             Logging.ActionLog(Request, "PerformanceTimesAndCombo: " + commandName + " ( ASP MVC WCF )");
 
+            //Response.AddHeader("Chart", $"PerformanceTimesAndCombo?commandName={commandName}");
+
             DateTime fromDateTime = DateTime.UtcNow.AddMonths(-1);
             DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
@@ -338,9 +340,10 @@ namespace HighlightsChart.Controllers
 
             ViewBag.CommandName =
                 new SelectList(
-                    commands.Select(x => new { x.CommandName, x.CommandDisplayName }).Distinct(),
+                    commands.Select(x => new { x.CommandName, x.CommandDisplayName }).Distinct().OrderBy(x => x.CommandDisplayName),
                     "CommandName",
-                    "CommandDisplayName"
+                    "CommandDisplayName",
+                    commandName
                     );
 
             List<DefaultPerformanceTimesContract> times = 
@@ -348,13 +351,22 @@ namespace HighlightsChart.Controllers
                     commandName
                     );
 
+            // to get lesser dates first in graph
+            times.Reverse();
+
+            // get exact time period
+            if (times.Count > 2) {
+                fromDateTime = times.First().DateTime;
+                untilDateTime = times.Last().DateTime;
+            }
+
             // create a collection of data
             var performanceTimes = new List<PerformanceTime>();
 
             foreach ( DefaultPerformanceTimesContract contract in times ) {
                 performanceTimes.Add(
                     new PerformanceTime() {
-                        Date = contract.DateTime.ToString("ss"),
+                        Date = contract.DateTime.ToString("hh:mm:ss"),
                         Milliseconds = contract.Milliseconds
                     }
                     );
@@ -374,7 +386,9 @@ namespace HighlightsChart.Controllers
                 .SetTitle(new Title { Text = "nor-port" })
 
                 // small label below the main Title
-                .SetSubtitle(new Subtitle { Text = commandName + " from " + fromDateTime.ToShortDateString() + " until " + untilDateTime.ToShortDateString() })
+                .SetSubtitle(new Subtitle { Text = commandName + " from " + fromDateTime 
+                                                               + " until " + untilDateTime
+                                            })
 
                 // load the X values
                 .SetXAxis(new XAxis { Categories = xDataTimes })
@@ -399,6 +413,8 @@ namespace HighlightsChart.Controllers
                     .SetSeries(new[]
                         {   new Series { Name = "Milliseconds", Data = new Data(yDataMilliseconds) }
                         });
+
+            RedirectToAction("PerformanceTimesAndCombo", new { commandName = commandName });
 
             return View(chart);
         }
@@ -409,77 +425,80 @@ namespace HighlightsChart.Controllers
             ) {
             Logging.ActionLog(Request, "PerformanceTimesAndCombo: " + commandName + " ( ASP MVC WCF )");
 
-            DateTime fromDateTime = DateTime.UtcNow.AddMonths(-1);
-            DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
+            return PerformanceTimesAndCombo(commandName, dillToDiffrentiateFromHttpGet: null);
 
-            List<DefaultPerformanceTimeCommandsContract> commands = 
-                new DefaultSearchServiceClient().DefaultPerformanceTimeCommands();
+            //DateTime fromDateTime = DateTime.UtcNow.AddMonths(-1);
+            //DateTime untilDateTime = DateTime.UtcNow.AddDays(+5);
 
-            ViewBag.CommandName =
-                new SelectList(
-                    commands.Select(x => new { x.CommandName, x.CommandDisplayName }).Distinct(),
-                    "CommandName",
-                    "CommandDisplayName"
-                    );
+            //List<DefaultPerformanceTimeCommandsContract> commands = 
+            //    new DefaultSearchServiceClient().DefaultPerformanceTimeCommands();
 
-            List<DefaultPerformanceTimesContract> times = 
-                new DefaultSearchServiceClient().DefaultPerformanceTimes(
-                    commandName
-                    );
+            //ViewBag.CommandName =
+            //    new SelectList(
+            //        commands.Select(x => new { x.CommandName, x.CommandDisplayName }).Distinct(),
+            //        "CommandName",
+            //        "CommandDisplayName",
+            //        commandName
+            //        );
 
-            // create a collection of data
-            var performanceTimes = new List<PerformanceTime>();
+            //List<DefaultPerformanceTimesContract> times = 
+            //    new DefaultSearchServiceClient().DefaultPerformanceTimes(
+            //        commandName
+            //        );
 
-            foreach ( DefaultPerformanceTimesContract contract in times ) {
-                performanceTimes.Add(
-                    new PerformanceTime() {
-                        Date = contract.DateTime.ToString("ss"),
-                        Milliseconds = contract.Milliseconds
-                    }
-                    );
-            }
+            //// create a collection of data
+            //var performanceTimes = new List<PerformanceTime>();
 
-            // modify data type to make it of array type
-            var xDataTimes = performanceTimes.Select(i => i.Date).ToArray();
-            var yDataMilliseconds = performanceTimes.Select(i => new object[] { i.Milliseconds.ToString() }).ToArray();
+            //foreach ( DefaultPerformanceTimesContract contract in times ) {
+            //    performanceTimes.Add(
+            //        new PerformanceTime() {
+            //            Date = contract.DateTime.ToString("ss"),
+            //            Milliseconds = contract.Milliseconds
+            //        }
+            //        );
+            //}
 
-            // instantiate an object of the High charts type
-            var chart = new Highcharts("chart")
+            //// modify data type to make it of array type
+            //var xDataTimes = performanceTimes.Select(i => i.Date).ToArray();
+            //var yDataMilliseconds = performanceTimes.Select(i => new object[] { i.Milliseconds.ToString() }).ToArray();
 
-                // define the type of chart 
-                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line })
+            //// instantiate an object of the High charts type
+            //var chart = new Highcharts("chart")
 
-                // overall Title of the chart 
-                .SetTitle(new Title { Text = "nor-port" })
+            //    // define the type of chart 
+            //    .InitChart(new Chart { DefaultSeriesType = ChartTypes.Line })
 
-                // small label below the main Title
-                .SetSubtitle(new Subtitle { Text = commandName + " from " + fromDateTime.ToShortDateString() + " until " + untilDateTime.ToShortDateString() })
+            //    // overall Title of the chart 
+            //    .SetTitle(new Title { Text = "nor-port" })
 
-                // load the X values
-                .SetXAxis(new XAxis { Categories = xDataTimes })
+            //    // small label below the main Title
+            //    .SetSubtitle(new Subtitle { Text = commandName + " from " + fromDateTime.ToShortDateString() + " until " + untilDateTime.ToShortDateString() })
 
-                // set the Y title
-                .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Milliseconds" } })
-                .SetTooltip(
-                    new Tooltip {
-                        Enabled = true,
-                        Formatter = @"function() { return '<b>'+ this.series.name +'</b><br/>'+ this.x +': '+ this.y; }"
-                    })
-                    .SetPlotOptions(new PlotOptions {
-                        Line = new PlotOptionsLine {
-                            DataLabels = new PlotOptionsLineDataLabels {
-                                Enabled = true
-                            },
-                            EnableMouseTracking = false
-                        }
-                    })
+            //    // load the X values
+            //    .SetXAxis(new XAxis { Categories = xDataTimes })
 
-                    // load the Y values 
-                    .SetSeries(new[]
-                        {   new Series { Name = "Milliseconds", Data = new Data(yDataMilliseconds) }
-                        });
+            //    // set the Y title
+            //    .SetYAxis(new YAxis { Title = new YAxisTitle { Text = "Milliseconds" } })
+            //    .SetTooltip(
+            //        new Tooltip {
+            //            Enabled = true,
+            //            Formatter = @"function() { return '<b>'+ this.series.name +'</b><br/>'+ this.x +': '+ this.y; }"
+            //        })
+            //        .SetPlotOptions(new PlotOptions {
+            //            Line = new PlotOptionsLine {
+            //                DataLabels = new PlotOptionsLineDataLabels {
+            //                    Enabled = true
+            //                },
+            //                EnableMouseTracking = false
+            //            }
+            //        })
 
-            return View(chart);
+            //        // load the Y values 
+            //        .SetSeries(new[]
+            //            {   new Series { Name = "Milliseconds", Data = new Data(yDataMilliseconds) }
+            //            });
+
+            //return View(chart);
         }
     }
 }

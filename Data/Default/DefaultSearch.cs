@@ -518,7 +518,7 @@ namespace SolutionNorSolutionPort.DataAccessLayer
 	                dpt.milliseconds
                  from default_performance_time as dpt
                  where dpt.command_name = @command_name
-                 order by date_time
+                 order by date_time desc
                 ";
 
             Logging log = Logging.PerformanceTimeStart("Default", "DataAccessLayer", "DefaultSearch", "DefaultPerformanceTimes");

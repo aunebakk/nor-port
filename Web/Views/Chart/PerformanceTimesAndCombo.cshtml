@@ -23,7 +23,7 @@
                 htmlAttributes: new {
                     @class = "form-control",
                     @style = "display:inline-block;width:400px",
-                    @onchange = "form.submit();"
+                    @onchange = "OnChangeEvent(this);"
                 }
             )
         </div>
@@ -37,5 +37,11 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 
-    <script type="text/javascript"> $(function () { $('.date-picker').datepicker(); }) </script>
+    <script type="text/javascript"> 
+        $(function () { $('.date-picker').datepicker(); }) 
+        function OnChangeEvent(dropDownElement){
+            var selectedValue = dropDownElement.options[dropDownElement.selectedIndex].value;
+            document.location = "/Chart/PerformanceTimesAndCombo?commandName=" + selectedValue;
+        }
+    </script>
 }
